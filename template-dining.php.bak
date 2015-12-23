@@ -1,0 +1,53 @@
+<?php
+/*
+ * Template Name: Dining
+ */
+?>
+<?php get_header(); ?>
+
+<!-- main content -->
+<div id="main-content" role="main">
+	<?php if (have_posts()) : ?>
+		<?php while (have_posts()) : the_post(); ?>
+
+		<?php
+			//d(get_fields());
+		?>
+
+		<?php show_hero_slides(); ?>
+
+		<?php
+		$restaurants = get_field('columns');
+		echo '<div class="restaurants">';
+			echo '<div class="container clearfix"><h1>Opening Fall 2016</h1>';
+			$count = 0;
+			/* Exclude content block for launch - 10/20/14 - LK
+			    foreach ($restaurants[0] as $restaurant){
+				if( $count%2 == 0 ){
+					echo '<div class="restaurant-block even">';
+				} else {
+					echo '<div class="restaurant-block odd">';
+				}
+					echo '<div class="restaurant-block-wrapper">';
+					if( $restaurant[0]['image'] ){
+						echo '<div class="restaurant-logo"><img src="'. $restaurant[0]['image'] .'" alt="" /></div>';
+					}
+					echo $restaurant[0]['content'];
+					echo '</div>';
+				echo '</div>';
+				$count++;
+			} */
+			echo '</div>';
+		echo '</div>';
+		?>
+
+		<!--<div class="open-soon">
+			<span>Opening <br /><strong>Fall 2016</strong></span>
+		</div>-->
+
+		<?php endwhile; ?>
+	<?php endif; ?>
+</div>
+<!-- /main content -->
+
+<?php get_footer(); ?>
