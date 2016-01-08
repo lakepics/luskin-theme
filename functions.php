@@ -12,7 +12,7 @@ add_theme_support( 'menus' );
 // register sidebar
 if ( function_exists('register_sidebar') )
 	register_sidebar(array(
-		'name' => __( 'Right Sidebar' ),
+		'name' => __( 'Right Sidebar', 'luskin' ),
         'id' => 'sidebar-right',
         'description' => __( 'Widgets in this area will be shown on all posts and pages.', 'theme-slug' ),
   		// 'before_widget' => '<li id="%1$s" class="widget %2$s">',
