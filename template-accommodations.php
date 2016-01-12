@@ -52,7 +52,7 @@
 		if( $reservation_policy ){
 		?>
 		<div class="reservation-policy">
-			<div class="two-columns container clearfix"><h2 style="color: #FFF;">AFFILIATION & ELIGIBILITY POLICY</h2>
+			<div class="two-columns container clearfix"><h2>AFFILIATION & ELIGIBILITY POLICY</h2>
 				<?php
 				if( $reservation_policy[0]['left_column'] ){
 					echo '<div class="column left-column">'. $reservation_policy[0]['left_column'] .'</div>';
