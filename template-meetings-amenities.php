@@ -36,6 +36,11 @@
 					<?php echo $amenities[0]['content']; ?>
 				</div>
 				<div class="services clearfix">
+                <h2>
+                <?php $amenities_header = get_field('amenities_header');
+					if ($amenities_header) { echo $amenities_header; }
+					?></h2>
+
 					<?php
 					$amenities[0]['amenities'];
 					$amenities_count = 0;

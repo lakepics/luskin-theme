@@ -16,22 +16,30 @@
 				$categories[create_slug( $picture['category'])] =  $picture['category'];
 			}
 			
-		?><!-- hide image categories
+		?>
 		<div class="container clearfix">
 			<div class="gallery-filters-wrapper">
 				<select id="gallery-filters">
+					<option selected="selected" value="*">show all</option>
+                    <option value=".accommodations">Accommodations</option>
+                    <option value=".meetings">Meetings</option>
+					<option value=".dining">Dining</option><option value=".conference-center">Conference Center</option><option value=".campus">Campus</option></select>
+			</div>
+
+            
+            
+				<!-- <select id="gallery-filters">
 					<option selected="selected" value="*">show all</option>
 					<?php
 
 
 					foreach ($categories as $key => $value) {
-						echo '<option value=".'.$key.'">'.$value.'</option>';
+						echo '<option value=".' . $key . '">' . $value .'</option>';
 					}
 					?>
 				</select>
-			</div>
+			</div> -->
 		</div>
-                 stop hiding categories -->
 
 		<div id="gallery-container" class="container clearfix">
 		<?php

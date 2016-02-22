@@ -1,8 +1,5 @@
-			<?php if( !is_front_page() ): ?>
-			</div>
-			<!--/content-->
+			</div><!--/content-->
 
-			<!--footer-->
 			<footer id="footer" class="clearfix">
 				<div class="container">
 					<div class="footer-block ucla-logo">
@@ -25,7 +22,8 @@
 						<h5><a href="/mailing-list">Join our Email List</a></h5>
 						<h5><a href="/family-club">Join our Family Club</a></h5>
                     	<h5 class="pr-link"><a href="/press-releases/">Press Releases</a></h5>
-<!--						<h5>Toll Free</h5>
+                    	<h5 class="pr-link"><a href="/be-inspired-2016/">News &amp; Updates</a></h5>
+						<!-- <h5>Toll Free</h5>
 						<span class="contact-option phone"><?php the_field('room_reservation', 'option'); ?></span> -->
 					</div>
 					<div class="footer-block follow">
@@ -42,17 +40,13 @@
 						<!-- <a href="<?php echo home_url(); ?>/terms-use">Terms of Use</a>&nbsp;&nbsp;|&nbsp;&nbsp;<a href="<?php echo home_url(); ?>/privacy-policy">Privacy Policy</a> -->
 						<!--<p class="designer">Design: <a href="http://hdsf.com">HDSF</a></p>-->
 					</div>
-                <div class="container clearfix hospitality-group">
-                    <strong><a href="http://hhs.ucla.edu">UCLA HOSPITALITY GROUP</a></strong> &nbsp; &nbsp; <a href="http://lacc.ucla.edu">Lake Arrowhead Conference Center</a> &nbsp; | &nbsp; <a href="http://guesthouse.ucla.edu">Guest House</a> &nbsp; | &nbsp; <a href="http://conferences.ucla.edu">Conference Services</a> &nbsp; | &nbsp; <a href="http://catering.ucla.edu">Catering</a>
-                </div>
+                	<div class="container clearfix hospitality-group">
+                    	<strong><a href="http://hhs.ucla.edu">UCLA HOSPITALITY GROUP</a></strong> &nbsp; &nbsp; <a href="http://lacc.ucla.edu">Lake Arrowhead Conference Center</a> &nbsp; | &nbsp; <a href="http://guesthouse.ucla.edu">Guest House</a> &nbsp; | &nbsp; <a href="http://conferences.ucla.edu">Conference Services</a> &nbsp; | &nbsp; <a href="http://catering.ucla.edu">Catering</a>
+                	</div>
 				</div>
-			</footer>
+			</footer><!--/footer-->
 
-			<!--/footer-->
-			<?php endif; ?>
-
-		</div>
-		<!--/container-->
+		</div><!--/container-->
 
 		<!--Scripts-->
 		<script type="text/javascript" src="<?php bloginfo('template_directory');?>/scripts/jquery.bxslider.min.js" charset="UTF-8"></script>
@@ -61,7 +55,7 @@
 		<script type="text/javascript" src="<?php bloginfo('template_directory');?>/plugins/fancybox/jquery.fancybox-1.3.4.js" charset="UTF-8"></script>
 		<script type="text/javascript" src="<?php bloginfo('template_directory');?>/scripts/general.js" charset="UTF-8"></script>
 		<script type="text/javascript" src="<?php bloginfo('template_directory');?>/scripts/form-step.js" charset="UTF-8"></script> <!-- added 11/06/14 to change numeral to text on RFP -->
-                <!-- eHunter Code -->
+        <!-- eHunter Code -->
 		<script type="text/javascript">
 		(function() {
 		  var pa = document.createElement('script'), ae = document.getElementsByTagName('script')[0], protocol = (('https:' == document.location.protocol) ? 'https://' : 'http://');pa.async = true;  
@@ -73,7 +67,7 @@
 		<!-- Typekit support for Adobe Caslon Pro -->
         <script src="https://use.typekit.net/sif5fib.js"></script>
 		<script>try{Typekit.load({ async: true });}catch(e){}</script>
-
-<?php wp_footer(); ?>
+		
+		<?php wp_footer(); ?>
 	</body>
 </html>

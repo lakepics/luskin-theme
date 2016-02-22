@@ -1,6 +1,6 @@
 <?php
 /*
- * Template Name: Accomodations - Rooms
+ * Template Name: Accomodations - Suites
  */
 ?>
 <?php get_header(); ?>
@@ -23,36 +23,26 @@
         </div>
         <?php
 
-		$amenities = get_field('guest_services_amenities');
-		if( $amenities ){
+		$page_content = get_field('two-to-one');
+		if( $page_content ){
 		?>
 		<div class="guest-services amenities">
 			<div class="container clearfix">
-				<div class="room-amenities">
-					<?php echo $amenities[0]['content']; ?>
+				<div class="page-col-twothird">
+					<?php echo $page_content[0]['content']; ?>
 				</div>
-				<div class="services clearfix">
-                <h2>
-                <?php $amenities_header = get_field('amenities_header');
-					if ($amenities_header) { echo $amenities_header; }
-					?></h2>
-                    
-					<?php
-					$amenities[0]['amenities'];
-					$amenities_count = 0;
-					foreach ( $amenities[0]['amenities'] as $service ){
-						if( $amenities_count%2 == 0 ){
-							echo '<div class="service-wrapper rooms even">';
-						} else {
-							echo '<div class="service-wrapper rooms odd">';
-						}
-
-							echo '<div class="service '. create_slug($service['icon']) .'"><span class="service-name"><span>'. $service['title'] .'</span></span></div>';
-						echo '</div>';
-						$amenities_count++;
-					}
-					?>
-				</div>
+				<div class="page-col-onethird">
+                    <h2>
+                    <?php $amenities_header = get_field('amenities_header');
+                        if ($amenities_header) { echo $amenities_header; } ?>
+                    </h2>
+                        <?php
+                        $page_content[0]['amenities'];
+                        foreach ( $page_content[0]['amenities'] as $service ){
+                                echo '<div class="service '. create_slug($service['icon']) .'"><span class="service-name"><span>'. $service['title'] .'</span></span></div>';
+                        }
+                        ?>
+                    </div>
 			</div>
 		</div>
 		<?php
@@ -69,7 +59,7 @@
 				//d($rooms);
 				$room_count = 0;
 				foreach ( $rooms as $room ){
-					echo '<div class="room-col">';
+					echo '<div class="room-col-thirds">';
 						if( $room['content'] ){
 							echo '<div class="content">'. $room['content'] .'</div>';
 						}
