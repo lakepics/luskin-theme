@@ -1,0 +1,178 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: wp theme luskin\n"
+"POT-Creation-Date: 2016-02-22 18:34-0700\n"
+"PO-Revision-Date: \n"
+"Last-Translator: \n"
+"Language-Team: Screen Pilot <info@screenpilot.com>\n"
+"Language: en\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.8.7\n"
+"X-Poedit-KeywordsList: __;_e\n"
+"X-Poedit-Basepath: ..\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-SearchPath-0: .\n"
+
+#: admin.php:94
+msgid "Recent news from Screen Pilot"
+msgstr ""
+
+#: custom-post-type.php:24
+msgid "Custom Types"
+msgstr ""
+
+#: custom-post-type.php:25
+msgid "Custom Post"
+msgstr ""
+
+#: custom-post-type.php:26
+msgid "All Custom Posts"
+msgstr ""
+
+#: custom-post-type.php:27
+msgid "Add New"
+msgstr ""
+
+#: custom-post-type.php:28
+msgid "Add New Custom Type"
+msgstr ""
+
+#: custom-post-type.php:29
+msgid "Edit"
+msgstr ""
+
+#: custom-post-type.php:30
+msgid "Edit Post Types"
+msgstr ""
+
+#: custom-post-type.php:31
+msgid "New Post Type"
+msgstr ""
+
+#: custom-post-type.php:32
+msgid "View Post Type"
+msgstr ""
+
+#: custom-post-type.php:33
+msgid "Search Post Type"
+msgstr ""
+
+#: custom-post-type.php:34
+msgid "Nothing found in the Database."
+msgstr ""
+
+#: custom-post-type.php:35
+msgid "Nothing found in Trash"
+msgstr ""
+
+#: custom-post-type.php:38
+msgid "This is the example custom post type"
+msgstr ""
+
+#: custom-post-type.php:75
+msgid "Custom Categories"
+msgstr ""
+
+#: custom-post-type.php:76
+msgid "Custom Category"
+msgstr ""
+
+#: custom-post-type.php:77
+msgid "Search Custom Categories"
+msgstr ""
+
+#: custom-post-type.php:78
+msgid "All Custom Categories"
+msgstr ""
+
+#: custom-post-type.php:79
+msgid "Parent Custom Category"
+msgstr ""
+
+#: custom-post-type.php:80
+msgid "Parent Custom Category:"
+msgstr ""
+
+#: custom-post-type.php:81
+msgid "Edit Custom Category"
+msgstr ""
+
+#: custom-post-type.php:82
+msgid "Update Custom Category"
+msgstr ""
+
+#: custom-post-type.php:83
+msgid "Add New Custom Category"
+msgstr ""
+
+#: custom-post-type.php:84
+msgid "New Custom Category Name"
+msgstr ""
+
+#: custom-post-type.php:98
+msgid "Custom Tags"
+msgstr ""
+
+#: custom-post-type.php:99
+msgid "Custom Tag"
+msgstr ""
+
+#: custom-post-type.php:100
+msgid "Search Custom Tags"
+msgstr ""
+
+#: custom-post-type.php:101
+msgid "All Custom Tags"
+msgstr ""
+
+#: custom-post-type.php:102
+msgid "Parent Custom Tag"
+msgstr ""
+
+#: custom-post-type.php:103
+msgid "Parent Custom Tag:"
+msgstr ""
+
+#: custom-post-type.php:104
+msgid "Edit Custom Tag"
+msgstr ""
+
+#: custom-post-type.php:105
+msgid "Update Custom Tag"
+msgstr ""
+
+#: custom-post-type.php:106
+msgid "Add New Custom Tag"
+msgstr ""
+
+#: custom-post-type.php:107
+msgid "New Custom Tag Name"
+msgstr ""
+
+#: luskin.php:73
+#, php-format
+msgid "Page %s"
+msgstr ""
+
+#: luskin.php:207
+msgid "The Main Menu"
+msgstr ""
+
+#: luskin.php:208
+msgid "Footer Links"
+msgstr ""
+
+#: luskin.php:246
+msgid "No Related Posts Yet!"
+msgstr ""
+
+#: luskin.php:291
+msgid "Read "
+msgstr ""
+
+#: luskin.php:291
+msgid "Read more &raquo;"
+msgstr ""
