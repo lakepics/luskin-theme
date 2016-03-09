@@ -1,9 +1,13 @@
 <?php
-/*
- * Default Template
+/**
+ * The template for displaying pages (default)
+ *
+ * @package WordPress
+ * @subpackage Luskin
+ * @since Luskin 2.0
  */
-?>
-<?php get_header(); ?>
+
+get_header(); ?>
 
 <div id="main-content" role="main">
 
