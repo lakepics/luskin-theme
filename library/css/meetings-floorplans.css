@@ -1,0 +1,752 @@
+/* ############ page.scss ############ */
+#page-310 {
+  margin-top: 55px; }
+
+.hero-image-container, .full-width-gallery {
+  margin-bottom: 30px; }
+
+.hero-image-container img {
+  display: block;
+  margin: 0 auto;
+  width: 100%;
+  max-width: 100%; }
+
+/* quick facts */
+.quick-facts {
+  position: relative;
+  margin-top: 25px;
+  margin-bottom: 60px;
+  border-top: 1px solid #8DA6B8;
+  padding-top: 40px; }
+
+.quick-facts-description {
+  font-family: "Proxima Nova Regular", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 15px;
+  line-height: 1.5;
+  margin-bottom: 25px;
+  width: 100%; }
+
+.quick-facts-description h3 {
+  margin: 40px 0 20px 0;
+  font-size: 25px;
+  letter-spacing: 0.05em;
+  line-height: 1;
+  color: #47718E;
+  font-family: "Proxima Nova Semibold", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  text-transform: uppercase;
+  text-align: center; }
+
+.quick-facts-button {
+  margin-top: 30px; }
+
+.generic-button {
+  float: left;
+  margin-right: 30px; }
+
+/* call out */
+.callout {
+  display: inline-block;
+  width: inherit;
+  margin: 0px;
+  padding: 20px 0px 30px 0px;
+  border-top: 1px solid #8DA6B8;
+  font-family: 'Adobe Caslon Pro', serif;
+  font-style: italic;
+  font-size: 200%;
+  line-height: 1.75em;
+  color: #8da6b8;
+  text-align: center; }
+
+.text-overlay {
+  bottom: -.5em;
+  color: rgba(255, 255, 255, 0.85);
+  font-family: "Proxima Nova Semibold", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 1.75em;
+  left: 0.7em;
+  line-height: 1.6em;
+  position: absolute;
+  text-transform: uppercase; }
+
+@media only screen and (min-width: 481px) {
+  .text-overlay {
+    font-size: 2.5em;
+    left: 0.5em; } }
+
+@media only screen and (min-width: 640px) {
+  .text-overlay {
+    font-size: 3.5em;
+    left: 0.3em; } }
+
+@media only screen and (min-width: 768px) {
+  .text-overlay {
+    font-size: 4.25em;
+    left: 0.25em; } }
+
+@media only screen and (min-width: 1030px) {
+  .text-overlay {
+    font-size: 5em; } }
+
+@media only screen and (min-width: 1240px) {
+  .text-overlay {
+    font-size: 6em;
+    left: 0.15em; } }
+
+/* ############ amennities-services.scss ############ */
+.amenities h2 {
+  color: #47718E;
+  font-family: "Proxima Nova Semibold", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 25px;
+  letter-spacing: 0.05em;
+  line-height: 1.15;
+  margin: 0 0 10px 0;
+  text-transform: uppercase; }
+
+.amenities .amenities-description,
+.amenities .room-amenities {
+  font-family: "Proxima Nova Regular", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 15px;
+  line-height: 1.5; }
+  .amenities .amenities-description h2,
+  .amenities .room-amenities h2 {
+    margin: 0 0 28px 0; }
+  .amenities .amenities-description p,
+  .amenities .room-amenities p {
+    margin-bottom: 30px; }
+
+.amenities .services .service-wrapper {
+  float: left;
+  width: 49.99%; }
+  .amenities .services .service-wrapper.rooms, .amenities .services .service-wrapper .rooms {
+    width: 45%;
+    margin-right: 4.9%; }
+  .amenities .services .service-wrapper:last-child .service {
+    border-bottom: 0; }
+  .amenities .services .service-wrapper.even .service {
+    margin-left: 0; }
+  .amenities .services .service-wrapper.odd .service {
+    margin-right: 0; }
+
+.guest-services {
+  padding: 0 0 20px 0; }
+
+.service {
+  border-bottom: 1px solid #8DA6B8;
+  color: #000;
+  font-family: "Proxima Nova Semibold", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 16px;
+  line-height: 1.25;
+  margin: 0 10px;
+  min-height: 75px;
+  padding: 0;
+  position: relative;
+  zoom: 1; }
+  .service .icon {
+    background: url("/wp-content/themes/luskin/library/images/amenities2.png") no-repeat center 0;
+    bottom: 0;
+    display: block;
+    height: 32px;
+    left: 20px;
+    margin: auto;
+    position: absolute;
+    right: auto;
+    top: 0;
+    width: 32px; }
+  .service .service-name {
+    display: table;
+    height: 75px;
+    padding: 0 10px 0 70px; }
+    .service .service-name span {
+      display: table-cell;
+      vertical-align: middle; }
+  .service.none, .service.none-none, .service.first {
+    margin: 0;
+    padding: 0 0 0 20px; }
+  .service.first {
+    border-top: 1px solid #8DA6B8; }
+  .service.bullet-round {
+    background: url("/wp-content/themes/luskin/library/images/round-bullet.png") no-repeat center 0; }
+  .service.ada-rooms-services .icon {
+    background-position: center -632px; }
+  .service.bell-service .icon,
+  .service.porter-service .icon {
+    height: 34px;
+    background-position: center -471px; }
+  .service.business-center .icon,
+  .service.extensive-business-center .icon {
+    background-position: center -320px; }
+  .service.campus-shuttle .icon {
+    background-position: center -711px; }
+  .service.complimentary-coffee-refreshments .icon {
+    height: 34px;
+    background-position: center -1086px; }
+  .service.concierge .icon {
+    background-position: center -395px; }
+  .service.dry-cleaning .icon {
+    height: 34px;
+    background-position: center -547px; }
+  .service.express-room-service .icon {
+    background-position: center -159px; }
+  .service.event-planning-services .icon {
+    background-position: center -1015px; }
+  .service.full-service-catering .icon {
+    background-position: center -865px; }
+  .service.integrated-audio-visual-technology-support .icon {
+    background-position: center -940px; }
+  .service.on-site-fitness-center .icon {
+    background-position: center -790px; }
+  .service.restaurant-and-lounge .icon,
+  .service.group-dining-options .icon {
+    background-position: center -82px; }
+  .service.valet-parking .icon,
+  .service.event-parking .icon {
+    background-position: center -237px; }
+  .service.wi-fi .icon {
+    background-position: center 0; }
+
+/* additional accommodations */
+.additional-ucla-accommodations {
+  padding-bottom: 40px; }
+
+@media only screen and (min-width: 931px) {
+  .amenities .amenities-description,
+  .amenities .room-amenities {
+    float: left;
+    width: 35%; }
+  .amenities .services {
+    float: right;
+    width: 60%; } }
+
+table.Basic-Table {
+  border-collapse: collapse;
+  border-color: #000000;
+  border-style: solid;
+  border-width: 1px;
+  margin: 4px auto; }
+
+td.Basic-Table {
+  border: 1px solid #666;
+  padding: 8px;
+  vertical-align: top; }
+
+p.Basic-Paragraph {
+  color: #000000;
+  font-family: "Minion Pro", serif;
+  font-size: 14px;
+  line-height: 22px;
+  margin: 0;
+  orphans: 1;
+  page-break-after: auto;
+  page-break-before: auto;
+  text-align: left;
+  text-decoration: none;
+  text-indent: 0;
+  text-transform: none;
+  widows: 1; }
+
+p.Table-body-copy {
+  color: #000000;
+  font-family: "Proxima Nova Regular", sans-serif;
+  font-size: 14px;
+  font-style: normal;
+  font-variant: normal;
+  line-height: 22px;
+  margin: 0;
+  orphans: 1;
+  page-break-after: auto;
+  page-break-before: auto;
+  text-align: left;
+  text-decoration: none;
+  text-indent: 0;
+  text-transform: none;
+  widows: 1; }
+
+p.Table-headings {
+  color: #FFF;
+  font-family: "Proxima Nova Regular", sans-serif;
+  font-size: 14px;
+  font-style: normal;
+  font-variant: normal;
+  line-height: 22px;
+  margin: 0;
+  orphans: 1;
+  page-break-after: auto;
+  page-break-before: auto;
+  text-align: center;
+  text-decoration: none;
+  text-indent: 0;
+  text-transform: uppercase;
+  widows: 1; }
+
+p.Table-parenthetical-text {
+  color: #FFFFFF;
+  font-family: "Proxima Nova Regular", sans-serif;
+  font-size: 16px;
+  font-style: italic;
+  font-variant: normal;
+  line-height: 1.286;
+  margin: 0;
+  orphans: 1;
+  page-break-after: auto;
+  page-break-before: auto;
+  text-align: center;
+  text-decoration: none;
+  text-indent: 0;
+  text-transform: none;
+  widows: 1; }
+
+p.table-level-heading {
+  color: #000000;
+  font-family: "Proxima Nova Semibold", sans-serif;
+  font-size: 16px;
+  font-style: italic;
+  font-variant: normal;
+  line-height: 22px;
+  margin: 0;
+  orphans: 1;
+  page-break-after: auto;
+  page-break-before: auto;
+  text-align: left;
+  text-decoration: none;
+  text-indent: 0;
+  text-transform: none;
+  widows: 1; }
+
+table.TableOverride-1 {
+  border-collapse: collapse; }
+
+td.CellOverride-1, td.CellOverride-2, td.CellOverride-3, td.CellOverride-4 {
+  background: #1C4D71; }
+
+td.CellOverride-1 {
+  padding-left: 10px;
+  border-bottom-color: #000000;
+  border-bottom-style: solid;
+  border-bottom-width: 1px;
+  border-left-color: #4c4c4c;
+  border-left-style: solid;
+  border-left-width: 0px;
+  border-right-color: #000000;
+  border-right-style: solid;
+  border-right-width: 0px;
+  border-top-color: #4c4c4c;
+  border-top-style: solid;
+  border-top-width: 0px;
+  vertical-align: middle; }
+
+td.CellOverride-2 {
+  border-bottom-color: #000000;
+  border-bottom-style: solid;
+  border-bottom-width: 1px;
+  border-left-color: #000000;
+  border-left-style: solid;
+  border-left-width: 0px;
+  border-right-color: #000000;
+  border-right-style: solid;
+  border-right-width: 0px;
+  border-top-color: #4c4c4c;
+  border-top-style: solid;
+  border-top-width: 0px;
+  vertical-align: middle; }
+
+td.CellOverride-3 {
+  border-bottom-color: #000000;
+  border-bottom-style: solid;
+  border-bottom-width: 1px;
+  border-left-color: #000000;
+  border-left-style: solid;
+  border-left-width: 0px;
+  border-right-color: #4c4c4c;
+  border-right-style: solid;
+  border-right-width: 0px;
+  border-top-color: #4c4c4c;
+  border-top-style: solid;
+  border-top-width: 0px;
+  vertical-align: middle; }
+
+td.CellOverride-4 {
+  border-bottom-color: #000000;
+  border-bottom-style: solid;
+  border-bottom-width: 1px;
+  border-left-color: #4c4c4c;
+  border-left-style: solid;
+  border-left-width: 0px;
+  border-right-color: #4c4c4c;
+  border-right-style: solid;
+  border-right-width: 0px;
+  border-top-color: #4c4c4c;
+  border-top-style: solid;
+  border-top-width: 0px;
+  vertical-align: middle; }
+
+td.CellOverride-5 {
+  padding-left: 10px;
+  background-color: #e5ebf5;
+  border-bottom-color: #000000;
+  border-bottom-style: solid;
+  border-bottom-width: 1px;
+  border-left-color: #4c4c4c;
+  border-left-style: solid;
+  border-left-width: 0px;
+  border-right-color: #000000;
+  border-right-style: solid;
+  border-right-width: 0px;
+  border-top-color: #000000;
+  border-top-style: solid;
+  border-top-width: 1px;
+  vertical-align: middle; }
+
+td.CellOverride-6 {
+  background-color: #e5ebf5;
+  border-bottom-color: #000000;
+  border-bottom-style: solid;
+  border-bottom-width: 1px;
+  border-left-color: #000000;
+  border-left-style: solid;
+  border-left-width: 0px;
+  border-right-color: #000000;
+  border-right-style: solid;
+  border-right-width: 0px;
+  border-top-color: #000000;
+  border-top-style: solid;
+  border-top-width: 1px;
+  vertical-align: middle; }
+
+td.CellOverride-7 {
+  background-color: #e5ebf5;
+  border-bottom-color: #000000;
+  border-bottom-style: solid;
+  border-bottom-width: 1px;
+  border-left-color: #000000;
+  border-left-style: solid;
+  border-left-width: 0px;
+  border-right-color: #4c4c4c;
+  border-right-style: solid;
+  border-right-width: 0px;
+  border-top-color: #000000;
+  border-top-style: solid;
+  border-top-width: 1px;
+  vertical-align: middle; }
+
+td.CellOverride-8 {
+  background-color: #e5ebf5;
+  border-bottom-color: #000000;
+  border-bottom-style: solid;
+  border-bottom-width: 1px;
+  border-left-color: #4c4c4c;
+  border-left-style: solid;
+  border-left-width: 0px;
+  border-right-color: #4c4c4c;
+  border-right-style: solid;
+  border-right-width: 0px;
+  border-top-color: #000000;
+  border-top-style: solid;
+  border-top-width: 1px;
+  vertical-align: middle; }
+
+td.CellOverride-9 {
+  padding-left: 10px;
+  border-bottom-color: #000000;
+  border-bottom-style: solid;
+  border-bottom-width: 1px;
+  border-left-color: #262626;
+  border-left-style: solid;
+  border-left-width: 0px;
+  border-right-color: #262626;
+  border-right-style: solid;
+  border-right-width: 0px;
+  border-top-color: #262626;
+  border-top-style: solid;
+  border-top-width: 0px;
+  vertical-align: middle; }
+
+td.CellOverride-10 {
+  padding-left: 10px;
+  border-bottom-color: #000000;
+  border-bottom-style: solid;
+  border-bottom-width: 1px;
+  border-left-color: #262626;
+  border-left-style: solid;
+  border-left-width: 0px;
+  border-right-color: #262626;
+  border-right-style: solid;
+  border-right-width: 0px;
+  border-top-color: #000000;
+  border-top-style: solid;
+  border-top-width: 1px;
+  vertical-align: middle; }
+
+td.CellOverride-11 {
+  padding-left: 10px;
+  border-bottom-color: #000000;
+  border-bottom-style: solid;
+  border-bottom-width: 1px;
+  border-left-color: #125187;
+  border-left-style: solid;
+  border-left-width: 0px;
+  border-right-color: #125187;
+  border-right-style: solid;
+  border-right-width: 0px;
+  border-top-color: #000000;
+  border-top-style: solid;
+  border-top-width: 1px;
+  vertical-align: middle; }
+
+td.CellOverride-12 {
+  padding-left: 10px;
+  background-color: #e1e7f4;
+  border-bottom-color: #262626;
+  border-bottom-style: solid;
+  border-bottom-width: 1px;
+  border-left-color: #4c4c4c;
+  border-left-style: solid;
+  border-left-width: 0px;
+  border-right-color: #000000;
+  border-right-style: solid;
+  border-right-width: 0px;
+  border-top-color: #000000;
+  border-top-style: solid;
+  border-top-width: 1px;
+  vertical-align: middle; }
+
+td.CellOverride-13 {
+  background-color: #e1e7f4;
+  border-bottom-color: #262626;
+  border-bottom-style: solid;
+  border-bottom-width: 1px;
+  border-left-color: #000000;
+  border-left-style: solid;
+  border-left-width: 0px;
+  border-right-color: #000000;
+  border-right-style: solid;
+  border-right-width: 0px;
+  border-top-color: #000000;
+  border-top-style: solid;
+  border-top-width: 1px;
+  vertical-align: middle; }
+
+td.CellOverride-14 {
+  background-color: #e1e7f4;
+  border-bottom-color: #262626;
+  border-bottom-style: solid;
+  border-bottom-width: 1px;
+  border-left-color: #000000;
+  border-left-style: solid;
+  border-left-width: 0px;
+  border-right-color: #4c4c4c;
+  border-right-style: solid;
+  border-right-width: 0px;
+  border-top-color: #000000;
+  border-top-style: solid;
+  border-top-width: 1px;
+  vertical-align: middle; }
+
+td.CellOverride-15 {
+  background-color: #e1e7f4;
+  border-bottom-color: #262626;
+  border-bottom-style: solid;
+  border-bottom-width: 1px;
+  border-left-color: #4c4c4c;
+  border-left-style: solid;
+  border-left-width: 0px;
+  border-right-color: #4c4c4c;
+  border-right-style: solid;
+  border-right-width: 0px;
+  border-top-color: #000000;
+  border-top-style: solid;
+  border-top-width: 1px;
+  vertical-align: middle; }
+
+td.CellOverride-16 {
+  padding-left: 10px;
+  border-bottom-color: #262626;
+  border-bottom-style: solid;
+  border-bottom-width: 1px;
+  border-left-color: #125187;
+  border-left-style: solid;
+  border-left-width: 0px;
+  border-right-color: #125187;
+  border-right-style: solid;
+  border-right-width: 0px;
+  border-top-color: #000000;
+  border-top-style: solid;
+  border-top-width: 1px;
+  vertical-align: middle; }
+
+p.ParaOverride-1 {
+  text-align: left; }
+
+p.ParaOverride-2 {
+  text-align: center; }
+
+span.CharOverride-1 {
+  font-size: 14px;
+  font-style: italic;
+  font-weight: normal; }
+
+td._idGenCellOverride-1 {
+  border-top-color: #000000;
+  border-top-style: solid;
+  border-top-width: 1px; }
+
+col._idGenTableRowColumn-1 {
+  width: 28.5%; }
+
+col._idGenTableRowColumn-2 {
+  width: 14.25%; }
+
+col._idGenTableRowColumn-3 {
+  width: 14.25%; }
+
+col._idGenTableRowColumn-4 {
+  width: 14.25%; }
+
+tr._idGenTableRowColumn-5 {
+  height: 80px;
+  min-height: 80px; }
+
+tr._idGenTableRowColumn-6 {
+  min-height: 18px; }
+
+tr._idGenTableRowColumn-7 {
+  height: 16px; }
+
+td.CellOverride-4 {
+  width: 14.25%; }
+
+#press-release-table {
+  width: 100%;
+  padding: 0; }
+
+tr.releases.first {
+  border-top: 1px solid #CCCCCC; }
+
+tr.releases {
+  border-bottom: 1px solid #CCCCCC;
+  height: 30px;
+  width: 100%; }
+
+tr.releases, tr.releases td {
+  margin-left: 0;
+  padding: 5px 0; }
+
+.releases td {
+  vertical-align: middle; }
+
+.releases td.date, .releases td.title {
+  font-size: 18px;
+  text-transform: uppercase;
+  font-family: "Proxima Nova Regular", "Helvetica Neue", Helvetica, Arial, sans-serif; }
+
+.releases td.date {
+  width: 10%; }
+
+.releases td.title {
+  padding-left: 2%;
+  width: 78%; }
+
+.releases td.download {
+  text-align: right; }
+
+.releases td.title a {
+  text-decoration: none; }
+
+/* ############ meetings-floorplan.scss ############ */
+.floorplan h2 {
+  background: #1C4D71; }
+
+.floorplan {
+  background: #FFF;
+  padding-bottom: 40px; }
+
+.floorplan-heading {
+  position: relative;
+  padding: 28px 50px 28px 0;
+  font-size: 25px;
+  line-height: 1.2;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: #fff;
+  font-family: "Proxima Nova Semibold", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  margin: 0 0 40px 0;
+  text-align: center; }
+
+.floorplan .floorplan-content {
+  background: #FFF;
+  padding: 0px 0 20px 0; }
+
+.floorplan .floorplan-plan {
+  position: relative;
+  float: left;
+  width: 50%; }
+
+.floorplan .floorplan-chart {
+  float: right;
+  width: 48%; }
+
+.floorplan .floorplan-plan img,
+.floorplan .floorplan-chart img {
+  display: block;
+  height: auto;
+  max-width: 100%; }
+
+.floorplan .floorplan-chart img {
+  margin: 0 auto; }
+
+.floorplan-plan .bx-prev,
+.floorplan-plan .bx-next {
+  display: inline-block;
+  *display: inline;
+  vertical-align: top;
+  width: 47px;
+  height: 32px;
+  margin-left: 4px;
+  overflow: hidden;
+  text-indent: -99999em;
+  background-color: #08548b;
+  background-image: url("/wp-content/themes/luskin/library/images/floor-plans-arrows.png");
+  background-repeat: no-repeat;
+  zoom: 1; }
+
+.floorplan-plan .bx-prev {
+  background-position: center -24px; }
+
+.floorplan-plan .bx-next {
+  background-position: center 8px; }
+
+.bx-controls-direction {
+  margin-top: -23px;
+  right: 0;
+  z-index: 101; }
+
+.floorplan-plan .floorplan-image {
+  background: #fff;
+  margin-bottom: 30px; }
+
+.floorplan-plan .floorplan span, .floorplan-content h3 {
+  display: block;
+  font-size: 20px;
+  line-height: 1.2;
+  color: #1C4D71;
+  font-family: "Proxima Nova Semibold", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 0.05em; }
+
+.service .service-name {
+  padding: 0 10px; }
+
+.res-columns a.button-alt {
+  background-position-x: 104%;
+  padding: 10px 40px 10px 10px; }
+
+@media screen and (max-width: 878px) {
+  .res-columns {
+    -webkit-column-count: 1;
+    -moz-column-count: 1;
+    column-count: 1;
+    -webkit-column-width: 100%;
+    -moz-column-width: 100%;
+    column-width: 100%;
+    -webkit-column-gap: 0;
+    -moz-column-gap: 0;
+    column-gap: 0; } }

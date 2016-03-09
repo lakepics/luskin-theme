@@ -1,0 +1,199 @@
+// variables
+@import "partials/variables";
+
+// page styles
+@import "sections/page";
+
+/* ############ contact.scss ############ */
+
+#main-content {
+
+  #container {
+    position: relative;
+    font-size: 1.0em;
+  }
+
+  .container, .container-1024 {
+
+    &.two-columns {
+
+      .column {
+
+        &.left-column,
+        &.right-column {
+          float: none;
+          margin: 0;
+          width: 100%;
+
+        }
+
+        &.right-column {
+          float: none;
+          margin: 3em 0 0;
+
+          h2 {
+            margin-bottom: 23px;
+          }
+
+        }
+
+      }
+
+      .contact-block {
+        margin-bottom: 50px;
+        border-bottom: 1px solid #8DA6B8;
+        padding-bottom: 50px;
+
+        &#plan-meeting {
+          border-bottom: none;
+          margin-bottom: 0;
+        }
+
+        .align-left {
+          float: left;
+          width: 49.99%;
+        }
+
+        .align-right {
+          float: right;
+          width: 49.99%;
+        }
+
+        strong {
+          color: $meta2;
+          font-family: $bold-sans-serif;
+        }
+
+      }
+
+    }
+
+  }
+
+}
+
+
+.driving-directions-utils {
+  position: absolute;
+  right: 0;
+  top: 5px;
+}
+
+.driving-directions-utils a {
+  display: inline-block;
+  *display: inline;
+  width: 32px;
+  height: 27px;
+  margin-left: 10px;
+  text-indent: -99999em;
+  overflow: hidden;
+  zoom: 1;
+}
+
+.driving-directions-utils a.print {
+  background: url("/wp-content/themes/luskin/library/images/driving-directions-utils.png") no-repeat center 0;
+}
+
+.driving-directions-utils a.see-map {
+  background: url("/wp-content/themes/luskin/library/images/driving-directions-utils.png") no-repeat center -34px;
+}
+
+.driving-directions-utils .separator {
+  display: inline-block;
+  *display: inline;
+  height: 27px;
+  width: 0;
+  margin-left: 10px;
+  border-left: 1px solid #ccc;
+  zoom: 1;
+}
+
+// styles for 0up
+
+
+// styles for 481up
+@media only screen and (min-width: 481px) {
+
+}
+
+// styles for 640up
+@media only screen and (min-width: 640px) {
+
+  #main-content {
+
+      .container, .container-1024 {
+
+      &.two-columns {
+
+        .column {
+
+          &.left-column,
+          &.right-column {
+            float: left;
+            margin: 0;
+            width: 47%;
+
+          }
+
+          &.right-column {
+            float: right;
+            margin: 0;
+          }
+
+        }
+
+        .contact-block {
+          margin-bottom: 50px;
+          border-bottom: 1px solid #8DA6B8;
+          padding-bottom: 50px;
+
+          &#plan-meeting {
+            border-bottom: none;
+            margin-bottom: 50px;
+          }
+
+          .align-left {
+            float: left;
+            width: 49.99%;
+          }
+
+          .align-right {
+            float: right;
+            width: 49.99%;
+          }
+
+          strong {
+            color: $meta2;
+            font-family: $bold-sans-serif;
+          }
+
+        }
+
+      }
+
+    }
+
+  }
+
+}
+
+// styles for 768up
+@media only screen and (min-width: 768px) {
+
+}
+
+// styles for 1030up
+@media only screen and (min-width: 1030px) {
+
+
+}
+
+// styles for 1240up
+@media only screen and (min-width: 1240px) {
+
+}
+
+// styles for 2x
+@media only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min--moz-device-pixel-ratio: 1.5), only screen and (min-device-pixel-ratio: 1.5) {
+
+}

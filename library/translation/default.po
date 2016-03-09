@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: wp theme luskin\n"
-"POT-Creation-Date: 2016-02-22 18:34-0700\n"
+"POT-Creation-Date: 2016-03-08 22:45-0700\n"
 "PO-Revision-Date: \n"
 "Last-Translator: \n"
 "Language-Team: Screen Pilot <info@screenpilot.com>\n"
@@ -16,7 +16,7 @@ msgstr ""
 "X-Poedit-SourceCharset: UTF-8\n"
 "X-Poedit-SearchPath-0: .\n"
 
-#: admin.php:94
+#: admin.php:91
 msgid "Recent news from Screen Pilot"
 msgstr ""
 
@@ -152,27 +152,85 @@ msgstr ""
 msgid "New Custom Tag Name"
 msgstr ""
 
-#: luskin.php:73
+#: luskin.php:92
 #, php-format
 msgid "Page %s"
 msgstr ""
 
-#: luskin.php:207
-msgid "The Main Menu"
+#: luskin.php:607
+msgid "Primary Nav"
 msgstr ""
 
-#: luskin.php:208
-msgid "Footer Links"
+#: luskin.php:608
+msgid "Secondary Nav"
 msgstr ""
 
-#: luskin.php:246
-msgid "No Related Posts Yet!"
+#: luskin.php:609
+msgid "Tertiary Nav"
 msgstr ""
 
-#: luskin.php:291
+#: luskin.php:631
+msgid "Right Sidebar"
+msgstr ""
+
+#: luskin.php:632
+msgid "Widgets in this area will be shown on all posts and pages."
+msgstr ""
+
+#: luskin.php:641
+msgid "Footer First Position"
+msgstr ""
+
+#: luskin.php:642
+msgid ""
+"Widgets in this area will be shown on all posts and pages within the footer "
+"within the first position (i.e., left outside)."
+msgstr ""
+
+#: luskin.php:651
+msgid "Footer Second Position"
+msgstr ""
+
+#: luskin.php:652
+msgid ""
+"Widgets in this area will be shown on all posts and pages within the footer "
+"within the second position (i.e., left inside)."
+msgstr ""
+
+#: luskin.php:661
+msgid "Footer Third Position"
+msgstr ""
+
+#: luskin.php:662
+msgid ""
+"Widgets in this area will be shown on all posts and pages within the footer "
+"within the third position (i.e., right inside)."
+msgstr ""
+
+#: luskin.php:671
+msgid "Footer Forth Position"
+msgstr ""
+
+#: luskin.php:672
+msgid ""
+"Widgets in this area will be shown on all posts and pages within the footer "
+"within the forth position (i.e., right outside)."
+msgstr ""
+
+#: luskin.php:681
+msgid "Sub Footer"
+msgstr ""
+
+#: luskin.php:682
+msgid ""
+"Widgets in this area will be shown on all posts and pages below the footer "
+"(i.e., the very bottom)."
+msgstr ""
+
+#: luskin.php:738
 msgid "Read "
 msgstr ""
 
-#: luskin.php:291
+#: luskin.php:738
 msgid "Read more &raquo;"
 msgstr ""

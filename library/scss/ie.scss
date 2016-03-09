@@ -1,16 +1,13 @@
-/******************************************************************
-Site Name:
-Author:
+/* ############ ie.scss ############ */
 
+/******************************************************************
 Stylesheet: IE Stylesheet
 
 So instead of using the respond.js file to add media query support
 to IE, we're going to use SASS to create an easily readable css file.
 Here, we import all the styles the standard stylesheet gets, only
 without the media queries. No need to worry about editing anything!
-
 ******************************************************************/
-
 
 /******************************************************************
 IMPORTS & DEPENDENCIES
@@ -20,10 +17,17 @@ understand (what's inside the media queries). We also need to
 import the mixins file so SASS can understand the variables.
 ******************************************************************/
 
-@import "partials/variables"; // import variables
-@import "partials/typography"; // import typography
-@import "partials/mixins"; // import mixins
-@import "partials/ie_grid"; // import grid
+// typography
+@import "partials/typography";
+
+// Sass variables
+@import "partials/variables";
+
+// import mixins
+@import "partials/mixins";
+
+// import grid
+//@import "partials/ie_grid";
 
 // import everything inside media queries
 @import "breakpoints/481up";
@@ -33,7 +37,6 @@ import the mixins file so SASS can understand the variables.
 /*
 you can call the larger styles if you want, but there's really no need
 */
-
 
 /******************************************************************
 ADDITIONAL IE FIXES

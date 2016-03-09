@@ -1,0 +1,13 @@
+/* ############ rsvp.scss ############ */
+#container #content {
+  margin: 0 auto;
+  padding: 10px 0;
+  max-width: 752px; }
+  #container #content #main-content .entry-content {
+    border: 1px solid #999; }
+    #container #content #main-content .entry-content img {
+      margin: 0; }
+    #container #content #main-content .entry-content #retirement_head_img {
+      vertical-align: top; }
+    #container #content #main-content .entry-content #retirement_foot_img {
+      vertical-align: bottom; }

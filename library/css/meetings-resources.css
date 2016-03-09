@@ -1,0 +1,511 @@
+/* ############ page.scss ############ */
+#page-310 {
+  margin-top: 55px; }
+
+.hero-image-container, .full-width-gallery {
+  margin-bottom: 30px; }
+
+.hero-image-container img {
+  display: block;
+  margin: 0 auto;
+  width: 100%;
+  max-width: 100%; }
+
+/* quick facts */
+.quick-facts {
+  position: relative;
+  margin-top: 25px;
+  margin-bottom: 60px;
+  border-top: 1px solid #8DA6B8;
+  padding-top: 40px; }
+
+.quick-facts-description {
+  font-family: "Proxima Nova Regular", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 15px;
+  line-height: 1.5;
+  margin-bottom: 25px;
+  width: 100%; }
+
+.quick-facts-description h3 {
+  margin: 40px 0 20px 0;
+  font-size: 25px;
+  letter-spacing: 0.05em;
+  line-height: 1;
+  color: #47718E;
+  font-family: "Proxima Nova Semibold", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  text-transform: uppercase;
+  text-align: center; }
+
+.quick-facts-button {
+  margin-top: 30px; }
+
+.generic-button {
+  float: left;
+  margin-right: 30px; }
+
+/* call out */
+.callout {
+  display: inline-block;
+  width: inherit;
+  margin: 0px;
+  padding: 20px 0px 30px 0px;
+  border-top: 1px solid #8DA6B8;
+  font-family: 'Adobe Caslon Pro', serif;
+  font-style: italic;
+  font-size: 200%;
+  line-height: 1.75em;
+  color: #8da6b8;
+  text-align: center; }
+
+.text-overlay {
+  bottom: -.5em;
+  color: rgba(255, 255, 255, 0.85);
+  font-family: "Proxima Nova Semibold", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 1.75em;
+  left: 0.7em;
+  line-height: 1.6em;
+  position: absolute;
+  text-transform: uppercase; }
+
+@media only screen and (min-width: 481px) {
+  .text-overlay {
+    font-size: 2.5em;
+    left: 0.5em; } }
+
+@media only screen and (min-width: 640px) {
+  .text-overlay {
+    font-size: 3.5em;
+    left: 0.3em; } }
+
+@media only screen and (min-width: 768px) {
+  .text-overlay {
+    font-size: 4.25em;
+    left: 0.25em; } }
+
+@media only screen and (min-width: 1030px) {
+  .text-overlay {
+    font-size: 5em; } }
+
+@media only screen and (min-width: 1240px) {
+  .text-overlay {
+    font-size: 6em;
+    left: 0.15em; } }
+
+/* ############ amennities-services.scss ############ */
+.amenities h2 {
+  color: #47718E;
+  font-family: "Proxima Nova Semibold", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 25px;
+  letter-spacing: 0.05em;
+  line-height: 1.15;
+  margin: 0 0 10px 0;
+  text-transform: uppercase; }
+
+.amenities .amenities-description,
+.amenities .room-amenities {
+  font-family: "Proxima Nova Regular", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 15px;
+  line-height: 1.5; }
+  .amenities .amenities-description h2,
+  .amenities .room-amenities h2 {
+    margin: 0 0 28px 0; }
+  .amenities .amenities-description p,
+  .amenities .room-amenities p {
+    margin-bottom: 30px; }
+
+.amenities .services .service-wrapper {
+  float: left;
+  width: 49.99%; }
+  .amenities .services .service-wrapper.rooms, .amenities .services .service-wrapper .rooms {
+    width: 45%;
+    margin-right: 4.9%; }
+  .amenities .services .service-wrapper:last-child .service {
+    border-bottom: 0; }
+  .amenities .services .service-wrapper.even .service {
+    margin-left: 0; }
+  .amenities .services .service-wrapper.odd .service {
+    margin-right: 0; }
+
+.guest-services {
+  padding: 0 0 20px 0; }
+
+.service {
+  border-bottom: 1px solid #8DA6B8;
+  color: #000;
+  font-family: "Proxima Nova Semibold", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 16px;
+  line-height: 1.25;
+  margin: 0 10px;
+  min-height: 75px;
+  padding: 0;
+  position: relative;
+  zoom: 1; }
+  .service .icon {
+    background: url("/wp-content/themes/luskin/library/images/amenities2.png") no-repeat center 0;
+    bottom: 0;
+    display: block;
+    height: 32px;
+    left: 20px;
+    margin: auto;
+    position: absolute;
+    right: auto;
+    top: 0;
+    width: 32px; }
+  .service .service-name {
+    display: table;
+    height: 75px;
+    padding: 0 10px 0 70px; }
+    .service .service-name span {
+      display: table-cell;
+      vertical-align: middle; }
+  .service.none, .service.none-none, .service.first {
+    margin: 0;
+    padding: 0 0 0 20px; }
+  .service.first {
+    border-top: 1px solid #8DA6B8; }
+  .service.bullet-round {
+    background: url("/wp-content/themes/luskin/library/images/round-bullet.png") no-repeat center 0; }
+  .service.ada-rooms-services .icon {
+    background-position: center -632px; }
+  .service.bell-service .icon,
+  .service.porter-service .icon {
+    height: 34px;
+    background-position: center -471px; }
+  .service.business-center .icon,
+  .service.extensive-business-center .icon {
+    background-position: center -320px; }
+  .service.campus-shuttle .icon {
+    background-position: center -711px; }
+  .service.complimentary-coffee-refreshments .icon {
+    height: 34px;
+    background-position: center -1086px; }
+  .service.concierge .icon {
+    background-position: center -395px; }
+  .service.dry-cleaning .icon {
+    height: 34px;
+    background-position: center -547px; }
+  .service.express-room-service .icon {
+    background-position: center -159px; }
+  .service.event-planning-services .icon {
+    background-position: center -1015px; }
+  .service.full-service-catering .icon {
+    background-position: center -865px; }
+  .service.integrated-audio-visual-technology-support .icon {
+    background-position: center -940px; }
+  .service.on-site-fitness-center .icon {
+    background-position: center -790px; }
+  .service.restaurant-and-lounge .icon,
+  .service.group-dining-options .icon {
+    background-position: center -82px; }
+  .service.valet-parking .icon,
+  .service.event-parking .icon {
+    background-position: center -237px; }
+  .service.wi-fi .icon {
+    background-position: center 0; }
+
+/* additional accommodations */
+.additional-ucla-accommodations {
+  padding-bottom: 40px; }
+
+@media only screen and (min-width: 931px) {
+  .amenities .amenities-description,
+  .amenities .room-amenities {
+    float: left;
+    width: 35%; }
+  .amenities .services {
+    float: right;
+    width: 60%; } }
+
+/* ############ meeting-resources.scss ############ */
+.event-planning-resources .section-description {
+  padding-bottom: 42px; }
+
+.event-planning-resources .three-columns {
+  margin-bottom: 70px; }
+
+.event-planning-resources .left-column {
+  float: left; }
+
+.event-planning-resources .right-column {
+  float: left; }
+
+.event-planning-resources .middle-column {
+  float: left;
+  width: 30%;
+  margin: 0 3.3% 0 0; }
+
+.event-planning-resources .column .inner-wrapper {
+  padding: 0 48px; }
+
+.event-planning-resources .left-column .inner-wrapper {
+  padding-left: 0; }
+
+.event-planning-resources .right-column .inner-wrapper {
+  padding-right: 0; }
+
+.event-planning-resources .column h3, h3.event-planning-resources {
+  margin: 0 0 25px 0;
+  font-size: 18px;
+  line-height: 1.15;
+  color: #47718E;
+  font-family: "Proxima Nova Bold", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  text-transform: uppercase; }
+
+h3.event-planning-resources {
+  margin-bottom: 10px;
+  padding-bottom: 0px; }
+
+.event-planning-resources .column ul {
+  margin: 0;
+  padding: 0;
+  list-style-type: none; }
+
+.evp ul {
+  margin-bottom: 20px; }
+
+.event-planning-resources .column ul li {
+  border-bottom: 1px solid #8DA6B8; }
+
+.event-planning-resources .column ul li:first-child {
+  border-top: 1px solid #8DA6B8; }
+
+.event-planning-resources .column ul li a {
+  display: block;
+  padding: 25px 40px 25px 5px;
+  font-size: 16px;
+  line-height: 1.33;
+  letter-spacing: 0.05em;
+  color: #000;
+  font-family: "Proxima Nova Semibold", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  background: url("/wp-content/themes/luskin/library/images/list-download-link-arrow.png") no-repeat right center; }
+
+.event-planning-resources .column ul li a:hover,
+.event-planning-resources .column ul li a:focus {
+  color: #3284BF; }
+
+.event-planning-resources .column .button {
+  margin-top: 45px; }
+
+#table001 {
+  width: 1100px;
+  margin: 0 auto; }
+
+#main-content .lax-directions {
+  background: none;
+  min-height: 0;
+  padding: 0 !important;
+  position: relative; }
+  #main-content .lax-directions .lax-dir-wrapper {
+    left: 0;
+    margin: auto;
+    position: absolute;
+    overflow: hidden;
+    right: 0;
+    top: 0;
+    width: 100%; }
+    #main-content .lax-directions .lax-dir-wrapper .map-directions {
+      display: none;
+      margin: 0 auto;
+      position: static; }
+      #main-content .lax-directions .lax-dir-wrapper .map-directions.map-directions-tablet {
+        display: none; }
+        #main-content .lax-directions .lax-dir-wrapper .map-directions.map-directions-tablet.map-directions-tablet-landscape {
+          display: none; }
+      #main-content .lax-directions .lax-dir-wrapper .map-directions.map-directions-mobile {
+        display: none; }
+        #main-content .lax-directions .lax-dir-wrapper .map-directions.map-directions-mobile.map-directions-mobile-landscape {
+          display: none; }
+        #main-content .lax-directions .lax-dir-wrapper .map-directions.map-directions-mobile.map-directions-mobile-portrait {
+          display: block; }
+  #main-content .lax-directions .textbox {
+    max-width: 1180px;
+    position: relative;
+    margin: 0 auto; }
+  #main-content .lax-directions .directions-info-block {
+    background: #1C4D71;
+    color: #FFFFFF;
+    font-family: "Proxima Nova Regular", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 15px;
+    line-height: 1.5;
+    margin: 0;
+    padding: 20px;
+    position: static; }
+    #main-content .lax-directions .directions-info-block h3 {
+      font-family: "Proxima Nova Bold", "Helvetica Neue", Helvetica, Arial, sans-serif;
+      font-size: 25px;
+      letter-spacing: 0.05em;
+      line-height: 1.22;
+      margin: 0 0 15px 0;
+      text-transform: uppercase; }
+    #main-content .lax-directions .directions-info-block h5 {
+      font-family: "Proxima Nova Regular", "Helvetica Neue", Helvetica, Arial, sans-serif;
+      font-size: 15px;
+      letter-spacing: 0.05em;
+      line-height: 1.3;
+      margin: 0 0 3px 0;
+      text-transform: uppercase; }
+    #main-content .lax-directions .directions-info-block p {
+      color: #FFFFFF; }
+
+@media only screen and (orientation: portrait) {
+  #main-content .lax-directions .lax-dir-wrapper {
+    height: auto;
+    position: relative; }
+    #main-content .lax-directions .lax-dir-wrapper .map-directions {
+      display: none; }
+      #main-content .lax-directions .lax-dir-wrapper .map-directions.map-directions-tablet {
+        display: none; }
+        #main-content .lax-directions .lax-dir-wrapper .map-directions.map-directions-tablet.map-directions-tablet-landscape {
+          display: none; }
+      #main-content .lax-directions .lax-dir-wrapper .map-directions.map-directions-mobile {
+        display: none; }
+        #main-content .lax-directions .lax-dir-wrapper .map-directions.map-directions-mobile.map-directions-mobile-landscape {
+          display: none; }
+        #main-content .lax-directions .lax-dir-wrapper .map-directions.map-directions-mobile.map-directions-mobile-portrait {
+          display: block;
+          height: auto;
+          margin: 0 auto;
+          position: static;
+          width: 100%; } }
+
+@media only screen and (orientation: landscape) and (max-width: 735px) {
+  #main-content .lax-directions .lax-dir-wrapper {
+    height: auto;
+    position: relative; }
+    #main-content .lax-directions .lax-dir-wrapper .map-directions {
+      display: none; }
+      #main-content .lax-directions .lax-dir-wrapper .map-directions.map-directions-tablet {
+        display: none; }
+        #main-content .lax-directions .lax-dir-wrapper .map-directions.map-directions-tablet.map-directions-tablet-landscape {
+          display: none; }
+      #main-content .lax-directions .lax-dir-wrapper .map-directions.map-directions-mobile {
+        display: none; }
+        #main-content .lax-directions .lax-dir-wrapper .map-directions.map-directions-mobile.map-directions-mobile-landscape {
+          display: block;
+          height: auto;
+          margin: 0 auto;
+          position: static;
+          width: 100%; }
+        #main-content .lax-directions .lax-dir-wrapper .map-directions.map-directions-mobile.map-directions-mobile-portrait {
+          display: none; } }
+
+@media only screen and (min-width: 481px) {
+  #main-content .lax-directions .lax-dir-wrapper {
+    height: auto;
+    position: relative; }
+    #main-content .lax-directions .lax-dir-wrapper .map-directions {
+      display: none; }
+      #main-content .lax-directions .lax-dir-wrapper .map-directions.map-directions-tablet {
+        display: none; }
+        #main-content .lax-directions .lax-dir-wrapper .map-directions.map-directions-tablet.map-directions-tablet-landscape {
+          display: block;
+          height: auto;
+          width: 100%; }
+      #main-content .lax-directions .lax-dir-wrapper .map-directions.map-directions-mobile {
+        display: none; }
+        #main-content .lax-directions .lax-dir-wrapper .map-directions.map-directions-mobile.map-directions-mobile-landscape {
+          display: none; }
+        #main-content .lax-directions .lax-dir-wrapper .map-directions.map-directions-mobile.map-directions-mobile-portrait {
+          display: none; } }
+
+@media only screen and (min-width: 640px) {
+  #main-content .event-planning-resources .column a.button {
+    background-position-x: 105%;
+    padding: 10px 40px 10px 10px; }
+  #main-content .lax-directions .lax-dir-wrapper .map-directions {
+    display: none; }
+    #main-content .lax-directions .lax-dir-wrapper .map-directions.map-directions-tablet {
+      display: none; }
+      #main-content .lax-directions .lax-dir-wrapper .map-directions.map-directions-tablet.map-directions-tablet-landscape {
+        display: block;
+        height: auto;
+        width: 100%; }
+    #main-content .lax-directions .lax-dir-wrapper .map-directions.map-directions-mobile {
+      display: none; }
+      #main-content .lax-directions .lax-dir-wrapper .map-directions.map-directions-mobile.map-directions-mobile-landscape {
+        display: none; }
+      #main-content .lax-directions .lax-dir-wrapper .map-directions.map-directions-mobile.map-directions-mobile-portrait {
+        display: none; }
+  #main-content .lax-directions .lax-dir-wrapper .textbox {
+    position: absolute;
+    top: 0; }
+    #main-content .lax-directions .lax-dir-wrapper .textbox .directions-info-block {
+      left: 20px;
+      margin-top: 0;
+      padding: 15px;
+      position: absolute;
+      width: 230px; } }
+
+@media only screen and (max-width: 700px) {
+  #main-content .event-planning-resources {
+    padding: 0; }
+    #main-content .event-planning-resources .three-columns,
+    #main-content .event-planning-resources .bottom-30 {
+      margin-bottom: 0;
+      padding-bottom: 0; }
+    #main-content .event-planning-resources .column {
+      float: none;
+      margin-bottom: 1.5em;
+      width: 100%; }
+      #main-content .event-planning-resources .column .inner-wrapper {
+        padding: 0; }
+      #main-content .event-planning-resources .column .button {
+        margin-top: 0; }
+    #main-content .event-planning-resources .bottom-30 {
+      padding-bottom: 0 !important; }
+  #main-content .lax-directions .lax-dir-wrapper .directions-info-block {
+    position: static;
+    width: 98%;
+    margin: 5px auto; } }
+
+@media only screen and (min-width: 768px) {
+  #main-content .lax-directions .lax-dir-wrapper .map-directions {
+    display: none; }
+    #main-content .lax-directions .lax-dir-wrapper .map-directions.map-directions-tablet {
+      display: none; }
+      #main-content .lax-directions .lax-dir-wrapper .map-directions.map-directions-tablet.map-directions-tablet-landscape {
+        display: block;
+        height: auto;
+        width: 100%; }
+    #main-content .lax-directions .lax-dir-wrapper .map-directions.map-directions-mobile {
+      display: none; }
+      #main-content .lax-directions .lax-dir-wrapper .map-directions.map-directions-mobile.map-directions-mobile-landscape {
+        display: none; }
+      #main-content .lax-directions .lax-dir-wrapper .map-directions.map-directions-mobile.map-directions-mobile-portrait {
+        display: none; } }
+
+@media only screen and (min-width: 1030px) {
+  #main-content .lax-directions {
+    margin: 0 auto;
+    max-width: 1920px; }
+    #main-content .lax-directions .lax-dir-wrapper {
+      min-height: 450px; }
+      #main-content .lax-directions .lax-dir-wrapper .map-directions {
+        display: block;
+        height: auto;
+        margin-right: -990px;
+        position: absolute;
+        right: 50%;
+        width: auto; }
+        #main-content .lax-directions .lax-dir-wrapper .map-directions.map-directions-tablet {
+          display: none; }
+          #main-content .lax-directions .lax-dir-wrapper .map-directions.map-directions-tablet.map-directions-tablet-landscape {
+            display: none; }
+        #main-content .lax-directions .lax-dir-wrapper .map-directions.map-directions-mobile {
+          display: none; }
+          #main-content .lax-directions .lax-dir-wrapper .map-directions.map-directions-mobile.map-directions-mobile-landscape {
+            display: none; }
+          #main-content .lax-directions .lax-dir-wrapper .map-directions.map-directions-mobile.map-directions-mobile-portrait {
+            display: none; } }
+
+@media only screen and (min-width: 1180px) {
+  #main-content .lax-directions .lax-dir-wrapper .textbox {
+    max-width: 1180px;
+    position: relative;
+    margin: 0 auto; }
+    #main-content .lax-directions .lax-dir-wrapper .textbox .directions-info-block {
+      left: 20px;
+      margin-top: 0;
+      padding: 15px;
+      position: absolute;
+      width: 230px; } }

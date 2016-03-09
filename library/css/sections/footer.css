@@ -1,0 +1,176 @@
+/* ############ footer.scss ############ */
+#footer {
+  background: #292929;
+  font-size: 14px;
+  line-height: 1.625;
+  margin: 0 auto;
+  padding: 50px 0; }
+  #footer .container {
+    display: table;
+    margin: 0 auto;
+    max-width: 1180px;
+    padding: 0 20px;
+    position: relative; }
+    #footer .container .widget {
+      margin: 0; }
+  #footer a, #footer a:visited {
+    color: #CCCCCC;
+    outline: none;
+    text-decoration: none;
+    /* on hover */
+    /* on click */
+    /* mobile tap color */ }
+    #footer a:hover, #footer a:focus, #footer a:visited:hover, #footer a:visited:focus {
+      color: #3185C0; }
+    #footer a:active, #footer a:visited:active {
+      color: #A2A2A2; }
+    #footer a:link, #footer a:visited:link {
+      /*
+      this highlights links on iPhones/iPads.
+      so it basically works like the :hover selector
+      for mobile devices.
+      */
+      -webkit-tap-highlight-color: rgba(0, 0, 0, 0.3); }
+  #footer .footer-block {
+    display: none; }
+  #footer .gmaps-link {
+    text-decoration: underline !important; }
+  #footer .contact-option {
+    position: relative;
+    display: block;
+    padding-left: 23px; }
+    #footer .contact-option:before {
+      color: #565656;
+      display: block;
+      font-family: "Proxima Nova Bold", "Helvetica Neue", Helvetica, Arial, sans-serif;
+      font-size: 16px;
+      left: 0;
+      line-height: 1;
+      position: absolute;
+      top: 2px; }
+  #footer .phone:before {
+    content: "p";
+    top: -1px; }
+  #footer .fax:before {
+    content: "f"; }
+  #footer .email:before {
+    content: "e"; }
+  #footer .widget_nav_menu {
+    padding-top: 5px;
+    font-family: "Proxima Nova Semibold", "Helvetica Neue", Helvetica, Arial, sans-serif; }
+  #footer .follow-link {
+    background: url("/wp-content/themes/luskin/library/images/footer-sprite-151027.png") no-repeat 0 0;
+    display: inline-block;
+    height: 30px;
+    line-height: 31px;
+    margin-bottom: 2px;
+    margin-right: 8px;
+    width: 31px; }
+  #footer .fb {
+    width: 20px;
+    background-position: -20px 0; }
+  #footer .tw {
+    width: 29px;
+    background-position: -60px 0; }
+  #footer .ln {
+    width: 28px;
+    background-position: -110px 0; }
+  #footer .pin {
+    width: 28px;
+    background-position: -158px 0; }
+  #footer .insta {
+    background-position: -206px 0; }
+  #footer .yt {
+    background-position: -260px 0; }
+  #footer .hospitality-group {
+    clear: both;
+    color: #A2A2A2;
+    display: block;
+    font-family: "Proxima Nova Regular", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    letter-spacing: 1px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 30px;
+    text-align: center; }
+    #footer .hospitality-group ul {
+      list-style: none;
+      padding: 0;
+      margin: 0; }
+      #footer .hospitality-group ul li {
+        display: inline;
+        padding: 0;
+        margin: 0; }
+        #footer .hospitality-group ul li:before {
+          content: "| "; }
+        #footer .hospitality-group ul li:first-child:before {
+          content: ""; }
+        #footer .hospitality-group ul li a {
+          padding: 0 5px; }
+    #footer .hospitality-group a, #footer .hospitality-group a:visited {
+      color: #A2A2A2;
+      outline: none;
+      text-decoration: none;
+      /* on hover */
+      /* on click */
+      /* mobile tap color */ }
+      #footer .hospitality-group a:hover, #footer .hospitality-group a:focus, #footer .hospitality-group a:visited:hover, #footer .hospitality-group a:visited:focus {
+        color: #3185C0; }
+      #footer .hospitality-group a:active, #footer .hospitality-group a:visited:active {
+        color: #A2A2A2; }
+      #footer .hospitality-group a:link, #footer .hospitality-group a:visited:link {
+        /*
+      this highlights links on iPhones/iPads.
+      so it basically works like the :hover selector
+      for mobile devices.
+      */
+        -webkit-tap-highlight-color: rgba(0, 0, 0, 0.3); }
+
+@media only screen and (min-width: 640px) {
+  #footer .container .footer-block {
+    color: #A2A2A2;
+    display: table-cell;
+    float: left;
+    line-height: 1.42;
+    margin-right: 0;
+    margin: 0 auto;
+    text-align: left;
+    vertical-align: top;
+    width: 33.3333333333%; }
+    #footer .container .footer-block h5 {
+      color: #CCCCCC;
+      font-family: "Proxima Nova Semibold", "Helvetica Neue", Helvetica, Arial, sans-serif;
+      font-size: 14px;
+      margin: 14px 0;
+      text-transform: capitalize; }
+  #footer .container #footer-logo {
+    display: none; }
+  #footer .container #menu-footer_links {
+    margin: 20px 0 0 !important; }
+    #footer .container #menu-footer_links a {
+      font-family: "Proxima Nova Semibold", "Helvetica Neue", Helvetica, Arial, sans-serif;
+      font-size: 14px;
+      font-weight: bold; }
+  #footer .container #sidebar-footer-forth {
+    text-align: center;
+    width: 100%; }
+  #footer .container.sub-footer {
+    margin-top: 50px; } }
+
+@media only screen and (min-width: 768px) {
+  #footer .container #sidebar-footer-first {
+    width: 21.6666666667%; }
+  #footer .container #sidebar-footer-second {
+    width: 21.6666666667%; }
+  #footer .container #sidebar-footer-third {
+    width: 21.6666666667%; }
+  #footer .container #sidebar-footer-forth {
+    text-align: left;
+    width: 25%; } }
+
+@media only screen and (min-width: 1030px) {
+  #footer .container #footer-logo {
+    display: table-cell;
+    width: 10%;
+    margin-top: 8px; }
+    #footer .container #footer-logo img {
+      max-width: 80%; } }

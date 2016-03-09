@@ -3,24 +3,26 @@
  * Template Name: Flip Book
  */
 ?>
-<?php get_header('fb'); ?>
+<?php get_header(); ?>
 
-<!-- main content -->
 <div id="main-content" role="main">
-	<?php if (have_posts()) : ?>
-		<?php while (have_posts()) : the_post(); ?>
 
-		<div class="clearfix">
-		<?php
-			$flipbook = get_field('content');
-				echo $flipbook;
-		?>
-		</div>
-		<div class="container clearfix"><br><br>
+    <?php if (have_posts()) : ?>
 
-		<?php endwhile; ?>
-	<?php endif; ?>
-</div>
-<!-- /main content -->
+        <?php while (have_posts()) : the_post(); ?>
+
+        <div <?php post_class('container') ?> id="page-<?php the_ID(); ?>">
+
+            <div class="entry-content">
+                <?php $flipbook = get_field('content'); echo $flipbook; ?>
+            </div>
+
+        </div>
+
+        <?php endwhile; ?>
+
+    <?php endif; ?>
+
+</div><!-- /main content -->
 
 <?php get_footer(); ?>

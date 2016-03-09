@@ -1,0 +1,586 @@
+/* ############ page.scss ############ */
+#page-310 {
+  margin-top: 55px; }
+
+.hero-image-container, .full-width-gallery {
+  margin-bottom: 30px; }
+
+.hero-image-container img {
+  display: block;
+  margin: 0 auto;
+  width: 100%;
+  max-width: 100%; }
+
+/* quick facts */
+.quick-facts {
+  position: relative;
+  margin-top: 25px;
+  margin-bottom: 60px;
+  border-top: 1px solid #8DA6B8;
+  padding-top: 40px; }
+
+.quick-facts-description {
+  font-family: "Proxima Nova Regular", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 15px;
+  line-height: 1.5;
+  margin-bottom: 25px;
+  width: 100%; }
+
+.quick-facts-description h3 {
+  margin: 40px 0 20px 0;
+  font-size: 25px;
+  letter-spacing: 0.05em;
+  line-height: 1;
+  color: #47718E;
+  font-family: "Proxima Nova Semibold", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  text-transform: uppercase;
+  text-align: center; }
+
+.quick-facts-button {
+  margin-top: 30px; }
+
+.generic-button {
+  float: left;
+  margin-right: 30px; }
+
+/* call out */
+.callout {
+  display: inline-block;
+  width: inherit;
+  margin: 0px;
+  padding: 20px 0px 30px 0px;
+  border-top: 1px solid #8DA6B8;
+  font-family: 'Adobe Caslon Pro', serif;
+  font-style: italic;
+  font-size: 200%;
+  line-height: 1.75em;
+  color: #8da6b8;
+  text-align: center; }
+
+.text-overlay {
+  bottom: -.5em;
+  color: rgba(255, 255, 255, 0.85);
+  font-family: "Proxima Nova Semibold", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 1.75em;
+  left: 0.7em;
+  line-height: 1.6em;
+  position: absolute;
+  text-transform: uppercase; }
+
+@media only screen and (min-width: 481px) {
+  .text-overlay {
+    font-size: 2.5em;
+    left: 0.5em; } }
+
+@media only screen and (min-width: 640px) {
+  .text-overlay {
+    font-size: 3.5em;
+    left: 0.3em; } }
+
+@media only screen and (min-width: 768px) {
+  .text-overlay {
+    font-size: 4.25em;
+    left: 0.25em; } }
+
+@media only screen and (min-width: 1030px) {
+  .text-overlay {
+    font-size: 5em; } }
+
+@media only screen and (min-width: 1240px) {
+  .text-overlay {
+    font-size: 6em;
+    left: 0.15em; } }
+
+table.Basic-Table {
+  border-collapse: collapse;
+  border-color: #000000;
+  border-style: solid;
+  border-width: 1px;
+  margin: 4px auto; }
+
+td.Basic-Table {
+  border: 1px solid #666;
+  padding: 8px;
+  vertical-align: top; }
+
+p.Basic-Paragraph {
+  color: #000000;
+  font-family: "Minion Pro", serif;
+  font-size: 14px;
+  line-height: 22px;
+  margin: 0;
+  orphans: 1;
+  page-break-after: auto;
+  page-break-before: auto;
+  text-align: left;
+  text-decoration: none;
+  text-indent: 0;
+  text-transform: none;
+  widows: 1; }
+
+p.Table-body-copy {
+  color: #000000;
+  font-family: "Proxima Nova Regular", sans-serif;
+  font-size: 14px;
+  font-style: normal;
+  font-variant: normal;
+  line-height: 22px;
+  margin: 0;
+  orphans: 1;
+  page-break-after: auto;
+  page-break-before: auto;
+  text-align: left;
+  text-decoration: none;
+  text-indent: 0;
+  text-transform: none;
+  widows: 1; }
+
+p.Table-headings {
+  color: #FFF;
+  font-family: "Proxima Nova Regular", sans-serif;
+  font-size: 14px;
+  font-style: normal;
+  font-variant: normal;
+  line-height: 22px;
+  margin: 0;
+  orphans: 1;
+  page-break-after: auto;
+  page-break-before: auto;
+  text-align: center;
+  text-decoration: none;
+  text-indent: 0;
+  text-transform: uppercase;
+  widows: 1; }
+
+p.Table-parenthetical-text {
+  color: #FFFFFF;
+  font-family: "Proxima Nova Regular", sans-serif;
+  font-size: 16px;
+  font-style: italic;
+  font-variant: normal;
+  line-height: 1.286;
+  margin: 0;
+  orphans: 1;
+  page-break-after: auto;
+  page-break-before: auto;
+  text-align: center;
+  text-decoration: none;
+  text-indent: 0;
+  text-transform: none;
+  widows: 1; }
+
+p.table-level-heading {
+  color: #000000;
+  font-family: "Proxima Nova Semibold", sans-serif;
+  font-size: 16px;
+  font-style: italic;
+  font-variant: normal;
+  line-height: 22px;
+  margin: 0;
+  orphans: 1;
+  page-break-after: auto;
+  page-break-before: auto;
+  text-align: left;
+  text-decoration: none;
+  text-indent: 0;
+  text-transform: none;
+  widows: 1; }
+
+table.TableOverride-1 {
+  border-collapse: collapse; }
+
+td.CellOverride-1, td.CellOverride-2, td.CellOverride-3, td.CellOverride-4 {
+  background: #1C4D71; }
+
+td.CellOverride-1 {
+  padding-left: 10px;
+  border-bottom-color: #000000;
+  border-bottom-style: solid;
+  border-bottom-width: 1px;
+  border-left-color: #4c4c4c;
+  border-left-style: solid;
+  border-left-width: 0px;
+  border-right-color: #000000;
+  border-right-style: solid;
+  border-right-width: 0px;
+  border-top-color: #4c4c4c;
+  border-top-style: solid;
+  border-top-width: 0px;
+  vertical-align: middle; }
+
+td.CellOverride-2 {
+  border-bottom-color: #000000;
+  border-bottom-style: solid;
+  border-bottom-width: 1px;
+  border-left-color: #000000;
+  border-left-style: solid;
+  border-left-width: 0px;
+  border-right-color: #000000;
+  border-right-style: solid;
+  border-right-width: 0px;
+  border-top-color: #4c4c4c;
+  border-top-style: solid;
+  border-top-width: 0px;
+  vertical-align: middle; }
+
+td.CellOverride-3 {
+  border-bottom-color: #000000;
+  border-bottom-style: solid;
+  border-bottom-width: 1px;
+  border-left-color: #000000;
+  border-left-style: solid;
+  border-left-width: 0px;
+  border-right-color: #4c4c4c;
+  border-right-style: solid;
+  border-right-width: 0px;
+  border-top-color: #4c4c4c;
+  border-top-style: solid;
+  border-top-width: 0px;
+  vertical-align: middle; }
+
+td.CellOverride-4 {
+  border-bottom-color: #000000;
+  border-bottom-style: solid;
+  border-bottom-width: 1px;
+  border-left-color: #4c4c4c;
+  border-left-style: solid;
+  border-left-width: 0px;
+  border-right-color: #4c4c4c;
+  border-right-style: solid;
+  border-right-width: 0px;
+  border-top-color: #4c4c4c;
+  border-top-style: solid;
+  border-top-width: 0px;
+  vertical-align: middle; }
+
+td.CellOverride-5 {
+  padding-left: 10px;
+  background-color: #e5ebf5;
+  border-bottom-color: #000000;
+  border-bottom-style: solid;
+  border-bottom-width: 1px;
+  border-left-color: #4c4c4c;
+  border-left-style: solid;
+  border-left-width: 0px;
+  border-right-color: #000000;
+  border-right-style: solid;
+  border-right-width: 0px;
+  border-top-color: #000000;
+  border-top-style: solid;
+  border-top-width: 1px;
+  vertical-align: middle; }
+
+td.CellOverride-6 {
+  background-color: #e5ebf5;
+  border-bottom-color: #000000;
+  border-bottom-style: solid;
+  border-bottom-width: 1px;
+  border-left-color: #000000;
+  border-left-style: solid;
+  border-left-width: 0px;
+  border-right-color: #000000;
+  border-right-style: solid;
+  border-right-width: 0px;
+  border-top-color: #000000;
+  border-top-style: solid;
+  border-top-width: 1px;
+  vertical-align: middle; }
+
+td.CellOverride-7 {
+  background-color: #e5ebf5;
+  border-bottom-color: #000000;
+  border-bottom-style: solid;
+  border-bottom-width: 1px;
+  border-left-color: #000000;
+  border-left-style: solid;
+  border-left-width: 0px;
+  border-right-color: #4c4c4c;
+  border-right-style: solid;
+  border-right-width: 0px;
+  border-top-color: #000000;
+  border-top-style: solid;
+  border-top-width: 1px;
+  vertical-align: middle; }
+
+td.CellOverride-8 {
+  background-color: #e5ebf5;
+  border-bottom-color: #000000;
+  border-bottom-style: solid;
+  border-bottom-width: 1px;
+  border-left-color: #4c4c4c;
+  border-left-style: solid;
+  border-left-width: 0px;
+  border-right-color: #4c4c4c;
+  border-right-style: solid;
+  border-right-width: 0px;
+  border-top-color: #000000;
+  border-top-style: solid;
+  border-top-width: 1px;
+  vertical-align: middle; }
+
+td.CellOverride-9 {
+  padding-left: 10px;
+  border-bottom-color: #000000;
+  border-bottom-style: solid;
+  border-bottom-width: 1px;
+  border-left-color: #262626;
+  border-left-style: solid;
+  border-left-width: 0px;
+  border-right-color: #262626;
+  border-right-style: solid;
+  border-right-width: 0px;
+  border-top-color: #262626;
+  border-top-style: solid;
+  border-top-width: 0px;
+  vertical-align: middle; }
+
+td.CellOverride-10 {
+  padding-left: 10px;
+  border-bottom-color: #000000;
+  border-bottom-style: solid;
+  border-bottom-width: 1px;
+  border-left-color: #262626;
+  border-left-style: solid;
+  border-left-width: 0px;
+  border-right-color: #262626;
+  border-right-style: solid;
+  border-right-width: 0px;
+  border-top-color: #000000;
+  border-top-style: solid;
+  border-top-width: 1px;
+  vertical-align: middle; }
+
+td.CellOverride-11 {
+  padding-left: 10px;
+  border-bottom-color: #000000;
+  border-bottom-style: solid;
+  border-bottom-width: 1px;
+  border-left-color: #125187;
+  border-left-style: solid;
+  border-left-width: 0px;
+  border-right-color: #125187;
+  border-right-style: solid;
+  border-right-width: 0px;
+  border-top-color: #000000;
+  border-top-style: solid;
+  border-top-width: 1px;
+  vertical-align: middle; }
+
+td.CellOverride-12 {
+  padding-left: 10px;
+  background-color: #e1e7f4;
+  border-bottom-color: #262626;
+  border-bottom-style: solid;
+  border-bottom-width: 1px;
+  border-left-color: #4c4c4c;
+  border-left-style: solid;
+  border-left-width: 0px;
+  border-right-color: #000000;
+  border-right-style: solid;
+  border-right-width: 0px;
+  border-top-color: #000000;
+  border-top-style: solid;
+  border-top-width: 1px;
+  vertical-align: middle; }
+
+td.CellOverride-13 {
+  background-color: #e1e7f4;
+  border-bottom-color: #262626;
+  border-bottom-style: solid;
+  border-bottom-width: 1px;
+  border-left-color: #000000;
+  border-left-style: solid;
+  border-left-width: 0px;
+  border-right-color: #000000;
+  border-right-style: solid;
+  border-right-width: 0px;
+  border-top-color: #000000;
+  border-top-style: solid;
+  border-top-width: 1px;
+  vertical-align: middle; }
+
+td.CellOverride-14 {
+  background-color: #e1e7f4;
+  border-bottom-color: #262626;
+  border-bottom-style: solid;
+  border-bottom-width: 1px;
+  border-left-color: #000000;
+  border-left-style: solid;
+  border-left-width: 0px;
+  border-right-color: #4c4c4c;
+  border-right-style: solid;
+  border-right-width: 0px;
+  border-top-color: #000000;
+  border-top-style: solid;
+  border-top-width: 1px;
+  vertical-align: middle; }
+
+td.CellOverride-15 {
+  background-color: #e1e7f4;
+  border-bottom-color: #262626;
+  border-bottom-style: solid;
+  border-bottom-width: 1px;
+  border-left-color: #4c4c4c;
+  border-left-style: solid;
+  border-left-width: 0px;
+  border-right-color: #4c4c4c;
+  border-right-style: solid;
+  border-right-width: 0px;
+  border-top-color: #000000;
+  border-top-style: solid;
+  border-top-width: 1px;
+  vertical-align: middle; }
+
+td.CellOverride-16 {
+  padding-left: 10px;
+  border-bottom-color: #262626;
+  border-bottom-style: solid;
+  border-bottom-width: 1px;
+  border-left-color: #125187;
+  border-left-style: solid;
+  border-left-width: 0px;
+  border-right-color: #125187;
+  border-right-style: solid;
+  border-right-width: 0px;
+  border-top-color: #000000;
+  border-top-style: solid;
+  border-top-width: 1px;
+  vertical-align: middle; }
+
+p.ParaOverride-1 {
+  text-align: left; }
+
+p.ParaOverride-2 {
+  text-align: center; }
+
+span.CharOverride-1 {
+  font-size: 14px;
+  font-style: italic;
+  font-weight: normal; }
+
+td._idGenCellOverride-1 {
+  border-top-color: #000000;
+  border-top-style: solid;
+  border-top-width: 1px; }
+
+col._idGenTableRowColumn-1 {
+  width: 28.5%; }
+
+col._idGenTableRowColumn-2 {
+  width: 14.25%; }
+
+col._idGenTableRowColumn-3 {
+  width: 14.25%; }
+
+col._idGenTableRowColumn-4 {
+  width: 14.25%; }
+
+tr._idGenTableRowColumn-5 {
+  height: 80px;
+  min-height: 80px; }
+
+tr._idGenTableRowColumn-6 {
+  min-height: 18px; }
+
+tr._idGenTableRowColumn-7 {
+  height: 16px; }
+
+td.CellOverride-4 {
+  width: 14.25%; }
+
+#press-release-table {
+  width: 100%;
+  padding: 0; }
+
+tr.releases.first {
+  border-top: 1px solid #CCCCCC; }
+
+tr.releases {
+  border-bottom: 1px solid #CCCCCC;
+  height: 30px;
+  width: 100%; }
+
+tr.releases, tr.releases td {
+  margin-left: 0;
+  padding: 5px 0; }
+
+.releases td {
+  vertical-align: middle; }
+
+.releases td.date, .releases td.title {
+  font-size: 18px;
+  text-transform: uppercase;
+  font-family: "Proxima Nova Regular", "Helvetica Neue", Helvetica, Arial, sans-serif; }
+
+.releases td.date {
+  width: 10%; }
+
+.releases td.title {
+  padding-left: 2%;
+  width: 78%; }
+
+.releases td.download {
+  text-align: right; }
+
+.releases td.title a {
+  text-decoration: none; }
+
+/* ############ press-release-index.scss ############ */
+#main-content #container {
+  position: relative;
+  font-size: 1.0em; }
+
+#main-content .container.two-columns .column.left-column, #main-content .container.two-columns .column.right-column, #main-content .container-1024.two-columns .column.left-column, #main-content .container-1024.two-columns .column.right-column {
+  float: none;
+  margin: 0;
+  width: 100%; }
+
+#main-content .container.two-columns .column.right-column, #main-content .container-1024.two-columns .column.right-column {
+  float: none;
+  margin: 3em 0 0; }
+  #main-content .container.two-columns .column.right-column h2, #main-content .container-1024.two-columns .column.right-column h2 {
+    margin-bottom: 23px; }
+
+#main-content .container.two-columns .column h1, #main-content .container-1024.two-columns .column h1 {
+  font-size: 1.75em;
+  line-height: 1em;
+  margin: 0 0 20px; }
+
+#main-content .media-contact {
+  margin: 50px 0 20px 0; }
+  #main-content .media-contact a.luskin-social {
+    display: inline-block;
+    margin: 0px 5px 0 0;
+    min-height: 35px;
+    height: 35px;
+    min-width: 25px;
+    width: 25px;
+    background: url("/wp-content/themes/luskin/library/images/cg9-social-icons.png") no-repeat;
+    line-height: 40px; }
+    #main-content .media-contact a.luskin-social.fb {
+      background-position: -20px -14px; }
+    #main-content .media-contact a.luskin-social.tw {
+      background-position: -92px -13px; }
+    #main-content .media-contact a.luskin-social.in {
+      background-position: -157px -12px; }
+  #main-content .media-contact .fn {
+    font-weight: bold;
+    font-size: 18px; }
+  #main-content .media-contact .ken {
+    line-height: 40px;
+    font-size: 18px;
+    font-family: "Proxima Nova Light", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    color: #999999;
+    vertical-align: top; }
+
+#main-content .press-release-list {
+  margin-top: 2em !important; }
+
+@media only screen and (min-width: 640px) {
+  #main-content .container.two-columns .column.left-column, #main-content .container.two-columns .column.right-column, #main-content .container-1024.two-columns .column.left-column, #main-content .container-1024.two-columns .column.right-column {
+    float: left;
+    margin: 0;
+    width: 47%; }
+  #main-content .container.two-columns .column.right-column, #main-content .container-1024.two-columns .column.right-column {
+    float: right;
+    margin: 0; } }

@@ -1,14 +1,94 @@
 /******************************************************************
-Site Name:
-Author:
-
 Stylesheet: Desktop Stylsheet
 
 This is the desktop size. It's larger than an iPad so it will only
 be seen on the Desktop.
-
 ******************************************************************/
 
-.wrap {
-  width: 1040px;
+/******************************************************************
+ * LAYOUT & GRID STYLES
+ ******************************************************************/
+
+#main-content {
+
+  .container, .container-1024 {
+
+    &.page-heading,
+    &.two-columns {
+
+      h1 {
+        font-size: 2.75em;
+        margin: 40px 0 20px 0;
+        line-height: 1.25em;
+      }
+
+    }
+
+  }
+
 }
+
+/******************************************************************
+ * MEDIA OVERRIDE STYLES
+ ******************************************************************/
+
+// @media screen and (max-width: 1180px) {
+//   // .container {
+//   //   width: auto;
+//   //   padding-left: 20px;
+//   //   padding-right: 20px;
+//   // }
+
+//   #slideshow-container .action-buttons {
+//     left: 10px;
+//     margin-left: 0;
+//   }
+
+//   .home-slideshow {
+//     .slide-description {
+//       left: 10px;
+//       margin-left: 0;
+//     }
+
+//     .slide-overlay {
+//       right: 10px;
+//       margin-right: 0;
+//     }
+//   }
+
+//   #slideshow-container .bx-controls {
+//     right: 10px;
+//     margin-right: 0;
+//   }
+
+//   .quick-facts .button {
+//     right: 20px;
+//   }
+
+//   .page-heading h1 {
+//     margin: 40px 0 20px 0;
+//     padding: 0;
+//     font-size: 2.25em;
+//     font-family: $semibold-sans-serif;
+//     text-transform: uppercase;
+//     color: #47718E;
+//     line-height: 1.25em;
+//   }
+
+
+
+//   .explore-title {
+//     position: absolute;
+//     bottom: 18px;
+//     left: 0;
+//     font-size: 3em;
+//     min-height: 450px;
+//     min-width: 100%;
+//     letter-spacing: .05em;
+//   }
+
+// }
+
+// @media screen and (max-width: 1100px) {
+
+// }

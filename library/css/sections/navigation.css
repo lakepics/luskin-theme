@@ -1,0 +1,210 @@
+/* ############ navigation.scss ############ */
+.mobile-navigation {
+  display: none;
+  width: 0;
+  background: #292929;
+  height: 100%;
+  left: 0;
+  overflow: scroll !important;
+  max-width: 300px;
+  position: fixed;
+  top: 0;
+  width: 300px;
+  z-index: 20000;
+  box-shadow: inset -10px 0 10px -10px #000000; }
+  .mobile-navigation .nav-menu {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    width: 100%; }
+    .mobile-navigation .nav-menu li {
+      display: inline-block;
+      position: relative;
+      width: 100%; }
+      .mobile-navigation .nav-menu li a, .mobile-navigation .nav-menu li a:visited {
+        border-bottom: 1px solid #3C3C3C;
+        color: #FFFFFF;
+        display: block;
+        font-family: "Proxima Nova Semibold", "Helvetica Neue", Helvetica, Arial, sans-serif;
+        font-size: 14px;
+        line-height: 20px;
+        min-height: 20px;
+        outline: none;
+        padding: 15px 0 15px 20px;
+        text-decoration: none;
+        text-transform: uppercase;
+        width: 100%;
+        /* on hover */
+        /* on click */
+        /* mobile tap color */ }
+        .mobile-navigation .nav-menu li a:hover, .mobile-navigation .nav-menu li a:focus, .mobile-navigation .nav-menu li a:visited:hover, .mobile-navigation .nav-menu li a:visited:focus {
+          color: #FFFFFF;
+          background-color: rgba(66, 66, 66, 0.75); }
+        .mobile-navigation .nav-menu li a:active, .mobile-navigation .nav-menu li a:visited:active {
+          color: #FFFFFF; }
+        .mobile-navigation .nav-menu li a:link, .mobile-navigation .nav-menu li a:visited:link {
+          /*
+          this highlights links on iPhones/iPads.
+          so it basically works like the :hover selector
+          for mobile devices.
+          */
+          -webkit-tap-highlight-color: rgba(0, 0, 0, 0.3); }
+      .mobile-navigation .nav-menu li .sub-menu {
+        background-color: rgba(25, 25, 25, 0.75);
+        border-top: 0;
+        clip: auto;
+        height: auto;
+        margin: 0;
+        overflow: visible;
+        position: static;
+        width: auto; }
+        .mobile-navigation .nav-menu li .sub-menu li {
+          width: 100%; }
+          .mobile-navigation .nav-menu li .sub-menu li a, .mobile-navigation .nav-menu li .sub-menu li a:visited {
+            text-transform: capitalize;
+            /* on hover */ }
+            .mobile-navigation .nav-menu li .sub-menu li a:hover, .mobile-navigation .nav-menu li .sub-menu li a:focus, .mobile-navigation .nav-menu li .sub-menu li a:visited:hover, .mobile-navigation .nav-menu li .sub-menu li a:visited:focus {
+              background-color: rgba(55, 55, 55, 0.75); }
+  .mobile-navigation .mobile-room-reservation {
+    border-bottom: 1px solid #3C3C3C;
+    padding: 15px 0 15px 20px;
+    white-space: nowrap; }
+    .mobile-navigation .mobile-room-reservation .mobile-room-label {
+      color: #FFFFFF;
+      display: block;
+      font-family: "Proxima Nova Bold", "Helvetica Neue", Helvetica, Arial, sans-serif;
+      font-size: 14px;
+      margin-bottom: 3px;
+      text-transform: uppercase; }
+    .mobile-navigation .mobile-room-reservation .mobile-room-phone {
+      display: block;
+      font-family: "Proxima Nova Semibold", "Helvetica Neue", Helvetica, Arial, sans-serif;
+      font-size: 14px; }
+      .mobile-navigation .mobile-room-reservation .mobile-room-phone:before {
+        color: #565656;
+        content: "p ";
+        font-family: "Proxima Nova Bold", "Helvetica Neue", Helvetica, Arial, sans-serif;
+        vertical-align: 2px; }
+
+#navbar #toggle-menu {
+  background: url("/wp-content/themes/luskin/library/images/mobile-menu-button.png") no-repeat center center;
+  cursor: pointer;
+  display: block;
+  height: 26px;
+  left: 30px;
+  position: absolute;
+  text-indent: -99999em;
+  top: 18px;
+  width: 31px; }
+
+#navbar #logo-lockup {
+  margin: 0 auto;
+  width: 258px; }
+  #navbar #logo-lockup #logo {
+    background: url("/wp-content/themes/luskin/library/images/rml-300-lcc.png") no-repeat center center !important;
+    display: inline-block;
+    height: 50px;
+    margin-left: 0;
+    margin-top: 5px;
+    max-width: none;
+    overflow: hidden;
+    width: 258px; }
+    #navbar #logo-lockup #logo img {
+      display: none; }
+  #navbar #logo-lockup #main-navigation {
+    display: none; }
+
+@media only screen and (min-width: 1030px) {
+  .mobile-navigation {
+    display: none; }
+  #navbar {
+    height: 125px; }
+    #navbar #toggle-menu {
+      display: none; }
+    #navbar #logo-lockup {
+      width: 100%; }
+      #navbar #logo-lockup #logo {
+        background: none !important;
+        height: 95px;
+        margin-top: 15px;
+        width: 300px;
+        vertical-align: text-top; }
+        #navbar #logo-lockup #logo img {
+          display: inline-block; }
+    #navbar #site-navigation {
+      display: inline-block;
+      float: right; }
+      #navbar #site-navigation .nav-menu,
+      #navbar #site-navigation #main-navigation {
+        display: block; }
+        #navbar #site-navigation .nav-menu li,
+        #navbar #site-navigation #main-navigation li {
+          display: inline-block;
+          position: relative; }
+          #navbar #site-navigation .nav-menu li:hover a, #navbar #site-navigation .nav-menu li:focus a,
+          #navbar #site-navigation #main-navigation li:hover a,
+          #navbar #site-navigation #main-navigation li:focus a {
+            color: #CCCCCC; }
+            #navbar #site-navigation .nav-menu li:hover a:hover, #navbar #site-navigation .nav-menu li:hover a:focus, #navbar #site-navigation .nav-menu li:focus a:hover, #navbar #site-navigation .nav-menu li:focus a:focus,
+            #navbar #site-navigation #main-navigation li:hover a:hover,
+            #navbar #site-navigation #main-navigation li:hover a:focus,
+            #navbar #site-navigation #main-navigation li:focus a:hover,
+            #navbar #site-navigation #main-navigation li:focus a:focus {
+              color: #CCCCCC; }
+          #navbar #site-navigation .nav-menu li:hover ul, #navbar #site-navigation .nav-menu li:focus ul,
+          #navbar #site-navigation #main-navigation li:hover ul,
+          #navbar #site-navigation #main-navigation li:focus ul {
+            clip: inherit;
+            display: block;
+            height: inherit;
+            overflow: inherit;
+            width: inherit; }
+          #navbar #site-navigation .nav-menu li a,
+          #navbar #site-navigation #main-navigation li a {
+            font-family: "Proxima Nova Semibold", "Helvetica Neue", Helvetica, Arial, sans-serif;
+            font-size: 19px;
+            font-weight: bold;
+            color: #FFFFFF;
+            display: block;
+            line-height: 125px;
+            margin: 0 15px;
+            padding: 0;
+            text-decoration: none; }
+            #navbar #site-navigation .nav-menu li a:hover, #navbar #site-navigation .nav-menu li a:focus,
+            #navbar #site-navigation #main-navigation li a:hover,
+            #navbar #site-navigation #main-navigation li a:focus {
+              color: #FFFFFF; }
+          #navbar #site-navigation .nav-menu li .sub-menu,
+          #navbar #site-navigation #main-navigation li .sub-menu {
+            background-color: rgba(28, 77, 113, 0.75);
+            border-top: 7px solid #FFFFFF;
+            display: none;
+            left: 0;
+            margin: 0;
+            overflow: hidden;
+            padding: 0;
+            position: absolute;
+            top: 125px; }
+            #navbar #site-navigation .nav-menu li .sub-menu li,
+            #navbar #site-navigation #main-navigation li .sub-menu li {
+              display: block; }
+              #navbar #site-navigation .nav-menu li .sub-menu li a, #navbar #site-navigation .nav-menu li .sub-menu li a:visited,
+              #navbar #site-navigation #main-navigation li .sub-menu li a,
+              #navbar #site-navigation #main-navigation li .sub-menu li a:visited {
+                color: #FFFFFF;
+                display: block;
+                font-family: "Proxima Nova Regular", "Helvetica Neue", Helvetica, Arial, sans-serif;
+                font-size: 17px;
+                line-height: 20px;
+                margin: 0;
+                min-height: 0px;
+                padding: 20px;
+                min-width: 250px; }
+                #navbar #site-navigation .nav-menu li .sub-menu li a:hover, #navbar #site-navigation .nav-menu li .sub-menu li a:focus, #navbar #site-navigation .nav-menu li .sub-menu li a:visited:hover, #navbar #site-navigation .nav-menu li .sub-menu li a:visited:focus,
+                #navbar #site-navigation #main-navigation li .sub-menu li a:hover,
+                #navbar #site-navigation #main-navigation li .sub-menu li a:focus,
+                #navbar #site-navigation #main-navigation li .sub-menu li a:visited:hover,
+                #navbar #site-navigation #main-navigation li .sub-menu li a:visited:focus {
+                  color: #FFFFFF;
+                  display: block;
+                  background-color: rgba(50, 132, 191, 0.85); } }

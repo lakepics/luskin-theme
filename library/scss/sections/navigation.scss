@@ -1,0 +1,336 @@
+// variables
+@import "../partials/variables";
+
+/* ############ navigation.scss ############ */
+
+// styles for 0up
+
+.mobile-navigation {
+  display: none;
+  width: 0;
+  background: $foot-text-color-bg;
+  height: 100%;
+  left: 0;
+  overflow: scroll !important;
+  max-width: 300px;
+  position: fixed;
+  top: 0;
+  width: 300px;
+  z-index: 20000;
+  box-shadow: inset -10px 0 10px -10px #000000;
+
+  .logo-ucla-mobile {
+
+  }
+
+  .nav-menu {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+
+    li {
+      display: inline-block;
+      position: relative;
+      width: 100%;
+
+      a, a:visited {
+        border-bottom: 1px solid $mobile-border;
+        color: $nav-link-color;
+        display: block;
+        font-family: $semibold-sans-serif;
+        font-size: 14px;
+        line-height: 20px;
+        min-height: 20px;
+        outline: none;
+        padding: 15px 0 15px 20px;
+        text-decoration: none;
+        text-transform: uppercase;
+        width: 100%;
+
+        /* on hover */
+        &:hover, &:focus {
+          color: $nav-link-color;
+          background-color: $mobile-bg;
+        }
+
+        /* on click */
+        &:active {
+          color: $nav-link-color;
+        }
+
+        /* mobile tap color */
+        &:link {
+          /*
+          this highlights links on iPhones/iPads.
+          so it basically works like the :hover selector
+          for mobile devices.
+          */
+          -webkit-tap-highlight-color: rgba(0, 0, 0, 0.3);
+        }
+
+      }
+
+      .sub-menu {
+        background-color: $mobile-bg-alt2;
+        border-top: 0;
+        clip: auto;
+        height: auto;
+        margin: 0;
+        overflow: visible;
+        position: static;
+        width: auto;
+
+        li {
+          width: 100%;
+
+          a, a:visited {
+            text-transform: capitalize;
+
+            /* on hover */
+            &:hover, &:focus {
+              background-color: $mobile-bg-alt;
+            }
+
+          }
+
+        }
+
+      }
+
+    }
+
+  }
+
+  .mobile-room-reservation {
+    border-bottom: 1px solid $mobile-border;
+    padding: 15px 0 15px 20px;
+    white-space: nowrap;
+
+    .mobile-room-label {
+      color: $nav-link-color;
+      display: block;
+      font-family: $bold-sans-serif;
+      font-size: 14px;
+      margin-bottom: 3px;
+      text-transform: uppercase;
+    }
+
+    .mobile-room-phone {
+      display: block;
+      font-family: $semibold-sans-serif;
+      font-size: 14px;
+
+      &:before {
+        color: $meta2;
+        content: "p ";
+        font-family: $bold-sans-serif;
+        vertical-align: 2px;
+      }
+
+    }
+
+  }
+
+} // end .mobile-navigation
+
+#navbar {
+
+  #toggle-menu {
+    background: url("/wp-content/themes/luskin/library/images/mobile-menu-button.png") no-repeat center center;
+    cursor: pointer;
+    display: block;
+    height: 26px;
+    left: 30px;
+    position: absolute;
+    text-indent: -99999em;
+    top: 18px;
+    width: 31px;
+  }
+
+  #logo-lockup {
+    margin: 0 auto;
+    width: 258px;
+
+    #logo {
+      background: url("/wp-content/themes/luskin/library/images/rml-300-lcc.png") no-repeat center center !important;
+      display: inline-block;
+      height: 50px;
+      margin-left: 0;
+      margin-top: 5px;
+      max-width: none;
+      overflow: hidden;
+      width: 258px;
+
+      img {
+        display: none;
+      }
+    }
+
+    #main-navigation {
+      display: none;
+    }
+
+  }
+
+} // end #navbar
+
+
+// styles for 481up
+@media only screen and (min-width: 481px) {
+
+}
+
+// styles for 640up
+@media only screen and (min-width: 640px) {
+
+}
+
+// styles for 768up
+@media only screen and (min-width: 768px) {
+
+}
+
+// styles for 1030up
+@media only screen and (min-width: 1030px) {
+
+  .mobile-navigation {
+    display: none;
+  }
+
+  #navbar {
+    height: 125px;
+
+    #toggle-menu {
+      display: none;
+    }
+
+    #logo-lockup {
+      width:100%;
+
+      #logo {
+        background: none !important;
+        height: 95px;
+        margin-top: 15px;
+        width: 300px;
+        vertical-align: text-top;
+
+        img {
+          display: inline-block;
+        }
+
+      }
+
+    }
+
+    #site-navigation {
+      display: inline-block;
+      float: right;
+
+      .nav-menu,
+      #main-navigation {
+
+        display: block;
+
+        li {
+          display: inline-block;
+          position: relative;
+
+          &:hover,
+          &:focus {
+
+            a {
+              color: $nav-link-hover;
+
+              &:hover,
+              &:focus {
+                color: $nav-link-hover
+              }
+
+            }
+
+            ul {
+              clip: inherit;
+              display: block;
+              height: inherit;
+              overflow: inherit;
+              width: inherit;
+            }
+
+          }
+
+          a {
+            font-family: $semibold-sans-serif;
+            font-size: 19px;
+            font-weight: bold;
+            color: $nav-link-color;
+            display: block;
+            line-height: 125px;
+            margin: 0 15px;
+            padding: 0;
+            text-decoration: none;
+
+            &:hover,
+            &:focus {
+              color: $nav-link-color;
+            }
+
+          }
+
+          .sub-menu {
+            background-color: rgba(28, 77, 113, 0.75);
+            border-top: 7px solid #FFFFFF;
+            display: none;
+            left: 0;
+            margin: 0;
+            overflow: hidden;
+            padding: 0;
+            position: absolute;
+            top: 125px;
+
+            li {
+              display: block;
+
+              a, a:visited {
+                color: $nav-link-color;
+                display: block;
+                font-family: $sans-serif;
+                font-size: 17px;
+                line-height: 20px;
+                margin: 0;
+                min-height: 0px;
+                padding: 20px;
+                min-width: 250px;
+
+                &:hover,
+                &:focus {
+                  color: $nav-link-color;
+                  display: block;
+                  background-color: rgba(50, 132, 191, 0.85);
+                }
+
+              }
+
+            }
+
+          }
+
+        }
+
+      }
+
+    }
+
+  }
+
+}
+
+// styles for 1240up
+@media only screen and (min-width: 1240px) {
+
+}
+
+// styles for 2x
+@media only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min--moz-device-pixel-ratio: 1.5), only screen and (min-device-pixel-ratio: 1.5) {
+
+}

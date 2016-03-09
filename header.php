@@ -1,106 +1,90 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" <?php language_attributes() ?>>
-    <head>
-        <!--Meta Tags-->
-        <meta http-equiv="Content-Type" content="<?php bloginfo('html_type'); ?>; charset=<?php bloginfo('charset'); ?>" />
-        <meta http-equiv="imagetoolbar" content="no" />
-        <meta name="distribution" content="global" />
-        <!-- Mobile viewport optimized: j.mp/bplateviewport -->
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta http-equiv="X-UA-Compatible" content="IE=EmulateIE9" />
-        <?php
-            if( !is_admin()){
-                wp_deregister_script('jquery');
-                wp_register_script('jquery', ("http://ajax.googleapis.com/ajax/libs/jquery/1.8/jquery.min.js"), false);
-                wp_enqueue_script('jquery');
-            }
-            wp_head();
-        ?>
-        <script src="<?php bloginfo('stylesheet_directory');?>/scripts/functions.js"></script>
-        <!--[if lt IE 9]>
-            <script src="<?php bloginfo('stylesheet_directory');?>/scripts/html5shiv.min.js"></script>
-        <![endif]-->
+<!doctype html>
+<!--[if lt IE 7]><html <?php language_attributes(); ?> class="no-js lt-ie9 lt-ie8 lt-ie7"><![endif]-->
+<!--[if (IE 7)&!(IEMobile)]><html <?php language_attributes(); ?> class="no-js lt-ie9 lt-ie8"><![endif]-->
+<!--[if (IE 8)&!(IEMobile)]><html <?php language_attributes(); ?> class="no-js lt-ie9"><![endif]-->
+<!--[if gt IE 8]><!--> <html <?php language_attributes(); ?> class="no-js"><!--<![endif]-->
+<head>
+<meta charset="utf-8">
+<meta http-equiv="Content-Type" content="<?php bloginfo('html_type'); ?>; charset=<?php bloginfo('charset'); ?>" />
+<meta name="distribution" content="global" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="HandheldFriendly" content="True">
+<meta name="MobileOptimized" content="320">
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title><?php wp_title('-',true,'right') ?><?php bloginfo('name'); ?></title>
+<?php wp_head(); ?></head>
+<?php
+    if( !is_front_page() ){
+        $not_front = "not-frontpage";
+    } else {
+        $not_front = "frontpage";
+    }
+?>
+<body <?php body_class($not_front); ?>>
 
-        <!--Styles-->
-        <!--Temporary Style Sheet - REMOVE LATER-->
-        <link rel="stylesheet" type="text/css" media="all" href="<?php bloginfo('stylesheet_directory');?>/style.css"/>
-        <link rel="stylesheet" type="text/css" media="all" href="<?php bloginfo('stylesheet_directory');?>/styles/default.css"/>
-        <!--[if lte IE 7]>
-            <link rel="stylesheet" type="text/css" media="screen, projection" href="<?php bloginfo('stylesheet_directory');?>/styles/ie.css"/>
-        <![endif]-->
-        
-        <link rel="stylesheet" type="text/css" media="all" href="<?php bloginfo('stylesheet_directory');?>/plugins/fancybox/jquery.fancybox-1.3.4.css"/>
+<?php the_field('google_gtm_code_snippet', 'option'); ?>
 
-        <!--Other //Uncomment to use
-        <link rel="icon" type="image/vnd.microsoft.icon" href="<?php bloginfo('stylesheet_directory');?>/favicon.ico" />
-        <link rel="shortcut icon" type="image/x-icon" href="<?php bloginfo('stylesheet_directory');?>/favicon.ico" />
-        -->
-        
-        <!--Title-->
-        <title><?php wp_title('-',true,'right') ?><?php bloginfo('name'); ?></title>
-
-        <!-- add new google analytics, relocated to head element per ScreenPilot -->
-        <script>
-            (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-            (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-            m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-            })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-            ga('create', 'UA-60141822-1', 'auto');
-            ga('send', 'pageview');
-        </script>
-
-    </head>
-    <?php
-        if( !is_front_page() ){
-            $not_front = "not-frontpage";
-        } else {
-            $not_front = "frontpage";
-        }
-    ?>
-    <body <?php body_class($not_front); ?>>
-        <div class="mobile-navigation">
-            <a href="http://www.ucla.edu/" class="logo-ucla-mobile"><img src="<?php bloginfo('stylesheet_directory');?>/images/ucla-logo-mobile.png" alt="UCLA" /></a> <!-- hidden in CSS -->
-            <div class="mobile-room-reservation">
-                <span class="mobile-room-label">Toll Free</span>
-                <a class="mobile-room-phone" href="tel:8555228252"><?php the_field('room_reservation', 'option'); ?></a>
-            </div>
-            <div class="mobile-follow">
-                <a class="follow-link fb" href="<?php the_field('facebook', 'option'); ?>">Facebook</a>
-                <a class="follow-link tw" href="<?php the_field('twitter', 'option'); ?>">Twitter</a>
-                <a class="follow-link yt" href="<?php the_field('youtube', 'option'); ?>">Youtube</a>
-            </div>
+    <div class="mobile-navigation">
+        <a href="/" class="logo-ucla-mobile"><img src="<?php bloginfo('stylesheet_directory');?>/library/images/ucla-logo-mobile.png" alt="UCLA" /></a>
+        <div class="mobile-room-reservation">
+            <span class="mobile-room-label">Toll Free</span>
+            <a class="mobile-room-phone" href="tel:<?php the_field('room_reservation_no_spaces', 'option'); ?>"><?php the_field('room_reservation_special', 'option'); ?> (<?php the_field('room_reservation', 'option'); ?>)</a>
         </div>
-        <!--accessibility navigation-->
-        <ul class="visuallyhidden">
-            <li>
-                <a href="#main-content">Skip to main content</a>
-            </li>
-        </ul>
-        <!--/accessibility navigation-->
+    </div>
 
-        <!--container-->
-        <div id="container">
-            <noscript>
-                <p class="warning">You have <a href="http://www.google.com/support/bin/answer.py?answer=23852">JavaScript disabled</a> or are viewing the site on a device that does no support JavaScript.Some features may not work properly.</p>
-            </noscript>
-            <!--header-->
-            <header id="header">
-                <div class="container clearfix">
-                    <div id="navbar" class="navbar">                    
-                    <span id="toggle-menu">Menu</span>
-                        <div id="logo-lockup">
-                            <a href="<?php bloginfo('url');?>" id="logo"><img src="<?php bloginfo('stylesheet_directory');?>/images/logo.png" alt="<?php bloginfo('name');?>" /></a>
-                        <!-- navigation -->
-                        <nav id="site-navigation" class="navigation main-navigation" role="navigation">
+    <ul class="visuallyhidden accessibility_nav">
+        <li>
+            <a href="#main-content">Skip to main content</a>
+        </li>
+    </ul>
+
+    <div id="container">
+
+        <noscript>
+            <p class="alert-info">You have <a href="//www.google.com/support/bin/answer.py?answer=23852">JavaScript disabled</a> or are viewing the site on a device that does no support JavaScript.Some features may not work properly.</p>
+        </noscript>
+
+        <header id="header">
+            <div class="container clearfix">
+                <div id="navbar" class="navbar">
+                <span id="toggle-menu">Menu</span>
+                    <div id="logo-lockup">
+                        <a href="<?php bloginfo('url');?>" id="logo"><img src="<?php bloginfo('stylesheet_directory');?>/library/images/logo.png" alt="<?php bloginfo('name');?>" /></a>
+                        <nav id="site-navigation" class="navigation main-navigation">
                         <?php wp_nav_menu( array( 'menu' => 'main_menu', 'container' => '', 'menu_id' => 'main-navigation', 'menu_class' => 'menu nav-menu', 'link_before' => '<span>', 'link_after' => '</span>' ) ); ?>
                         </nav>
-                        <!-- /navigation -->
-                        </div>
-                    </div>              
+                    </div>
                 </div>
-            </header>
-            <!--/header-->
-            <?php if( !is_front_page() ): ?>
-            <!--content-->
-            <div id="content">
-            <?php endif; ?>
+            </div>
+        </header>
+
+
+        <?php
+
+        if( !is_front_page() ) {
+
+            if ( get_field('slides') ) {
+
+                $slides = get_field('slides');
+
+                $contentWrapper = '<div id="content" data-slides="true">';
+
+            } else {
+
+                $contentWrapper = '<div id="content" class="no-hero" data-slides="false">';
+
+            }
+
+        } else {
+
+            $contentWrapper = '<div id="content" class="front-page">';
+
+        }
+
+        echo $contentWrapper;
+
+        ?>
+
+        <!--// END HEADER //-->
+
+        <!--// BEGIN PAGE //-->

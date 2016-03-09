@@ -1,0 +1,272 @@
+// variables
+@import "partials/variables";
+
+/* ############ rooms.scss ############ */
+
+// styles for 0up
+
+.room-types {
+  background: #4d4d4d;
+  margin: 20px 0 0 0;
+  padding: 70px;
+
+  .room-type-container {
+    max-width: 1170px;
+    margin-right: auto;
+    margin-left: auto;
+  }
+
+  .room-type-non-mobile {
+    display: none;
+  }
+
+  .room-types-mobile {
+    display: block;
+
+    .room-type-div {
+      border-bottom: 1px solid #616060;
+    }
+
+    .room-type-div-toggle-trigger {
+      border-top: 1px solid #434343;
+      color: #fff;
+      font-family: $semibold-sans-serif;
+      font-size: 22px;
+      line-height: 1;
+      padding: 33px 60px 33px 20px;
+      position: relative;
+
+      :before {
+        background: url("/wp-content/themes/luskin/library/images/room-type-toogle.png") no-repeat center 0;
+        content: "";
+        display: block;
+        height: 29px;
+        margin-top: -14px;
+        position: absolute;
+        right: 20px;
+        top: 50%;
+        width: 29px;
+      }
+
+      &.expanded:before {
+        background-position: center bottom;
+      }
+
+      * {
+        display: inline;
+      }
+
+    }
+
+    .room-type-div-toggle {
+      padding: 12px 20px 20px 20px;
+
+      img {
+        display: block;
+        height: auto;
+        margin: 0 auto;
+        width: 100%;
+        filter: brightness(100);
+        -webkit-filter: brightness(100);
+        -moz-filter: brightness(100);
+        -o-filter: brightness(100);
+        -ms-filter: brightness(100);
+      }
+
+    }
+
+  }
+
+  .section-title {
+    color: #FFF;
+    font-family: $semibold-sans-serif;
+    font-size: 25px;
+    letter-spacing: 0.05em;
+    line-height: 1.15;
+    margin: 0 0 60px 0;
+    text-align: center;
+    text-transform: uppercase;
+  }
+
+}
+
+.room-col {
+  display: inline-block;
+  align: center;
+  width: 49%;
+
+  &.first {
+
+    .content {
+      width: 100%;
+      padding: 0;
+      padding-bottom: 30px;
+    }
+
+    &:before {
+      display: none;
+    }
+
+  }
+
+  &.second {
+
+    .content {
+      width: 100%;
+      padding: 0;
+      padding-bottom: 30px;
+    }
+
+  }
+
+  h3 {
+    margin: 0;
+    padding-bottom: 30px;
+    font-family: $semibold-sans-serif;
+    font-size: 20px;
+    line-height: 1;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    color: #FFF;
+    text-align: center;
+  }
+
+  img {
+    display: block;
+    height: auto;
+    margin: 0 auto;
+    width: 90%;
+    filter: brightness(100);
+    -webkit-filter: brightness(100);
+    -moz-filter: brightness(100);
+    -o-filter: brightness(100);
+    -ms-filter: brightness(100);
+  }
+
+  .content {
+    padding: 0 10%;
+    text-align: center;
+    color: #fff;
+
+    ul {
+      color: #FFF;
+      content: 0;
+      font-family: $semibold-sans-serif;
+      list-style: none;
+      margin: 0 auto;
+      padding: 0;
+      text-align: left;
+      width: 70%;
+
+      li {
+
+        margin-bottom: 15px;
+        text-indent: -1em;
+        padding-left: 1em;
+        font-size: 18px;
+        line-height: 1.5;
+        list-style: disc;
+        list-style-position: inside;
+
+      }
+
+    }
+
+    h5 {
+      margin: -5px 0 15px 50px;
+      font-size: 20px;
+      text-align: left;
+      line-height: 1.375;
+      letter-spacing: 0.05em;
+      color: #FFF;
+      text-transform: uppercase;
+      font-family: $semibold-sans-serif;
+    }
+
+  }
+
+}
+
+.room-type-div-toggle {
+
+  h5 {
+    margin-top: 0;
+  }
+
+  ul {
+    color: #FFF;
+    content: 0;
+    font-family: $semibold-sans-serif;
+    list-style: none;
+    margin: 0 auto;
+    padding: 0;
+    text-align: left;
+    width: 100%;
+
+    li {
+      margin-bottom: 15px;
+      text-indent: -1em;
+      padding-left: 1em;
+      font-size: 18px;
+      line-height: 1.5;
+      list-style: disc;
+      list-style-position: inside;
+    }
+
+  }
+
+}
+
+// styles for 481up
+@media only screen and (min-width: 481px) {
+
+}
+
+// styles for 640up
+@media only screen and (min-width: 640px) {
+
+
+}
+
+// styles for 768up
+@media only screen and (min-width: 768px) {
+
+  .room-types {
+
+    .room-type-non-mobile {
+      display: block;
+
+      .room-type-div-toggle {
+
+        img {
+          height: auto;
+          width: 100%;
+        }
+
+      }
+
+    }
+
+    .room-types-mobile {
+      display: none;
+    }
+
+  }
+
+}
+
+// styles for 1030up
+@media only screen and (min-width: 1030px) {
+
+
+}
+
+// styles for 1240up
+@media only screen and (min-width: 1240px) {
+
+}
+
+// styles for 2x
+@media only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min--moz-device-pixel-ratio: 1.5), only screen and (min-device-pixel-ratio: 1.5) {
+
+}

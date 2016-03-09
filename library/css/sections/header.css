@@ -1,0 +1,74 @@
+/* ############ header.scss ############ */
+#logo {
+  display: inline-block;
+  margin-top: 15px;
+  height: 95px;
+  vertical-align: middle;
+  max-width: 328px; }
+  #logo img {
+    display: inline-block;
+    max-width: 100%; }
+
+.logo-ucla {
+  display: inline-block;
+  margin-top: 15px;
+  height: 95px;
+  vertical-align: middle;
+  padding-right: 22px;
+  border-right: 1px solid #CCC; }
+
+.logo-ucla-mobile {
+  display: none; }
+
+.full-width-gallery {
+  position: relative;
+  width: 100%; }
+  .full-width-gallery ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0; }
+  .full-width-gallery img.mobile-image {
+    display: block;
+    max-width: 100%;
+    width: 100%; }
+  .full-width-gallery img {
+    display: none;
+    max-width: 100%;
+    width: 100%; }
+
+#header {
+  background: #fff url("/wp-content/themes/luskin/library/images/header-gradient4.png");
+  border-bottom: 7px solid #FFF;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.17);
+  height: 67px;
+  position: relative;
+  z-index: 102; }
+
+.not-frontpage #header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 111; }
+
+.not-frontpage #content {
+  margin-top: 68px; }
+
+.not-frontpage .no-hero {
+  margin-top: 108px !important; }
+
+@media only screen and (min-width: 1030px) {
+  .full-width-gallery img {
+    display: block; }
+  .full-width-gallery img.mobile-image {
+    display: none; }
+  #header {
+    height: 132px; }
+    #header > .container {
+      margin: 0 auto;
+      max-width: 1180px;
+      padding: 0 20px; }
+  .not-frontpage #content {
+    margin-top: 132px;
+    position: relative; }
+  .not-frontpage .no-hero {
+    margin-top: 172px !important; } }

@@ -1,75 +1,295 @@
-/******************************************************************
-Site Name:
-Author:
+// ############ modules/buttons.scss ############
 
-Stylesheet: Button Styles
+// ******************************************************************
+// Stylesheet: Button Styles
 
-Buttons are a pretty important part of your site's style, so it's
-important to have a consistent baseline for them. Use this stylesheet
-to create all kinds of buttons.
+// Buttons are a pretty important part of your site's style, so it's
+// important to have a consistent baseline for them. Use this stylesheet
+// to create all kinds of buttons.
 
-Helpful Links:
-http://galp.in/blog/2011/08/02/the-ui-guide-part-1-buttons/
+// Helpful Links:
+// http://galp.in/blog/2011/08/02/the-ui-guide-part-1-buttons/
+// ******************************************************************
 
-******************************************************************/
+// ******************************************************************
+// BUTTON DEFAULTS
+// We're gonna use a placeholder selector here
+// so we can use common styles. We then use this
+// to load up the defaults in all our buttons.
 
-/*********************
-BUTTON DEFAULTS
-We're gonna use a placeholder selector here
-so we can use common styles. We then use this
-to load up the defaults in all our buttons.
+// Here's a quick video to show how it works:
+// http://www.youtube.com/watch?v=hwdVpKiJzac
+// ******************************************************************
 
-Here's a quick video to show how it works:
-http://www.youtube.com/watch?v=hwdVpKiJzac
+// %btn {
+//   display: inline-block;
+//   position: relative;
+//   font-family: $sans-serif;
+//   text-decoration: none;
+//   color: $light;
+//   font-size: 0.9em;
+//   font-size: 34px;
+//   line-height: 34px;
+//   font-weight: normal;
+//   padding: 0 24px;
+//   border-radius: 4px;
+//   border: 0;
+//   cursor: pointer;
 
-*********************/
+//   @include transition(background-color 0.14s ease-in-out);
 
-%btn {
+//   // hovering on the btn
+//   &:hover, &:focus {
+//     color: $light;
+//     text-decoration: none;
+//     outline: none;
+//   }
+
+//   // end hover
+
+//   // clicking on the button
+//   &:active {
+//     top: 1px;
+
+//     // adds a tiny hop to the click
+
+//   }
+
+//   // end active
+// }
+
+// // end .button
+
+// /*
+// An example button.
+// You can use this example if you want. Just replace all the variables
+// and it will create a button dependant on those variables.
+// */
+// .blue-btn {
+//   @extend %btn;
+
+//   // here we load the btn defaults
+//   background-color: $blue;
+
+//   &:hover,
+//   &:focus {
+//     background-color: darken($blue, 4%);
+//   }
+
+//   // end hover
+
+//   &:active {
+//     background-color: darken($blue, 5%);
+//   }
+
+//   // end active
+// }
+
+// // end blue button
+
+a.button, a.button:visited,
+a.button-alt, a.button-alt:visited,
+a.button-abt, a.button-abt:visited,
+.gform_button {
+  background-color: $btn-bg-link;
+  background-image: url("/wp-content/themes/luskin/library/images/button-arrows.png");
+  background-position: right -238px;
+  background-repeat: no-repeat;
+  color: $btn-text-link !important;
   display: inline-block;
-  position: relative;
-  font-family: $sans-serif;
-  text-decoration: none;
-  color: $white;
-  font-size: 0.9em;
-  font-size: 34px;
-  line-height: 34px;
-  font-weight: normal;
-  padding: 0 24px;
-  border-radius: 4px;
-  border: 0;
-  cursor: pointer;
-  @include transition(background-color 0.14s ease-in-out);
+  font-family: $semibold-sans-serif;
+  font-size: 14px;
+  height: 42px;
+  letter-spacing: 0.05em;
+  line-height: 24px;
+  margin: 0;
+  padding: 10px 50px 10px 20px;
+  text-transform: uppercase;
+  zoom: 1;
 
-  // hovering on the btn
+  /* on hover */
   &:hover, &:focus {
-    color: $white;
-    text-decoration: none;
-    outline: none;
-  } // end hover
+    color: $btn-text-hover !important;
+    background-color: $btn-bg-hover !important;
+    background-position: right -238px;
+       -o-transition: color .1s ease-out, background-color .3s ease-in !important;
+      -ms-transition: color .1s ease-out, background-color .3s ease-in !important;
+     -moz-transition: color .1s ease-out, background-color .3s ease-in !important;
+  -webkit-transition: color .1s ease-out, background-color .3s ease-in !important;
+          transition: color .1s ease-out, background-color .3s ease-in !important;
+  }
 
-  // clicking on the button
+  /* on click */
   &:active {
-    top: 1px; // adds a tiny hop to the click
-  } // end active
 
-} // end .button
+  }
 
-/*
-An example button.
-You can use this example if you want. Just replace all the variables
-and it will create a button dependant on those variables.
-*/
-.blue-btn {
-  @extend %btn; // here we load the btn defaults
-  background-color: $blue;
+  &.download-btn {
+    background-position: right -185px;
 
-  &:hover,
-  &:focus {
-    background-color: darken($blue, 4%);
-  } // end hover
+    &:hover, &:focus {
+      background-position: right -185px;
+    }
 
-  &:active {
-    background-color: darken($blue, 5%);
-  } // end active
+  }
 
-} // end blue button
+  &.events-calendar {
+    background-position: right -295px;
+
+    &:hover, &:focus {
+      background-position: right -295px;
+    }
+
+  }
+
+  &.down-arrow {
+    background-image: url("/wp-content/themes/luskin/library/images/button-arrows.png");
+    background-position: right -181px;
+    background-repeat: no-repeat;
+
+    &.second-icon {
+      background-image: url("/wp-content/themes/luskin/library/images/button-arrows.png");
+      background-position: 11px -181px;
+      min-height: 25px;
+      min-width: 25px;
+      padding: 10px 20px;
+    }
+  }
+
+  &.left-arrow {
+    background-image: url("/wp-content/themes/luskin/library/images/button-arrows.png");
+    background-position: right -183px;
+    background-repeat: no-repeat;
+  }
+
+  &.right-arrow {
+    background-image: url("/wp-content/themes/luskin/library/images/button-arrows.png");
+    background-position: right -183px;
+    background-repeat: no-repeat;
+  }
+
+  &.book-icon {
+    background-image: url("/wp-content/themes/luskin/library/images/new-button-icons.png");
+    background-position: 5px -8px;
+    background-repeat: no-repeat;
+    min-height: 25px;
+    min-width: 25px;
+    padding: 10px 20px;
+  }
+
+  &.movie-icon {
+    background-image: url("/wp-content/themes/luskin/library/images/new-button-icons.png");
+    background-position: right -67px;
+    background-repeat: no-repeat;
+  }
+
+  &.reservation {
+    background-image: url("/wp-content/themes/luskin/library/images/button-alt-icons.png");
+    background-position: right -101px;
+    background-repeat: no-repeat;
+    margin-top: 15px;
+    min-width: 212px;
+    padding-bottom: 26px;
+    padding-top: 26px;
+
+    &:hover, &:focus {
+      background-position: right -263px;
+    }
+
+  }
+
+  &.request-for-proposal {
+    background-image: url("/wp-content/themes/luskin/library/images/button-alt-icons-small.png");
+    background-position: right -92px;
+    background-repeat: no-repeat;
+    min-width: 275px;
+
+    &:hover, &:focus {
+      background-position: right -269px;
+    }
+
+  }
+
+  &.book-a-room {
+    background-image: url("/wp-content/themes/luskin/library/images/button-alt-icons-small.png");
+    background-position: right -5px;
+    background-repeat: no-repeat;
+    min-width: 275px;
+
+    &:hover, &:focus {
+      background-position: right -5px;
+    }
+
+  }
+
+  &.last {
+    margin-right: 0px;
+  }
+
+  &.button-no-right-padding {
+    padding-right: 15px;
+    background-image: none;
+  }
+
+  &.button-less-right-margin {
+    margin-right: 10px;
+  }
+
+  &.second-icon,
+  &.third-icon {
+    background-color: $btn-bg-link-alt !important;
+    color: $btn-text-link-alt;
+    margin-left: 2px;
+
+    &:hover, &:focus {
+      background-color: $btn-bg-hover !important;
+    }
+
+    &:active {
+      background-color: $btn-bg-hover !important;
+    }
+
+    /* mobile tap color */
+    &:link {
+      /*
+      this highlights links on iPhones/iPads.
+      so it basically works like the :hover selector
+      for mobile devices.
+      */
+      -webkit-tap-highlight-color: rgba(0, 0, 0, 0.3);
+    }
+
+  }
+
+  span,
+  em {
+    font-size: 15px;
+    font-style: normal;
+    font-family: $sans-serif;
+  }
+
+}
+
+.gform_button {
+  text-align: left !important;
+  width: 200px !important;
+}
+
+.column-button-block {
+  border-top: 1px solid #e1e1e1;
+  padding-top: 19px;
+}
+
+.column-button-block .title {
+  display: inline-block;
+  *display: inline;
+  vertical-align: middle;
+  margin: 0 40px 0 4px;
+  font-size: 15px;
+  line-height: 1.33;
+  letter-spacing: 0.05em;
+  color: #000;
+  font-family: $semibold-sans-serif;
+  text-transform: uppercase;
+  zoom: 1;
+}

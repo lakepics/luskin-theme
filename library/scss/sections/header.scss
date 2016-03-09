@@ -1,0 +1,143 @@
+// variables
+@import "../partials/variables";
+
+/* ############ header.scss ############ */
+
+// styles for 0up
+
+#logo {
+  display: inline-block;
+  margin-top: 15px;
+  height: 95px;
+  vertical-align: middle;
+  max-width: 328px;
+
+  img {
+    display: inline-block;
+    max-width: 100%;
+  }
+
+}
+
+.logo-ucla {
+  display: inline-block;
+  margin-top: 15px;
+  height: 95px;
+  vertical-align: middle;
+  padding-right: 22px;
+  border-right: 1px solid #CCC;
+}
+
+.logo-ucla-mobile {
+  display: none;
+}
+
+.full-width-gallery {
+  position: relative;
+  width: 100%;
+
+  ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  img.mobile-image {
+    display: block;
+    max-width: 100%;
+    width: 100%;
+  }
+
+  img {
+    display: none;
+    max-width: 100%;
+    width: 100%;
+  }
+
+}
+
+#header {
+  background: #fff url("/wp-content/themes/luskin/library/images/header-gradient4.png");
+  border-bottom: 7px solid #FFF;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.17);
+  height: 67px;
+  position: relative;
+  z-index: 102;
+}
+
+.not-frontpage #header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 111;
+}
+
+.not-frontpage #content {
+  margin-top: 68px;
+}
+
+.not-frontpage .no-hero {
+  margin-top: 108px !important; // .not-frontpage #content : margin-top: 68px + 40px
+}
+
+// styles for 481up
+@media only screen and (min-width: 481px) {
+
+}
+
+// styles for 640up
+@media only screen and (min-width: 640px) {
+
+}
+
+// styles for 768up
+@media only screen and (min-width: 768px) {
+
+}
+
+// styles for 1030up
+@media only screen and (min-width: 1030px) {
+
+  .full-width-gallery {
+
+    img {
+      display: block;
+    }
+
+    img.mobile-image {
+      display: none;
+    }
+
+  }
+
+  #header {
+    height: 132px;
+
+    > .container {
+      margin: 0 auto;
+      max-width: 1180px;
+      padding: 0 20px;
+    }
+
+  }
+
+  .not-frontpage #content {
+    margin-top: 132px; // should match #header height in prev. rule
+    position: relative;
+  }
+
+  .not-frontpage .no-hero {
+    margin-top: 172px !important; // .not-frontpage #content : margin-top: 132px + 40px
+  }
+
+}
+
+// styles for 1240up
+@media only screen and (min-width: 1240px) {
+
+}
+
+// styles for 2x
+@media only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min--moz-device-pixel-ratio: 1.5), only screen and (min-device-pixel-ratio: 1.5) {
+
+}

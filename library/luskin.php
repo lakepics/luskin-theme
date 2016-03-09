@@ -1,295 +1,739 @@
 <?php
 
+/* *****************************************************************************
 /* Welcome to Luskin :)
 
-This is the core Luskin file where most of the main functions & features reside. 
-If you have any custom functions, it's best to put them in the functions.php file.
+This is the core Luskin file where most of the main functions & features
+reside. If you have any custom functions, it's best to put them in the
+functions.php file.
 
-  - head cleanup (remove rsd, uri links, junk css, ect)
-  - enqueueing scripts & styles
-  - theme support functions
-  - custom menu output & fallbacks
-  - related post function
-  - page-navi function
-  - removing <p> from around images
-  - customizing the post excerpt
+- head cleanup (remove rsd, uri links, junk css, ect)
+- enqueueing scripts & styles
+- theme support functions
+- custom menu output & fallbacks
+- related post function
+- page-navi function
+- removing <p> from around images
+- customizing the post excerpt
+ * ****************************************************************************/
 
-*/
-
-/* ********************************************************************************
+/* *****************************************************************************
  * WP_HEAD GOODNESS
- * The default wordpress head is a mess. Let's clean it up by removing all the junk 
- * we don't need. 
- * *******************************************************************************/
+ * The default wordpress head is a mess. Let's clean it up by removing all
+ * the junk we don't need.
+ * ****************************************************************************/
 
-function luskin_head_cleanup() {
-	// category feeds
-	// remove_action( 'wp_head', 'feed_links_extra', 3 );
-	// post and comment feeds
-	// remove_action( 'wp_head', 'feed_links', 2 );
-	// EditURI link
-	remove_action( 'wp_head', 'rsd_link' );
-	// windows live writer
-	remove_action( 'wp_head', 'wlwmanifest_link' );
-	// previous link
-	remove_action( 'wp_head', 'parent_post_rel_link', 10, 0 );
-	// start link
-	remove_action( 'wp_head', 'start_post_rel_link', 10, 0 );
-	// links for adjacent posts
-	remove_action( 'wp_head', 'adjacent_posts_rel_link_wp_head', 10, 0 );
-	// WP version
-	remove_action( 'wp_head', 'wp_generator' );
-	// remove WP version from css
-	add_filter( 'style_loader_src', 'luskin_remove_wp_ver_css_js', 9999 );
-	// remove Wp version from scripts
-	add_filter( 'script_loader_src', 'luskin_remove_wp_ver_css_js', 9999 );
+// remove stuff that really doen't need to be in the output of the head tag
+function luskinHeadCleanup()
+{
+    // category feeds
+    remove_action('wp_head', 'feed_links_extra', 3);
+    // post and comment feeds
+    remove_action('wp_head', 'feed_links', 2);
+    // edituri link
+    remove_action('wp_head', 'rsd_link');
+    // windows live writer
+    remove_action('wp_head', 'wlwmanifest_link');
+    // previous link
+    remove_action('wp_head', 'parent_post_rel_link', 10, 0);
+    // start link
+    remove_action('wp_head', 'start_post_rel_link', 10, 0);
+    // links for adjacent posts
+    remove_action('wp_head', 'adjacent_posts_rel_link_wp_head', 10, 0);
+    // wp version
+    remove_action('wp_head', 'wp_generator');
+    // remove wp version from css
+    add_filter('style_loader_src', 'luskinRemoveWpVerCssJs', 9999);
+    // remove wp version from scripts
+    add_filter('script_loader_src', 'luskinRemoveWpVerCssJs', 9999);
+    // remove emojis
+    remove_action('wp_head', 'print_emoji_detection_script', 7);
+    remove_action('wp_print_styles', 'print_emoji_styles');
 
 } /* end luskin head cleanup */
 
-// A better title
+// remove wp version from scripts
+function luskinRemoveWpVerCssJs($src)
+{
+    if (strpos($src, 'ver=')) {
+        $src = remove_query_arg('ver', $src);
+    }
+
+    return $src;
+}
+
+// a better title
 // http://www.deluxeblogtips.com/2012/03/better-title-meta-tag.html
-function rw_title( $title, $sep, $seplocation ) {
-  global $page, $paged;
+function rwTitle($title, $sep, $seplocation)
+{
+    global $page, $paged;
 
-  // Don't affect in feeds.
-  if ( is_feed() ) return $title;
+    // Don't affect in feeds.
+    if (is_feed()) {
+        return $title;
+    }
 
-  // Add the blog's name
-  if ( 'right' == $seplocation ) {
-    $title .= get_bloginfo( 'name' );
-  } else {
-    $title = get_bloginfo( 'name' ) . $title;
-  }
+    // Add the blog's name
+    if ('right' == $seplocation) {
+        $title .= get_bloginfo('name');
+    } else {
+        $title = get_bloginfo('name') . $title;
+    }
 
-  // Add the blog description for the home/front page.
-  $site_description = get_bloginfo( 'description', 'display' );
+    // Add the blog description for the home/front page.
+    $site_description = get_bloginfo('description', 'display');
 
-  if ( $site_description && ( is_home() || is_front_page() ) ) {
-    $title .= " {$sep} {$site_description}";
-  }
+    if ($site_description && (is_home() || is_front_page())) {
+        $title .= " {$sep} {$site_description}";
+    }
 
-  // Add a page number if necessary:
-  if ( $paged >= 2 || $page >= 2 ) {
-    $title .= " {$sep} " . sprintf( __( 'Page %s', 'dbt' ), max( $paged, $page ) );
-  }
+    // Add a page number if necessary:
+    if ($paged >= 2 || $page >= 2) {
+        $title .= " {$sep} " . sprintf(__('Page %s', 'dbt'), max($paged, $page));
+    }
 
-  return $title;
+    return $title;
 
 } // end better title
 
-// remove WP version from RSS
-function luskin_rss_version() { return ''; }
+// remove wp version from rss
+function luskinRssVersion()
+{return '';}
 
-// remove WP version from scripts
-function luskin_remove_wp_ver_css_js( $src ) {
-	if ( strpos( $src, 'ver=' ) )
-		$src = remove_query_arg( 'ver', $src );
-	return $src;
+// remove pesky injected css for recent comments widget
+function luskinRemoveWpWidgetRecentCommentsStyle()
+{
+    if (has_filter('wp_head', 'wp_widget_recent_comments_style')) {
+        remove_filter('wp_head', 'wp_widget_recent_comments_style');
+    }
 }
 
-// remove injected CSS for recent comments widget
-function luskin_remove_wp_widget_recent_comments_style() {
-	if ( has_filter( 'wp_head', 'wp_widget_recent_comments_style' ) ) {
-		remove_filter( 'wp_head', 'wp_widget_recent_comments_style' );
-	}
+// clean up comment styles in the head
+function luskinRemoveRecentCommentsStyle()
+{
+    global $wp_widget_factory;
+    if (isset($wp_widget_factory->widgets['WP_Widget_Recent_Comments'])) {
+        remove_action('wp_head', array($wp_widget_factory->widgets['WP_Widget_Recent_Comments'], 'recent_comments_style'));
+    }
 }
 
-// remove injected CSS from recent comments widget
-function luskin_remove_recent_comments_style() {
-	global $wp_widget_factory;
-	if (isset($wp_widget_factory->widgets['WP_Widget_Recent_Comments'])) {
-		remove_action( 'wp_head', array($wp_widget_factory->widgets['WP_Widget_Recent_Comments'], 'recent_comments_style') );
-	}
+// remove injected css from gallery
+function luskinGalleryStyle($css)
+{
+    return preg_replace("!<style type='text/css'>(.*?)</style>!s", '', $css);
 }
 
-// remove injected CSS from gallery
-function luskin_gallery_style($css) {
-	return preg_replace( "!<style type='text/css'>(.*?)</style>!s", '', $css );
-}
-
-
-/* ********************************************************************************
+/* *****************************************************************************
  * SCRIPTS & ENQUEUEING
- * ********************************************************************************/
+ * ****************************************************************************/
 
-// loading modernizr and jquery, and reply script
-function luskin_scripts_and_styles() {
+// enqueue all scripts and styles
+function luskinScriptsAndStyles()
+{
 
-  global $wp_styles; // call global $wp_styles variable to add conditional wrapper around ie stylesheet the WordPress way
+    global $wp_styles; // call global $wp_styles variable to add conditional wrapper around ie stylesheet the WordPress way
 
-  if (!is_admin()) {
+    // not admin area/control panel
+    if (!is_admin()) {
 
-		// modernizr (without media query polyfill)
-		wp_register_script( 'luskin-modernizr', get_stylesheet_directory_uri() . '/library/js/libs/modernizr.custom.min.js', array(), '2.5.3', false );
+        /* *********************************************************************
+         * register/deregister and enqueue STYLES in the HEADER section
+         * ********************************************************************/
 
-		// register main stylesheet
-		wp_register_style( 'luskin-stylesheet', get_stylesheet_directory_uri() . '/library/css/style.css', array(), '', 'all' );
+        /* **************************************************
+         * ...on all pages
+         * **************************************************/
 
-		// ie-only style sheet
-		wp_register_style( 'luskin-ie-only', get_stylesheet_directory_uri() . '/library/css/ie.css', array(), '' );
+        // main stylesheet
+        wp_enqueue_style('luskin-stylesheet', get_stylesheet_directory_uri() . '/library/css/style.min.css', array(), '', 'all');
 
-    // comment reply script for threaded comments
-    if ( is_singular() AND comments_open() AND (get_option('thread_comments') == 1)) {
-		  wp_enqueue_script( 'comment-reply' );
+        // ie-only style sheet
+        wp_enqueue_style('luskin-ie-only', get_stylesheet_directory_uri() . '/library/css/ie.min.css', array('luskin-stylesheet'), '');
+        // add conditional wrapper for Internet Explorer versions less than 7
+        $wp_styles->add_data('luskin-ie-only', 'conditional', 'lt IE 7');
+
+        // get the path of page template in current or parent template
+        $pageTemplate = get_page_template();
+        // break into usable sections; seperated by the forward slash
+        $pageArray = explode("/", $pageTemplate);
+        // grab the last usable section
+        $pageTemplate = end($pageArray);
+
+        // test for error page
+        if (is_404()) {
+            wp_enqueue_style('404-stylesheet', get_stylesheet_directory_uri() . '/library/css/404.min.css', array('luskin-stylesheet'), '', 'all');
+        }
+
+        // test for author page
+        if (is_author()) {
+
+        }
+
+        // test for category page
+        if (is_category()) {
+
+        }
+
+        // test for front page
+        // On the site, front page, 'is_front_page()' will always return TRUE, regardless of whether the site front page displays the blog posts index or a static page.
+        if (is_front_page()) {
+
+        }
+
+        // // test for home page
+        // On the blog posts index, 'is_home()' will always return TRUE, regardless of whether the blog posts index is displayed on the site front page or a separate page.
+        if (is_home()) {
+
+        }
+
+        // test for search  page
+        if (is_search()) {
+
+        }
+
+        // test for single page
+        if (is_single()) {
+
+        }
+
+        // test for tag page
+        if (is_tag()) {
+
+        }
+
+        // test for taxtaxonomy page
+        if (is_tax()) {
+
+        }
+
+        // test the pageTemplate and assign section stylesheet to it
+        switch ($pageTemplate) {
+            case '404.php':
+                wp_enqueue_style('404-stylesheet', get_stylesheet_directory_uri() . '/library/css/404.min.css', array('luskin-stylesheet'), '', 'all');
+                break;
+            case 'template-about-dir.php':
+                wp_enqueue_style('about-us-dir-stylesheet', get_stylesheet_directory_uri() . '/library/css/about-us-dir.min.css', array('luskin-stylesheet'), '', 'all');
+                break;
+            case 'template-about-sub.php':
+                wp_enqueue_style('about-us-sub-stylesheet', get_stylesheet_directory_uri() . '/library/css/about-us-sub.min.css', array('luskin-stylesheet'), '', 'all');
+                break;
+            case 'template-about.php':
+                wp_enqueue_style('about-stylesheet', get_stylesheet_directory_uri() . '/library/css/about.min.css', array('luskin-stylesheet'), '', 'all');
+                break;
+            case 'template-accommodations-amenities.php':
+                wp_enqueue_style('accommodations-amenities-stylesheet', get_stylesheet_directory_uri() . '/library/css/accommodations-amenities.min.css', array('luskin-stylesheet'), '', 'all');
+                break;
+            case 'template-accommodations-rooms.php':
+                wp_enqueue_style('accommodations-rooms-stylesheet', get_stylesheet_directory_uri() . '/library/css/accommodations-rooms.min.css', array('luskin-stylesheet'), '', 'all');
+                break;
+            case 'template-accommodations-suites.php':
+                wp_enqueue_style('accommodations-suites-stylesheet', get_stylesheet_directory_uri() . '/library/css/accommodations-suites.min.css', array('luskin-stylesheet'), '', 'all');
+                break;
+            case 'template-accommodations.php':
+                wp_enqueue_style('accommodations-stylesheet', get_stylesheet_directory_uri() . '/library/css/accommodations.min.css', array('luskin-stylesheet'), '', 'all');
+                break;
+            case 'template-contact-team.php':
+                wp_enqueue_style('contact-team-stylesheet', get_stylesheet_directory_uri() . '/library/css/contact-team.min.css', array('luskin-stylesheet'), '', 'all');
+                break;
+            case 'template-contact.php':
+                wp_enqueue_style('contact-stylesheet', get_stylesheet_directory_uri() . '/library/css/contact.min.css', array('luskin-stylesheet'), '', 'all');
+                break;
+            case 'template-dining.php':
+                wp_enqueue_style('dining-stylesheet', get_stylesheet_directory_uri() . '/library/css/dining.min.css', array('luskin-stylesheet'), '', 'all');
+                break;
+            case 'template-flip-book.php':
+                wp_enqueue_style('flip-book-stylesheet', get_stylesheet_directory_uri() . '/library/css/flip-book.min.css', array('luskin-stylesheet'), '', 'all');
+                break;
+            case 'template-gallery.php':
+                wp_enqueue_style('gallery-stylesheet', get_stylesheet_directory_uri() . '/library/css/gallery.min.css', array('luskin-stylesheet'), '', 'all');
+                break;
+            case 'template-hma-opt-in-thank-you.php':
+                wp_enqueue_style('hma-opt-in-thank-you-stylesheet', get_stylesheet_directory_uri() . '/library/css/hma-opt-in-thank-you.min.css', array('luskin-stylesheet'), '', 'all');
+                break;
+            case 'template-homepage.php':
+                wp_enqueue_style('homepage-stylesheet', get_stylesheet_directory_uri() . '/library/css/homepage.min.css', array('luskin-stylesheet'), '', 'all');
+                break;
+            case 'template-meetings-amenities.php':
+                wp_enqueue_style('meetings-amenities-stylesheet', get_stylesheet_directory_uri() . '/library/css/meetings-amenities.min.css', array('luskin-stylesheet'), '', 'all');
+                break;
+            case 'template-meetings-floorplans.php':
+                wp_enqueue_style('meetings-floorplans-stylesheet', get_stylesheet_directory_uri() . '/library/css/meetings-floorplans.min.css', array('luskin-stylesheet'), '', 'all');
+                break;
+            case 'template-meetings-resources-faq.php':
+                wp_enqueue_style('meetings-resources-faq-stylesheet', get_stylesheet_directory_uri() . '/library/css/meetings-resources-faq.min.css', array('luskin-stylesheet'), '', 'all');
+                break;
+            case 'template-meetings-resources.php':
+                wp_enqueue_style('meetings-resources-stylesheet', get_stylesheet_directory_uri() . '/library/css/meetings-resources.min.css', array('luskin-stylesheet'), '', 'all');
+                break;
+            case 'template-meetings.php':
+                wp_enqueue_style('meetings-stylesheet', get_stylesheet_directory_uri() . '/library/css/meetings.min.css', array('luskin-stylesheet'), '', 'all');
+                break;
+            case 'template-news.php':
+                wp_enqueue_style('news-stylesheet', get_stylesheet_directory_uri() . '/library/css/news.min.css', array('luskin-stylesheet'), '', 'all');
+                break;
+            case 'template-parents-club-thank-you.php':
+                wp_enqueue_style('parents-club-thank-you-stylesheet', get_stylesheet_directory_uri() . '/library/css/parents-club-thank-you.min.css', array('luskin-stylesheet'), '', 'all');
+                break;
+            case 'template-parents-club.php':
+                wp_enqueue_style('parents-club-stylesheet', get_stylesheet_directory_uri() . '/library/css/parents-club.min.css', array('luskin-stylesheet'), '', 'all');
+                break;
+            case 'template-press-release-index.php':
+                wp_enqueue_style('press-release-index-stylesheet', get_stylesheet_directory_uri() . '/library/css/press-release-index.min.css', array('luskin-stylesheet'), '', 'all');
+                break;
+            case 'template-press-release.php':
+                wp_enqueue_style('press-release-stylesheet', get_stylesheet_directory_uri() . '/library/css/press-release.min.css', array('luskin-stylesheet'), '', 'all');
+                break;
+            case 'template-room-gallery.php':
+                wp_enqueue_style('room-gallery-stylesheet', get_stylesheet_directory_uri() . '/library/css/room-gallery.min.css', array('luskin-stylesheet'), '', 'all');
+                break;
+            case 'template-rsvp.php':
+                wp_enqueue_style('rsvp-stylesheet', get_stylesheet_directory_uri() . '/library/css/rsvp.min.css', array('luskin-stylesheet'), '', 'all');
+                break;
+            case 'template-stories.php':
+                wp_enqueue_style('stories-stylesheet', get_stylesheet_directory_uri() . '/library/css/stories.min.css', array('luskin-stylesheet'), '', 'all');
+                break;
+            default : '';
+        }
+
+        /* **************************************************
+         * ...on the gallery & room gallery template
+         * **************************************************/
+        if (is_page_template(array('template-gallery.php',
+            'template-room-gallery.php'))) {
+            wp_enqueue_style('fancybox-stylesheet', get_stylesheet_directory_uri() . '/library/plugins/fancybox/jquery.fancybox-1.3.4.min.css', array('luskin-stylesheet'), '', 'all');
+            wp_enqueue_style('luskin-fancybox-stylesheet', get_stylesheet_directory_uri() . '/library/css/sections/fancybox.min.css', array('fancybox-stylesheet'), '', 'all');
+        }
+
+        /* **************************************************
+         * ...on the flipbook template
+         * **************************************************/
+        if (is_page_template('template-flip-book.php')) {
+            wp_enqueue_style('flipbook-stylesheet', get_stylesheet_directory_uri() . '/library/plugins/flipbook/style.min.css', array(), '', 'all');
+            wp_enqueue_style('flipbook-page-stylesheet', get_stylesheet_directory_uri() . '/library/plugins/flipbook/page-styles.min.css', array('flipbook-stylesheet'), '', 'all');
+            wp_enqueue_style('luskin-flipbook-stylesheet', get_stylesheet_directory_uri() . '/library/css/flip-book.min.css', array('flipbook-page-stylesheet'), '', 'all');
+        }
+
+        /* **************************************************
+         * ...on the hma opt-in template
+         * **************************************************/
+        if (is_page_template('template-hma.php')) {
+
+            // layout stylesheet
+            wp_enqueue_style('wforms-layout-stylesheet', '//www.tfaforms.com/form-builder/4.1.0/css/wforms-layout.css', array(), '', 'all');
+
+            // ie8 layout stylesheet
+            wp_enqueue_style('wforms-layout-ie8-stylesheet', '//www.tfaforms.com/form-builder/4.1.0/css/wforms-layout-ie8.css', array('wforms-layout-stylesheet'), '', 'all');
+            $wp_styles->add_data('wforms-layout-ie8-stylesheet', 'conditional', 'if IE 8');
+
+            // ie7 layout stylesheet
+            wp_enqueue_style('wforms-layout-ie7-stylesheet', '//www.tfaforms.com/form-builder/4.1.0/css/wforms-layout-ie7.css', array('wforms-layout-stylesheet'), '', 'all');
+            $wp_styles->add_data('wforms-layout-ie7-stylesheet', 'conditional', 'if IE 7');
+
+            // ie6 layout stylesheet
+            wp_enqueue_style('wforms-layout-ie6-stylesheet', '//www.tfaforms.com/form-builder/4.1.0/css/wforms-layout-ie6.css', array('wforms-layout-stylesheet'), '', 'all');
+            $wp_styles->add_data('wforms-layout-ie6-stylesheet', 'conditional', 'if IE 6');
+
+            // default stylesheet
+            wp_enqueue_style('wforms-default-stylesheet', '//www.tfaforms.com/themes/get/default.css', array('wforms-layout-stylesheet'), '', 'all');
+
+            // this stylesheet activated by javascript
+            wp_enqueue_style('wforms-jsonly-stylesheet', '//www.tfaforms.com/form-builder/4.1.0/css/wforms-jsonly.css', array('wforms-default-stylesheet'), '', 'all');
+
+            // override styles to force wforms to look like others on the site
+            wp_enqueue_style('wforms-override-stylesheet', get_stylesheet_directory_uri() . '/library/plugins/hma/style.css', array('wforms-jsonly-stylesheet'), '', 'all');
+
+        }
+
+        /* **************************************************
+         * ...on the targeted pages
+         * - contact-us
+         * - mailing-list-old
+         * - parents-club-signup-old
+         * - request-proposal
+         * - rsvp
+         * **************************************************/
+        if (is_page(array('contact-us',
+            'mailing-list-old',
+            'parents-club-signup-old',
+            'request-proposal',
+            'rsvp'))) {
+            wp_enqueue_style('gforms-override-stylesheet', get_stylesheet_directory_uri() . '/library/plugins/gravityforms/style.min.css', array(), '', 'all');
+        }
+
+        /* **************************************************
+         * ...on the targeted pages
+         * - mailing-list
+         * - parents-club-signup
+         * **************************************************/
+        if (is_page(array('mailing-list',
+            'parents-club-signup'))) {
+            wp_enqueue_style('hma-forms-stylesheet', get_stylesheet_directory_uri() . '/library/plugins/hma/style.min.css', array(), '', 'all');
+        }
+
+        /* **************************************************
+         * ...on the targeted templates
+         *
+         * - template-accommodations-amenities
+         * - template-accommodations
+         * - template-dining
+         * - template-meetings-floorplans
+         * - template-meetings
+         * - template-opt-in-thank-you
+         * **************************************************/
+        if (is_page_template(array('template-accommodations-amenities.php',
+            'template-accommodations.php',
+            'template-dining.php',
+            'template-meetings-floorplans.php',
+            'template-meetings.php',
+            'template-opt-in-thank-you.php',
+            'template-hma-opt-in-thank-you.php'))) {
+
+            // Lemmon Slider
+            wp_enqueue_style('lemmonslider-stylesheet', get_stylesheet_directory_uri() . '/library/css/sections/slider.min.css', array(), '', 'all');
+        }
+
+        /* *********************************************************************
+         * register/deregister and enqueue JAVASCRIPTS in the HEADER section
+         * ********************************************************************/
+
+        /* **************************************************
+         * ...on all pages
+         * **************************************************/
+
+        // modernizr (without media query polyfill)
+        wp_enqueue_script('modernizr', get_stylesheet_directory_uri() . '/library/js/libs/modernizr.custom.min.js', array(), false, false);
+
+        // jquery swap out; remove wordpress version of jquery and replace with a CDN hosted version that's more recent
+        wp_deregister_script('jquery');
+        wp_enqueue_script('jquery', '//ajax.googleapis.com/ajax/libs/jquery/1.8/jquery.min.js', array('modernizr'), false, false);
+
+        /* **************************************************
+         * ...on the flipbook template
+         * **************************************************/
+
+        if (is_page_template('template-flip-book.php')) {
+            //wp_enqueue_script('swfobject2', get_stylesheet_directory_uri() . '/library/js/libs/swfobject2.min.js', array('jquery'), false, false);
+            wp_enqueue_script('jq-easing', get_stylesheet_directory_uri() . '/library/js/libs/jquery.easing.1.3.min.js', array('jquery'), false, false);
+            wp_enqueue_script('jq-doubletap', get_stylesheet_directory_uri() . '/library/js/libs/jquery.doubletap.min.js', array('jquery'), false, false);
+            wp_enqueue_script('jq-color', get_stylesheet_directory_uri() . '/library/js/libs/jquery.color.min.js', array('jquery'), false, false);
+            wp_enqueue_script('turn', get_stylesheet_directory_uri() . '/library/js/libs/turn.min.js', array('jquery'), false, false);
+            wp_enqueue_script('flipbook', get_stylesheet_directory_uri() . '/library/plugins/flipbook/flipbook.min.js', array('turn'), false, false);
+        }
+
+        /* **************************************************
+         * ...on singular pages that allow comments
+         * *************************************************/
+        if (is_singular() and comments_open() and (get_option('thread_comments') == 1)) {
+            wp_enqueue_script('comment-reply');
+        }
+
+        /* *********************************************************************
+         * register/deregister and enqueue JAVASCRIPTS in the FOOTER section
+         * ********************************************************************/
+
+        /* **************************************************
+         * ...on all pages
+         * **************************************************/
+
+        // example
+        //wp_enqueue_script( 'luskin-script', get_stylesheet_directory_uri() . '/library/js/some-script-file.min.js', array('jquery'), false, true );
+
+        /* **************************************************
+         * ...on the homepage template
+         * **************************************************/
+        if (is_page_template('template-homepage.php')) {
+            // Box Slider
+            wp_enqueue_script('bxslider', get_stylesheet_directory_uri() . '/library/js/libs/jquery.bxslider.min.js', array('jquery'), false, true);
+            // Homepage Scripts
+            wp_enqueue_script('luskin-homepage', get_stylesheet_directory_uri() . '/library/js/hp/homepage.min.js', array('bxslider'), false, true);
+        }
+
+        /* **************************************************
+         * ...on the gallery & room gallery template
+         * **************************************************/
+        if (is_page_template(array('template-gallery.php',
+            'template-room-gallery.php'))) {
+            // Box Slider
+            wp_enqueue_script('bxslider', get_stylesheet_directory_uri() . '/library/js/libs/jquery.bxslider.min.js', array('jquery'), false, true);
+            // Isotope
+            wp_enqueue_script('isotope', get_stylesheet_directory_uri() . '/library/js/libs/isotope.pkgd.min.js', array('jquery'), false, true);
+            // Fancybox
+            wp_enqueue_script('fancybox', get_stylesheet_directory_uri() . '/library/plugins/fancybox/jquery.fancybox-1.3.4.pack.js', array('jquery'), false, true);
+            // Gallery Scripts
+            wp_enqueue_script('luskin-gallery', get_stylesheet_directory_uri() . '/library/js/gallery/gallery.min.js', array('fancybox'), false, true);
+        }
+
+        /* **************************************************
+         * ...on the targeted templates
+         *
+         * - template-accommodations-amenities
+         * - template-accommodations
+         * - template-dining
+         * - template-meetings-floorplans
+         * - template-meetings
+         * - template-opt-in-thank-you
+         * - template-hma-opt-in-thank-you
+         * **************************************************/
+        if (is_page_template(array('template-accommodations-amenities.php',
+            'template-accommodations.php',
+            'template-dining.php',
+            'template-meetings-floorplans.php',
+            'template-meetings.php',
+            'template-opt-in-thank-you.php',
+            'template-hma-opt-in-thank-you.php'))) {
+
+            // Lemmon Slider
+            wp_enqueue_script('lemmon-slider', get_stylesheet_directory_uri() . '/library/js/libs/lemmon-slider.min.js', array('jquery'), false, true);
+            // customize slider
+            //wp_enqueue_script( 'luskin-slider', get_stylesheet_directory_uri() . '/library/js/slider/slider.min.js', array('lemmon-slider'), false, true );
+
+        }
+
+        /* **************************************************
+         * ...on the targeted pages by name/slug/id:
+         *
+         * - "Request for Proposal" @ /request-proposal/
+         * **************************************************/
+        if (is_page(array('request-proposal'))) {
+            // form step
+            wp_enqueue_script('form-step', get_stylesheet_directory_uri() . '/library/js/forms/form-step.min.js', array('jquery'), false, true);
+        }
+
+        /* **************************************************
+         * ...on the targeted pages by name/slug/id:
+         *
+         * - "Join Our Email List" @ /mailing-list/
+         * - "Join the Luskin Conference Center Family Club Today!" @ /parents-club-signup/
+         * **************************************************/
+        if (is_page(array('mailing-list',
+            'parents-club-signup'))) {
+            // form processing scripts
+            wp_enqueue_script('wforms', '//www.tfaforms.com/wForms/3.7/js/wforms.js', array(), false, true);
+            wp_enqueue_script('wforms-localization', '//www.tfaforms.com/wForms/3.7/js/localization-en_US.js', array('wforms'), false, true);
+        }
+
     }
 
-		//adding scripts file in the footer
-		wp_register_script( 'luskin-js', get_stylesheet_directory_uri() . '/library/js/scripts.js', array( 'jquery' ), '', true );
+    // admin/control panel
+    if (is_admin()) {
 
-		// enqueue styles and scripts
-		wp_enqueue_script( 'luskin-modernizr' );
-		wp_enqueue_style( 'luskin-stylesheet' );
-		wp_enqueue_style( 'luskin-ie-only' );
+        /* *********************************************************************
+         * register/deregister and enqueue STYLES in the HEADER section
+         * ********************************************************************/
 
-		$wp_styles->add_data( 'luskin-ie-only', 'conditional', 'lt IE 9' ); // add conditional wrapper around ie stylesheet
+        /* load the lato font from google fonts - this is a modification of a
+        function found in the twentythirteen theme where we can declare some
+        external fonts. If you're using Google Fonts, you can replace these
+        fonts, change it in your scss files and be up and running in seconds. */
+        wp_enqueue_style('googleFonts', '//fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic', array(), false, false);
 
-		/*
-		I recommend using a plugin to call jQuery
-		using the google cdn. That way it stays cached
-		and your site will load faster.
-		*/
-		wp_enqueue_script( 'jquery' );
-		wp_enqueue_script( 'luskin-js' );
+        /* *********************************************************************
+         * register/deregister and enqueue JAVASCRIPTS in the HEADER section
+         * ********************************************************************/
 
-	}
+        // wp_enqueue_script('script-name', get_stylesheet_directory_uri() . '/library/js/script.min.js', array('jquery'), false, false);
+
+        /* *********************************************************************
+         * register/deregister and enqueue JAVASCRIPTS in the FOOTER section
+         * ********************************************************************/
+
+        // wp_enqueue_script('script-name', get_stylesheet_directory_uri() . '/library/js/script.min.js', array('jquery'), false, true);
+
+    }
+
 }
 
-/* ********************************************************************************
- * THEME SUPPORT
- * ********************************************************************************/
+function luskinLoadScriptsLast()
+{
+    // luskin general scripts
+    wp_enqueue_script('luskin-general', get_stylesheet_directory_uri() . '/library/js/scripts.min.js', array(), false, true);
 
-// Adding WP 3+ Functions & Theme Support
-function luskin_theme_support() {
+    // Helper scripts
+    //wp_register_script( 'luskin-js', get_stylesheet_directory_uri() . '/library/js/scripts.min.js', array( 'jquery' ), '', true );
+}
+
+/* *****************************************************************************
+ * THEME SUPPORT
+ * ****************************************************************************/
+
+// adding wp 3+ functions & theme support after theme setup
+function luskinThemeSupport()
+{
 
     // wp menus
-    add_theme_support( 'menus' );
+    add_theme_support('menus');
 
-	// wp thumbnails (sizes handled in functions.php)
-	add_theme_support( 'post-thumbnails' );
+    // wp thumbnails (sizes handled in functions.php)
+    // Note: To enable featured images, the current theme must include
+    // "add_theme_support( 'post-thumbnails' );".
+    // See also Post Thumbnails https://codex.wordpress.org/Post_Thumbnails
+    add_theme_support( 'post-thumbnails' );
 
-	// default thumb size
-	set_post_thumbnail_size(125, 125, true);
+    // set the default Featured Image (formerly Post Thumbnail) dimensions
+    set_post_thumbnail_size(100, 100, true);
 
-	// wp custom background (thx to @bransonwerner for update)
-	add_theme_support( 'custom-background',
-	    array(
-	    'default-image' => '',    // background image default
-	    'default-color' => '',    // background color default (dont add the #)
-	    'wp-head-callback' => '_custom_background_cb',
-	    'admin-head-callback' => '',
-	    'admin-preview-callback' => ''
-	    )
-	);
+    // wp custom background (thx to @bransonwerner for update)
+    // add_theme_support('custom-background',
+    //     array(
+    //         'default-image' => '', // background image default
+    //         'default-color' => '', // background color default (dont add the #)
+    //         'wp-head-callback' => '_custom_background_cb',
+    //         'admin-head-callback' => '',
+    //         'admin-preview-callback' => '',
+    //     )
+    // );
 
-	// rss thingy
-	add_theme_support('automatic-feed-links');
+    // rss thingy
+    add_theme_support('automatic-feed-links');
 
-	// adding post format support
-	add_theme_support( 'post-formats',
-		array(
-			'aside',             // title less blurb
-			'gallery',           // gallery of images
-			'link',              // quick link to other site
-			'image',             // an image
-			'quote',             // a quick quote
-			'status',            // a Facebook like status update
-			'video',             // video
-			'audio',             // audio
-			'chat'               // chat transcript
-		)
-	);
+    // adding post format support
+    add_theme_support('post-formats',
+        array(
+            'aside', // title less blurb
+            'gallery', // gallery of images
+            'link', // quick link to other site
+            'image', // an image
+            'quote', // a quick quote
+            'status', // a Facebook like status update
+            'video', // video
+            'audio', // audio
+            'chat', // chat transcript
+        )
+    );
 
-	// wp menus
-	add_theme_support( 'menus' );
+    // registering wp3+ menus
+    register_nav_menus(
+        array(
+            'main-nav' => __('Primary Nav', 'luskintheme'),
+            'footer-links' => __('Secondary Nav', 'luskintheme'),
+            'sub-footer-links' => __('Tertiary Nav', 'luskintheme'),
+        )
+    );
 
-	// registering wp3+ menus
-	register_nav_menus(
-		array(
-			'main-nav' => __( 'The Main Menu', 'luskintheme' ),   // main nav in header
-			'footer-links' => __( 'Footer Links', 'luskintheme' ) // secondary nav in footer
-		)
-	);
+    // enable support for HTML5 markup.
+    add_theme_support('html5', array(
+        'comment-list',
+        'search-form',
+        'comment-form',
+    ));
 
-	// Enable support for HTML5 markup.
-	add_theme_support( 'html5', array(
-		'comment-list',
-		'search-form',
-		'comment-form'
-	) );
+} /* end theme support */
 
-} /* end luskin theme support */
+/* *****************************************************************************
+ * ACTIVE SIDEBARS
+ * ****************************************************************************/
+
+// adding sidebars & widgetizes areas
+function luskinRegisterSidebars()
+{
+    register_sidebar(array(
+        'id' => 'sidebar-right',
+        'name' => __('Right Sidebar', 'luskintheme'),
+        'description' => __('Widgets in this area will be shown on all posts and pages.', 'luskintheme'),
+        // 'before_widget' => '<div id="%1$s" class="widget %2$s">',
+        // 'after_widget' => '</div>',
+        'before_title' => '<h4 class="widget-title"><span class="widget-icon"></span>',
+        'after_title' => '</h4>',
+    ));
+
+    register_sidebar(array(
+        'id' => 'sidebar-footer-first',
+        'name' => __('Footer First Position', 'luskintheme'),
+        'description' => __('Widgets in this area will be shown on all posts and pages within the footer within the first position (i.e., left outside).', 'luskintheme'),
+        'before_widget' => '<div id="%1$s" class="widget %2$s">',
+        'after_widget' => '</div>',
+        'before_title' => '<h5 class="widget-title"><span class="widget-icon"></span>',
+        'after_title' => '</h5>',
+    ));
+
+    register_sidebar(array(
+        'id' => 'sidebar-footer-second',
+        'name' => __('Footer Second Position', 'luskintheme'),
+        'description' => __('Widgets in this area will be shown on all posts and pages within the footer within the second position (i.e., left inside).', 'luskintheme'),
+        'before_widget' => '<div id="%1$s" class="widget %2$s">',
+        'after_widget' => '</div>',
+        'before_title' => '<h5 class="widget-title"><span class="widget-icon"></span>',
+        'after_title' => '</h5>',
+    ));
+
+    register_sidebar(array(
+        'id' => 'sidebar-footer-third',
+        'name' => __('Footer Third Position', 'luskintheme'),
+        'description' => __('Widgets in this area will be shown on all posts and pages within the footer within the third position (i.e., right inside).', 'luskintheme'),
+        'before_widget' => '<div id="%1$s" class="widget %2$s">',
+        'after_widget' => '</div>',
+        'before_title' => '<h5 class="widget-title"><span class="widget-icon"></span>',
+        'after_title' => '</h5>',
+    ));
+
+    register_sidebar(array(
+        'id' => 'sidebar-footer-forth',
+        'name' => __('Footer Forth Position', 'luskintheme'),
+        'description' => __('Widgets in this area will be shown on all posts and pages within the footer within the forth position (i.e., right outside).', 'luskintheme'),
+        'before_widget' => '<div id="%1$s" class="widget %2$s">',
+        'after_widget' => '</div>',
+        'before_title' => '<h5 class="widget-title"><span class="widget-icon"></span>',
+        'after_title' => '</h5>',
+    ));
+
+    register_sidebar(array(
+        'id' => 'sidebar-sub-footer',
+        'name' => __('Sub Footer', 'luskintheme'),
+        'description' => __('Widgets in this area will be shown on all posts and pages below the footer (i.e., the very bottom).', 'luskintheme'),
+        'before_widget' => '<div id="%1$s" class="widget %2$s">',
+        'after_widget' => '</div>',
+        'before_title' => '<h5 class="widget-title"><span class="widget-icon"></span>',
+        'after_title' => '</h5>',
+    ));
+
+    /*
+to add more sidebars or widgetized areas, just copy and edit the above
+sidebar code. In order to call your new sidebar just use the following code:
+
+Just change the name to whatever your new sidebar's id is, for example:
+
+register_sidebar(array(
+'id' => 'sidebar2',
+'name' => __( 'Sidebar 2', 'luskintheme' ),
+'description' => __( 'The second (secondary) sidebar.', 'luskintheme' ),
+'before_widget' => '<div id="%1$s" class="widget %2$s">',
+'after_widget' => '</div>',
+'before_title' => '<h4 class="widgettitle">',
+'after_title' => '</h4>',
+));
+
+To call the sidebar in your template, you can just copy the sidebar.php file
+and rename it to your sidebar's name. So using the above example, it would
+be: sidebar-sidebar2.php
+ */
+} /* end sidebars & widgetizes areas */
 
 
-/* ********************************************************************************
- * RELATED POSTS FUNCTION
- * ********************************************************************************/
+// Enable Scripts and Shortcodes in WordPress Text Widgets
+function php_text($text) {
+    if (strpos($text, '<' . '?') !== false) {
+        ob_start();
+        eval('?' . '>' . $text);
+        $text = ob_get_contents();
+        ob_end_clean();
+    }
+    return $text;
+}
 
-// Related Posts Function (call using luskin_related_posts(); )
-function luskin_related_posts() {
-	echo '<ul id="luskin-related-posts">';
-	global $post;
-	$tags = wp_get_post_tags( $post->ID );
-	if($tags) {
-		foreach( $tags as $tag ) {
-			$tag_arr .= $tag->slug . ',';
-		}
-		$args = array(
-			'tag' => $tag_arr,
-			'numberposts' => 5, /* you can change this to show more */
-			'post__not_in' => array($post->ID)
-		);
-		$related_posts = get_posts( $args );
-		if($related_posts) {
-			foreach ( $related_posts as $post ) : setup_postdata( $post ); ?>
-				<li class="related_post"><a class="entry-unrelated" href="<?php the_permalink() ?>" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a></li>
-			<?php endforeach; }
-		else { ?>
-			<?php echo '<li class="no_related_post">' . __( 'No Related Posts Yet!', 'luskintheme' ) . '</li>'; ?>
-		<?php }
-	}
-	wp_reset_postdata();
-	echo '</ul>';
-} /* end luskin related posts function */
-
-/* ********************************************************************************
- * PAGE NAVI
- * ********************************************************************************/
-
-// Numeric Page Navi (built into the theme by default)
-function luskin_page_navi() {
-  global $wp_query;
-  $bignum = 999999999;
-  if ( $wp_query->max_num_pages <= 1 )
-    return;
-  echo '<nav class="pagination">';
-  echo paginate_links( array(
-    'base'         => str_replace( $bignum, '%#%', esc_url( get_pagenum_link($bignum) ) ),
-    'format'       => '',
-    'current'      => max( 1, get_query_var('paged') ),
-    'total'        => $wp_query->max_num_pages,
-    'prev_text'    => '&larr;',
-    'next_text'    => '&rarr;',
-    'type'         => 'list',
-    'end_size'     => 3,
-    'mid_size'     => 3
-  ) );
-  echo '</nav>';
-} /* end page navi */
-
-/* ********************************************************************************
+/* *****************************************************************************
  * RANDOM CLEANUP ITEMS
- * ********************************************************************************/
+ * ****************************************************************************/
 
 // remove the p from around imgs (http://css-tricks.com/snippets/wordpress/remove-paragraph-tags-from-around-images/)
-function luskin_filter_ptags_on_images($content){
-	return preg_replace('/<p>\s*(<a .*>)?\s*(<img .* \/>)\s*(<\/a>)?\s*<\/p>/iU', '\1\2\3', $content);
+function luskinFilterPtagsOnImages($content)
+{
+    return preg_replace('/<p>\s*(<a .*>)?\s*(<img .* \/>)\s*(<\/a>)?\s*<\/p>/iU', '\1\2\3', $content);
 }
 
-// This removes the annoying […] to a Read More link
-function luskin_excerpt_more($more) {
-	global $post;
-	// edit here if you like
-	return '...  <a class="excerpt-read-more" href="'. get_permalink( $post->ID ) . '" title="'. __( 'Read ', 'luskintheme' ) . esc_attr( get_the_title( $post->ID ) ).'">'. __( 'Read more &raquo;', 'luskintheme' ) .'</a>';
+// remove the annoying […] to a read more link
+function luskinExcerptMore($more)
+{
+    global $post;
+    // edit here if you like
+    return '...  <a class="excerpt-read-more" href="' . get_permalink($post->ID) . '" title="' . __('Read ', 'luskintheme') . esc_attr(get_the_title($post->ID)) . '">' . __('Read more &raquo;', 'luskintheme') . '</a>';
 }
-
-?>

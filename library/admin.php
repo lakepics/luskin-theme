@@ -20,7 +20,9 @@ Digging into WP - http://digwp.com/2010/10/customize-wordpress-dashboard/
 
 // disable default dashboard widgets
 function disable_default_dashboard_widgets() {
+	
 	global $wp_meta_boxes;
+	
 	// unset($wp_meta_boxes['dashboard']['normal']['core']['dashboard_right_now']);    // Right Now Widget
 	unset($wp_meta_boxes['dashboard']['normal']['core']['dashboard_activity']);        // Activity Widget
 	unset($wp_meta_boxes['dashboard']['normal']['core']['dashboard_recent_comments']); // Comments Widget
@@ -56,6 +58,7 @@ http://digwp.com/2010/10/customize-wordpress-dashboard/
 
 // RSS Dashboard Widget
 function luskin_rss_dashboard_widget() {
+	
 	if ( function_exists( 'fetch_feed' ) ) {
 		// include_once( ABSPATH . WPINC . '/feed.php' );                // include the required file
 		$feed = fetch_feed( 'http://feeds.feedburner.com/wpcandy' );     // specify the source feed
@@ -79,17 +82,18 @@ function luskin_rss_dashboard_widget() {
 		<?php echo substr($item->get_description(), 0, 200); ?>
 	</p>
 	<?php }
+
 }
 
 // calling all custom dashboard widgets
 function luskin_custom_dashboard_widgets() {
+	
 	wp_add_dashboard_widget( 'luskin_rss_dashboard_widget', __( 'Recent news from Screen Pilot', 'luskintheme' ), 'luskin_rss_dashboard_widget' );
+	
 	/*
-	Be sure to drop any other created Dashboard Widgets
-	in this function and they will all load.
+	Be sure to drop any other created Dashboard Widgets in this function and they will all load.
 	*/
 }
-
 
 // removing the dashboard widgets
 add_action( 'wp_dashboard_setup', 'disable_default_dashboard_widgets' );
@@ -131,7 +135,7 @@ WordPress updates. Here are a few funtions which you can choose to use if you li
 
 // Custom Backend Footer
 function luskin_custom_admin_footer() {
-	echo ( '<span id="footer-thankyou">Developed by <a href="http://screenpilot.com" target="_blank">Screen Pilot</a></span>.' );
+	echo ( '<span id="footer-thankyou">Developed by <a href="//screenpilot.com" target="_blank">Screen Pilot</a></span>.' );
 }
 
 // adding it to the admin area

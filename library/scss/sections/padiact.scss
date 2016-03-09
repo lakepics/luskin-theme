@@ -1,0 +1,443 @@
+// variables
+@import "../partials/variables";
+
+// ############ partials/padiact.scss ############
+
+.padiOverlay {
+  position: fixed;
+  left: 0;
+  top: 0;
+  padding: 0;
+  margin: 0;
+  visibility: visible;
+  overflow-x: hidden;
+  overflow-y: auto;
+  width: 100%;
+  height: 100%;
+  z-index: 1040;
+}
+
+.padiFade {
+  zoom: 1;
+  background-color: rgba(0, 0, 0, 0.6);
+  width: 100%;
+  height: 100%;
+  z-index: 1041;
+}
+
+.padiPop4Overlay h1, .padiPop4Overlay h2, .padiPop4Overlay h3, .padiPop4Overlay div, .padiPop4Overlay ul, .padiPop4Overlay li, .padiPop4Overlay ol, .padiPop4Overlay p, .padiPop4Overlay a, .padiPop4Overlay input, .padiPop4Overlay input[type=text], .padiPop4Overlay input[type=email] {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: none;
+  font-size: 14px;
+  line-height: 18px;
+  font-family: $sans-serif;
+  font-weight: normal;
+  vertical-align: middle;
+  float: none;
+  width: auto;
+  height: auto;
+  background-image: none;
+  letter-spacing: 0;
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+  list-style: none;
+  text-shadow: none !important;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.padiPop4Overlay *, .padiPop4Overlay :before, .padiPop4Overlay :after {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.padiPop4Wrap {
+  position: relative;
+  visibility: visible;
+  z-index: 1602;
+  height: auto;
+  width: auto;
+  width: 100%;
+  max-width: 400px;
+  padding: 5px;
+  box-sizing: border-box;
+  background-color: rgba(180, 180, 180, 0.8);
+}
+
+.padiPop4Overlay {
+  font-family: $sans-serif;
+  font-size: 13px;
+  font-weight: normal;
+}
+
+.padiPop4Overlay a {
+  color: inherit;
+  text-decoration: underline;
+  border-bottom: none;
+}
+
+.padiPop4Overlay a:hover {
+  color: inherit;
+  text-decoration: underline;
+  border-bottom: none;
+}
+
+.padiPop4Overlay h1.padiTitle {
+  color: #FFFFFF;
+  font-family: $sans-serif;
+  font-size: 15px;
+  line-height: 20px;
+  font-weight: normal;
+  text-align: center;
+  text-transform: uppercase;
+  margin: 0;
+  padding: 5px 0 5px 0;
+  text-shadow: none;
+  word-spacing: 2px;
+  text-decoration: none;
+}
+
+img.logo {
+  width: 100%;
+  height: auto;
+  display: block;
+  border: 0;
+}
+
+.padiPop4Overlay div.padiPopupContent {
+  position: relative;
+  -moz-border-radius: 6px;
+  -webkit-border-radius: 6px;
+  border-radius: 6px;
+  background: #666666;
+  background: url(//www.hmaimages.com/HMA/ehunter/lcc_ehunter_bg.png) bottom center;
+  background-size: cover;
+  background-color: #226AA0;
+  margin-bottom: 0;
+  -moz-background-clip: padding;
+  -webkit-background-clip: padding-box;
+  background-clip: padding-box;
+  color: #FFFFFF;
+}
+
+.padiPop4Overlay .padiContent {
+  padding: 1.5em 2em 1.5em 2em;
+  color: #FFFFFF;
+}
+
+.padiPop4Overlay .padiContent p {
+  margin-top: 0;
+  margin-bottom: .6em;
+}
+
+.padiPop4Overlay .padiContent label {
+  color: #FFFFFF;
+  display: block;
+}
+
+.padiPop4Overlay .padiCriticalMessage {
+  border: none !important;
+  background: #FCC;
+  padding: 10px;
+  font-size: 14px;
+  font-weight: normal;
+  color: #FFFFFF;
+  -moz-border-radius: 6px;
+  -webkit-border-radius: 6px;
+  border-radius: 6px;
+}
+
+.padiPop4Overlay .padiFields {
+  width: 100%;
+  display: block;
+  vertical-align: top;
+  padding: 0;
+}
+
+.padiPop4Overlay .padiThanks {
+  width: 100%;
+  display: block;
+  vertical-align: top;
+  padding: 25px 5px 25px 5px;
+  font-weight: bold;
+  color: #FFFFFF;
+  text-align: center;
+  font-size: 24px;
+  line-height: 28px;
+}
+
+.padiClearfix:after {
+  content: " ";
+
+  /* Older browser do not support empty content */
+  visibility: hidden;
+  display: block;
+  height: 0;
+  clear: both;
+}
+
+.padiPop4Overlay .padiClose {
+  font-family: $sans-serif;
+  padding: 8px;
+  margin: 0;
+  display: block;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+  line-height: 18px;
+  color: rgb(180, 180, 180);
+  text-shadow: none;
+  opacity: .5;
+  filter: alpha(opacity = 20);
+  text-decoration: none !important;
+  border: none;
+}
+
+.padiPop4Overlay .padiClose:hover {
+  color: rgb(180, 180, 180);
+  opacity: .9;
+  filter: alpha(opacity = 40);
+  cursor: pointer;
+  text-decoration: none !important;
+  border: none;
+  padding: 8px;
+  margin: 0;
+  display: block;
+}
+
+/* THE FORM FIELDS */
+.padiPop4Overlay form {
+  position: relative;
+  padding-top: 5px;
+  margin: 0;
+  display: block;
+}
+
+.padiPop4Overlay form .padiField {
+  display: block;
+  width: 100%;
+  height: 30px;
+  padding: 6px 8px;
+  font-size: 13px;
+  line-height: 1.428571429;
+  color: #2d2d2d;
+  vertical-align: middle;
+  background-color: rgba(255, 255, 255, 0.9);
+  background-image: none;
+  border: 1px solid #CCC;
+  border-radius: 4px;
+  -webkit-box-shadow: inset 0 0 3px rgba(0, 0, 0, 0.18);
+  -moz-box-shadow: inset 0 0 3px rgba(0, 0, 0, 0.18);
+  box-shadow: inset 0 0 3px rgba(0, 0, 0, 0.18);
+  -webkit-transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+  transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+  margin: 0px;
+  font-family: $sans-serif;
+}
+
+.padiPop4Overlay form .padiCheck {
+  margin: 0 4px 2px;
+  vertical-align: bottom;
+}
+
+.padiPop4Overlay form .padiField:focus {
+  border-color: #666;
+  outline: none;
+  border: 1px solid #333333;
+  border-radius: 4px;
+  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(255, 255, 255, 0.6);
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(255, 255, 255, 0.6);
+}
+
+.padiPop4Overlay form .padiLabel {
+  font-weight: normal;
+}
+
+.padiPop4Overlay form .padiRadioLabel {
+  font-weight: normal !important;
+  font-size: 12px;
+}
+
+.padiPop4Overlay form option {
+  color: #333;
+}
+
+.padiPop4Overlay form .padiRadio {
+  margin-bottom: 1.4em;
+  padding: 0;
+  list-style: none;
+}
+
+.padiPop4Overlay form .padiRadio li {
+  margin: 3px 0;
+}
+
+.padiPop4Overlay form .padiButton {
+  display: block;
+  padding: 4px 10px;
+  margin: 20px auto;
+  color: #000000;
+  font-size: 14px;
+  font-weight: bold;
+  line-height: 1.428571429;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: middle;
+  cursor: pointer;
+  background-image: none;
+  background-color: hsla(0, 0%, 100%, 0.8);
+  border: 1px solid transparent;
+  -moz-border-radius: 6px;
+  -webkit-border-radius: 6px;
+  border-radius: 6px;
+  outline: none;
+  font-family: $sans-serif;
+  -webkit-box-shadow: hsla(0, 0%, 0%, 0.9) 1px 1px 1px;
+  -moz-box-shadow: hsla(0, 0%, 0%, 0.9) 1px 1px 1px;
+  box-shadow: hsla(0, 0%, 0%, 0.9) 1px 1px 1px;
+}
+
+.padiPop4Overlay form .padiButton:hover {
+  background-color: hsla(0, 0%, 100%, 0.9);
+  box-shadow: none;
+  position: relative;
+  top: 1px;
+  left: 1px;
+}
+
+.padiPop4Overlay form .padiButton:active {
+  background-image: none;
+  outline: none;
+  -webkit-box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.225);
+  box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.225);
+}
+
+.padiPop4Overlay form .padiButton::after {
+  content: " \25BA";
+}
+
+.padiPop4Overlay form .padiSLabel {
+  font-size: 12px;
+  display: block;
+  margin: 5px 0;
+}
+
+.padiPop4Overlay .padiPrivacy {
+  font-size: 12px;
+  line-height: 13px;
+  font-style: normal;
+  color: #FFFFFF;
+  margin-top: 0px !important;
+  margin-bottom: 0px !important;
+}
+
+.padiPreload {
+  display: inline-block;
+  position: absolute;
+  bottom: 0;
+  right: inherit;
+  padding: 3px;
+}
+
+div.padiFormWrap {
+  padding-top: 10px;
+}
+
+div.padiPrivacy {
+  font-size: 12px;
+  padding: 0 0 5px;
+}
+
+.padiPop4Overlay #logo {
+  display: block;
+  width: 100%;
+  padding: 40px 20px 0px 20px;
+  box-sizing: border-box;
+}
+
+@media only screen and (min-width: 400px) {
+  .padiPop4Wrap {
+    position: absolute;
+    visibility: visible;
+    z-index: 1602;
+    left: 50%;
+    margin-left: -200px;
+    top: 5%;
+    height: auto;
+    width: auto;
+    max-width: 400px;
+    background-color: transparent;
+  }
+
+  .padiPop4Overlay {
+    font-family: $sans-serif;
+    font-size: 13px;
+    background-color: rgb(180, 180, 180);
+    background-color: rgba(180, 180, 180, 0.8);
+    background-image: none;
+    background-repeat: no-repeat;
+    padding: 6px;
+    -moz-border-radius: 6px;
+    -webkit-border-radius: 6px;
+    border-radius: 6px;
+    -webkit-box-shadow: 0 0 25px rgba(0, 0, 0, 0.8);
+    -moz-box-shadow: 0 0 25px rgba(0, 0, 0, 0.8);
+    box-shadow: 0 0 25px rgba(0, 0, 0, 0.8);
+    -moz-background-clip: padding;
+    -webkit-background-clip: padding-box;
+    background-clip: padding-box;
+    position: static;
+    margin: 0;
+    z-index: 1060;
+    overflow: auto;
+  }
+
+  .padiPop4Overlay div.padiPopupContent {
+    -moz-border-radius: 6px;
+    -webkit-border-radius: 6px;
+    border-radius: 6px;
+  }
+}
+
+
+// styles for 0up
+
+
+// styles for 481up
+@media only screen and (min-width: 481px) {
+
+}
+
+// styles for 640up
+@media only screen and (min-width: 640px) {
+
+}
+
+// styles for 768up
+@media only screen and (min-width: 768px) {
+
+}
+
+// styles for 1030up
+@media only screen and (min-width: 1030px) {
+
+
+}
+
+// styles for 1240up
+@media only screen and (min-width: 1240px) {
+
+}
+
+// styles for 2x
+@media only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min--moz-device-pixel-ratio: 1.5), only screen and (min-device-pixel-ratio: 1.5) {
+
+}

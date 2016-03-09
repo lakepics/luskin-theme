@@ -1,0 +1,641 @@
+// variables
+@import "partials/variables";
+
+// page styles
+@import "sections/page";
+
+// amenities and services
+@import "sections/amenities-services";
+
+/* ############ meeting-resources.scss ############ */
+
+.event-planning-resources .section-description {
+  padding-bottom: 42px;
+}
+
+.event-planning-resources .three-columns {
+  margin-bottom: 70px;
+}
+
+.event-planning-resources .left-column {
+  float: left;
+}
+
+.event-planning-resources .right-column {
+  float: left;
+}
+
+.event-planning-resources .middle-column {
+  float: left;
+  width: 30%;
+  margin: 0 3.3% 0 0;
+}
+
+.event-planning-resources .column .inner-wrapper {
+  padding: 0 48px;
+}
+
+.event-planning-resources .left-column .inner-wrapper {
+  padding-left: 0;
+}
+
+.event-planning-resources .right-column .inner-wrapper {
+  padding-right: 0;
+}
+
+.event-planning-resources .column h3, h3.event-planning-resources {
+  margin: 0 0 25px 0;
+  font-size: 18px;
+  line-height: 1.15;
+  color: #47718E;
+  font-family: $bold-sans-serif;
+  text-transform: uppercase;
+}
+
+h3.event-planning-resources {
+  margin-bottom: 10px;
+  padding-bottom: 0px;
+}
+
+.event-planning-resources .column ul {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+.evp ul {
+  margin-bottom: 20px;
+}
+
+.event-planning-resources .column ul li {
+  border-bottom: 1px solid #8DA6B8;
+}
+
+.event-planning-resources .column ul li:first-child {
+  border-top: 1px solid #8DA6B8;
+}
+
+.event-planning-resources .column ul li a {
+  display: block;
+  padding: 25px 40px 25px 5px;
+  font-size: 16px;
+  line-height: 1.33;
+  letter-spacing: 0.05em;
+  color: #000;
+  font-family: $semibold-sans-serif;
+  background: url("/wp-content/themes/luskin/library/images/list-download-link-arrow.png") no-repeat right center;
+}
+
+.event-planning-resources .column ul li a:hover,
+.event-planning-resources .column ul li a:focus {
+  color: #3284BF;
+}
+
+.event-planning-resources .column .button {
+  margin-top: 45px;
+}
+
+#table001 {
+  width: 1100px;
+  margin: 0 auto;
+}
+
+// styles for 0up
+
+#main-content {
+
+  .lax-directions {
+    background: none;
+    min-height: 0;
+    padding: 0 !important;
+    position: relative;
+    // overflow: hidden;
+
+    .lax-dir-wrapper {
+      // height: 450px;
+      left: 0;
+      margin: auto;
+      position: absolute;
+      overflow: hidden;
+      right: 0;
+      top: 0;
+      width: 100%;
+
+      .map-directions {
+        display: none;
+        // height: 533px;
+        margin: 0 auto;
+        position: static;
+        // width: 1920px;
+
+        &.map-directions-tablet {
+          display: none;
+
+          &.map-directions-tablet-landscape {
+            display: none;
+            // height: 500px;
+            // width: 1024px;
+          }
+
+        }
+
+        &.map-directions-mobile {
+          display: none;
+
+          &.map-directions-mobile-landscape {
+            display: none;
+            // height: 568px;
+            // width: 240px;
+          }
+
+          &.map-directions-mobile-portrait {
+            display: block;
+            // height: 320px;
+            // width: 221px;
+          }
+
+        }
+
+      }
+
+    }
+
+    .textbox {
+      max-width: 1180px;
+      position: relative;
+      margin: 0 auto;
+    }
+
+    .directions-info-block {
+      background: $alt-dark-blue;
+      color: $white;
+      font-family: $sans-serif;
+      font-size: 15px;
+      line-height: 1.5;
+      margin: 0;
+      padding: 20px;
+      position: static;
+
+      h3 {
+        font-family: $bold-sans-serif;
+        font-size: 25px;
+        letter-spacing: 0.05em;
+        line-height: 1.22;
+        margin: 0 0 15px 0;
+        text-transform: uppercase;
+      }
+
+      h5 {
+        font-family: $sans-serif;
+        font-size: 15px;
+        letter-spacing: 0.05em;
+        line-height: 1.3;
+        margin: 0 0 3px 0;
+        text-transform: uppercase;
+      }
+
+      p {
+        color: $white;
+      }
+
+    }
+
+  }
+
+}
+
+@media only screen and (orientation: portrait) {
+
+  #main-content {
+
+    .lax-directions {
+
+      .lax-dir-wrapper {
+        height: auto;
+        position: relative;
+
+        .map-directions {
+          display: none;
+
+          &.map-directions-tablet {
+          display: none;
+
+            &.map-directions-tablet-landscape {
+              display: none;
+            }
+
+          }
+
+          &.map-directions-mobile {
+            display: none;
+
+            &.map-directions-mobile-landscape {
+              display: none;
+            }
+
+            &.map-directions-mobile-portrait {
+              display: block;
+              height: auto;
+              margin: 0 auto;
+              position: static;
+              width: 100%;
+            }
+
+          }
+
+        }
+
+      }
+
+    }
+
+  }
+
+}
+
+@media only screen and (orientation: landscape) and (max-width: 735px) {
+
+  #main-content {
+
+    .lax-directions {
+
+      .lax-dir-wrapper {
+        height: auto;
+        position: relative;
+
+        .map-directions {
+          display: none;
+
+          &.map-directions-tablet {
+          display: none;
+
+            &.map-directions-tablet-landscape {
+              display: none;
+            }
+
+          }
+
+          &.map-directions-mobile {
+            display: none;
+
+            &.map-directions-mobile-landscape {
+              display: block;
+              height: auto;
+              margin: 0 auto;
+              position: static;
+              width: 100%;
+            }
+
+            &.map-directions-mobile-portrait {
+              display: none;
+            }
+
+          }
+
+        }
+
+      }
+
+    }
+
+  }
+
+}
+
+// styles for 481up
+@media only screen and (min-width: 481px) {
+
+  #main-content {
+
+    .lax-directions {
+
+      .lax-dir-wrapper {
+        height: auto;
+        position: relative;
+
+        .map-directions {
+          display: none;
+
+          &.map-directions-tablet {
+          display: none;
+
+            &.map-directions-tablet-landscape {
+              display: block;
+              height: auto;
+              width: 100%;
+            }
+
+          }
+
+          &.map-directions-mobile {
+            display: none;
+
+            &.map-directions-mobile-landscape {
+              display: none;
+            }
+
+            &.map-directions-mobile-portrait {
+              display: none;
+            }
+
+          }
+
+        }
+
+        // .textbox {
+        //   position: absolute;
+        //   top: 0;
+
+        //   .directions-info-block {
+        //     position: absolute;
+        //     top: 0;
+        //   }
+
+        // }
+
+      }
+
+    }
+
+  }
+
+}
+
+// styles for 640up
+@media only screen and (min-width: 640px) {
+
+  #main-content {
+
+    .event-planning-resources {
+
+      .column {
+
+        a.button {
+          background-position-x: 105%;
+          padding: 10px 40px 10px 10px;
+        }
+
+      }
+
+    }
+
+    .lax-directions {
+
+      .lax-dir-wrapper {
+
+        .map-directions {
+          display: none;
+
+          &.map-directions-tablet {
+          display: none;
+
+            &.map-directions-tablet-landscape {
+              display: block;
+              height: auto;
+              width: 100%;
+            }
+
+          }
+
+          &.map-directions-mobile {
+            display: none;
+
+            &.map-directions-mobile-landscape {
+              display: none;
+            }
+
+            &.map-directions-mobile-portrait {
+              display: none;
+            }
+
+          }
+
+        }
+
+        .textbox {
+          position: absolute;
+          top: 0;
+
+          .directions-info-block {
+            left: 20px;
+            margin-top: 0;
+            padding: 15px;
+            position: absolute;
+            width: 230px;
+          }
+
+        }
+
+      }
+
+    }
+
+  }
+
+}
+
+// styles for 700down
+@media only screen and (max-width: 700px) {
+
+  #main-content {
+
+    .event-planning-resources {
+      padding: 0;
+
+      .three-columns,
+      .bottom-30 {
+        margin-bottom: 0;
+        padding-bottom: 0;
+      }
+
+      .column {
+        float: none;
+        margin-bottom: 1.5em;
+        width: 100%;
+
+        .inner-wrapper {
+          padding: 0;
+        }
+
+        .button {
+          margin-top: 0;
+        }
+
+      }
+
+      .bottom-30 {
+        padding-bottom: 0 !important;
+      }
+
+    }
+
+    .lax-directions {
+
+      .lax-dir-wrapper {
+
+        .directions-info-block {
+          position: static;
+          width: 98%;
+          margin: 5px auto;
+        }
+
+      }
+
+    }
+
+  }
+
+}
+
+// styles for 768up
+@media only screen and (min-width: 768px) {
+
+  #main-content {
+
+    .lax-directions {
+      // min-height: 450px;
+
+      .lax-dir-wrapper {
+
+        .map-directions {
+          display: none;
+
+          &.map-directions-tablet {
+          display: none;
+
+            &.map-directions-tablet-landscape {
+              display: block;
+              height: auto;
+              width: 100%;
+            }
+
+          }
+
+          &.map-directions-mobile {
+            display: none;
+
+            &.map-directions-mobile-landscape {
+              display: none;
+            }
+
+            &.map-directions-mobile-portrait {
+              display: none;
+            }
+
+          }
+
+        }
+
+      }
+
+    }
+
+  }
+
+}
+
+// styles for 1030up
+@media only screen and (min-width: 1030px) {
+
+  #main-content {
+
+    .lax-directions {
+      margin: 0 auto;
+      max-width: 1920px;
+
+      .lax-dir-wrapper {
+        min-height: 450px;
+
+        .map-directions {
+          display: block;
+          height: auto;
+          margin-right: -990px;
+          position: absolute;
+          right: 50%;
+          width: auto;
+
+          &.map-directions-tablet {
+          display: none;
+
+            &.map-directions-tablet-landscape {
+              display: none;
+            }
+
+          }
+
+          &.map-directions-mobile {
+            display: none;
+
+            &.map-directions-mobile-landscape {
+              display: none;
+            }
+
+            &.map-directions-mobile-portrait {
+              display: none;
+            }
+
+          }
+
+        }
+
+      }
+
+    }
+
+  }
+
+}
+
+// styles for 1180up
+@media only screen and (min-width: 1180px) {
+
+   #main-content {
+
+    .lax-directions {
+
+      .lax-dir-wrapper {
+
+        .textbox {
+          max-width: 1180px;
+          position: relative;
+          margin: 0 auto;
+
+          .directions-info-block {
+            left: 20px;
+            margin-top: 0;
+            padding: 15px;
+            position: absolute;
+            width: 230px;
+          }
+
+        }
+
+      }
+
+    }
+
+  }
+
+}
+
+// styles for 1240up
+@media only screen and (min-width: 1240px) {
+
+  #main-content {
+
+    .lax-directions {
+
+      .lax-dir-wrapper {
+
+      }
+
+    }
+
+  }
+
+}
+
+// styles for 2x
+@media only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min--moz-device-pixel-ratio: 1.5), only screen and (min-device-pixel-ratio: 1.5) {
+
+}

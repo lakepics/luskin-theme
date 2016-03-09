@@ -5,14 +5,13 @@
 ?>
 <?php get_header(); ?>
 
-<!-- main content -->
 <div id="main-content" role="main">
+
 	<?php if (have_posts()) : ?>
+
 		<?php while (have_posts()) : the_post(); ?>
 
-		<?php
-
-		show_hero_slides();
+		<?php showHeroSlides();
 
 		$intro_text = get_field('intro_copy');
 			if ( $intro_text ) {
@@ -20,7 +19,7 @@
 					$page_sub_head = get_field('intro_h2');
 					if ($page_sub_head) {
 						echo '<h2>' . $page_sub_head . '</h2>';
-						}				
+						}
 				echo '<div class="res-content res-columns">'. $intro_text .'</div>';
 				echo '</div>';
 				}
@@ -31,14 +30,14 @@
 		if( $floorplan ){
 		?>
 		<div class="top-30">
-			<div class="features clearfix">
-			<?php $section_title = get_field('floorplan_h2'); 
+			<div class="clearfix">
+			<?php $section_title = get_field('floorplan_h2');
 				if ($section_title) {
 					echo '<h2 class="floorplan-heading">' . $section_title . '</h2>';
-				}                    
+				}
 			?>
-            
-        <div class="separator-images floorplan-slider clearfix">
+
+        <div class="lemmonslider floorplan-slider clearfix">
 			<div id="floorplan-slider" class="slider">
 				<ul>
 				<?php
@@ -56,23 +55,23 @@
 			</div>
 		</div>
 		<div class="container clearfix bottom-30 top-30">
-        	<?php 
+        	<?php
 				$capacity_table = get_field('capacity_table');
 				if($capacity_table) {
 					echo $capacity_table;
-					}				
+					}
 			?>
 		</div>
         <div class="container clearfix top-30">
-        </div>            
+        </div>
 		<?php
 		}
 		?>
-		
 
 		<?php endwhile; ?>
+
 	<?php endif; ?>
-</div>
-<!-- /main content -->
+
+</div><!-- /main content -->
 
 <?php get_footer(); ?>

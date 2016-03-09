@@ -1,0 +1,163 @@
+// variables
+@import "partials/variables";
+
+// page styles
+@import "sections/page";
+
+/* ############ room-gallery.scss ############ */
+
+/* full width gallery */
+.full-width-gallery {
+  width: 100%;
+  position: relative;
+}
+
+.full-width-gallery ul {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+.full-width-gallery .bx-prev,
+.full-width-gallery .bx-next {
+  display: block;
+  width: 48px;
+  height: 47px;
+  position: absolute;
+  top: 50%;
+  margin-top: -24px;
+  left: 0;
+  text-indent: -99999em;
+  overflow: hidden;
+  background: url("/wp-content/themes/luskin/library/images/gallery-controls.png") no-repeat center top;
+  z-index: 100;
+}
+
+.full-width-gallery .bx-next {
+  left: auto;
+  right: 0;
+  background-position: center bottom;
+}
+
+.full-width-gallery .bx-controls .bx-pager {
+  position: absolute;
+  width: 100%;
+  text-align: center;
+  bottom: 26px;
+  z-index: 100;
+}
+
+.full-width-gallery .bx-controls .bx-pager-item {
+  display: inline-block;
+  *display: inline;
+  margin-left: 4px;
+  margin-right: 4px;
+  zoom: 1;
+}
+
+.full-width-gallery .bx-controls .bx-pager-link {
+  display: block;
+  width: 12px;
+  height: 12px;
+  overflow: hidden;
+  text-indent: -99999em;
+  background: rgb(255, 255, 255);
+  background: rgba(255, 255, 255, 0.4);
+  -moz-border-radius: 20px;
+  -webkit-border-radius: 20px;
+  -o-border-radius: 20px;
+  -khtml-border-radius: 20px;
+  border-radius: 20px;
+}
+
+.full-width-gallery .bx-controls .bx-pager-link.active {
+  background: #ffb300;
+}
+
+/* -------------- Gallery --------------- */
+.page-template-template-gallery-php {
+  background: #f4f4f4;
+}
+
+#gallery-container {
+  margin-top: 25px;
+}
+
+#gallery-container .item {
+  float: left;
+  margin-bottom: 20px;
+}
+
+#gallery-container .item img {
+  display: block;
+  max-width: 100%;
+}
+
+#gallery-container .item a {
+  display: block;
+  position: relative;
+}
+
+#gallery-container .item a:before {
+  /*  content: " "; ### Remove search icons on gallery thumbnails - LK
+      display: block;
+      width: 30px;
+      height: 30px;
+      position: absolute;
+      right: 5px;
+      bottom: 5px;
+      background: url('../../images/search-icon.png') no-repeat center center; */
+}
+
+.gallery-filters-wrapper {
+  display: block;
+  position: relative;
+  float: right;
+  width: 100%;
+  max-width: 380px;
+  height: 58px;
+  margin: 55px 0 27px 0;
+  box-shadow: 1px 1px 0 0 #e3e3e3;
+  background: #fff;
+}
+
+#gallery-filters {
+  position: absolute;
+  left: 0;
+  top: 0;
+  opacity: 0;
+  width: 100%;
+  height: 58px;
+  padding: 25px 0 0 30px;
+  border: none;
+  font-size: 16px;
+  line-height: 1;
+  color: #737373;
+  text-transform: uppercase;
+  font-family: $semibold-sans-serif;
+  background: transparent !important;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  -webkit-appearance: none;
+  -moz-appearance: text-field;
+  appearance: none;
+  text-indent: 0.01px;
+  text-overflow: "";
+}
+
+#gallery-filters::-ms-expand {
+  display: none;
+}
+
+.gallery-filters-wrapper span {
+  display: block;
+  height: 58px;
+  line-height: 58px;
+  padding: 0 50px 0 30px;
+  font-size: 16px;
+  color: #737373;
+  text-transform: uppercase;
+  font-family: $semibold-sans-serif;
+  background: url("/wp-content/themes/luskin/library/images/dropdown-arrow.png") no-repeat right center;
+}

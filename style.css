@@ -1,8 +1,19 @@
-/*
-Theme Name: Luskin
-Theme URI: 
-Description: Luskin Custom WP theme.
-Author: HDSF
-Version: 1.0
-Tags: 
-*/
+/* *****************************************************************************
+ * Theme Name: Luskin
+ * Theme URI: https://www.screenpilot.com/
+ * Author: Screen Pilot
+ * Author URI: https://www.screenpilot.com/
+ * Description: A custom WordPress theme built for Luskin by HDSF and updated by Screen Pilot, LLC to be faster
+ * Version: 2.0
+ * License: GNU General Public License v2 or later
+ * License URI: http://www.gnu.org/licenses/gpl-2.0.html
+ * Tags: hotel, venue, meetings, conferences, dinning, responsive, sticky-nav, slideshow, gallery, flipbook, advanced-custom-fields, gravity-forms
+ * Text Domain: luskintheme
+ *
+ * Note: The CSS used for this theme may not always be valid according to the
+ * W3C standards. It may contain proprietary/nonstandard or yet unsupported
+ * code. This code is used to fix certain user agent rendering bugs, or to
+ * enhance the website/application in the case of more advanced user agents.
+ *
+ * Note: The CSS is built using SASS and can be fould in the /library folder.
+ * ****************************************************************************/

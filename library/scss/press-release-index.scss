@@ -1,0 +1,164 @@
+// variables
+@import "partials/variables";
+
+// page styles
+@import "sections/page";
+
+// tables
+@import "modules/tables";
+
+/* ############ press-release-index.scss ############ */
+
+// styles for 0up
+
+#main-content {
+
+  #container {
+    position: relative;
+    font-size: 1.0em;
+  }
+
+  .container, .container-1024 {
+
+    &.two-columns {
+
+      .column {
+
+        &.left-column,
+        &.right-column {
+          float: none;
+          margin: 0;
+          width: 100%;
+
+        }
+
+        &.right-column {
+          float: none;
+          margin: 3em 0 0;
+
+          h2 {
+            margin-bottom: 23px;
+          }
+
+        }
+
+        h1 {
+          font-size: 1.75em;
+          line-height: 1em;
+          margin: 0 0 20px;
+        }
+
+      }
+
+    }
+
+  }
+
+  .media-contact {
+    margin: 50px 0 20px 0;
+
+      a.luskin-social {
+      display: inline-block;
+      margin: 0px 5px 0 0;
+      min-height: 35px;
+      height: 35px;
+      min-width: 25px;
+      width: 25px;
+      background: url("/wp-content/themes/luskin/library/images/cg9-social-icons.png") no-repeat;
+      line-height: 40px;
+
+      &.fb {
+        background-position: -20px -14px;
+      }
+
+      &.tw {
+        background-position: -92px -13px;
+      }
+
+      &.in {
+        background-position: -157px -12px;
+      }
+
+    }
+
+    .fn {
+      font-weight: bold;
+      font-size: 18px;
+    }
+
+    .ken {
+      line-height: 40px;
+      font-size: 18px;
+      font-family: $light-sans-serif;
+      color: #999999;
+      vertical-align: top;
+    }
+
+  }
+
+  .press-release-list {
+    margin-top: 2em !important;
+  }
+
+}
+
+// styles for 481up
+@media only screen and (min-width: 481px) {
+
+}
+
+// styles for 640up
+@media only screen and (min-width: 640px) {
+
+  #main-content {
+
+      .container, .container-1024 {
+
+      &.two-columns {
+
+        .column {
+
+          &.left-column,
+          &.right-column {
+            float: left;
+            margin: 0;
+            width: 47%;
+
+          }
+
+          &.right-column {
+            float: right;
+            margin: 0;
+          }
+
+        }
+
+      }
+
+    }
+
+  }
+
+}
+
+// styles for 768up
+@media only screen and (min-width: 768px) {
+
+}
+
+// styles for 1030up
+@media only screen and (min-width: 1030px) {
+
+
+}
+
+// styles for 1240up
+@media only screen and (min-width: 1240px) {
+
+}
+
+// styles for 2x
+@media only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min--moz-device-pixel-ratio: 1.5), only screen and (min-device-pixel-ratio: 1.5) {
+
+}
+

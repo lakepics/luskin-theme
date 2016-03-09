@@ -1,43 +1,50 @@
-/******************************************************************
-Site Name:
-Author:
+// ############ modules/alerts.scss ############
 
-Stylesheet: Alert Styles
+// ******************************************************************
+// Stylesheet: Alert Styles
 
-If you want to use these alerts in your design, you can. If not,
-you can just remove this stylesheet.
-
-******************************************************************/
-
-
+// If you want to use these alerts in your design, you can. If not,
+// you can just remove this stylesheet.
+// ******************************************************************
 
 // alerts and notices
 %alert {
-  margin: 10px;
-  padding: 5px 18px;
+  @include border-radius(6px);
+
+  background-position: 6px 10px !important;
+  background-repeat: no-repeat !important;
   border: 1px solid;
+  line-height: 1.5;
+  margin: 0 auto 10px;
+  padding: 8px 10px 8px 30px;
 }
 
-.alert-help {
+.alert-help,
+.warning {
   @extend %alert;
-  border-color: darken($alert-yellow, 5%);
-  background: $alert-yellow;
+
+  background: url("/library/images/warning.png") repeat scroll 0 0 $alert-yellow;
+  border-color: darken($alert-yellow, 10%);
 }
 
 .alert-info {
   @extend %alert;
-  border-color: darken($alert-blue, 5%);
+
+  border-color: darken($alert-blue, 10%);
   background: $alert-blue;
 }
 
 .alert-error {
   @extend %alert;
-  border-color: darken($alert-red, 5%);
+
+  border-color: darken($alert-red, 10%);
   background: $alert-red;
 }
 
-.alert-success {
+.alert-success,
+.success {
   @extend %alert;
-  border-color: darken($alert-green, 5%);
+
+  border-color: darken($alert-green, 10%);
   background: $alert-green;
 }
