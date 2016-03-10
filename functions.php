@@ -71,7 +71,7 @@ function luskinAhoy()
     add_action('get_header', 'wp_html_compression_start');
 
     // minify output
-    add_action('get_header', 'gkp_html_minify_start');
+    //add_action('get_header', 'gkp_html_minify_start');
 
 } /* end luskin ahoy */
 
@@ -329,7 +329,9 @@ function luskinComments($comment, $args, $depth)
 function luskinTypekit()
 {
     // ucla url to typekit
-    wp_enqueue_script( 'theme_typekit', '//use.typekit.net/sif5fib.js');
+    //wp_enqueue_script( 'theme_typekit', '//use.typekit.net/sif5fib.js');
+    // screen pilot copy; remove before sending to client
+    wp_enqueue_script('theme_typekit', '//use.typekit.net/peu6ygo.js');
 }
 add_action('wp_enqueue_scripts', 'luskinTypekit');
 
