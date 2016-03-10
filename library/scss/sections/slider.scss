@@ -1,8 +1,5 @@
-// variables
-@import "partials/variables";
-
-// page styles
-@import "sections/page";
+@import 'partials/variables';
+@import 'sections/page';
 
 /* ############ slider.scss ############ */
 
@@ -62,7 +59,7 @@
   left: 0;
   text-indent: -99999em;
   overflow: hidden;
-  background: url("/wp-content/themes/luskin/library/images/gallery-controls.png") no-repeat center top;
+  background: url('/wp-content/themes/luskin/library/images/gallery-controls.png') no-repeat center top;
   z-index: 100;
 }
 
@@ -82,34 +79,20 @@
 
 // styles for 0up
 
-
 // styles for 481up
-@media only screen and (min-width: 481px) {
-
-}
+@media only screen and (min-width: 481px) {}
 
 // styles for 640up
-@media only screen and (min-width: 640px) {
-
-}
+@media only screen and (min-width: 640px) {}
 
 // styles for 768up
-@media only screen and (min-width: 768px) {
-
-}
+@media only screen and (min-width: 768px) {}
 
 // styles for 1030up
-@media only screen and (min-width: 1030px) {
-
-
-}
+@media only screen and (min-width: 1030px) {}
 
 // styles for 1240up
-@media only screen and (min-width: 1240px) {
-
-}
+@media only screen and (min-width: 1240px) {}
 
 // styles for 2x
-@media only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min--moz-device-pixel-ratio: 1.5), only screen and (min-device-pixel-ratio: 1.5) {
-
-}
+@media only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min--moz-device-pixel-ratio: 1.5), only screen and (min-device-pixel-ratio: 1.5) {}

@@ -651,13 +651,6 @@ tr.releases, tr.releases td {
   text-decoration: none; }
 
 /* ############ meetings-floorplan.scss ############ */
-.floorplan h2 {
-  background: #1C4D71; }
-
-.floorplan {
-  background: #FFF;
-  padding-bottom: 40px; }
-
 .floorplan-heading {
   position: relative;
   padding: 28px 50px 28px 0;
@@ -670,67 +663,10 @@ tr.releases, tr.releases td {
   margin: 0 0 40px 0;
   text-align: center; }
 
-.floorplan .floorplan-content {
-  background: #FFF;
-  padding: 0px 0 20px 0; }
-
-.floorplan .floorplan-plan {
-  position: relative;
-  float: left;
-  width: 50%; }
-
-.floorplan .floorplan-chart {
-  float: right;
-  width: 48%; }
-
-.floorplan .floorplan-plan img,
-.floorplan .floorplan-chart img {
-  display: block;
-  height: auto;
-  max-width: 100%; }
-
-.floorplan .floorplan-chart img {
-  margin: 0 auto; }
-
-.floorplan-plan .bx-prev,
-.floorplan-plan .bx-next {
-  display: inline-block;
-  *display: inline;
-  vertical-align: top;
-  width: 47px;
-  height: 32px;
-  margin-left: 4px;
-  overflow: hidden;
-  text-indent: -99999em;
-  background-color: #08548b;
-  background-image: url("/wp-content/themes/luskin/library/images/floor-plans-arrows.png");
-  background-repeat: no-repeat;
-  zoom: 1; }
-
-.floorplan-plan .bx-prev {
-  background-position: center -24px; }
-
-.floorplan-plan .bx-next {
-  background-position: center 8px; }
-
 .bx-controls-direction {
   margin-top: -23px;
   right: 0;
   z-index: 101; }
-
-.floorplan-plan .floorplan-image {
-  background: #fff;
-  margin-bottom: 30px; }
-
-.floorplan-plan .floorplan span, .floorplan-content h3 {
-  display: block;
-  font-size: 20px;
-  line-height: 1.2;
-  color: #1C4D71;
-  font-family: "Proxima Nova Semibold", "Helvetica Neue", Helvetica, Arial, sans-serif;
-  text-align: center;
-  text-transform: uppercase;
-  letter-spacing: 0.05em; }
 
 .service .service-name {
   padding: 0 10px; }

@@ -1,22 +1,24 @@
-// variables
-@import "partials/variables";
+@import 'partials/variables';
 
 // page styles
-// @import "sections/page";
+// @import 'sections/page';
 
 /* ############ rsvp.scss ############ */
 
-#container{
-    #content {
-      margin: 0 auto;
-      padding: 10px 0;
-      max-width: 752px;
+// styles for 0up
 
-      #main-content .entry-content {
+#container {
+  #content {
+    margin: 0 auto;
+    padding: 10px 0;
+    max-width: 752px;
+
+    #main-content {
+      .entry-content {
         border: 1px solid #999;
 
         img {
-            margin: 0;
+          margin: 0;
         }
 
         #retirement_head_img {
@@ -26,9 +28,25 @@
         #retirement_foot_img {
           vertical-align: bottom;
         }
-
       }
-
     }
-
+  }
 }
+
+// styles for 481up
+@media only screen and (min-width: 481px) {}
+
+// styles for 640up
+@media only screen and (min-width: 640px) {}
+
+// styles for 768up
+@media only screen and (min-width: 768px) {}
+
+// styles for 1030up
+@media only screen and (min-width: 1030px) {}
+
+// styles for 1240up
+@media only screen and (min-width: 1240px) {}
+
+// styles for 2x
+@media only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min--moz-device-pixel-ratio: 1.5), only screen and (min-device-pixel-ratio: 1.5) {}

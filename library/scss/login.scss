@@ -11,8 +11,7 @@ For more info, check out the codex:
 http://codex.wordpress.org/Creating_Admin_Themes
 ******************************************************************/
 
-// variables
-@import "partials/variables";
+@import 'partials/variables';
 
 body.login {}
 
@@ -48,7 +47,7 @@ form {
 }
 
 body form .input {
-  font-family: "HelveticaNeue-Light","Helvetica Neue Light","Helvetica Neue",sans-serif;
+  font-family: 'HelveticaNeue-Light','Helvetica Neue Light','Helvetica Neue',sans-serif;
   font-weight: 200;
   font-size: 24px;
   width: 97%;
@@ -81,4 +80,5 @@ retina login logo
     /* make sure to replace this! */
   }
 }
+
 // end retina media query

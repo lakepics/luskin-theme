@@ -20,11 +20,11 @@ get_header(); ?>
 
 <div id="main-content" role="main">
 
-    <?php if (have_posts()) : ?>
+    <?php if ( have_posts() ) : ?>
 
-        <?php while (have_posts()) : the_post(); ?>
+        <?php while ( have_posts() ) : the_post(); ?>
 
-        <div <?php post_class('container') ?> id="page-<?php the_ID(); ?>">
+        <div <?php post_class( 'container' ) ?> id="page-<?php the_ID(); ?>">
 
             <h2 class="entry-title"><?php the_title(); ?></h2>
 
@@ -36,16 +36,16 @@ get_header(); ?>
 
         <?php endwhile; ?>
 
-		<?php
-		// Previous/next page navigation.
-		the_posts_pagination( array(
-			'prev_text'          => __( 'Previous page', 'luskintheme' ),
-			'next_text'          => __( 'Next page', 'luskintheme' ),
-			'before_page_number' => '<span class="meta-nav screen-reader-text">' . __( 'Page', 'luskintheme' ) . ' </span>',
-		) );
-		?>
+        <?php
+// Previous/next page navigation.
+the_posts_pagination( array(
+        'prev_text'          => __( 'Previous page', 'luskintheme' ),
+        'next_text'          => __( 'Next page', 'luskintheme' ),
+        'before_page_number' => '<span class="meta-nav screen-reader-text">' . __( 'Page', 'luskintheme' ) . ' </span>',
+    ) );
+?>
 
-		<?php endif; ?>
+        <?php endif; ?>
 
 </div><!-- /main content -->
 

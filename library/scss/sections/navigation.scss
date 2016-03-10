@@ -1,5 +1,5 @@
 // variables
-@import "../partials/variables";
+@import '../partials/variables';
 
 /* ############ navigation.scss ############ */
 
@@ -19,9 +19,7 @@
   z-index: 20000;
   box-shadow: inset -10px 0 10px -10px #000000;
 
-  .logo-ucla-mobile {
-
-  }
+  .logo-ucla-mobile {}
 
   .nav-menu {
     list-style-type: none;
@@ -68,7 +66,6 @@
           */
           -webkit-tap-highlight-color: rgba(0, 0, 0, 0.3);
         }
-
       }
 
       .sub-menu {
@@ -91,15 +88,10 @@
             &:hover, &:focus {
               background-color: $mobile-bg-alt;
             }
-
           }
-
         }
-
       }
-
     }
-
   }
 
   .mobile-room-reservation {
@@ -123,21 +115,19 @@
 
       &:before {
         color: $meta2;
-        content: "p ";
+        content: 'p ';
         font-family: $bold-sans-serif;
         vertical-align: 2px;
       }
-
     }
-
   }
+}
 
-} // end .mobile-navigation
+// end .mobile-navigation
 
 #navbar {
-
   #toggle-menu {
-    background: url("/wp-content/themes/luskin/library/images/mobile-menu-button.png") no-repeat center center;
+    background: url('/wp-content/themes/luskin/library/images/mobile-menu-button.png') no-repeat center center;
     cursor: pointer;
     display: block;
     height: 26px;
@@ -153,7 +143,7 @@
     width: 258px;
 
     #logo {
-      background: url("/wp-content/themes/luskin/library/images/rml-300-lcc.png") no-repeat center center !important;
+      background: url('/wp-content/themes/luskin/library/images/rml-300-lcc.png') no-repeat center center !important;
       display: inline-block;
       height: 50px;
       margin-left: 0;
@@ -170,30 +160,22 @@
     #main-navigation {
       display: none;
     }
-
   }
+}
 
-} // end #navbar
-
+// end #navbar
 
 // styles for 481up
-@media only screen and (min-width: 481px) {
-
-}
+@media only screen and (min-width: 481px) {}
 
 // styles for 640up
-@media only screen and (min-width: 640px) {
-
-}
+@media only screen and (min-width: 640px) {}
 
 // styles for 768up
-@media only screen and (min-width: 768px) {
-
-}
+@media only screen and (min-width: 768px) {}
 
 // styles for 1030up
 @media only screen and (min-width: 1030px) {
-
   .mobile-navigation {
     display: none;
   }
@@ -206,7 +188,7 @@
     }
 
     #logo-lockup {
-      width:100%;
+      width: 100%;
 
       #logo {
         background: none !important;
@@ -218,9 +200,7 @@
         img {
           display: inline-block;
         }
-
       }
-
     }
 
     #site-navigation {
@@ -229,7 +209,6 @@
 
       .nav-menu,
       #main-navigation {
-
         display: block;
 
         li {
@@ -238,15 +217,13 @@
 
           &:hover,
           &:focus {
-
             a {
               color: $nav-link-hover;
 
               &:hover,
               &:focus {
-                color: $nav-link-hover
+                color: $nav-link-hover;
               }
-
             }
 
             ul {
@@ -256,7 +233,6 @@
               overflow: inherit;
               width: inherit;
             }
-
           }
 
           a {
@@ -274,7 +250,6 @@
             &:focus {
               color: $nav-link-color;
             }
-
           }
 
           .sub-menu {
@@ -308,29 +283,17 @@
                   display: block;
                   background-color: rgba(50, 132, 191, 0.85);
                 }
-
               }
-
             }
-
           }
-
         }
-
       }
-
     }
-
   }
-
 }
 
 // styles for 1240up
-@media only screen and (min-width: 1240px) {
-
-}
+@media only screen and (min-width: 1240px) {}
 
 // styles for 2x
-@media only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min--moz-device-pixel-ratio: 1.5), only screen and (min-device-pixel-ratio: 1.5) {
-
-}
+@media only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min--moz-device-pixel-ratio: 1.5), only screen and (min-device-pixel-ratio: 1.5) {}

@@ -11,11 +11,11 @@ get_header(); ?>
 
 <div id="main-content" role="main">
 
-    <?php if (have_posts()) : ?>
+    <?php if ( have_posts() ) : ?>
 
-        <?php while (have_posts()) : the_post(); ?>
+        <?php while ( have_posts() ) : the_post(); ?>
 
-        <div <?php post_class('container') ?> id="page-<?php the_ID(); ?>">
+        <div <?php post_class( 'container' ) ?> id="page-<?php the_ID(); ?>">
 
             <h2 class="entry-title"><?php the_title(); ?></h2>
 

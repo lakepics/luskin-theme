@@ -64,7 +64,7 @@
 // An example button.
 // You can use this example if you want. Just replace all the variables
 // and it will create a button dependant on those variables.
-// */
+//
 // .blue-btn {
 //   @extend %btn;
 
@@ -92,7 +92,7 @@ a.button-alt, a.button-alt:visited,
 a.button-abt, a.button-abt:visited,
 .gform_button {
   background-color: $btn-bg-link;
-  background-image: url("/wp-content/themes/luskin/library/images/button-arrows.png");
+  background-image: url('/wp-content/themes/luskin/library/images/button-arrows.png');
   background-position: right -238px;
   background-repeat: no-repeat;
   color: $btn-text-link !important;
@@ -112,17 +112,15 @@ a.button-abt, a.button-abt:visited,
     color: $btn-text-hover !important;
     background-color: $btn-bg-hover !important;
     background-position: right -238px;
-       -o-transition: color .1s ease-out, background-color .3s ease-in !important;
-      -ms-transition: color .1s ease-out, background-color .3s ease-in !important;
-     -moz-transition: color .1s ease-out, background-color .3s ease-in !important;
-  -webkit-transition: color .1s ease-out, background-color .3s ease-in !important;
-          transition: color .1s ease-out, background-color .3s ease-in !important;
+    -o-transition: color .1s ease-out, background-color .3s ease-in !important;
+    -ms-transition: color .1s ease-out, background-color .3s ease-in !important;
+    -moz-transition: color .1s ease-out, background-color .3s ease-in !important;
+    -webkit-transition: color .1s ease-out, background-color .3s ease-in !important;
+    transition: color .1s ease-out, background-color .3s ease-in !important;
   }
 
   /* on click */
-  &:active {
-
-  }
+  &:active {}
 
   &.download-btn {
     background-position: right -185px;
@@ -130,7 +128,6 @@ a.button-abt, a.button-abt:visited,
     &:hover, &:focus {
       background-position: right -185px;
     }
-
   }
 
   &.events-calendar {
@@ -139,16 +136,15 @@ a.button-abt, a.button-abt:visited,
     &:hover, &:focus {
       background-position: right -295px;
     }
-
   }
 
   &.down-arrow {
-    background-image: url("/wp-content/themes/luskin/library/images/button-arrows.png");
+    background-image: url('/wp-content/themes/luskin/library/images/button-arrows.png');
     background-position: right -181px;
     background-repeat: no-repeat;
 
     &.second-icon {
-      background-image: url("/wp-content/themes/luskin/library/images/button-arrows.png");
+      background-image: url('/wp-content/themes/luskin/library/images/button-arrows.png');
       background-position: 11px -181px;
       min-height: 25px;
       min-width: 25px;
@@ -157,19 +153,19 @@ a.button-abt, a.button-abt:visited,
   }
 
   &.left-arrow {
-    background-image: url("/wp-content/themes/luskin/library/images/button-arrows.png");
+    background-image: url('/wp-content/themes/luskin/library/images/button-arrows.png');
     background-position: right -183px;
     background-repeat: no-repeat;
   }
 
   &.right-arrow {
-    background-image: url("/wp-content/themes/luskin/library/images/button-arrows.png");
+    background-image: url('/wp-content/themes/luskin/library/images/button-arrows.png');
     background-position: right -183px;
     background-repeat: no-repeat;
   }
 
   &.book-icon {
-    background-image: url("/wp-content/themes/luskin/library/images/new-button-icons.png");
+    background-image: url('/wp-content/themes/luskin/library/images/new-button-icons.png');
     background-position: 5px -8px;
     background-repeat: no-repeat;
     min-height: 25px;
@@ -178,13 +174,13 @@ a.button-abt, a.button-abt:visited,
   }
 
   &.movie-icon {
-    background-image: url("/wp-content/themes/luskin/library/images/new-button-icons.png");
+    background-image: url('/wp-content/themes/luskin/library/images/new-button-icons.png');
     background-position: right -67px;
     background-repeat: no-repeat;
   }
 
   &.reservation {
-    background-image: url("/wp-content/themes/luskin/library/images/button-alt-icons.png");
+    background-image: url('/wp-content/themes/luskin/library/images/button-alt-icons.png');
     background-position: right -101px;
     background-repeat: no-repeat;
     margin-top: 15px;
@@ -195,11 +191,10 @@ a.button-abt, a.button-abt:visited,
     &:hover, &:focus {
       background-position: right -263px;
     }
-
   }
 
   &.request-for-proposal {
-    background-image: url("/wp-content/themes/luskin/library/images/button-alt-icons-small.png");
+    background-image: url('/wp-content/themes/luskin/library/images/button-alt-icons-small.png');
     background-position: right -92px;
     background-repeat: no-repeat;
     min-width: 275px;
@@ -207,11 +202,10 @@ a.button-abt, a.button-abt:visited,
     &:hover, &:focus {
       background-position: right -269px;
     }
-
   }
 
   &.book-a-room {
-    background-image: url("/wp-content/themes/luskin/library/images/button-alt-icons-small.png");
+    background-image: url('/wp-content/themes/luskin/library/images/button-alt-icons-small.png');
     background-position: right -5px;
     background-repeat: no-repeat;
     min-width: 275px;
@@ -219,7 +213,6 @@ a.button-abt, a.button-abt:visited,
     &:hover, &:focus {
       background-position: right -5px;
     }
-
   }
 
   &.last {
@@ -258,7 +251,6 @@ a.button-abt, a.button-abt:visited,
       */
       -webkit-tap-highlight-color: rgba(0, 0, 0, 0.3);
     }
-
   }
 
   span,
@@ -267,7 +259,6 @@ a.button-abt, a.button-abt:visited,
     font-style: normal;
     font-family: $sans-serif;
   }
-
 }
 
 .gform_button {

@@ -18,21 +18,21 @@ import the mixins file so SASS can understand the variables.
 ******************************************************************/
 
 // typography
-@import "partials/typography";
+@import 'partials/typography';
 
 // Sass variables
-@import "partials/variables";
+@import 'partials/variables';
 
 // import mixins
-@import "partials/mixins";
+@import 'partials/mixins';
 
 // import grid
-//@import "partials/ie_grid";
+//@import 'partials/ie_grid';
 
 // import everything inside media queries
-@import "breakpoints/481up";
-@import "breakpoints/768up";
-@import "breakpoints/1030up";
+@import 'breakpoints/481up';
+@import 'breakpoints/768up';
+@import 'breakpoints/1030up';
 
 /*
 you can call the larger styles if you want, but there's really no need

@@ -41,7 +41,7 @@
                 setTimeout(function () {
                     $($slideElement).find('.slide-overlay h3').animate({
                         opacity: 1
-                    }, 1000);
+                    }, 800);
                     $($slideElement).find('.slide-overlay h4').animate({
                         opacity: 1
                     }, 1000);

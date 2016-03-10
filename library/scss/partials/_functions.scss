@@ -61,6 +61,6 @@
 }
 
 // get equal column widths in percent
-@function eq-cols($percentage, $col-count){
-    @return $percentage / $col-count;
+@function eq-cols($percentage, $col-count) {
+  @return $percentage / $col-count;
 }

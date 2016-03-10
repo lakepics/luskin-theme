@@ -23,7 +23,7 @@
 .warning {
   @extend %alert;
 
-  background: url("/library/images/warning.png") repeat scroll 0 0 $alert-yellow;
+  background: url('/library/images/warning.png') repeat scroll 0 0 $alert-yellow;
   border-color: darken($alert-yellow, 10%);
 }
 

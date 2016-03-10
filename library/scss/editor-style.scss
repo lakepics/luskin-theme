@@ -14,19 +14,19 @@ http://codex.wordpress.org/Editor_Style
 here http://codex.wordpress.org/Function_Reference/add_editor_style */
 body#tinymce.wp-editor {
   // normalize: http://necolas.github.io/normalize.css/
-  @import "partials/normalize";
+  @import 'partials/normalize';
 
   // typography
-  @import "partials/typography";
+  @import 'partials/typography';
 
   // Sass variables
-  @import "partials/variables";
+  @import 'partials/variables';
 
   // Sass functions
-  @import "partials/functions";
+  @import 'partials/functions';
 
   // import mixins
-  @import "partials/mixins";
+  @import 'partials/mixins';
 
   color: $text-color;
   font-family: $lato;
@@ -36,8 +36,8 @@ body#tinymce.wp-editor {
   -webkit-font-smoothing: antialiased;
 
   /*********************
-	LINK STYLES
-	*********************/
+  LINK STYLES
+  *********************/
 
   a, a:visited {
     color: $link-color;

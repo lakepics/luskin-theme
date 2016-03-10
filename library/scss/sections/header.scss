@@ -1,5 +1,5 @@
 // variables
-@import "../partials/variables";
+@import '../partials/variables';
 
 /* ############ header.scss ############ */
 
@@ -16,7 +16,6 @@
     display: inline-block;
     max-width: 100%;
   }
-
 }
 
 .logo-ucla {
@@ -53,11 +52,10 @@
     max-width: 100%;
     width: 100%;
   }
-
 }
 
 #header {
-  background: #fff url("/wp-content/themes/luskin/library/images/header-gradient4.png");
+  background: #fff url('/wp-content/themes/luskin/library/images/header-gradient4.png');
   border-bottom: 7px solid #FFF;
   box-shadow: 0 1px 4px rgba(0, 0, 0, 0.17);
   height: 67px;
@@ -77,29 +75,23 @@
 }
 
 .not-frontpage .no-hero {
-  margin-top: 108px !important; // .not-frontpage #content : margin-top: 68px + 40px
+  margin-top: 108px !important;
+
+  // .not-frontpage #content : margin-top: 68px + 40px
 }
 
 // styles for 481up
-@media only screen and (min-width: 481px) {
-
-}
+@media only screen and (min-width: 481px) {}
 
 // styles for 640up
-@media only screen and (min-width: 640px) {
-
-}
+@media only screen and (min-width: 640px) {}
 
 // styles for 768up
-@media only screen and (min-width: 768px) {
-
-}
+@media only screen and (min-width: 768px) {}
 
 // styles for 1030up
 @media only screen and (min-width: 1030px) {
-
   .full-width-gallery {
-
     img {
       display: block;
     }
@@ -107,7 +99,6 @@
     img.mobile-image {
       display: none;
     }
-
   }
 
   #header {
@@ -118,26 +109,25 @@
       max-width: 1180px;
       padding: 0 20px;
     }
-
   }
 
   .not-frontpage #content {
-    margin-top: 132px; // should match #header height in prev. rule
+    margin-top: 132px;
+
+    // should match #header height in prev. rule
     position: relative;
   }
 
   .not-frontpage .no-hero {
-    margin-top: 172px !important; // .not-frontpage #content : margin-top: 132px + 40px
-  }
+    margin-top: 172px !important;
 
+    // .not-frontpage #content : margin-top: 132px + 40px
+
+  }
 }
 
 // styles for 1240up
-@media only screen and (min-width: 1240px) {
-
-}
+@media only screen and (min-width: 1240px) {}
 
 // styles for 2x
-@media only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min--moz-device-pixel-ratio: 1.5), only screen and (min-device-pixel-ratio: 1.5) {
-
-}
+@media only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min--moz-device-pixel-ratio: 1.5), only screen and (min-device-pixel-ratio: 1.5) {}

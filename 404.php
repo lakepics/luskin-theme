@@ -11,12 +11,12 @@ get_header(); ?>
 
 <div id="main-content" role="main">
 
-	<div class="error-404 not-found">
+    <div class="error-404 not-found">
 
-		<h2 class="entry-title"><?php _e( 'Oops! That page can&rsquo;t be found.', 'luskintheme' ); ?></h2>
+        <h2 class="entry-title"><?php _e( 'Oops! That page can&rsquo;t be found.', 'luskintheme' ); ?></h2>
 
-		<div class="entry-content">
-            
+        <div class="entry-content">
+
             <p><?php _e( 'It looks like nothing was found at this location. Maybe try a search?', 'luskintheme' ); ?></p>
 
             <?php get_search_form(); ?>

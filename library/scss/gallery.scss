@@ -1,12 +1,10 @@
-// variables
-@import "partials/variables";
-
-// page styles
-@import "sections/page";
+@import 'partials/variables';
+@import 'sections/page';
 
 /* ############ gallery.scss ############ */
 
-/* full width gallery using bxslider */
+// styles for 0up
+
 .full-width-gallery .bx-prev,
 .full-width-gallery .bx-next {
   display: block;
@@ -18,7 +16,7 @@
   left: 0;
   text-indent: -99999em;
   overflow: hidden;
-  background: url("/wp-content/themes/luskin/library/images/gallery-controls.png") no-repeat center top;
+  background: url('/wp-content/themes/luskin/library/images/gallery-controls.png') no-repeat center top;
   z-index: 100;
 }
 
@@ -121,7 +119,7 @@
   -moz-appearance: text-field;
   appearance: none;
   text-indent: 0.01px;
-  text-overflow: "";
+  text-overflow: '';
 }
 
 #gallery-filters::-ms-expand {
@@ -137,7 +135,7 @@
   color: #737373;
   text-transform: uppercase;
   font-family: $semibold-sans-serif;
-  background: url("/wp-content/themes/luskin/library/images/dropdown-arrow.png") no-repeat right center;
+  background: url('/wp-content/themes/luskin/library/images/dropdown-arrow.png') no-repeat right center;
 }
 
 .gallery {
@@ -162,7 +160,7 @@
   left: 0;
   text-indent: -99999em;
   overflow: hidden;
-  background: url("/wp-content/themes/luskin/library/images/gallery-controls.png") no-repeat center top;
+  background: url('/wp-content/themes/luskin/library/images/gallery-controls.png') no-repeat center top;
   z-index: 100;
 }
 
@@ -236,6 +234,7 @@
 }
 
 // explore UCLA gallery slider mobile nav; not in use
+
 #mobile-gallery-nav {
   display: none;
   position: relative;
@@ -279,6 +278,24 @@
   font-family: $semibold-sans-serif;
   font-size: 18px;
   line-height: 58px;
-  background: #fff url("/wp-content/themes/luskin/library/images/dropdown-arrow.png") no-repeat right center;
+  background: #fff url('/wp-content/themes/luskin/library/images/dropdown-arrow.png') no-repeat right center;
   cursor: pointer;
 }
+
+// styles for 481up
+@media only screen and (min-width: 481px) {}
+
+// styles for 640up
+@media only screen and (min-width: 640px) {}
+
+// styles for 768up
+@media only screen and (min-width: 768px) {}
+
+// styles for 1030up
+@media only screen and (min-width: 1030px) {}
+
+// styles for 1240up
+@media only screen and (min-width: 1240px) {}
+
+// styles for 2x
+@media only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min--moz-device-pixel-ratio: 1.5), only screen and (min-device-pixel-ratio: 1.5) {}

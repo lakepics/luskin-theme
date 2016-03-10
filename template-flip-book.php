@@ -7,14 +7,14 @@
 
 <div id="main-content" role="main">
 
-    <?php if (have_posts()) : ?>
+    <?php if ( have_posts() ) : ?>
 
-        <?php while (have_posts()) : the_post(); ?>
+        <?php while ( have_posts() ) : the_post(); ?>
 
-        <div <?php post_class('container') ?> id="page-<?php the_ID(); ?>">
+        <div <?php post_class( 'container' ) ?> id="page-<?php the_ID(); ?>">
 
             <div class="entry-content">
-                <?php $flipbook = get_field('content'); echo $flipbook; ?>
+                <?php $flipbook = get_field( 'content' ); echo $flipbook; ?>
             </div>
 
         </div>

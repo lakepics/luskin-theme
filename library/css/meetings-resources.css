@@ -223,19 +223,40 @@
 .event-planning-resources .three-columns {
   margin-bottom: 70px; }
 
-.event-planning-resources .left-column {
-  float: left; }
-
-.event-planning-resources .right-column {
+.event-planning-resources .left-column,
+.event-planning-resources .right-column,
+.event-planning-resources .middle-column {
   float: left; }
 
 .event-planning-resources .middle-column {
-  float: left;
-  width: 30%;
-  margin: 0 3.3% 0 0; }
+  margin: 0 3.3% 0 0;
+  width: 30%; }
 
 .event-planning-resources .column .inner-wrapper {
   padding: 0 48px; }
+
+.event-planning-resources .column ul {
+  margin: 0;
+  padding: 0;
+  list-style-type: none; }
+  .event-planning-resources .column ul li {
+    border-bottom: 1px solid #8DA6B8; }
+    .event-planning-resources .column ul li:first-child {
+      border-top: 1px solid #8DA6B8; }
+    .event-planning-resources .column ul li a {
+      background: url("/wp-content/themes/luskin/library/images/list-download-link-arrow.png") no-repeat right center;
+      color: #000;
+      display: block;
+      font-family: "Proxima Nova Semibold", "Helvetica Neue", Helvetica, Arial, sans-serif;
+      font-size: 16px;
+      letter-spacing: 0.05em;
+      line-height: 1.33;
+      padding: 25px 40px 25px 5px; }
+      .event-planning-resources .column ul li a:hover, .event-planning-resources .column ul li a:focus {
+        color: #3284BF; }
+
+.event-planning-resources .column .button {
+  margin-top: 45px; }
 
 .event-planning-resources .left-column .inner-wrapper {
   padding-left: 0; }
@@ -243,48 +264,21 @@
 .event-planning-resources .right-column .inner-wrapper {
   padding-right: 0; }
 
-.event-planning-resources .column h3, h3.event-planning-resources {
-  margin: 0 0 25px 0;
-  font-size: 18px;
-  line-height: 1.15;
+.event-planning-resources .column h3,
+h3.event-planning-resources {
   color: #47718E;
   font-family: "Proxima Nova Bold", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 18px;
+  line-height: 1.15;
+  margin: 0 0 25px 0;
   text-transform: uppercase; }
 
 h3.event-planning-resources {
   margin-bottom: 10px;
   padding-bottom: 0px; }
 
-.event-planning-resources .column ul {
-  margin: 0;
-  padding: 0;
-  list-style-type: none; }
-
 .evp ul {
   margin-bottom: 20px; }
-
-.event-planning-resources .column ul li {
-  border-bottom: 1px solid #8DA6B8; }
-
-.event-planning-resources .column ul li:first-child {
-  border-top: 1px solid #8DA6B8; }
-
-.event-planning-resources .column ul li a {
-  display: block;
-  padding: 25px 40px 25px 5px;
-  font-size: 16px;
-  line-height: 1.33;
-  letter-spacing: 0.05em;
-  color: #000;
-  font-family: "Proxima Nova Semibold", "Helvetica Neue", Helvetica, Arial, sans-serif;
-  background: url("/wp-content/themes/luskin/library/images/list-download-link-arrow.png") no-repeat right center; }
-
-.event-planning-resources .column ul li a:hover,
-.event-planning-resources .column ul li a:focus {
-  color: #3284BF; }
-
-.event-planning-resources .column .button {
-  margin-top: 45px; }
 
 #table001 {
   width: 1100px;

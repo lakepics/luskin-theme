@@ -1,95 +1,139 @@
-// variables
-@import "partials/variables";
-
-// page styles
-@import "sections/page";
+@import 'partials/variables';
+@import 'sections/page';
 
 /* ############ meetings.scss ############ */
 
 // styles for 0up
+
 #main-content {
-
   .container {
-
     &.two-columns {
-
       .column {
-
         &.left-column,
         &.right-column {
           float: none;
           margin: 0;
           width: 100%;
-
         }
 
         &.right-column {
           float: none;
         }
-
       }
-
     }
 
-  }
+    .floorplan {
+      background: #FFF;
+      padding-bottom: 40px;
 
+      h2 {
+        background: #1C4D71;
+      }
+
+      .floorplan-content {
+        background: #FFF;
+        padding: 0px 0 20px 0;
+      }
+
+      .floorplan-plan {
+        position: relative;
+        float: left;
+        width: 50%;
+
+        .floorplan-image {
+          background: #fff;
+          margin-bottom: 30px;
+        }
+      }
+
+      .floorplan-chart {
+        float: right;
+        width: 48%;
+
+        img {
+          margin: 0 auto;
+        }
+      }
+
+      .floorplan-plan img,
+      .floorplan-chart img {
+        display: block;
+        height: auto;
+        max-width: 100%;
+      }
+
+      .bx-prev,
+      .bx-next {
+        background-color: #08548b;
+        background-image: url('/wp-content/themes/luskin/library/images/floor-plans-arrows.png');
+        background-repeat: no-repeat;
+        display: inline-block;
+        *display: inline;
+        height: 32px;
+        margin-left: 4px;
+        overflow: hidden;
+        text-indent: -99999em;
+        vertical-align: top;
+        width: 47px;
+        zoom: 1;
+      }
+
+      .bx-prev {
+        background-position: center -24px;
+      }
+
+      .bx-next {
+        background-position: center 8px;
+      }
+    }
+
+    .floorplan-plan .floorplan span,
+    .floorplan-content h3 {
+      display: block;
+      font-size: 20px;
+      line-height: 1.2;
+      color: #1C4D71;
+      font-family: $semibold-sans-serif;
+      text-align: center;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+  }
 }
 
 // styles for 481up
-@media only screen and (min-width: 481px) {
-
-}
+@media only screen and (min-width: 481px) {}
 
 // styles for 640up
 @media only screen and (min-width: 640px) {
-
   #main-content {
-
     .container {
-
       &.two-columns {
-
         .column {
-
           &.left-column,
           &.right-column {
             float: left;
             margin: 0;
             width: 47%;
-
           }
 
           &.right-column {
             float: right;
           }
-
         }
-
       }
-
     }
-
   }
-
 }
 
 // styles for 768up
-@media only screen and (min-width: 768px) {
-
-}
+@media only screen and (min-width: 768px) {}
 
 // styles for 1030up
-@media only screen and (min-width: 1030px) {
-
-
-}
+@media only screen and (min-width: 1030px) {}
 
 // styles for 1240up
-@media only screen and (min-width: 1240px) {
-
-}
+@media only screen and (min-width: 1240px) {}
 
 // styles for 2x
-@media only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min--moz-device-pixel-ratio: 1.5), only screen and (min-device-pixel-ratio: 1.5) {
-
-}
+@media only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min--moz-device-pixel-ratio: 1.5), only screen and (min-device-pixel-ratio: 1.5) {}

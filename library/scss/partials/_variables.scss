@@ -19,114 +19,220 @@
 // ******************************************************************
 
 // alert colors
-$alert-yellow:          #EBE16F;    //rgba(235, 225, 111, 1)
-$alert-red:             #FBE3E4;    //rgba(251, 227, 228, 1)
-$alert-green:           #E6EfC2;    //rgba(230, 239, 194, 1)
-$alert-blue:            #D5EDF8;    //rgba(213, 237, 248, 1)
+$alert-yellow: #EBE16F;
+
+//rgba(235, 225, 111, 1)
+$alert-red: #FBE3E4;
+
+//rgba(251, 227, 228, 1)
+$alert-green: #E6EfC2;
+
+//rgba(230, 239, 194, 1)
+$alert-blue: #D5EDF8;
+
+//rgba(213, 237, 248, 1)
 
 // some generic colors
-$gray:                  #EAEDF2;    //rgba(234, 237, 242, 1)
-$light-gray:            lighten($gray, 10%);
-$dark-gray:             darken($gray, 10%);
-$light:                 #EAEBEC;    //rgba(234, 235, 236, 1)
-$x-light:               lighten($light, 10%);
-$dark:                  #323944;    //rgba(50, 57, 68, 1)
-$x-dark:                darken($dark, 10%);
-$blue:                  #2980B9;    //rgba(41, 128, 185, 1)
-$dark-blue:             #47718E;    //rgba(71, 113, 142, 1)
-$alt-dark-blue:         #1C4D71;    //rgba(28, 77, 113, 1)
-$light-blue:            #8DA6B8;
-$green:                 #7DD667;    //rgba(125, 214, 103, 1)
-$red:                   #FF1A00;    //rgba(255, 26, 0, 1)
-$white:                 #FFFFFF;    //rgba(255, 255, 255, 1)
-$meta:                  #9FA6B4;    //rgba(159, 166, 180, 1)
-$meta2:                 #565656;    //rgba(86, 86, 86, 1)
+$gray: #EAEDF2;
+
+//rgba(234, 237, 242, 1)
+$light-gray: lighten($gray, 10%);
+$dark-gray: darken($gray, 10%);
+$light: #EAEBEC;
+
+//rgba(234, 235, 236, 1)
+$x-light: lighten($light, 10%);
+$dark: #323944;
+
+//rgba(50, 57, 68, 1)
+$x-dark: darken($dark, 10%);
+$blue: #2980B9;
+
+//rgba(41, 128, 185, 1)
+$dark-blue: #47718E;
+
+//rgba(71, 113, 142, 1)
+$alt-dark-blue: #1C4D71;
+
+//rgba(28, 77, 113, 1)
+$light-blue: #8DA6B8;
+$green: #7DD667;
+
+//rgba(125, 214, 103, 1)
+$red: #FF1A00;
+
+//rgba(255, 26, 0, 1)
+$white: #FFFFFF;
+
+//rgba(255, 255, 255, 1)
+$meta: #9FA6B4;
+
+//rgba(159, 166, 180, 1)
+$meta2: #565656;
+
+//rgba(86, 86, 86, 1)
 
 // text-overlay color
-$text-overlay-color:    rgba(255, 255, 255, 0.85);
+$text-overlay-color: rgba(255, 255, 255, 0.85);
 
 // default fore/background colors
-$text-color:            #000000;    //rgba(0, 0, 0, 1)
-$text-color-bg:         #FFFFFF;    //rgba(255, 255, 255, 1)
+$text-color: #000000;
+
+//rgba(0, 0, 0, 1)
+$text-color-bg: #FFFFFF;
+
+//rgba(255, 255, 255, 1)
 
 // pre-foot fore/background colors
-$prefoot-text-color:    #FFFFFF;    //rgba(255, 255, 255, 1)
-$prefoot-text-color-bg: #4D4D4D;    //rgba(77, 77, 77, 1)
+$prefoot-text-color: #FFFFFF;
+
+//rgba(255, 255, 255, 1)
+$prefoot-text-color-bg: #4D4D4D;
+
+//rgba(77, 77, 77, 1)
 
 // foot fore/background colors
-$foot-pri-text-color:   #CCCCCC;    //rgba(204, 204, 204, 1)
-$foot-sec-text-color:   #A2A2A2;    //rgba(162, 162, 162, 1)
-$foot-text-color-bg:    #292929;    //rgba(41, 41, 41, 1)
+$foot-pri-text-color: #CCCCCC;
+
+//rgba(204, 204, 204, 1)
+$foot-sec-text-color: #A2A2A2;
+
+//rgba(162, 162, 162, 1)
+$foot-text-color-bg: #292929;
+
+//rgba(41, 41, 41, 1)
 
 // button colors
-$btn-text-link:         #FFFFFF;    //rgba(255, 255, 255, 1)
-$btn-bg-link:           #1C4D71;    //rgba(28, 77, 113, 1)
-$btn-text-visited:      #FFFFFF;    //rgba(255, 255, 255, 1)
-$btn-bg-visited:        #1C4D71;    //rgba(28, 77, 113, 1)
+$btn-text-link: #FFFFFF;
 
-$btn-text-link-alt:     #FFFFFF;    //rgba(255, 255, 255, 1)
-$btn-bg-link-alt:       #47718E;    //rgba(71, 113, 142, 1)
+//rgba(255, 255, 255, 1)
+$btn-bg-link: #1C4D71;
 
-$btn-text-hover:        #FFFFFF;    //rgba(255, 255, 255, 1)
-$btn-bg-hover:          #C6C8CA;    //rgba(198, 200, 202, 1)
-$btn-text-active:       #FFFFFF;    //rgba(255, 255, 255, 1)
-$btn-bg-active:         #C6C8CA;    //rgba(198, 200, 202, 1)
+//rgba(28, 77, 113, 1)
+$btn-text-visited: #FFFFFF;
+
+//rgba(255, 255, 255, 1)
+$btn-bg-visited: #1C4D71;
+
+//rgba(28, 77, 113, 1)
+
+$btn-text-link-alt: #FFFFFF;
+
+//rgba(255, 255, 255, 1)
+$btn-bg-link-alt: #47718E;
+
+//rgba(71, 113, 142, 1)
+
+$btn-text-hover: #FFFFFF;
+
+//rgba(255, 255, 255, 1)
+$btn-bg-hover: #C6C8CA;
+
+//rgba(198, 200, 202, 1)
+$btn-text-active: #FFFFFF;
+
+//rgba(255, 255, 255, 1)
+$btn-bg-active: #C6C8CA;
+
+//rgba(198, 200, 202, 1)
 
 // default link colors
-$link-color:            #A2A2A2;    //rgba(162, 162, 162, 1)
-$link-visted:           #A2A2A2;    //rgba(162, 162, 162, 1)
-$link-hover:            #CCCCCC;    //rgba(204, 204, 204, 1)
-$link-active:           #CCCCCC;    //rgba(204, 204, 204, 1)
+$link-color: #A2A2A2;
+
+//rgba(162, 162, 162, 1)
+$link-visted: #A2A2A2;
+
+//rgba(162, 162, 162, 1)
+$link-hover: #CCCCCC;
+
+//rgba(204, 204, 204, 1)
+$link-active: #CCCCCC;
+
+//rgba(204, 204, 204, 1)
 
 // alt link colors
-$alt-link-color:        #47718E;    //rgba(162, 162, 162, 1)
-$alt-link-visted:       #47718E;    //rgba(162, 162, 162, 1)
-$alt-link-hover:        #CCCCCC;    //rgba(204, 204, 204, 1)
-$alt-link-active:       #CCCCCC;    //rgba(204, 204, 204, 1)
+$alt-link-color: #47718E;
+
+//rgba(162, 162, 162, 1)
+$alt-link-visted: #47718E;
+
+//rgba(162, 162, 162, 1)
+$alt-link-hover: #CCCCCC;
+
+//rgba(204, 204, 204, 1)
+$alt-link-active: #CCCCCC;
+
+//rgba(204, 204, 204, 1)
 
 // footer link colors
-$foot-link-color:       #CCCCCC;    //rgba(204, 204, 204, 1)
-$foot-link-visited:     #CCCCCC;    //rgba(204, 204, 204, 1)
-$foot-link-hover:       #3185C0;    //rgba(49, 133, 192, 1)
-$foot-link-active:      #A2A2A2;    //rgba(162, 162, 162, 1)
+$foot-link-color: #CCCCCC;
+
+//rgba(204, 204, 204, 1)
+$foot-link-visited: #CCCCCC;
+
+//rgba(204, 204, 204, 1)
+$foot-link-hover: #3185C0;
+
+//rgba(49, 133, 192, 1)
+$foot-link-active: #A2A2A2;
+
+//rgba(162, 162, 162, 1)
 
 // primary nav link colors
-$nav-link-color:        #FFFFFF;    //rgba(255, 255, 255, 1)
-$nav-link-visited:      #FFFFFF;    //rgba(255, 255, 255, 1)
-$nav-link-hover:        #CCCCCC;    //rgba(204, 204, 204, 1)
-$nav-link-active:       #CCCCCC;    //rgba(204, 204, 204, 1)
-$mobile-bg:             rgba(66,66,66,0.75);
-$mobile-bg-alt:         rgba(55,55,55,0.75);
-$mobile-bg-alt2:        rgba(25,25,25,0.75);
-$mobile-border:         #3C3C3C;    //rgba(60, 60, 60, 1)
+$nav-link-color: #FFFFFF;
+
+//rgba(255, 255, 255, 1)
+$nav-link-visited: #FFFFFF;
+
+//rgba(255, 255, 255, 1)
+$nav-link-hover: #CCCCCC;
+
+//rgba(204, 204, 204, 1)
+$nav-link-active: #CCCCCC;
+
+//rgba(204, 204, 204, 1)
+$mobile-bg: rgba(66, 66, 66, 0.75);
+$mobile-bg-alt: rgba(55, 55, 55, 0.75);
+$mobile-bg-alt2: rgba(25, 25, 25, 0.75);
+$mobile-border: #3C3C3C;
+
+//rgba(60, 60, 60, 1)
 
 // footer nav link colors
-$nav-foot-link-color:   #888888;    //rgba(136, 136, 136, 1)
-$nav-foot-link-visited: #888888;    //rgba(136, 136, 136, 1)
-$nav-foot-link-hover:   #296AAD;    //rgba(41, 106, 173, 1)
-$nav-foot-link-active:  #296AAD;    //rgba(41, 106, 173, 1)
+$nav-foot-link-color: #888888;
+
+//rgba(136, 136, 136, 1)
+$nav-foot-link-visited: #888888;
+
+//rgba(136, 136, 136, 1)
+$nav-foot-link-hover: #296AAD;
+
+//rgba(41, 106, 173, 1)
+$nav-foot-link-active: #296AAD;
+
+//rgba(41, 106, 173, 1)
 
 // ******************************************************************
 // FONT FAMILIES
 // ******************************************************************
 
 // sans-serif font stacks
-$sans-serif:            "Proxima Nova Regular", "Helvetica Neue", Helvetica, Arial, sans-serif;
+$sans-serif: 'Proxima Nova Regular', 'Helvetica Neue', Helvetica, Arial, sans-serif;
 
-$italic-sans-serif:     "Proxima Nova Regular Italic", "Helvetica Neue", Helvetica, Arial, sans-serif;
+$italic-sans-serif: 'Proxima Nova Regular Italic', 'Helvetica Neue', Helvetica, Arial, sans-serif;
 
-$light-sans-serif:      "Proxima Nova Light", "Helvetica Neue", Helvetica, Arial, sans-serif;
+$light-sans-serif: 'Proxima Nova Light', 'Helvetica Neue', Helvetica, Arial, sans-serif;
 
-$bold-sans-serif:       "Proxima Nova Bold", "Helvetica Neue", Helvetica, Arial, sans-serif;
+$bold-sans-serif: 'Proxima Nova Bold', 'Helvetica Neue', Helvetica, Arial, sans-serif;
 
-$semibold-sans-serif:   "Proxima Nova Semibold", "Helvetica Neue", Helvetica, Arial, sans-serif;
+$semibold-sans-serif: 'Proxima Nova Semibold', 'Helvetica Neue', Helvetica, Arial, sans-serif;
 
 // serif font stacks
-$serif:                 "Georgia", Cambria, Times New Roman, Times, serif;
+$serif: 'Georgia', Cambria, Times New Roman, Times, serif;
 
-// serif typekit fonts; can also be added via: ".tk-adobe-caslon-pro" and ".tk-minion-pro"
-$adobe-caslon-pro:      "adobe-caslon-pro", "Georgia", Cambria, Times New Roman, Times, serif;
-$minion-pro:            "minion-pro", "Georgia", Cambria, Times New Roman, Times, serif;
+// serif typekit fonts; can also be added via: '.tk-adobe-caslon-pro' and '.tk-minion-pro'
+$adobe-caslon-pro: 'adobe-caslon-pro', 'Georgia', Cambria, Times New Roman, Times, serif;
+$minion-pro: 'minion-pro', 'Georgia', Cambria, Times New Roman, Times, serif;
 
 // imported this google font in the /library/luskin.php main function file so the editor would look sweet.
-$lato:                  "Lato", $sans-serif;
+$lato: 'Lato', $sans-serif;

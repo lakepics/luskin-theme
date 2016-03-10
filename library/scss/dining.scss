@@ -1,24 +1,23 @@
-// variables
-@import "partials/variables";
-
-// page styles
-@import "sections/page";
+@import 'partials/variables';
+@import 'sections/page';
 
 /* ############ dining.scss ############ */
 
+// styles for 0up
+
 .restaurants {
   padding: 36px 0 72px;
-}
 
-.restaurants h1 {
-  margin: 0 0 28px 0;
-  font-size: 25px;
-  color: #47718E;
-  text-align: center;
-  letter-spacing: 0.05em;
-  line-height: 1.15;
-  text-transform: uppercase;
-  font-family: $semibold-sans-serif;
+  h1 {
+    margin: 0 0 28px 0;
+    font-size: 25px;
+    color: #47718E;
+    text-align: center;
+    letter-spacing: 0.05em;
+    line-height: 1.15;
+    text-transform: uppercase;
+    font-family: $semibold-sans-serif;
+  }
 }
 
 .restaurant-block {
@@ -30,42 +29,42 @@
   color: #000;
   font-family: $sans-serif;
   zoom: 1;
-}
 
-.restaurant-block.even {
-  width: 47.3%;
-  float: left;
-  background: #f6f2e1 url("/wp-content/themes/luskin/library/images/pfeil.png") no-repeat left top;
-}
+  &.even {
+    width: 47.3%;
+    float: left;
+    background: #f6f2e1 url('/wp-content/themes/luskin/library/images/pfeil.png') no-repeat left top;
+  }
 
-.restaurant-block.odd {
-  float: right;
-  width: 47.3%;
-  background: #f6f2e1 url("/wp-content/themes/luskin/library/images/pfeil_odd.png") no-repeat left bottom;
-}
+  &.odd {
+    float: right;
+    width: 47.3%;
+    background: #f6f2e1 url('/wp-content/themes/luskin/library/images/pfeil_odd.png') no-repeat left bottom;
+  }
 
-.restaurant-block:before {
-  content: "";
-  display: block;
-  position: absolute;
-  top: 9px;
-  bottom: 9px;
-  left: 11px;
-  right: 11px;
-  border: 1px solid #ccc7ae;
-}
+  &:before {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 9px;
+    bottom: 9px;
+    left: 11px;
+    right: 11px;
+    border: 1px solid #ccc7ae;
+  }
 
-.restaurant-block .restaurant-block-wrapper {
-  padding: 80px 60px 20px 60px;
-}
+  .restaurant-block-wrapper {
+    padding: 80px 60px 20px 60px;
+  }
 
-.restaurant-block .restaurant-logo {
-  min-height: 150px;
-  zoom: 1;
-}
+  .restaurant-logo {
+    min-height: 150px;
+    zoom: 1;
 
-.restaurant-block .restaurant-logo img {
-  vertical-align: top;
+    img {
+      vertical-align: top;
+    }
+  }
 }
 
 .open-soon {
@@ -78,17 +77,35 @@
   text-transform: uppercase;
   font-family: $sans-serif;
   background: #523117;
+
+  > span {
+    display: block;
+    padding-top: 30px;
+  }
+
+  strong {
+    font-size: 40px;
+    letter-spacing: 1px;
+    color: #FFF;
+    font-weight: normal;
+    font-family: $bold-sans-serif;
+  }
 }
 
-.open-soon > span {
-  display: block;
-  padding-top: 30px;
-}
+// styles for 481up
+@media only screen and (min-width: 481px) {}
 
-.open-soon strong {
-  font-size: 40px;
-  letter-spacing: 1px;
-  color: #FFF;
-  font-weight: normal;
-  font-family: $bold-sans-serif;
-}
+// styles for 640up
+@media only screen and (min-width: 640px) {}
+
+// styles for 768up
+@media only screen and (min-width: 768px) {}
+
+// styles for 1030up
+@media only screen and (min-width: 1030px) {}
+
+// styles for 1240up
+@media only screen and (min-width: 1240px) {}
+
+// styles for 2x
+@media only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min--moz-device-pixel-ratio: 1.5), only screen and (min-device-pixel-ratio: 1.5) {}

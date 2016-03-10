@@ -1,5 +1,5 @@
 // variables
-@import "../partials/variables";
+@import '../partials/variables';
 
 // ############ partials/padiact.scss ############
 
@@ -174,7 +174,7 @@ img.logo {
 }
 
 .padiClearfix:after {
-  content: " ";
+  content: ' ';
 
   /* Older browser do not support empty content */
   visibility: hidden;
@@ -321,7 +321,7 @@ img.logo {
 }
 
 .padiPop4Overlay form .padiButton::after {
-  content: " \25BA";
+  content: ' \25BA';
 }
 
 .padiPop4Overlay form .padiSLabel {
@@ -407,37 +407,22 @@ div.padiPrivacy {
   }
 }
 
-
 // styles for 0up
 
-
 // styles for 481up
-@media only screen and (min-width: 481px) {
-
-}
+@media only screen and (min-width: 481px) {}
 
 // styles for 640up
-@media only screen and (min-width: 640px) {
-
-}
+@media only screen and (min-width: 640px) {}
 
 // styles for 768up
-@media only screen and (min-width: 768px) {
-
-}
+@media only screen and (min-width: 768px) {}
 
 // styles for 1030up
-@media only screen and (min-width: 1030px) {
-
-
-}
+@media only screen and (min-width: 1030px) {}
 
 // styles for 1240up
-@media only screen and (min-width: 1240px) {
-
-}
+@media only screen and (min-width: 1240px) {}
 
 // styles for 2x
-@media only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min--moz-device-pixel-ratio: 1.5), only screen and (min-device-pixel-ratio: 1.5) {
-
-}
+@media only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min--moz-device-pixel-ratio: 1.5), only screen and (min-device-pixel-ratio: 1.5) {}

@@ -92,7 +92,6 @@
     left: 0.15em; } }
 
 /* ############ gallery.scss ############ */
-/* full width gallery using bxslider */
 .full-width-gallery .bx-prev,
 .full-width-gallery .bx-next {
   display: block;

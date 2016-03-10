@@ -1,10 +1,8 @@
-// variables
-@import "partials/variables";
+@import 'partials/variables';
 
 /* ############ amennities-services.scss ############ */
 
 .amenities {
-
   h2 {
     color: $dark-blue;
     font-family: $semibold-sans-serif;
@@ -28,11 +26,9 @@
     p {
       margin-bottom: 30px;
     }
-
   }
 
   .services {
-
     .service-wrapper {
       float: left;
       width: 49.99%;
@@ -53,11 +49,8 @@
       &.odd .service {
         margin-right: 0;
       }
-
     }
-
   }
-
 }
 
 .guest-services {
@@ -77,7 +70,7 @@
   zoom: 1;
 
   .icon {
-    background: url("/wp-content/themes/luskin/library/images/amenities2.png") no-repeat center 0;
+    background: url('/wp-content/themes/luskin/library/images/amenities2.png') no-repeat center 0;
     bottom: 0;
     display: block;
     height: 32px;
@@ -98,7 +91,6 @@
       display: table-cell;
       vertical-align: middle;
     }
-
   }
 
   &.none, &.none-none, &.first {
@@ -111,7 +103,7 @@
   }
 
   &.bullet-round {
-    background: url("/wp-content/themes/luskin/library/images/round-bullet.png") no-repeat center 0;
+    background: url('/wp-content/themes/luskin/library/images/round-bullet.png') no-repeat center 0;
   }
 
   &.ada-rooms-services .icon {
@@ -180,7 +172,6 @@
   &.wi-fi .icon {
     background-position: center 0;
   }
-
 }
 
 /* additional accommodations */
@@ -190,27 +181,18 @@
 
 // styles for 0up
 
-
 // styles for 481up
-@media only screen and (min-width: 481px) {
-
-}
+@media only screen and (min-width: 481px) {}
 
 // styles for 640up
-@media only screen and (min-width: 640px) {
-
-}
+@media only screen and (min-width: 640px) {}
 
 // styles for 768up
-@media only screen and (min-width: 768px) {
-
-}
+@media only screen and (min-width: 768px) {}
 
 // styles for 931up
 @media only screen and (min-width: 931px) {
-
   .amenities {
-
     .amenities-description,
     .room-amenities {
       float: left;
@@ -221,23 +203,14 @@
       float: right;
       width: 60%;
     }
-
   }
-
 }
 
 // styles for 1030up
-@media only screen and (min-width: 1030px) {
-
-}
+@media only screen and (min-width: 1030px) {}
 
 // styles for 1240up
-@media only screen and (min-width: 1240px) {
-
-}
+@media only screen and (min-width: 1240px) {}
 
 // styles for 2x
-@media only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min--moz-device-pixel-ratio: 1.5), only screen and (min-device-pixel-ratio: 1.5) {
-
-}
-
+@media only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min--moz-device-pixel-ratio: 1.5), only screen and (min-device-pixel-ratio: 1.5) {}

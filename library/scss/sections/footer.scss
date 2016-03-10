@@ -1,5 +1,5 @@
 // variables
-@import "../partials/variables";
+@import '../partials/variables';
 
 /* ############ footer.scss ############ */
 
@@ -22,7 +22,6 @@
     .widget {
       margin: 0;
     }
-
   }
 
   a, a:visited {
@@ -49,7 +48,6 @@
       */
       -webkit-tap-highlight-color: rgba(0, 0, 0, 0.3);
     }
-
   }
 
   .footer-block {
@@ -75,20 +73,19 @@
       position: absolute;
       top: 2px;
     }
-
   }
 
   .phone:before {
-    content: "p";
+    content: 'p';
     top: -1px;
   }
 
   .fax:before {
-    content: "f";
+    content: 'f';
   }
 
   .email:before {
-    content: "e";
+    content: 'e';
   }
 
   .widget_nav_menu {
@@ -97,7 +94,7 @@
   }
 
   .follow-link {
-    background: url("/wp-content/themes/luskin/library/images/footer-sprite-151027.png") no-repeat 0 0;
+    background: url('/wp-content/themes/luskin/library/images/footer-sprite-151027.png') no-repeat 0 0;
     display: inline-block;
     height: 30px;
     line-height: 31px;
@@ -105,6 +102,7 @@
     margin-right: 8px;
     width: 31px;
   }
+
   .fb {
     width: 20px;
     background-position: -20px 0;
@@ -155,50 +153,45 @@
         margin: 0;
 
         &:before {
-          content: "| ";
+          content: '| ';
         }
 
         &:first-child:before {
-          content: "";
+          content: '';
         }
 
         a {
           padding: 0 5px;
         }
-
       }
-
     }
 
     a, a:visited {
-    color: $link-color;
-    outline: none;
-    text-decoration: none;
+      color: $link-color;
+      outline: none;
+      text-decoration: none;
 
-    /* on hover */
-    &:hover, &:focus {
-      color: $foot-link-hover;
+      /* on hover */
+      &:hover, &:focus {
+        color: $foot-link-hover;
+      }
+
+      /* on click */
+      &:active {
+        color: $foot-link-active;
+      }
+
+      /* mobile tap color */
+      &:link {
+        /*
+        this highlights links on iPhones/iPads.
+        so it basically works like the :hover selector
+        for mobile devices.
+        */
+        -webkit-tap-highlight-color: rgba(0, 0, 0, 0.3);
+      }
     }
-
-    /* on click */
-    &:active {
-      color: $foot-link-active;
-    }
-
-    /* mobile tap color */
-    &:link {
-      /*
-      this highlights links on iPhones/iPads.
-      so it basically works like the :hover selector
-      for mobile devices.
-      */
-      -webkit-tap-highlight-color: rgba(0, 0, 0, 0.3);
-    }
-
   }
-
-  }
-
 }
 
 // .not-frontpage #footer {
@@ -206,15 +199,11 @@
 // }
 
 // styles for 481up
-@media only screen and (min-width: 481px) {
-
-}
+@media only screen and (min-width: 481px) {}
 
 // styles for 640up
 @media only screen and (min-width: 640px) {
-
   #footer {
-
     .container {
       // margin: 0 auto;
       // max-width: 1180px;
@@ -237,7 +226,6 @@
           margin: 14px 0;
           text-transform: capitalize;
         }
-
       }
 
       #footer-logo {
@@ -252,7 +240,6 @@
           font-size: 14px;
           font-weight: bold;
         }
-
       }
 
       #sidebar-footer-forth {
@@ -261,22 +248,16 @@
       }
 
       &.sub-footer {
-        margin-top:50px;
+        margin-top: 50px;
       }
-
     }
-
   }
-
 }
 
 // styles for 768up
 @media only screen and (min-width: 768px) {
-
   #footer {
-
     .container {
-
       #sidebar-footer-first {
         width: 21.6666666667%;
       }
@@ -293,20 +274,14 @@
         text-align: left;
         width: 25%;
       }
-
     }
-
   }
-
 }
 
 // styles for 1030up
 @media only screen and (min-width: 1030px) {
-
   #footer {
-
     .container {
-
       #footer-logo {
         display: table-cell;
         width: 10%;
@@ -315,29 +290,20 @@
         img {
           max-width: 80%;
         }
-
       }
-
     }
-
   }
-
 }
 
 // styles for 1240up
 @media only screen and (min-width: 1240px) {
-
   #footer {
-
     // .container {
     //   padding: 0;
     // }
 
   }
-
 }
 
 // styles for 2x
-@media only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min--moz-device-pixel-ratio: 1.5), only screen and (min-device-pixel-ratio: 1.5) {
-
-}
+@media only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min--moz-device-pixel-ratio: 1.5), only screen and (min-device-pixel-ratio: 1.5) {}

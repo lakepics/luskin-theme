@@ -22,19 +22,19 @@ a, a:visited {
 
   // show links on printed pages
   &:after {
-    content: " (" attr(href) ")";
+    content: ' (' attr(href) ')';
   }
 
   // show title too
   abbr[title]:after {
-    content: " (" attr(title) ")";
+    content: ' (' attr(title) ')';
   }
 }
 
 .ir a:after,
-a[href^="javascript:"]:after,
-a[href^="#"]:after {
-  content: "";
+a[href^='javascript:']:after,
+a[href^='#']:after {
+  content: '';
 }
 
 pre, blockquote {

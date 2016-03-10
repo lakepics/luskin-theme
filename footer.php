@@ -11,7 +11,7 @@
         <div class="container">
 
             <div id="footer-logo" class="footer-block">
-                <a href="/"><img src="<?php bloginfo('stylesheet_directory');?>/library/images/ucla-logo.png" alt="UCLA" /></a>
+                <a href="/"><img src="<?php bloginfo( 'stylesheet_directory' );?>/library/images/ucla-logo.png" alt="UCLA" /></a>
             </div>
 
             <?php if ( is_active_sidebar( 'sidebar-footer-first' ) ) : ?>
@@ -54,7 +54,7 @@
 
     <?php wp_footer(); ?>
 
-    <?php the_field('third_party_snippets', 'option'); ?>
+    <?php the_field( 'third_party_snippets', 'option' ); ?>
 
 </body>
 </html>

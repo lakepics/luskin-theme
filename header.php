@@ -5,30 +5,30 @@
 <!--[if gt IE 8]><!--> <html <?php language_attributes(); ?> class="no-js"><!--<![endif]-->
 <head>
 <meta charset="utf-8">
-<meta http-equiv="Content-Type" content="<?php bloginfo('html_type'); ?>; charset=<?php bloginfo('charset'); ?>" />
+<meta http-equiv="Content-Type" content="<?php bloginfo( 'html_type' ); ?>; charset=<?php bloginfo( 'charset' ); ?>" />
 <meta name="distribution" content="global" />
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="HandheldFriendly" content="True">
 <meta name="MobileOptimized" content="320">
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title><?php wp_title('-',true,'right') ?><?php bloginfo('name'); ?></title>
+<title><?php wp_title( '-', true, 'right' ) ?><?php bloginfo( 'name' ); ?></title>
 <?php wp_head(); ?></head>
 <?php
-    if( !is_front_page() ){
-        $not_front = "not-frontpage";
-    } else {
-        $not_front = "frontpage";
-    }
+if ( !is_front_page() ) {
+    $not_front = "not-frontpage";
+} else {
+    $not_front = "frontpage";
+}
 ?>
-<body <?php body_class($not_front); ?>>
+<body <?php body_class( $not_front ); ?>>
 
-<?php the_field('google_gtm_code_snippet', 'option'); ?>
+<?php the_field( 'google_gtm_code_snippet', 'option' ); ?>
 
     <div class="mobile-navigation">
-        <a href="/" class="logo-ucla-mobile"><img src="<?php bloginfo('stylesheet_directory');?>/library/images/ucla-logo-mobile.png" alt="UCLA" /></a>
+        <a href="/" class="logo-ucla-mobile"><img src="<?php bloginfo( 'stylesheet_directory' );?>/library/images/ucla-logo-mobile.png" alt="UCLA" /></a>
         <div class="mobile-room-reservation">
             <span class="mobile-room-label">Toll Free</span>
-            <a class="mobile-room-phone" href="tel:<?php the_field('room_reservation_no_spaces', 'option'); ?>"><?php the_field('room_reservation_special', 'option'); ?> (<?php the_field('room_reservation', 'option'); ?>)</a>
+            <a class="mobile-room-phone" href="tel:<?php the_field( 'room_reservation_no_spaces', 'option' ); ?>"><?php the_field( 'room_reservation_special', 'option' ); ?> (<?php the_field( 'room_reservation', 'option' ); ?>)</a>
         </div>
     </div>
 
@@ -49,7 +49,7 @@
                 <div id="navbar" class="navbar">
                 <span id="toggle-menu">Menu</span>
                     <div id="logo-lockup">
-                        <a href="<?php bloginfo('url');?>" id="logo"><img src="<?php bloginfo('stylesheet_directory');?>/library/images/logo.png" alt="<?php bloginfo('name');?>" /></a>
+                        <a href="<?php bloginfo( 'url' );?>" id="logo"><img src="<?php bloginfo( 'stylesheet_directory' );?>/library/images/logo.png" alt="<?php bloginfo( 'name' );?>" /></a>
                         <nav id="site-navigation" class="navigation main-navigation">
                         <?php wp_nav_menu( array( 'menu' => 'main_menu', 'container' => '', 'menu_id' => 'main-navigation', 'menu_class' => 'menu nav-menu', 'link_before' => '<span>', 'link_after' => '</span>' ) ); ?>
                         </nav>
@@ -61,29 +61,29 @@
 
         <?php
 
-        if( !is_front_page() ) {
+if ( !is_front_page() ) {
 
-            if ( get_field('slides') ) {
+    if ( get_field( 'slides' ) ) {
 
-                $slides = get_field('slides');
+        $slides = get_field( 'slides' );
 
-                $contentWrapper = '<div id="content" data-slides="true">';
+        $contentWrapper = '<div id="content" data-slides="true">';
 
-            } else {
+    } else {
 
-                $contentWrapper = '<div id="content" class="no-hero" data-slides="false">';
+        $contentWrapper = '<div id="content" class="no-hero" data-slides="false">';
 
-            }
+    }
 
-        } else {
+} else {
 
-            $contentWrapper = '<div id="content" class="front-page">';
+    $contentWrapper = '<div id="content" class="front-page">';
 
-        }
+}
 
-        echo $contentWrapper;
+echo $contentWrapper;
 
-        ?>
+?>
 
         <!--// END HEADER //-->
 

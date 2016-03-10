@@ -12,7 +12,7 @@ upon your base.scss styles.
 ******************************************************************/
 
 /*
-IMPORTANT NOTE ABOUT SASS 3.3 & UP
+IMPORTANT INFO ABOUT SASS 3.3 & UP
 You can't use @extend within media queries
 anymore, so just be aware that if you drop
 them in here, they won't work.
@@ -23,55 +23,40 @@ them in here, they won't work.
  ******************************************************************/
 
 #main-content {
-
   #container {
     position: relative;
     font-size: 1.0em;
   }
 
   .container, .container-1024 {
-
     &.two-columns {
-
       .column {
-
         &.left-column,
         &.right-column {
           float: left;
           margin: 0;
           width: 47%;
-
         }
 
         &.right-column {
           float: right;
         }
-
       }
-
     }
 
     &.three-columns {
-
       .column {
-
         &.left-column,
         &.middle-column,
         &.right-column {
           float: left;
           margin: 0;
           width: 33%;
-
         }
-
       }
-
     }
-
   }
-
 }
-
 
 /******************************************************************
 * POSTS & CONTENT STYLES

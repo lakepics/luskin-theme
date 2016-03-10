@@ -1,25 +1,11 @@
-// variables
-@import "partials/variables";
-
-// page styles
-@import "sections/page";
-
-// amenities and services
-@import "sections/amenities-services";
-
-// tables
-@import "modules/tables";
+@import 'partials/variables';
+@import 'sections/page';
+@import 'sections/amenities-services';
+@import 'modules/tables';
 
 /* ############ meetings-floorplan.scss ############ */
 
-.floorplan h2 {
-  background: #1C4D71;
-}
-
-.floorplan {
-  background: #FFF;
-  padding-bottom: 40px;
-}
+// styles for 0up
 
 .floorplan-heading {
   position: relative;
@@ -34,108 +20,54 @@
   text-align: center;
 }
 
-.floorplan .floorplan-content {
-  background: #FFF;
-  padding: 0px 0 20px 0;
-}
-
-.floorplan .floorplan-plan {
-  position: relative;
-  float: left;
-  width: 50%;
-}
-
-.floorplan .floorplan-chart {
-  float: right;
-  width: 48%;
-}
-
-.floorplan .floorplan-plan img,
-.floorplan .floorplan-chart img {
-  display: block;
-  height: auto;
-  max-width: 100%;
-}
-
-.floorplan .floorplan-chart img {
-  margin: 0 auto;
-}
-
-.floorplan-plan .bx-prev,
-.floorplan-plan .bx-next {
-  display: inline-block;
-  *display: inline;
-  vertical-align: top;
-  width: 47px;
-  height: 32px;
-  margin-left: 4px;
-  overflow: hidden;
-  text-indent: -99999em;
-  background-color: #08548b;
-  background-image: url("/wp-content/themes/luskin/library/images/floor-plans-arrows.png");
-  background-repeat: no-repeat;
-  zoom: 1;
-}
-
-.floorplan-plan .bx-prev {
-  background-position: center -24px;
-}
-
-.floorplan-plan .bx-next {
-  background-position: center 8px;
-}
-
 .bx-controls-direction {
   margin-top: -23px;
   right: 0;
   z-index: 101;
 }
 
-.floorplan-plan .floorplan-image {
-  background: #fff;
-  margin-bottom: 30px;
-}
-
-.floorplan-plan .floorplan span, .floorplan-content h3 {
-  display: block;
-  font-size: 20px;
-  line-height: 1.2;
-  color: #1C4D71;
-  font-family: $semibold-sans-serif;
-  text-align: center;
-  text-transform: uppercase;
-  letter-spacing: 0.05em;
-}
-
 .service {
-
   .service-name {
-    padding: 0 10px ;
+    padding: 0 10px;
   }
-
 }
 
 .res-columns {
-
   a.button-alt {
     background-position-x: 104%;
-    padding: 10px 40px 10px 10px
+    padding: 10px 40px 10px 10px;
   }
-
 }
+
 // styles for 878down
 @media screen and (max-width: 878px) {
-
   .res-columns {
     -webkit-column-count: 1;
-       -moz-column-count: 1;
-            column-count: 1;
+    -moz-column-count: 1;
+    column-count: 1;
     -webkit-column-width: 100%;
-       -moz-column-width: 100%;
-            column-width: 100%;
-      -webkit-column-gap: 0;
-         -moz-column-gap: 0;
-              column-gap: 0;
+    -moz-column-width: 100%;
+    column-width: 100%;
+    -webkit-column-gap: 0;
+    -moz-column-gap: 0;
+    column-gap: 0;
   }
-
 }
+
+// styles for 481up
+@media only screen and (min-width: 481px) {}
+
+// styles for 640up
+@media only screen and (min-width: 640px) {}
+
+// styles for 768up
+@media only screen and (min-width: 768px) {}
+
+// styles for 1030up
+@media only screen and (min-width: 1030px) {}
+
+// styles for 1240up
+@media only screen and (min-width: 1240px) {}
+
+// styles for 2x
+@media only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min--moz-device-pixel-ratio: 1.5), only screen and (min-device-pixel-ratio: 1.5) {}

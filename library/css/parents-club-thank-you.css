@@ -96,12 +96,12 @@ ul {
   list-style-type: disc; }
 
 .parents-callout {
-  width: 70%;
-  margin: 20px auto;
-  padding-top: 20px;
   border-top: none;
+  color: #1C4D71;
   font-family: "Proxima Nova Regular", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 1.5em;
   line-height: 1.25em;
-  color: #1C4D71;
-  text-align: center; }
+  margin: 20px auto;
+  padding-top: 20px;
+  text-align: center;
+  width: 70%; }

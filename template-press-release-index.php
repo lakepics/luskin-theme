@@ -8,11 +8,11 @@
 <div id="main-content" role="main">
 
     <?php
-      if ( have_posts() ) :
+if ( have_posts() ) :
 
-        while ( have_posts() ) : the_post();
+  while ( have_posts() ) : the_post();
 
-        showHeroSlides(); ?>
+  showHeroSlides(); ?>
 
         <div class="container clearfix two-columns">
             <div class="column left-column">
@@ -40,27 +40,27 @@
             <h2 class="view-press-release">View our press releases</h2>
             <table id="press-release-table">
               <?php
-              $press_releases = get_field('press_releases');
-              if ($press_releases) {
-                  foreach ($press_releases as $release) {
-                      echo '<tr class="releases">';
-                      echo '<td class="date">' . $release['date']. '</td>';
-                      echo '<td class="title"><a href="' . $release['link'] . '">' . $release['title'] . '</a></td>';
-                      echo '<td class="download"><a href="' . $release['pdf_link'] . '" target="_blank" class="button-abt down-arrow">PDF</a></td>';
-                      echo '</tr>';
-                      }
-                  }
-              ?>
+$press_releases = get_field( 'press_releases' );
+if ( $press_releases ) {
+  foreach ( $press_releases as $release ) {
+    echo '<tr class="releases">';
+    echo '<td class="date">' . $release['date']. '</td>';
+    echo '<td class="title"><a href="' . $release['link'] . '">' . $release['title'] . '</a></td>';
+    echo '<td class="download"><a href="' . $release['pdf_link'] . '" target="_blank" class="button-abt down-arrow">PDF</a></td>';
+    echo '</tr>';
+  }
+}
+?>
             </table>
         </div>
 
         <div class="container clearfix"></div><br><br>
 
       <?php
-        endwhile;
-      else :
-        echo wpautop( 'Sorry, no posts were found' );
-      endif; ?>
+endwhile;
+else :
+  echo wpautop( 'Sorry, no posts were found' );
+endif; ?>
 
 </div><!-- /main content -->
 

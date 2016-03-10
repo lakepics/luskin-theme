@@ -26,9 +26,10 @@
 // You'll need to be using Sass 3.2+ for these to work.
 // Thanks to @anthonyshort for the inspiration on these.
 // USAGE: @include transition(all 0.2s ease-in-out);
+
 @mixin transition($transition...) {
   // defining prefixes so we can use them in mixins below
-  $prefixes: "-webkit-", "";
+  $prefixes: '-webkit-', '';
 
   @each $prefix in $prefixes {
     #{$prefix}transition: $transition;
@@ -42,6 +43,7 @@
 // ******************************************************************
 
 // USAGE: @include css-gradient(#dfdfdf,#f8f8f8);
+
 @mixin css-gradient($from: #dfdfdf, $to: #f8f8f8) {
   background-color: $to;
   background-image: -webkit-gradient(linear, left top, left bottom, from($from), to($to));
@@ -55,9 +57,10 @@
 // BOX SIZING
 // ******************************************************************
 
-// NOTE: value of "padding-box" is only supported in Gecko. So
+// INFO: value of 'padding-box' is only supported in Gecko. So
 // probably best not to use it. I mean, were you going to anyway?
 // USAGE: @include box-sizing(border-box);
+
 @mixin box-sizing($type: border-box) {
   -webkit-box-sizing: $type;
   -moz-box-sizing: $type;
@@ -74,6 +77,7 @@
   -webkit-border-radius: $radius;
   border-radius: $radius;
   background-clip: padding-box;
+
   // stops bg color from leaking outside the border:
 }
 
@@ -120,7 +124,7 @@
   &:before,
   &:after {
     display: table;
-    content: "";
+    content: '';
 
     // Fixes Opera/contenteditable bug:
     // http://nicolasgallagher.com/micro-clearfix-hack/#comment-36952

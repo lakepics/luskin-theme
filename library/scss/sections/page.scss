@@ -1,5 +1,5 @@
 // variables
-@import "../partials/variables";
+@import '../partials/variables';
 
 /* ############ page.scss ############ */
 
@@ -70,7 +70,6 @@
   text-align: center;
 }
 
-
 // styles for 0up
 .text-overlay {
   bottom: -.5em;
@@ -85,27 +84,22 @@
 
 // styles for 481up
 @media only screen and (min-width: 481px) {
-
   .text-overlay {
     font-size: 2.5em;
     left: 0.5em;
   }
-
 }
 
 // styles for 640up
 @media only screen and (min-width: 640px) {
-
   .text-overlay {
     font-size: 3.5em;
     left: 0.3em;
   }
-
 }
 
 // styles for 768up
 @media only screen and (min-width: 768px) {
-
   // .not-frontpage #content {
   //   padding-top: 44px;
   // }
@@ -114,12 +108,10 @@
     font-size: 4.25em;
     left: 0.25em;
   }
-
 }
 
 // styles for 1030up
 @media only screen and (min-width: 1030px) {
-
   // .not-frontpage #content {
   //   padding-top: 108px;
   // }
@@ -127,20 +119,15 @@
   .text-overlay {
     font-size: 5em;
   }
-
 }
 
 // styles for 1240up
 @media only screen and (min-width: 1240px) {
-
   .text-overlay {
     font-size: 6em;
     left: 0.15em;
   }
-
 }
 
 // styles for 2x
-@media only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min--moz-device-pixel-ratio: 1.5), only screen and (min-device-pixel-ratio: 1.5) {
-
-}
+@media only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min--moz-device-pixel-ratio: 1.5), only screen and (min-device-pixel-ratio: 1.5) {}

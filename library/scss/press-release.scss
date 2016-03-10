@@ -1,50 +1,54 @@
-// variables
-@import "partials/variables";
-
-// page styles
-@import "sections/page";
+@import 'partials/variables';
+@import 'sections/page';
 
 /* ############ press-release.scss ############ */
+
+// styles for 0up
 
 ul {
   list-style-type: disc;
 }
 
 h1.press-release {
+  color: #47718E;
+  font-family: $semibold-sans-serif;
+  font-size: 2.75em;
+  line-height: 1.25em;
   margin: 40px 0 20px 0;
   padding: 0;
-  font-size: 2.75em;
-  font-family: $semibold-sans-serif;
   text-transform: uppercase;
-  color: #47718E;
-  line-height: 1.25em;
 }
 
 .media-contact {
   margin: 50px 0 20px 0;
-}
 
-.media-contact a.luskin-social {
-  display: inline-block;
-  margin: 0px 5px 0 0;
-  min-height: 35px;
-  height: 35px;
-  min-width: 25px;
-  width: 25px;
-  background: url("/wp-content/themes/luskin/library/images/cg9-social-icons.png") no-repeat;
-  line-height: 40px;
-}
+  a.luskin-social {
+    display: inline-block;
+    margin: 0px 5px 0 0;
+    min-height: 35px;
+    height: 35px;
+    min-width: 25px;
+    width: 25px;
+    background: url('/wp-content/themes/luskin/library/images/cg9-social-icons.png') no-repeat;
+    line-height: 40px;
 
-.media-contact a.luskin-social.fb {
-  background-position: -20px -14px;
-}
+    .fb {
+      background-position: -20px -14px;
+    }
 
-.media-contact a.luskin-social.tw {
-  background-position: -92px -13px;
-}
+    .tw {
+      background-position: -92px -13px;
+    }
 
-.media-contact a.luskin-social.in {
-  background-position: -157px -12px;
+    .in {
+      background-position: -157px -12px;
+    }
+  }
+
+  .fn {
+    font-weight: bold;
+    font-size: 18px;
+  }
 }
 
 .ken {
@@ -55,40 +59,36 @@ h1.press-release {
   vertical-align: top;
 }
 
-.media-contact .fn {
-  font-weight: bold;
-  font-size: 18px;
-}
-
 .press-release-list {
   margin-top: 50px;
 }
 
 h2.view-press-release {
+  color: #47718E;
+  font-family: $semibold-sans-serif;
   font-size: 25px;
   letter-spacing: 0.05em;
   line-height: 60px;
   text-transform: uppercase;
-  font-family: $semibold-sans-serif;
-  color: #47718E;
 }
 
 #press-release-table {
-  width: 100%;
   padding: 0;
-}
-
-tr.releases.first {
-  border-top: 1px solid #CCCCCC;
+  width: 100%;
 }
 
 tr.releases {
   border-bottom: 1px solid #CCCCCC;
   height: 30px;
   width: 100%;
+
+  &.first {
+    border-top: 1px solid #CCCCCC;
+  }
 }
 
-tr.releases, tr.releases td {
+tr.releases,
+tr.releases td {
   margin-left: 0;
   padding-left: 0;
 }
@@ -97,98 +97,115 @@ tr.releases, tr.releases td {
   min-height: 50px;
   line-height: 51px;
   vertical-align: middle;
-}
 
-.releases td.date, .releases td.title {
-  font-size: 18px;
-  text-transform: uppercase;
-  font-family: $sans-serif;
-}
+  &.date,
+  &.title {
+    font-size: 18px;
+    text-transform: uppercase;
+    font-family: $sans-serif;
+  }
 
-.releases td.date {
-  width: 15%;
-}
+  &.date {
+    width: 15%;
+  }
 
-.releases td.title {
-  width: 75%;
-}
+  &.title {
+    width: 75%;
 
-.releases td.title a {
-  text-decoration: none;
-}
-
-#press-release h2 {
-  margin-bottom: 10px;
-  text-align: center;
-  text-transform: none;
-}
-
-#press-release h3 {
-  margin-bottom: 20px;
-  text-align: center;
-  font-size: 21px;
-}
-
-#press-release p {
-  margin-bottom: 10px;
+    a {
+      text-decoration: none;
+    }
+  }
 }
 
 #press-release {
   margin-top: 40px;
-}
 
-/* Stories Styles
-/*
-/**/
+  h2 {
+    margin-bottom: 10px;
+    text-align: center;
+    text-transform: none;
+  }
+
+  h3 {
+    margin-bottom: 20px;
+    text-align: center;
+    font-size: 21px;
+  }
+
+  p {
+    margin-bottom: 10px;
+  }
+}
 
 .story {
-  /* Main Wrapper */
   margin-bottom: 50px;
+
+  p {
+    padding-bottom: 0px;
+
+    a {
+      color: #1C4D71;
+      font-weight: bold;
+    }
+  }
 }
 
-.story p {
-  padding-bottom: 0px;
-}
-
-.story p a {
-  color: #1C4D71;
-  font-weight: bold;
-}
-
-.story p a:visited, #press-release a:visited {
+.story p a:visited,
+#press-release a:visited {
   color: #1C4D71;
   font-family: $bold-sans-serif;
 }
 
-img.story-img, img.team-img {
+img.story-img,
+img.team-img {
   float: left;
-  margin-right: 20px;
   margin-bottom: 10px;
+  margin-right: 20px;
 }
 
 h3.story-tagline {
-  margin-bottom: 5px;
   color: #1C4D71;
+  margin-bottom: 5px;
   text-transform: uppercase;
 }
 
 .story-subject {
-  margin-bottom: 20px;
+  color: #333;
   font-family: 'Adobe Caslon Pro', sans-serif;
   font-size: 22px;
-  color: #333;
+  margin-bottom: 20px;
 }
 
 p.story-title {
-  margin-top: -20px;
   display: block;
   font-size: 17px;
   font-style: italic;
   line-height: 20px;
+  margin-top: -20px;
 }
 
-p.sources a, p.sources a:visited {
+p.sources a,
+p.sources a:visited {
+  color: #333;
   font-family: $sans-serif;
   font-weight: normal;
-  color: #333;
 }
+
+// styles for 481up
+@media only screen and (min-width: 481px) {}
+
+// styles for 640up
+@media only screen and (min-width: 640px) {}
+
+// styles for 768up
+@media only screen and (min-width: 768px) {}
+
+// styles for 1030up
+@media only screen and (min-width: 1030px) {}
+
+// styles for 1240up
+@media only screen and (min-width: 1240px) {}
+
+// styles for 2x
+@media only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min--moz-device-pixel-ratio: 1.5), only screen and (min-device-pixel-ratio: 1.5) {}
