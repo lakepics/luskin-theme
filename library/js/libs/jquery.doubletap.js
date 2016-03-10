@@ -1,5 +1,3 @@
-'use strict';
-
 /*
 
 This plugin adds custom touch-screen events to the given HTML elements. This

@@ -122,7 +122,7 @@
     width: 47.3%;
     background: #f6f2e1 url("/wp-content/themes/luskin/library/images/pfeil_odd.png") no-repeat left bottom; }
   .restaurant-block:before {
-    content: "";
+    content: '';
     display: block;
     position: absolute;
     top: 9px;

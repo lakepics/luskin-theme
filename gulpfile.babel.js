@@ -146,17 +146,19 @@ gulp.task('js', function () {
     .pipe($.plumber())
 
     // write out beautified versions
-    .pipe($.babel())
-    .pipe($.jsbeautifier({
-      indent_level: 4,
-      indent_char: ' ',
-      space_after_anon_function: true
-    }))
-    .pipe($.size({
-      showFiles: true
-    }))
-    //.on('error', $.gutil.log)
-    .pipe(gulp.dest('.'))
+    // .pipe($.babel())
+    // .pipe($.jsbeautifier({
+    //   "indent_level": 4,
+    //   "indent_char": ' ',
+    //   "space_after_anon_function": true,
+    //   "jslint_happy": true,
+    //   "space_before_conditional": true
+    // }))
+    // .pipe($.size({
+    //   showFiles: true
+    // }))
+    // //.on('error', $.gutil.log)
+    // .pipe(gulp.dest('.'))
 
     // write out the minified versions
     .pipe($.sourcemaps.init())
@@ -182,17 +184,17 @@ gulp.task('v_js', function () {
     .pipe($.plumber())
 
     // write out beautified versions
-    .pipe($.babel())
-    .pipe($.jsbeautifier({
-      indent_level: 4,
-      indent_char: ' ',
-      space_after_anon_function: true
-    }))
-    .pipe($.size({
-      showFiles: true
-    }))
-    //.on('error', $.gutil.log)
-    .pipe(gulp.dest('.'))
+    // .pipe($.babel())
+    // .pipe($.jsbeautifier({
+    //   indent_level: 4,
+    //   indent_char: ' ',
+    //   space_after_anon_function: true
+    // }))
+    // .pipe($.size({
+    //   showFiles: true
+    // }))
+    // //.on('error', $.gutil.log)
+    // .pipe(gulp.dest('.'))
 
     // write out the minified versions
     .pipe($.sourcemaps.init())
@@ -324,7 +326,7 @@ gulp.task('watch', function() {
 });
 
 gulp.task('build', ['clean', 'scss', 'v_scss', 'v_css', 'js' ,'v_js', 'images', 'v_imgs'], () => {
-  return
+  return;
 });
 
 // default task (called when you run `gulp` from cli)

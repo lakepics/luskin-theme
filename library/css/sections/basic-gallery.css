@@ -1,0 +1,205 @@
+/* ############ page.scss ############ */
+#page-310 {
+  margin-top: 55px; }
+
+.hero-image-container, .full-width-gallery {
+  margin-bottom: 30px; }
+
+.hero-image-container img {
+  display: block;
+  margin: 0 auto;
+  width: 100%;
+  max-width: 100%; }
+
+/* quick facts */
+.quick-facts {
+  position: relative;
+  margin-top: 25px;
+  margin-bottom: 60px;
+  border-top: 1px solid #8DA6B8;
+  padding-top: 40px; }
+
+.quick-facts-description {
+  font-family: "Proxima Nova Regular", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 15px;
+  line-height: 1.5;
+  margin-bottom: 25px;
+  width: 100%; }
+
+.quick-facts-description h3 {
+  margin: 40px 0 20px 0;
+  font-size: 25px;
+  letter-spacing: 0.05em;
+  line-height: 1;
+  color: #47718E;
+  font-family: "Proxima Nova Semibold", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  text-transform: uppercase;
+  text-align: center; }
+
+.quick-facts-button {
+  margin-top: 30px; }
+
+.generic-button {
+  float: left;
+  margin-right: 30px; }
+
+/* call out */
+.callout {
+  display: inline-block;
+  width: inherit;
+  margin: 0px;
+  padding: 20px 0px 30px 0px;
+  border-top: 1px solid #8DA6B8;
+  font-family: 'Adobe Caslon Pro', serif;
+  font-style: italic;
+  font-size: 200%;
+  line-height: 1.75em;
+  color: #8da6b8;
+  text-align: center; }
+
+.text-overlay {
+  bottom: -.5em;
+  color: rgba(255, 255, 255, 0.85);
+  font-family: "Proxima Nova Semibold", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 1.75em;
+  left: 0.7em;
+  line-height: 1.6em;
+  position: absolute;
+  text-transform: uppercase; }
+
+@media only screen and (min-width: 481px) {
+  .text-overlay {
+    font-size: 2.5em;
+    left: 0.5em; } }
+
+@media only screen and (min-width: 640px) {
+  .text-overlay {
+    font-size: 3.5em;
+    left: 0.3em; } }
+
+@media only screen and (min-width: 768px) {
+  .text-overlay {
+    font-size: 4.25em;
+    left: 0.25em; } }
+
+@media only screen and (min-width: 1030px) {
+  .text-overlay {
+    font-size: 5em; } }
+
+@media only screen and (min-width: 1240px) {
+  .text-overlay {
+    font-size: 6em;
+    left: 0.15em; } }
+
+/* ############ basic-gallery.scss ############ */
+.gallery {
+  position: relative;
+  width: 100%; }
+  .gallery .bx-prev, .gallery .bx-next {
+    background: url("/wp-content/themes/luskin/library/images/gallery-controls.png") no-repeat center top;
+    display: block;
+    height: 47px;
+    left: 0;
+    margin-top: -24px;
+    overflow: hidden;
+    position: absolute;
+    text-indent: -99999em;
+    top: 50%;
+    width: 48px;
+    z-index: 100; }
+  .gallery .bx-next {
+    background-position: center bottom;
+    left: auto;
+    right: 0; }
+  .gallery ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0; }
+    .gallery ul li {
+      position: relative; }
+  .gallery img {
+    display: block;
+    max-width: 100%; }
+  .gallery .overlay {
+    background: rgba(28, 77, 113, 0.75);
+    bottom: 0;
+    color: #dfdfdf;
+    font-family: "Proxima Nova Semibold", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 15px;
+    height: 236px;
+    left: 0;
+    line-height: 1.33;
+    margin: auto;
+    padding: 55px 48px 44px 48px;
+    position: absolute;
+    right: 0;
+    text-align: center;
+    top: 0;
+    width: 304px; }
+    .gallery .overlay > p {
+      max-height: 160px;
+      overflow: hidden; }
+    .gallery .overlay h4 {
+      color: #fff;
+      font-size: 23px;
+      line-height: 1.25;
+      margin: 0 0 20px 0; }
+    .gallery .overlay .ext-link {
+      border-top: 1px solid #906404;
+      bottom: 0;
+      color: #ffb300;
+      display: block;
+      font-family: "Proxima Nova Bold", "Helvetica Neue", Helvetica, Arial, sans-serif;
+      font-size: 14px;
+      left: 48px;
+      line-height: 1;
+      margin-top: 20px;
+      padding-bottom: 25px;
+      padding-top: 25px;
+      position: absolute;
+      right: 48px;
+      text-align: center;
+      text-transform: uppercase; }
+
+.content-tabs .gallery {
+  margin-top: 45px;
+  max-height: 495px;
+  overflow: hidden; }
+
+#mobile-gallery-nav {
+  display: none;
+  position: relative; }
+  #mobile-gallery-nav ul {
+    background: #fff;
+    background: rgba(255, 255, 255, 0.9);
+    display: none;
+    list-style-type: none;
+    margin: 0;
+    padding: 5px 0;
+    position: absolute;
+    top: 59px;
+    width: 100%;
+    z-index: 101; }
+    #mobile-gallery-nav ul li {
+      color: #4d4d4d;
+      display: block;
+      font-family: "Proxima Nova Semibold", "Helvetica Neue", Helvetica, Arial, sans-serif;
+      font-size: 18px;
+      line-height: 1.33;
+      padding: 11px 0;
+      text-align: center; }
+      #mobile-gallery-nav ul li:hover, #mobile-gallery-nav ul li.current {
+        color: #ffb300;
+        cursor: pointer; }
+
+.mobile-gallery-nav-select {
+  background: #fff url("/wp-content/themes/luskin/library/images/dropdown-arrow.png") no-repeat right center;
+  color: #4d4d4d;
+  cursor: pointer;
+  display: block;
+  font-family: "Proxima Nova Semibold", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 18px;
+  height: 58px;
+  line-height: 58px;
+  padding: 0 50px;
+  text-align: center; }

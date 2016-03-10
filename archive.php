@@ -37,13 +37,13 @@ get_header(); ?>
         <?php endwhile; ?>
 
         <?php
-// Previous/next page navigation.
-the_posts_pagination( array(
-        'prev_text'          => __( 'Previous page', 'luskintheme' ),
-        'next_text'          => __( 'Next page', 'luskintheme' ),
-        'before_page_number' => '<span class="meta-nav screen-reader-text">' . __( 'Page', 'luskintheme' ) . ' </span>',
-    ) );
-?>
+        // Previous/next page navigation.
+        the_posts_pagination( array(
+                'prev_text'          => __( 'Previous page', 'luskintheme' ),
+                'next_text'          => __( 'Next page', 'luskintheme' ),
+                'before_page_number' => '<span class="meta-nav screen-reader-text">' . __( 'Page', 'luskintheme' ) . ' </span>',
+            ) );
+        ?>
 
         <?php endif; ?>
 

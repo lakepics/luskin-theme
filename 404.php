@@ -11,7 +11,7 @@ get_header(); ?>
 
 <div id="main-content" role="main">
 
-    <div class="error-404 not-found">
+    <div class="error-404 not-found container">
 
         <h2 class="entry-title"><?php _e( 'Oops! That page can&rsquo;t be found.', 'luskintheme' ); ?></h2>
 

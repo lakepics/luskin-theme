@@ -1,5 +1,3 @@
-'use strict';
-
 // Form Step JavaScript
 
 (function () {

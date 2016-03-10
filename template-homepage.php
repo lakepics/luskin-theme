@@ -14,7 +14,7 @@
 $slides = get_field( 'slides' );
 
 if ( $slides ) {
-    echo '<div id="slideshow-container">';
+    echo '<div id="slideshow-container" style="display:none;">';
 
     if ( $buttons ) {
         $action_count = 1;

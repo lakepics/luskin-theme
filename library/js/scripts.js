@@ -1,25 +1,8 @@
-'use strict';
-
-/*
- * Bones Scripts File
- * Author: Eddie Machado
- *
- * This file should contain any js scripts you want to add to the site.
- * Instead of calling it in the header or throwing it inside wp_head()
- * this file will be called automatically in the footer so as not to
- * slow the page load.
- *
- * There are a lot of example functions and tools in here. If you don't
- * need any of it, just remove it. They are meant to be helpers and are
- * not required. It's your world baby, you can do whatever you want.
- */
-
 /*
  * Get Viewport Dimensions
  * returns object with viewport dimensions to match css in width and height properties
  * ( source: http://andylangton.co.uk/blog/development/get-viewport-size-width-and-height-javascript )
  */
-
 function updateViewportDimensions() {
     var w = window,
         d = document,
@@ -52,7 +35,6 @@ var waitForFinalEvent = function () {
         timers[uniqueId] = setTimeout(callback, ms);
     };
 }();
-
 // how long to wait before deciding the resize has stopped, in ms. Around 50-100 should work ok.
 var timeToWaitForLast = 100;
 
@@ -116,188 +98,15 @@ function loadGravatars() {
     }
 } // end function
 
-/*
- * Put all of your regular jQuery in here.
- */
-jQuery(document).ready(function ($) {
 
+/*
+ * Put all of your script in here.
+ */
+(function ($) {
     /*
-     * Let's fire off the gravatar function
-     * You can remove this if you don't need it
+     * Let's fire off the gravatar function you can remove this if you don't need it
      */
     // loadGravatars();
-
-    /*
-     * Theme functions
-     *
-     * Contains handlers for navigation, accessibility, header sizing
-     * footer widgets and Featured Content slider
-     */
-    var body = $('body'),
-        _window = $(window),
-        nav,
-        button,
-        menu;
-
-    nav = $('#primary-navigation');
-    button = nav.find('.menu-toggle');
-    menu = nav.find('.nav-menu');
-
-    // Enable menu toggle for small screens.
-    (function () {
-        if (!nav || !button) {
-            return;
-        }
-
-        // Hide button if menu is missing or empty.
-        if (!menu || !menu.children().length) {
-            button.hide();
-            return;
-        }
-
-        button.on('click.twentyfourteen', function () {
-            nav.toggleClass('toggled-on');
-            if (nav.hasClass('toggled-on')) {
-                $(this).attr('aria-expanded', 'true');
-                menu.attr('aria-expanded', 'true');
-            } else {
-                $(this).attr('aria-expanded', 'false');
-                menu.attr('aria-expanded', 'false');
-            }
-        });
-    })();
-
-    /*
-     * Makes "skip to content" link work correctly in IE9 and Chrome for better
-     * accessibility.
-     *
-     * @link http://www.nczonline.net/blog/2013/01/15/fixing-skip-to-content-links/
-     */
-    _window.on('hashchange.twentyfourteen', function () {
-        var hash = location.hash.substring(1),
-            element;
-
-        if (!hash) {
-            return;
-        }
-
-        element = document.getElementById(hash);
-
-        if (element) {
-            if (!/^(?:a|select|input|button|textarea)$/i.test(element.tagName)) {
-                element.tabIndex = -1;
-            }
-
-            element.focus();
-
-            // Repositions the window on jump-to-anchor to account for header height.
-            window.scrollBy(0, -80);
-        }
-    });
-
-    $(function () {
-
-        // Search toggle.
-        $('.search-toggle').on('click.twentyfourteen', function (event) {
-            var that = $(this),
-                wrapper = $('#search-container'),
-                container = that.find('a');
-
-            that.toggleClass('active');
-            wrapper.toggleClass('hide');
-
-            if (that.hasClass('active')) {
-                container.attr('aria-expanded', 'true');
-            } else {
-                container.attr('aria-expanded', 'false');
-            }
-
-            if (that.is('.active') || $('.search-toggle .screen-reader-text')[0] === event.target) {
-                wrapper.find('.search-field').focus();
-            }
-        });
-
-        /*
-         * Fixed header for large screen.
-         * If the header becomes more than 48px tall, unfix the header.
-         *
-         * The callback on the scroll event is only added if there is a header
-         * image and we are not on mobile.
-         */
-        if (_window.width() > 781) {
-            var mastheadHeight = $('#masthead').height(),
-                toolbarOffset,
-                mastheadOffset;
-
-            if (mastheadHeight > 48) {
-                body.removeClass('masthead-fixed');
-            }
-
-            if (body.is('.header-image')) {
-                toolbarOffset = body.is('.admin-bar') ? $('#wpadminbar').height() : 0;
-                mastheadOffset = $('#masthead').offset().top - toolbarOffset;
-
-                _window.on('scroll.twentyfourteen', function () {
-                    if (_window.scrollTop() > mastheadOffset && mastheadHeight < 49) {
-                        body.addClass('masthead-fixed');
-                    } else {
-                        body.removeClass('masthead-fixed');
-                    }
-                });
-            }
-        }
-
-        // Focus styles for menus.
-        $('.primary-navigation, .secondary-navigation').find('a').on('focus.twentyfourteen blur.twentyfourteen', function () {
-            $(this).parents().toggleClass('focus');
-        });
-    });
-
-    /**
-     * @summary Add or remove ARIA attributes.
-     * Uses jQuery's width() function to determine the size of the window and add
-     * the default ARIA attributes for the menu toggle if it's visible.
-     * @since Twenty Fourteen 1.4
-     */
-    function onResizeARIA() {
-
-        if (781 > _window.width()) {
-            button.attr('aria-expanded', 'false');
-            menu.attr('aria-expanded', 'false');
-            button.attr('aria-controls', 'primary-menu');
-        } else {
-            button.removeAttr('aria-expanded');
-            menu.removeAttr('aria-expanded');
-            button.removeAttr('aria-controls');
-        }
-    }
-
-    _window.on('load.twentyfourteen', onResizeARIA).on('resize.twentyfourteen', function () {
-        onResizeARIA();
-    });
-
-    _window.load(function () {
-        // Arrange footer widgets vertically.
-        if ($.isFunction($.fn.masonry)) {
-            $('#footer-sidebar').masonry({
-                itemSelector: '.widget',
-                columnWidth: function columnWidth(containerWidth) {
-                    return containerWidth / 4;
-                },
-                gutterWidth: 0,
-                isResizable: true,
-                isRTL: $('body').is('.rtl')
-            });
-        }
-
-        // Initialize Featured Content slider.
-        if (body.is('.slider')) {
-            $('.featured-content').featuredslider({
-                selector: '.featured-content-inner > article',
-                controlsContainer: '.featured-content'
-            });
-        }
-    });
 
     //---------------------------------- utils ---------------------------------//
 
@@ -313,10 +122,10 @@ jQuery(document).ready(function ($) {
         links = document.getElementsByTagName('a'),
         pattern = /^https?:\/\/(www.)?/i;
 
-    for (var i = 0, len = links.length; i < len; i++) {
-        if (pattern.test(links[i].href) && links[i].href.toLowerCase().indexOf(hostname) == -1) {
-            links[i].target = "_blank";
-            links[i].className += ' external';
+    for (var j = 0, linklen = links.length; j < linklen; j++) {
+        if (pattern.test(links[j].href) && links[j].href.toLowerCase().indexOf(hostname) == -1) {
+            links[j].target = "_blank";
+            links[j].className += ' external';
         }
     }
 
@@ -326,7 +135,7 @@ jQuery(document).ready(function ($) {
             this.value = '';
         }
     }).bind('blur', function () {
-        if (this.value == '') {
+        if (this.value === '') {
             this.value = this.defaultValue;
         }
     });
@@ -363,7 +172,7 @@ jQuery(document).ready(function ($) {
                 width: "300px"
             }, 300).addClass('open').css({
                 'display': 'block'
-            });;
+            });
             $('#container, .not-frontpage #header').animate({
                 left: "300px"
             }, 300);
@@ -377,15 +186,4 @@ jQuery(document).ready(function ($) {
         $(this).next('.room-type-div-toggle').slideToggle('fast');
     });
 
-    // imgCentering
-    (function () {
-        // $(".lax-dir-wrapper img").imgCentering({
-        //   'forceSmart': true,   //centering without showing background
-        //   //'forceWidth': true,   //centering with fix width
-        //   //'forceHeight': true,  //centering with fix height
-        //   'bgColor': '#CCC'     //empty space color
-        // });
-    })();
-
-    $(function () {});
-});
+}(jQuery));

@@ -1,5 +1,3 @@
-'use strict';
-
 // Homepage JavaScript
 
 (function ($) {
@@ -18,6 +16,9 @@
 
     // homepage slides
     $(document).ready(function () {
+
+        // unhide the slideshow node
+        $('#slideshow-container').css( "display", "block" );
 
         var slider = $('#slideshow').bxSlider({
             slideSelector: 'div.slide',
@@ -41,7 +42,7 @@
                 setTimeout(function () {
                     $($slideElement).find('.slide-overlay h3').animate({
                         opacity: 1
-                    }, 800);
+                    }, 1000);
                     $($slideElement).find('.slide-overlay h4').animate({
                         opacity: 1
                     }, 1000);
@@ -77,5 +78,6 @@
             slider.stopAuto();
             slider.startAuto();
         });
+
     });
 })(jQuery);

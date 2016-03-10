@@ -49,6 +49,8 @@ function luskinHeadCleanup()
     // remove emojis
     remove_action('wp_head', 'print_emoji_detection_script', 7);
     remove_action('wp_print_styles', 'print_emoji_styles');
+    // remove wp-embed scripts
+    //add_action('init', 'disable_embeds_init', 9999);
 
 } /* end luskin head cleanup */
 
@@ -108,6 +110,23 @@ function luskinRemoveWpWidgetRecentCommentsStyle()
     }
 }
 
+// remove wp-embed scripts
+function disable_embeds_init() {
+
+    // Remove the REST API endpoint.
+    remove_action('rest_api_init', 'wp_oembed_register_route');
+
+    // Turn off oEmbed auto discovery.
+    // Don't filter oEmbed results.
+    remove_filter('oembed_dataparse', 'wp_filter_oembed_result', 10);
+
+    // Remove oEmbed discovery links.
+    remove_action('wp_head', 'wp_oembed_add_discovery_links');
+
+    // Remove oEmbed-specific JavaScript from the front-end and back-end.
+    remove_action('wp_head', 'wp_oembed_add_host_js');
+}
+
 // clean up comment styles in the head
 function luskinRemoveRecentCommentsStyle()
 {
@@ -117,7 +136,7 @@ function luskinRemoveRecentCommentsStyle()
     }
 }
 
-// remove injected css from gallery
+//remove injected css from gallery
 function luskinGalleryStyle($css)
 {
     return preg_replace("!<style type='text/css'>(.*?)</style>!s", '', $css);
@@ -245,7 +264,7 @@ function luskinScriptsAndStyles()
                 wp_enqueue_style('flip-book-stylesheet', get_stylesheet_directory_uri() . '/library/css/flip-book.min.css', array('luskin-stylesheet'), '', 'all');
                 break;
             case 'template-gallery.php':
-                wp_enqueue_style('gallery-stylesheet', get_stylesheet_directory_uri() . '/library/css/gallery.min.css', array('luskin-stylesheet'), '', 'all');
+                wp_enqueue_style('gallery-stylesheet', get_stylesheet_directory_uri() . '/library/css/gallery.min.css', array('luskin-stylesheet', 'fancybox-stylesheet'), '', 'all');
                 break;
             case 'template-hma-opt-in-thank-you.php':
                 wp_enqueue_style('hma-opt-in-thank-you-stylesheet', get_stylesheet_directory_uri() . '/library/css/hma-opt-in-thank-you.min.css', array('luskin-stylesheet'), '', 'all');
@@ -300,8 +319,7 @@ function luskinScriptsAndStyles()
          * **************************************************/
         if (is_page_template(array('template-gallery.php',
             'template-room-gallery.php'))) {
-            wp_enqueue_style('fancybox-stylesheet', get_stylesheet_directory_uri() . '/library/plugins/fancybox/jquery.fancybox-1.3.4.min.css', array('luskin-stylesheet'), '', 'all');
-            wp_enqueue_style('luskin-fancybox-stylesheet', get_stylesheet_directory_uri() . '/library/css/sections/fancybox.min.css', array('fancybox-stylesheet'), '', 'all');
+            wp_enqueue_style('fancybox-stylesheet', get_stylesheet_directory_uri() . '/library/plugins/fancybox/jquery.fancybox.min.css', array(), '', 'all');
         }
 
         /* **************************************************
@@ -387,7 +405,8 @@ function luskinScriptsAndStyles()
             'template-meetings.php',
             'template-opt-in-thank-you.php',
             'template-hma-opt-in-thank-you.php'))) {
-
+            // BX Slider
+            //wp_enqueue_style('bxslider-stylesheet', get_stylesheet_directory_uri() . '/library/plugins/jquery.bxslider/jquery.bxslider.min.css', array(), '', 'all');
             // Lemmon Slider
             wp_enqueue_style('lemmonslider-stylesheet', get_stylesheet_directory_uri() . '/library/css/sections/slider.min.css', array(), '', 'all');
         }
@@ -410,14 +429,13 @@ function luskinScriptsAndStyles()
         /* **************************************************
          * ...on the flipbook template
          * **************************************************/
-
         if (is_page_template('template-flip-book.php')) {
             //wp_enqueue_script('swfobject2', get_stylesheet_directory_uri() . '/library/js/libs/swfobject2.min.js', array('jquery'), false, false);
             wp_enqueue_script('jq-easing', get_stylesheet_directory_uri() . '/library/js/libs/jquery.easing.1.3.min.js', array('jquery'), false, false);
             wp_enqueue_script('jq-doubletap', get_stylesheet_directory_uri() . '/library/js/libs/jquery.doubletap.min.js', array('jquery'), false, false);
             wp_enqueue_script('jq-color', get_stylesheet_directory_uri() . '/library/js/libs/jquery.color.min.js', array('jquery'), false, false);
             wp_enqueue_script('turn', get_stylesheet_directory_uri() . '/library/js/libs/turn.min.js', array('jquery'), false, false);
-            wp_enqueue_script('flipbook', get_stylesheet_directory_uri() . '/library/plugins/flipbook/flipbook.min.js', array('turn'), false, false);
+            wp_enqueue_script('flipbook', get_stylesheet_directory_uri() . '/library/plugins/flipbook/flipbook.js', array('turn'), false, false);
         }
 
         /* **************************************************
@@ -438,14 +456,25 @@ function luskinScriptsAndStyles()
         // example
         //wp_enqueue_script( 'luskin-script', get_stylesheet_directory_uri() . '/library/js/some-script-file.min.js', array('jquery'), false, true );
 
+        // remove wp-embed scripts
+        wp_deregister_script( 'wp-embed' );
+
         /* **************************************************
          * ...on the homepage template
          * **************************************************/
         if (is_page_template('template-homepage.php')) {
             // Box Slider
-            wp_enqueue_script('bxslider', get_stylesheet_directory_uri() . '/library/js/libs/jquery.bxslider.min.js', array('jquery'), false, true);
+            wp_enqueue_script('bxslider', get_stylesheet_directory_uri() . '/library/plugins/jquery.bxslider/jquery.bxslider.min.js', array('jquery'), false, true);
             // Homepage Scripts
             wp_enqueue_script('luskin-homepage', get_stylesheet_directory_uri() . '/library/js/hp/homepage.min.js', array('bxslider'), false, true);
+        }
+
+        /* **************************************************
+         * ...on the news template
+         * **************************************************/
+        if (is_page_template('template-news.php')) {
+            // add wp-embed scripts
+            wp_enqueue_script('wp-embed', '/wp-includes//js/wp-embed.min.js', array('jquery'), false, true);
         }
 
         /* **************************************************
@@ -453,27 +482,25 @@ function luskinScriptsAndStyles()
          * **************************************************/
         if (is_page_template(array('template-gallery.php',
             'template-room-gallery.php'))) {
-            // Box Slider
-            wp_enqueue_script('bxslider', get_stylesheet_directory_uri() . '/library/js/libs/jquery.bxslider.min.js', array('jquery'), false, true);
             // Isotope
             wp_enqueue_script('isotope', get_stylesheet_directory_uri() . '/library/js/libs/isotope.pkgd.min.js', array('jquery'), false, true);
             // Fancybox
-            wp_enqueue_script('fancybox', get_stylesheet_directory_uri() . '/library/plugins/fancybox/jquery.fancybox-1.3.4.pack.js', array('jquery'), false, true);
+            wp_enqueue_script('fancybox', get_stylesheet_directory_uri() . '/library/plugins/fancybox/jquery.fancybox.min.js', array('isotope'), false, true);
             // Gallery Scripts
-            wp_enqueue_script('luskin-gallery', get_stylesheet_directory_uri() . '/library/js/gallery/gallery.min.js', array('fancybox'), false, true);
+            wp_enqueue_script('luskin-gallery', get_stylesheet_directory_uri() . '/library/js/gallery/masonry-gallery.min.js', array('fancybox'), false, true);
         }
 
-        /* **************************************************
-         * ...on the targeted templates
-         *
-         * - template-accommodations-amenities
-         * - template-accommodations
-         * - template-dining
-         * - template-meetings-floorplans
-         * - template-meetings
-         * - template-opt-in-thank-you
-         * - template-hma-opt-in-thank-you
-         * **************************************************/
+        // /* **************************************************
+        //  * ...on the targeted templates
+        //  *
+        //  * - template-accommodations-amenities
+        //  * - template-accommodations
+        //  * - template-dining
+        //  * - template-meetings-floorplans
+        //  * - template-meetings
+        //  * - template-opt-in-thank-you
+        //  * - template-hma-opt-in-thank-you
+        //  * **************************************************/
         if (is_page_template(array('template-accommodations-amenities.php',
             'template-accommodations.php',
             'template-dining.php',
@@ -481,11 +508,12 @@ function luskinScriptsAndStyles()
             'template-meetings.php',
             'template-opt-in-thank-you.php',
             'template-hma-opt-in-thank-you.php'))) {
-
+            // Box Slider
+            wp_enqueue_script('bxslider', get_stylesheet_directory_uri() . '/library/plugins/jquery.bxslider/jquery.bxslider.min.js', array('jquery'), false, true);
             // Lemmon Slider
-            wp_enqueue_script('lemmon-slider', get_stylesheet_directory_uri() . '/library/js/libs/lemmon-slider.min.js', array('jquery'), false, true);
-            // customize slider
-            //wp_enqueue_script( 'luskin-slider', get_stylesheet_directory_uri() . '/library/js/slider/slider.min.js', array('lemmon-slider'), false, true );
+            wp_enqueue_script('lemmon-slider', get_stylesheet_directory_uri() . '/library/plugins/lemmon-slider/lemmon-slider.min.js', array('jquery'), false, true);
+            // Luskin Customized Lemon Slider
+            wp_enqueue_script('luskin-lemmon-slider', get_stylesheet_directory_uri() . '/library/js/slider/slider.min.js', array('lemmon-slider'), false, true);
 
         }
 
@@ -546,7 +574,7 @@ function luskinScriptsAndStyles()
 function luskinLoadScriptsLast()
 {
     // luskin general scripts
-    wp_enqueue_script('luskin-general', get_stylesheet_directory_uri() . '/library/js/scripts.min.js', array(), false, true);
+    //wp_enqueue_script('luskin-general', get_stylesheet_directory_uri() . '/library/js/scripts.min.js', array(), false, true);
 
     // Helper scripts
     //wp_register_script( 'luskin-js', get_stylesheet_directory_uri() . '/library/js/scripts.min.js', array( 'jquery' ), '', true );
@@ -687,25 +715,25 @@ function luskinRegisterSidebars()
     ));
 
     /*
-to add more sidebars or widgetized areas, just copy and edit the above
-sidebar code. In order to call your new sidebar just use the following code:
+    to add more sidebars or widgetized areas, just copy and edit the above
+    sidebar code. In order to call your new sidebar just use the following code:
 
-Just change the name to whatever your new sidebar's id is, for example:
+    Just change the name to whatever your new sidebar's id is, for example:
 
-register_sidebar(array(
-'id' => 'sidebar2',
-'name' => __( 'Sidebar 2', 'luskintheme' ),
-'description' => __( 'The second (secondary) sidebar.', 'luskintheme' ),
-'before_widget' => '<div id="%1$s" class="widget %2$s">',
-'after_widget' => '</div>',
-'before_title' => '<h4 class="widgettitle">',
-'after_title' => '</h4>',
-));
+    register_sidebar(array(
+    'id' => 'sidebar2',
+    'name' => __( 'Sidebar 2', 'luskintheme' ),
+    'description' => __( 'The second (secondary) sidebar.', 'luskintheme' ),
+    'before_widget' => '<div id="%1$s" class="widget %2$s">',
+    'after_widget' => '</div>',
+    'before_title' => '<h4 class="widgettitle">',
+    'after_title' => '</h4>',
+    ));
 
-To call the sidebar in your template, you can just copy the sidebar.php file
-and rename it to your sidebar's name. So using the above example, it would
-be: sidebar-sidebar2.php
- */
+    To call the sidebar in your template, you can just copy the sidebar.php file
+    and rename it to your sidebar's name. So using the above example, it would
+    be: sidebar-sidebar2.php
+     */
 } /* end sidebars & widgetizes areas */
 
 

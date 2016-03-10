@@ -49,12 +49,12 @@
       position: absolute;
       top: 2px; }
   #footer .phone:before {
-    content: "p";
+    content: 'p';
     top: -1px; }
   #footer .fax:before {
-    content: "f"; }
+    content: 'f'; }
   #footer .email:before {
-    content: "e"; }
+    content: 'e'; }
   #footer .widget_nav_menu {
     padding-top: 5px;
     font-family: "Proxima Nova Semibold", "Helvetica Neue", Helvetica, Arial, sans-serif; }
@@ -101,9 +101,9 @@
         padding: 0;
         margin: 0; }
         #footer .hospitality-group ul li:before {
-          content: "| "; }
+          content: '| '; }
         #footer .hospitality-group ul li:first-child:before {
-          content: ""; }
+          content: ''; }
         #footer .hospitality-group ul li a {
           padding: 0 5px; }
     #footer .hospitality-group a, #footer .hospitality-group a:visited {
@@ -119,10 +119,10 @@
         color: #A2A2A2; }
       #footer .hospitality-group a:link, #footer .hospitality-group a:visited:link {
         /*
-      this highlights links on iPhones/iPads.
-      so it basically works like the :hover selector
-      for mobile devices.
-      */
+        this highlights links on iPhones/iPads.
+        so it basically works like the :hover selector
+        for mobile devices.
+        */
         -webkit-tap-highlight-color: rgba(0, 0, 0, 0.3); }
 
 @media only screen and (min-width: 640px) {

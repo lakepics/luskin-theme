@@ -15,116 +15,116 @@
     var stepHooks = "backgroundColor borderBottomColor borderLeftColor borderRightColor borderTopColor color outlineColor".split(" "),
 
 
-        // plusequals test for += 100 -= 100
-        rplusequals = /^([\-+])=\s*(\d+\.?\d*)/,
+    // plusequals test for += 100 -= 100
+    rplusequals = /^([\-+])=\s*(\d+\.?\d*)/,
 
 
-        // a set of RE's that can match strings and generate color tuples.
-        stringParsers = [{
-            re: /rgba?\(\s*(\d{1,3})\s*,\s*(\d{1,3})\s*,\s*(\d{1,3})\s*(?:,\s*(\d+(?:\.\d+)?)\s*)?\)/,
-            parse: function parse(execResult) {
-                return [execResult[1], execResult[2], execResult[3], execResult[4]];
-            }
-        }, {
-            re: /rgba?\(\s*(\d+(?:\.\d+)?)\%\s*,\s*(\d+(?:\.\d+)?)\%\s*,\s*(\d+(?:\.\d+)?)\%\s*(?:,\s*(\d+(?:\.\d+)?)\s*)?\)/,
-            parse: function parse(execResult) {
-                return [2.55 * execResult[1], 2.55 * execResult[2], 2.55 * execResult[3], execResult[4]];
-            }
-        }, {
-            re: /#([a-fA-F0-9]{2})([a-fA-F0-9]{2})([a-fA-F0-9]{2})/,
-            parse: function parse(execResult) {
-                return [parseInt(execResult[1], 16), parseInt(execResult[2], 16), parseInt(execResult[3], 16)];
-            }
-        }, {
-            re: /#([a-fA-F0-9])([a-fA-F0-9])([a-fA-F0-9])/,
-            parse: function parse(execResult) {
-                return [parseInt(execResult[1] + execResult[1], 16), parseInt(execResult[2] + execResult[2], 16), parseInt(execResult[3] + execResult[3], 16)];
-            }
-        }, {
-            re: /hsla?\(\s*(\d+(?:\.\d+)?)\s*,\s*(\d+(?:\.\d+)?)\%\s*,\s*(\d+(?:\.\d+)?)\%\s*(?:,\s*(\d+(?:\.\d+)?)\s*)?\)/,
-            space: "hsla",
-            parse: function parse(execResult) {
-                return [execResult[1], execResult[2] / 100, execResult[3] / 100, execResult[4]];
-            }
-        }],
+    // a set of RE's that can match strings and generate color tuples.
+    stringParsers = [{
+        re: /rgba?\(\s*(\d{1,3})\s*,\s*(\d{1,3})\s*,\s*(\d{1,3})\s*(?:,\s*(\d+(?:\.\d+)?)\s*)?\)/,
+        parse: function parse(execResult) {
+            return [execResult[1], execResult[2], execResult[3], execResult[4]];
+        }
+    }, {
+        re: /rgba?\(\s*(\d+(?:\.\d+)?)\%\s*,\s*(\d+(?:\.\d+)?)\%\s*,\s*(\d+(?:\.\d+)?)\%\s*(?:,\s*(\d+(?:\.\d+)?)\s*)?\)/,
+        parse: function parse(execResult) {
+            return [2.55 * execResult[1], 2.55 * execResult[2], 2.55 * execResult[3], execResult[4]];
+        }
+    }, {
+        re: /#([a-fA-F0-9]{2})([a-fA-F0-9]{2})([a-fA-F0-9]{2})/,
+        parse: function parse(execResult) {
+            return [parseInt(execResult[1], 16), parseInt(execResult[2], 16), parseInt(execResult[3], 16)];
+        }
+    }, {
+        re: /#([a-fA-F0-9])([a-fA-F0-9])([a-fA-F0-9])/,
+        parse: function parse(execResult) {
+            return [parseInt(execResult[1] + execResult[1], 16), parseInt(execResult[2] + execResult[2], 16), parseInt(execResult[3] + execResult[3], 16)];
+        }
+    }, {
+        re: /hsla?\(\s*(\d+(?:\.\d+)?)\s*,\s*(\d+(?:\.\d+)?)\%\s*,\s*(\d+(?:\.\d+)?)\%\s*(?:,\s*(\d+(?:\.\d+)?)\s*)?\)/,
+        space: "hsla",
+        parse: function parse(execResult) {
+            return [execResult[1], execResult[2] / 100, execResult[3] / 100, execResult[4]];
+        }
+    }],
 
 
-        // jQuery.Color( )
-        color = jQuery.Color = function (color, green, blue, alpha) {
-            return new jQuery.Color.fn.parse(color, green, blue, alpha);
-        },
+    // jQuery.Color( )
+    color = jQuery.Color = function (color, green, blue, alpha) {
+        return new jQuery.Color.fn.parse(color, green, blue, alpha);
+    },
         spaces = {
-            rgba: {
-                cache: "_rgba",
-                props: {
-                    red: {
-                        idx: 0,
-                        type: "byte",
-                        empty: true
-                    },
-                    green: {
-                        idx: 1,
-                        type: "byte",
-                        empty: true
-                    },
-                    blue: {
-                        idx: 2,
-                        type: "byte",
-                        empty: true
-                    },
-                    alpha: {
-                        idx: 3,
-                        type: "percent",
-                        def: 1
-                    }
-                }
-            },
-            hsla: {
-                cache: "_hsla",
-                props: {
-                    hue: {
-                        idx: 0,
-                        type: "degrees",
-                        empty: true
-                    },
-                    saturation: {
-                        idx: 1,
-                        type: "percent",
-                        empty: true
-                    },
-                    lightness: {
-                        idx: 2,
-                        type: "percent",
-                        empty: true
-                    }
+        rgba: {
+            cache: "_rgba",
+            props: {
+                red: {
+                    idx: 0,
+                    type: "byte",
+                    empty: true
+                },
+                green: {
+                    idx: 1,
+                    type: "byte",
+                    empty: true
+                },
+                blue: {
+                    idx: 2,
+                    type: "byte",
+                    empty: true
+                },
+                alpha: {
+                    idx: 3,
+                    type: "percent",
+                    def: 1
                 }
             }
         },
+        hsla: {
+            cache: "_hsla",
+            props: {
+                hue: {
+                    idx: 0,
+                    type: "degrees",
+                    empty: true
+                },
+                saturation: {
+                    idx: 1,
+                    type: "percent",
+                    empty: true
+                },
+                lightness: {
+                    idx: 2,
+                    type: "percent",
+                    empty: true
+                }
+            }
+        }
+    },
         propTypes = {
-            "byte": {
-                floor: true,
-                min: 0,
-                max: 255
-            },
-            "percent": {
-                min: 0,
-                max: 1
-            },
-            "degrees": {
-                mod: 360,
-                floor: true
-            }
+        "byte": {
+            floor: true,
+            min: 0,
+            max: 255
         },
+        "percent": {
+            min: 0,
+            max: 1
+        },
+        "degrees": {
+            mod: 360,
+            floor: true
+        }
+    },
         rgbaspace = spaces.rgba.props,
         support = color.support = {},
 
 
-        // colors = jQuery.Color.names
-        colors,
+    // colors = jQuery.Color.names
+    colors,
 
 
-        // local aliases of functions called often
-        each = jQuery.each;
+    // local aliases of functions called often
+    each = jQuery.each;
 
     spaces.hsla.props.alpha = rgbaspace.alpha;
 
@@ -139,7 +139,7 @@
             return prop.def;
         }
         if (type.floor) {
-            value = ~~value;
+            value = ~ ~value;
         } else {
             value = parseFloat(value);
         }
@@ -347,8 +347,8 @@
         toRgbaString: function toRgbaString() {
             var prefix = "rgba(",
                 rgba = jQuery.map(this._rgba, function (v, i) {
-                    return v == null ? i > 2 ? 1 : 0 : v;
-                });
+                return v == null ? i > 2 ? 1 : 0 : v;
+            });
 
             if (rgba[3] === 1) {
                 rgba.pop();
@@ -360,16 +360,16 @@
         toHslaString: function toHslaString() {
             var prefix = "hsla(",
                 hsla = jQuery.map(this.hsla(), function (v, i) {
-                    if (v == null) {
-                        v = i > 2 ? 1 : 0;
-                    }
+                if (v == null) {
+                    v = i > 2 ? 1 : 0;
+                }
 
-                    // catch 1 and 2
-                    if (i && i < 3) {
-                        v = Math.round(v * 100) + "%";
-                    }
-                    return v;
-                });
+                // catch 1 and 2
+                if (i && i < 3) {
+                    v = Math.round(v * 100) + "%";
+                }
+                return v;
+            });
 
             if (hsla[3] == 1) {
                 hsla.pop();
@@ -382,7 +382,7 @@
                 alpha = rgba.pop();
 
             if (includeAlpha) {
-                rgba.push(~~(alpha * 255));
+                rgba.push(~ ~(alpha * 255));
             }
 
             return "#" + jQuery.map(rgba, function (v, i) {

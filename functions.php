@@ -71,7 +71,7 @@ function luskinAhoy()
     add_action('get_header', 'wp_html_compression_start');
 
     // minify output
-    //add_action('get_header', 'gkp_html_minify_start');
+    add_action('get_header', 'gkp_html_minify_start');
 
 } /* end luskin ahoy */
 

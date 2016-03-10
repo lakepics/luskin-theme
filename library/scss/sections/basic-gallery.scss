@@ -1,0 +1,167 @@
+@import 'partials/variables';
+@import 'sections/page';
+
+/* ############ basic-gallery.scss ############ */
+
+// styles for 0up
+
+.gallery {
+  position: relative;
+  width: 100%;
+
+  .bx-prev, .bx-next {
+    background: url('/wp-content/themes/luskin/library/images/gallery-controls.png') no-repeat center top;
+    display: block;
+    height: 47px;
+    left: 0;
+    margin-top: -24px;
+    overflow: hidden;
+    position: absolute;
+    text-indent: -99999em;
+    top: 50%;
+    width: 48px;
+    z-index: 100;
+  }
+
+  .bx-next {
+    background-position: center bottom;
+    left: auto;
+    right: 0;
+  }
+
+  ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+
+    li {
+      position: relative;
+    }
+  }
+
+  img {
+    display: block;
+    max-width: 100%;
+  }
+
+  .overlay {
+    background: rgba(28, 77, 113, 0.75);
+    bottom: 0;
+    color: #dfdfdf;
+    font-family: $semibold-sans-serif;
+    font-size: 15px;
+    height: 236px;
+    left: 0;
+    line-height: 1.33;
+    margin: auto;
+    padding: 55px 48px 44px 48px;
+    position: absolute;
+    right: 0;
+    text-align: center;
+    top: 0;
+    width: 304px;
+
+    > p {
+      max-height: 160px;
+      overflow: hidden;
+    }
+
+    h4 {
+      color: #fff;
+      font-size: 23px;
+      line-height: 1.25;
+      margin: 0 0 20px 0;
+    }
+
+    .ext-link {
+      border-top: 1px solid #906404;
+      bottom: 0;
+      color: #ffb300;
+      display: block;
+      font-family: $bold-sans-serif;
+      font-size: 14px;
+      left: 48px;
+      line-height: 1;
+      margin-top: 20px;
+      padding-bottom: 25px;
+      padding-top: 25px;
+      position: absolute;
+      right: 48px;
+      text-align: center;
+      text-transform: uppercase;
+    }
+  }
+}
+
+.content-tabs .gallery {
+  margin-top: 45px;
+  max-height: 495px;
+  overflow: hidden;
+}
+
+// explore UCLA gallery slider mobile nav; not in use
+
+#mobile-gallery-nav {
+  display: none;
+  position: relative;
+
+  ul {
+    background: #fff;
+    background: rgba(255, 255, 255, 0.9);
+    display: none;
+    list-style-type: none;
+    margin: 0;
+    padding: 5px 0;
+    position: absolute;
+    top: 59px;
+    width: 100%;
+    z-index: 101;
+
+    li {
+      color: #4d4d4d;
+      display: block;
+      font-family: $semibold-sans-serif;
+      font-size: 18px;
+      line-height: 1.33;
+      padding: 11px 0;
+      text-align: center;
+
+      &:hover,
+      &.current {
+        color: #ffb300;
+        cursor: pointer;
+      }
+    }
+  }
+}
+
+.mobile-gallery-nav-select {
+  background: #fff url('/wp-content/themes/luskin/library/images/dropdown-arrow.png') no-repeat right center;
+  color: #4d4d4d;
+  cursor: pointer;
+  display: block;
+  font-family: $semibold-sans-serif;
+  font-size: 18px;
+  height: 58px;
+  line-height: 58px;
+  padding: 0 50px;
+  text-align: center;
+}
+
+// styles for 481up
+@media only screen and (min-width: 481px) {}
+
+// styles for 640up
+@media only screen and (min-width: 640px) {}
+
+// styles for 768up
+@media only screen and (min-width: 768px) {}
+
+// styles for 1030up
+@media only screen and (min-width: 1030px) {}
+
+// styles for 1240up
+@media only screen and (min-width: 1240px) {}
+
+// styles for 2x
+@media only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min--moz-device-pixel-ratio: 1.5), only screen and (min-device-pixel-ratio: 1.5) {}

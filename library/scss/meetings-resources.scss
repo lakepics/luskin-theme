@@ -135,7 +135,7 @@ h3.event-planning-resources {
 
             // height: 500px;
             // width: 1024px;
-
+         
           }
         }
 
@@ -147,7 +147,7 @@ h3.event-planning-resources {
 
             // height: 568px;
             // width: 240px;
-
+         
           }
 
           &.map-directions-mobile-portrait {
@@ -155,7 +155,7 @@ h3.event-planning-resources {
 
             // height: 320px;
             // width: 221px;
-
+         
           }
         }
       }
@@ -324,7 +324,7 @@ h3.event-planning-resources {
         //   }
 
         // }
-
+     
       }
     }
   }
@@ -471,8 +471,10 @@ h3.event-planning-resources {
 @media only screen and (min-width: 1030px) {
   #main-content {
     .lax-directions {
+      background-color: #C4C4C4;
       margin: 0 auto;
-      max-width: 1920px;
+
+      // max-width: 1920px;
 
       .lax-dir-wrapper {
         min-height: 450px;

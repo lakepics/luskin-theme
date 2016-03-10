@@ -230,7 +230,7 @@ td.Basic-Table {
 
 p.Basic-Paragraph {
   color: #000000;
-  font-family: "Minion Pro", serif;
+  font-family: 'Minion Pro', serif;
   font-size: 14px;
   line-height: 22px;
   margin: 0;
@@ -245,7 +245,7 @@ p.Basic-Paragraph {
 
 p.Table-body-copy {
   color: #000000;
-  font-family: "Proxima Nova Regular", sans-serif;
+  font-family: 'Proxima Nova Regular', sans-serif;
   font-size: 14px;
   font-style: normal;
   font-variant: normal;
@@ -262,7 +262,7 @@ p.Table-body-copy {
 
 p.Table-headings {
   color: #FFF;
-  font-family: "Proxima Nova Regular", sans-serif;
+  font-family: 'Proxima Nova Regular', sans-serif;
   font-size: 14px;
   font-style: normal;
   font-variant: normal;
@@ -279,7 +279,7 @@ p.Table-headings {
 
 p.Table-parenthetical-text {
   color: #FFFFFF;
-  font-family: "Proxima Nova Regular", sans-serif;
+  font-family: 'Proxima Nova Regular', sans-serif;
   font-size: 16px;
   font-style: italic;
   font-variant: normal;
@@ -296,7 +296,7 @@ p.Table-parenthetical-text {
 
 p.table-level-heading {
   color: #000000;
-  font-family: "Proxima Nova Semibold", sans-serif;
+  font-family: 'Proxima Nova Semibold', sans-serif;
   font-size: 16px;
   font-style: italic;
   font-variant: normal;

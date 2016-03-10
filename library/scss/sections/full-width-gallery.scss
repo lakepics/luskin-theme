@@ -1,0 +1,93 @@
+@import 'partials/variables';
+@import 'sections/page';
+
+/* ############ full-width-gallery.scss ############ */
+
+// styles for 0up
+
+.full-width-gallery {
+  position: relative;
+  width: 100%;
+
+  ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  .bx-prev,
+  .bx-next {
+    background: url('/wp-content/themes/luskin/library/images/gallery-controls.png') no-repeat center top;
+    display: block;
+    height: 47px;
+    left: 0;
+    margin-top: -24px;
+    overflow: hidden;
+    position: absolute;
+    text-indent: -99999em;
+    top: 50%;
+    width: 48px;
+    z-index: 100;
+  }
+
+  .bx-next {
+    background-position: center bottom;
+    left: auto;
+    right: 0;
+  }
+
+  .bx-controls {
+    .bx-pager {
+      bottom: 26px;
+      position: absolute;
+      text-align: center;
+      width: 100%;
+      z-index: 100;
+    }
+
+    .bx-pager-item {
+      display: inline-block;
+      *display: inline;
+      margin-left: 4px;
+      margin-right: 4px;
+      zoom: 1;
+    }
+
+    .bx-pager-link {
+      -khtml-border-radius: 20px;
+      -moz-border-radius: 20px;
+      -o-border-radius: 20px;
+      -webkit-border-radius: 20px;
+      background: rgb(255, 255, 255);
+      background: rgba(255, 255, 255, 0.4);
+      border-radius: 20px;
+      display: block;
+      height: 12px;
+      overflow: hidden;
+      text-indent: -99999em;
+      width: 12px;
+
+      &.active {
+        background: #ffb300;
+      }
+    }
+  }
+}
+
+// styles for 481up
+@media only screen and (min-width: 481px) {}
+
+// styles for 640up
+@media only screen and (min-width: 640px) {}
+
+// styles for 768up
+@media only screen and (min-width: 768px) {}
+
+// styles for 1030up
+@media only screen and (min-width: 1030px) {}
+
+// styles for 1240up
+@media only screen and (min-width: 1240px) {}
+
+// styles for 2x
+@media only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min--moz-device-pixel-ratio: 1.5), only screen and (min-device-pixel-ratio: 1.5) {}

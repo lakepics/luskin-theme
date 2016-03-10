@@ -1,68 +1,9 @@
 "use strict";
 
-var _typeof10 = typeof Symbol === "function" && typeof Symbol.iterator === "symbol" ? function (obj) {
-    return typeof obj;
-} : function (obj) {
-    return obj && typeof Symbol === "function" && obj.constructor === Symbol ? "symbol" : typeof obj;
-};
-
-var _typeof9 = typeof Symbol === "function" && _typeof10(Symbol.iterator) === "symbol" ? function (obj) {
-    return typeof obj === "undefined" ? "undefined" : _typeof10(obj);
-} : function (obj) {
-    return obj && typeof Symbol === "function" && obj.constructor === Symbol ? "symbol" : typeof obj === "undefined" ? "undefined" : _typeof10(obj);
-};
-
-var _typeof8 = typeof Symbol === "function" && _typeof9(Symbol.iterator) === "symbol" ? function (obj) {
-    return typeof obj === "undefined" ? "undefined" : _typeof9(obj);
-} : function (obj) {
-    return obj && typeof Symbol === "function" && obj.constructor === Symbol ? "symbol" : typeof obj === "undefined" ? "undefined" : _typeof9(obj);
-};
-
-var _typeof7 = typeof Symbol === "function" && _typeof8(Symbol.iterator) === "symbol" ? function (obj) {
-    return typeof obj === "undefined" ? "undefined" : _typeof8(obj);
-} : function (obj) {
-    return obj && typeof Symbol === "function" && obj.constructor === Symbol ? "symbol" : typeof obj === "undefined" ? "undefined" : _typeof8(obj);
-};
-
-var _typeof6 = typeof Symbol === "function" && _typeof7(Symbol.iterator) === "symbol" ? function (obj) {
-    return typeof obj === "undefined" ? "undefined" : _typeof7(obj);
-} : function (obj) {
-    return obj && typeof Symbol === "function" && obj.constructor === Symbol ? "symbol" : typeof obj === "undefined" ? "undefined" : _typeof7(obj);
-};
-
-var _typeof5 = typeof Symbol === "function" && _typeof6(Symbol.iterator) === "symbol" ? function (obj) {
-    return typeof obj === "undefined" ? "undefined" : _typeof6(obj);
-} : function (obj) {
-    return obj && typeof Symbol === "function" && obj.constructor === Symbol ? "symbol" : typeof obj === "undefined" ? "undefined" : _typeof6(obj);
-};
-
-var _typeof4 = typeof Symbol === "function" && _typeof5(Symbol.iterator) === "symbol" ? function (obj) {
-    return typeof obj === "undefined" ? "undefined" : _typeof5(obj);
-} : function (obj) {
-    return obj && typeof Symbol === "function" && obj.constructor === Symbol ? "symbol" : typeof obj === "undefined" ? "undefined" : _typeof5(obj);
-};
-
-var _typeof3 = typeof Symbol === "function" && _typeof4(Symbol.iterator) === "symbol" ? function (obj) {
-    return typeof obj === "undefined" ? "undefined" : _typeof4(obj);
-} : function (obj) {
-    return obj && typeof Symbol === "function" && obj.constructor === Symbol ? "symbol" : typeof obj === "undefined" ? "undefined" : _typeof4(obj);
-};
-
-var _typeof2 = typeof Symbol === "function" && _typeof3(Symbol.iterator) === "symbol" ? function (obj) {
-    return typeof obj === "undefined" ? "undefined" : _typeof3(obj);
-} : function (obj) {
-    return obj && typeof Symbol === "function" && obj.constructor === Symbol ? "symbol" : typeof obj === "undefined" ? "undefined" : _typeof3(obj);
-};
-
-var _typeof = typeof Symbol === "function" && _typeof2(Symbol.iterator) === "symbol" ? function (obj) {
-    return typeof obj === "undefined" ? "undefined" : _typeof2(obj);
-} : function (obj) {
-    return obj && typeof Symbol === "function" && obj.constructor === Symbol ? "symbol" : typeof obj === "undefined" ? "undefined" : _typeof2(obj);
-};
-
 /*	SWFObject v2.2 <http://code.google.com/p/swfobject/> 
 	is released under the MIT License <http://www.opensource.org/licenses/mit-license.php> 
 */
+
 var swfobject = function () {
     var D = "undefined",
         r = "object",
@@ -89,97 +30,97 @@ var swfobject = function () {
         G,
         m = true,
         M = function () {
-            var aa = _typeof(j.getElementById) != D && _typeof(j.getElementsByTagName) != D && _typeof(j.createElement) != D,
-                ah = t.userAgent.toLowerCase(),
-                Y = t.platform.toLowerCase(),
-                ae = Y ? /win/.test(Y) : /win/.test(ah),
-                ac = Y ? /mac/.test(Y) : /mac/.test(ah),
-                af = /webkit/.test(ah) ? parseFloat(ah.replace(/^.*webkit\/(\d+(\.\d+)?).*$/, "$1")) : false,
-                X = !+"\v1",
-                ag = [0, 0, 0],
-                ab = null;
-            if (_typeof(t.plugins) != D && _typeof(t.plugins[S]) == r) {
-                ab = t.plugins[S].description;
-                if (ab && !(_typeof(t.mimeTypes) != D && t.mimeTypes[q] && !t.mimeTypes[q].enabledPlugin)) {
-                    T = true;
-                    X = false;
-                    ab = ab.replace(/^.*\s+(\S+\s+\S+$)/, "$1");
-                    ag[0] = parseInt(ab.replace(/^(.*)\..*$/, "$1"), 10);
-                    ag[1] = parseInt(ab.replace(/^.*\.(.*)\s.*$/, "$1"), 10);
-                    ag[2] = /[a-zA-Z]/.test(ab) ? parseInt(ab.replace(/^.*[a-zA-Z]+(.*)$/, "$1"), 10) : 0;
-                }
-            } else {
-                if (_typeof(O.ActiveXObject) != D) {
-                    try {
-                        var ad = new ActiveXObject(W);
-                        if (ad) {
-                            ab = ad.GetVariable("$version");
-                            if (ab) {
-                                X = true;
-                                ab = ab.split(" ")[1].split(",");
-                                ag = [parseInt(ab[0], 10), parseInt(ab[1], 10), parseInt(ab[2], 10)];
-                            }
+        var aa = _typeof(j.getElementById) != D && _typeof(j.getElementsByTagName) != D && _typeof(j.createElement) != D,
+            ah = t.userAgent.toLowerCase(),
+            Y = t.platform.toLowerCase(),
+            ae = Y ? /win/.test(Y) : /win/.test(ah),
+            ac = Y ? /mac/.test(Y) : /mac/.test(ah),
+            af = /webkit/.test(ah) ? parseFloat(ah.replace(/^.*webkit\/(\d+(\.\d+)?).*$/, "$1")) : false,
+            X = ! +"\v1",
+            ag = [0, 0, 0],
+            ab = null;
+        if (_typeof(t.plugins) != D && _typeof(t.plugins[S]) == r) {
+            ab = t.plugins[S].description;
+            if (ab && !(_typeof(t.mimeTypes) != D && t.mimeTypes[q] && !t.mimeTypes[q].enabledPlugin)) {
+                T = true;
+                X = false;
+                ab = ab.replace(/^.*\s+(\S+\s+\S+$)/, "$1");
+                ag[0] = parseInt(ab.replace(/^(.*)\..*$/, "$1"), 10);
+                ag[1] = parseInt(ab.replace(/^.*\.(.*)\s.*$/, "$1"), 10);
+                ag[2] = /[a-zA-Z]/.test(ab) ? parseInt(ab.replace(/^.*[a-zA-Z]+(.*)$/, "$1"), 10) : 0;
+            }
+        } else {
+            if (_typeof(O.ActiveXObject) != D) {
+                try {
+                    var ad = new ActiveXObject(W);
+                    if (ad) {
+                        ab = ad.GetVariable("$version");
+                        if (ab) {
+                            X = true;
+                            ab = ab.split(" ")[1].split(",");
+                            ag = [parseInt(ab[0], 10), parseInt(ab[1], 10), parseInt(ab[2], 10)];
                         }
-                    } catch (Z) {}
-                }
-            }
-            return {
-                w3: aa,
-                pv: ag,
-                wk: af,
-                ie: X,
-                win: ae,
-                mac: ac
-            };
-        }(),
-        k = function () {
-            if (!M.w3) {
-                return;
-            }
-            if (_typeof(j.readyState) != D && j.readyState == "complete" || _typeof(j.readyState) == D && (j.getElementsByTagName("body")[0] || j.body)) {
-                f();
-            }
-            if (!J) {
-                if (_typeof(j.addEventListener) != D) {
-                    j.addEventListener("DOMContentLoaded", f, false);
-                }
-                if (M.ie && M.win) {
-                    j.attachEvent(x, function () {
-                        if (j.readyState == "complete") {
-                            j.detachEvent(x, arguments.callee);
-                            f();
-                        }
-                    });
-                    if (O == top) {
-                        (function () {
-                            if (J) {
-                                return;
-                            }
-                            try {
-                                j.documentElement.doScroll("left");
-                            } catch (X) {
-                                setTimeout(arguments.callee, 0);
-                                return;
-                            }
-                            f();
-                        })();
                     }
-                }
-                if (M.wk) {
+                } catch (Z) {}
+            }
+        }
+        return {
+            w3: aa,
+            pv: ag,
+            wk: af,
+            ie: X,
+            win: ae,
+            mac: ac
+        };
+    }(),
+        k = function () {
+        if (!M.w3) {
+            return;
+        }
+        if (_typeof(j.readyState) != D && j.readyState == "complete" || _typeof(j.readyState) == D && (j.getElementsByTagName("body")[0] || j.body)) {
+            f();
+        }
+        if (!J) {
+            if (_typeof(j.addEventListener) != D) {
+                j.addEventListener("DOMContentLoaded", f, false);
+            }
+            if (M.ie && M.win) {
+                j.attachEvent(x, function () {
+                    if (j.readyState == "complete") {
+                        j.detachEvent(x, arguments.callee);
+                        f();
+                    }
+                });
+                if (O == top) {
                     (function () {
                         if (J) {
                             return;
                         }
-                        if (!/loaded|complete/.test(j.readyState)) {
+                        try {
+                            j.documentElement.doScroll("left");
+                        } catch (X) {
                             setTimeout(arguments.callee, 0);
                             return;
                         }
                         f();
                     })();
                 }
-                s(f);
             }
-        }();
+            if (M.wk) {
+                (function () {
+                    if (J) {
+                        return;
+                    }
+                    if (!/loaded|complete/.test(j.readyState)) {
+                        setTimeout(arguments.callee, 0);
+                        return;
+                    }
+                    f();
+                })();
+            }
+            s(f);
+        }
+    }();
 
     function f() {
         if (J) {

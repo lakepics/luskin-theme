@@ -241,7 +241,7 @@
       position: relative; }
       .room-types .room-types-mobile .room-type-div-toggle-trigger :before {
         background: url("/wp-content/themes/luskin/library/images/room-type-toogle.png") no-repeat center 0;
-        content: "";
+        content: '';
         display: block;
         height: 29px;
         margin-top: -14px;

@@ -470,8 +470,8 @@ h3.event-planning-resources {
 
 @media only screen and (min-width: 1030px) {
   #main-content .lax-directions {
-    margin: 0 auto;
-    max-width: 1920px; }
+    background-color: #C4C4C4;
+    margin: 0 auto; }
     #main-content .lax-directions .lax-dir-wrapper {
       min-height: 450px; }
       #main-content .lax-directions .lax-dir-wrapper .map-directions {

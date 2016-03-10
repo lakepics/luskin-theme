@@ -140,7 +140,7 @@ img.logo {
   line-height: 28px; }
 
 .padiClearfix:after {
-  content: " ";
+  content: ' ';
   /* Older browser do not support empty content */
   visibility: hidden;
   display: block;
@@ -263,7 +263,7 @@ img.logo {
   box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.225); }
 
 .padiPop4Overlay form .padiButton::after {
-  content: " \25BA"; }
+  content: ' \25BA'; }
 
 .padiPop4Overlay form .padiSLabel {
   font-size: 12px;
