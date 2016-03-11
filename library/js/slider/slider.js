@@ -2,9 +2,14 @@
 
 (function ($) {
 
-    //separator images slider
-	$( '.lemmonslider > .slider' ).lemmonSlider({
-	    'infinite' : true
-	});
+    // where all the actions happens
+    $(document).ready(function () {
+
+	    // initializing slider
+		$( '.lemmonslider > .slider' ).lemmonSlider({
+		    'infinite' : true
+		});
+
+    });
 
 })(jQuery);

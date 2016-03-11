@@ -3,14 +3,7 @@
     // where all the actions happens
     $(document).ready(function () {
 
-        // fake select dropdown on gallery
-        $('#gallery-filters').after('<span>' + $('option:selected', this).text() + '</span>');
-        $('#gallery-filters').click(function (event) {
-            $(this).siblings('span').remove();
-            $(this).after('<span>' + $('option:selected', this).text() + '</span>');
-        });
-        
-        // employ fancybox
+        // initializing fancybox
         $('#gallery-container .item > a')
             .addClass( "fancybox" )
             .attr('rel', 'gallery');
@@ -20,14 +13,6 @@
                 margin      : [20, 60, 20, 60] // Increase left/right margin
             });
 
-        // resize gallery
-        resizeGallery();
-
-        // resize gallery on window change
-        $(window).resize(function () {
-            resizeGallery();
-        });
-
         // initializing isotope
         $('#gallery-container').isotope({
             itemSelector: '.item',
@@ -35,6 +20,13 @@
                 // columnWidth: 380,
                 gutter: 20
             }
+        });
+
+        // fake select dropdown on gallery
+        $('#gallery-filters').after('<span>' + $('option:selected', this).text() + '</span>');
+        $('#gallery-filters').click(function (event) {
+            $(this).siblings('span').remove();
+            $(this).after('<span>' + $('option:selected', this).text() + '</span>');
         });
 
         // bind filter on select change
@@ -47,6 +39,14 @@
                 filter: filterValue
             });
         });
+
+        // resize gallery on window change
+        $(window).resize(function () {
+            resizeGallery();
+        });
+
+        // resize gallery initial call
+        resizeGallery();
 
     });
 
