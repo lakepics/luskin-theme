@@ -1,7 +1,6 @@
 (function ($) {
 
-    // where all the actions happens
-    $(document).ready(function () {
+    $(window).load(function () {
 
         // initializing fancybox
         $('#gallery-container .item > a')

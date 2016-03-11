@@ -1,5 +1,3 @@
-// Slider JavaScript
-
 (function ($) {
 
     $(window).load(function () {
