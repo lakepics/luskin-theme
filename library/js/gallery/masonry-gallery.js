@@ -173,7 +173,7 @@
                             origHeight = h2;
                             break;
                         default:
-                            origHeight = h21;
+                            origHeight = h1;
                             break;
 
                     }
