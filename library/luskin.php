@@ -577,10 +577,7 @@ function luskinScriptsAndStyles()
 function luskinLoadScriptsLast()
 {
     // luskin general scripts
-    //wp_enqueue_script('luskin-general', get_stylesheet_directory_uri() . '/library/js/scripts.min.js', array(), false, true);
-
-    // Helper scripts
-    //wp_register_script( 'luskin-js', get_stylesheet_directory_uri() . '/library/js/scripts.min.js', array( 'jquery' ), '', true );
+    wp_enqueue_script('luskin-general', get_stylesheet_directory_uri() . '/library/js/scripts.min.js', array(), false, true);
 }
 
 /* *****************************************************************************
