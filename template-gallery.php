@@ -33,12 +33,13 @@
         </div>
 
         <div id="gallery-container" class="container clearfix">
+            <div class="sizer"></div>
 
         <?php
         $pictures = get_field( 'images', 20 );
         foreach ( $pictures as $picture ) {
             $picture_src = wp_get_attachment_image_src( $picture['image']['id'], 'full' );
-            echo '<div class="item '. createSlug( $picture['category'] ) .'">';
+            echo '<div class="item '. $picture['css_class'] . ' ' . createSlug( $picture['category'] ) .'">';
             if ( $picture['large_image'] ) {
                 if ( $picture['large_image']['caption'] != '' ) {
                     $imgTitle = $picture['large_image']['caption'];
@@ -46,10 +47,10 @@
                     $imgTitle = '';
                 }
                 echo '<a href="'. $picture['large_image']['url'] .'" title="'. $imgTitle .'">';
-                echo '<img class="'.$picture['css_class'].'" src="'. $picture_src[0] .'" alt="" />';
+                echo '<img class="" src="'. $picture_src[0] .'" alt="'. $imgTitle .'" />';
                 echo '</a>';
             } else {
-                echo '<img class="'.$picture['css_class'].'" src="'. $picture_src[0] .'" alt="" />';
+                echo '<img class="" src="'. $picture_src[0] .'" alt="'. $imgTitle .'" />';
             }
             echo '</div>';
         }

@@ -5,27 +5,49 @@
 
 // styles for 0up
 
+/* force scrollbar, prevents initial gap */
+html {
+  overflow-y: scroll; 
+}
+
 body {
   background: #f4f4f4;
 }
 
-#gallery-container {
+/* ---- grid ---- */
+#main-content {
+
+  #gallery-container {
   margin-top: 25px;
-
-  .item {
-    float: left;
-    margin-bottom: 20px;
-
-    img {
+  max-width: 1180px;
+  padding: 0 20px;
+ 
+    /* clear fix */
+    :after {
+      content: '';
       display: block;
-      max-width: 100%;
+      clear: both;
     }
 
-    a {
-      display: block;
-      position: relative;
+    /* ---- .element-item ---- */
+    .item {
+      float: left;
+      margin-bottom: 20px;
+
+      a {
+        display: block;
+        position: relative;
+      }
+
+      img {
+        display: block;
+        max-width: 100%;
+      }
+
     }
+
   }
+
 }
 
 .gallery-filters-wrapper {
@@ -92,6 +114,19 @@ body {
 
 // styles for 1030up
 @media only screen and (min-width: 1030px) {}
+
+// styles for 1030up
+@media only screen and (min-width: 1180px) {
+
+  #main-content {
+
+    #gallery-container {
+      padding: 0;
+    }
+
+  }
+
+}
 
 // styles for 1240up
 @media only screen and (min-width: 1240px) {}

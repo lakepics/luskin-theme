@@ -424,7 +424,10 @@ function luskinScriptsAndStyles()
 
         // jquery swap out; remove wordpress version of jquery and replace with a CDN hosted version that's more recent
         wp_deregister_script('jquery');
-        wp_enqueue_script('jquery', '//ajax.googleapis.com/ajax/libs/jquery/1.8/jquery.min.js', array('modernizr'), false, false);
+        //wp_enqueue_script('jquery', '//ajax.googleapis.com/ajax/libs/jquery/1.8/jquery.min.js', array('modernizr'), false, false);
+        wp_enqueue_script('jquery', '//code.jquery.com/jquery-1.12.1.min.js', array('modernizr'), false, false);
+
+        
 
         /* **************************************************
          * ...on the flipbook template

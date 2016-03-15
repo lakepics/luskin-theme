@@ -185,20 +185,33 @@
     left: 0.15em; } }
 
 /* ############ masonry-gallery.scss ############ */
+/* force scrollbar, prevents initial gap */
+html {
+  overflow-y: scroll; }
+
 body {
   background: #f4f4f4; }
 
-#gallery-container {
-  margin-top: 25px; }
-  #gallery-container .item {
+/* ---- grid ---- */
+#main-content #gallery-container {
+  margin-top: 25px;
+  max-width: 1180px;
+  padding: 0 20px;
+  /* clear fix */
+  /* ---- .element-item ---- */ }
+  #main-content #gallery-container :after {
+    content: '';
+    display: block;
+    clear: both; }
+  #main-content #gallery-container .item {
     float: left;
     margin-bottom: 20px; }
-    #gallery-container .item img {
-      display: block;
-      max-width: 100%; }
-    #gallery-container .item a {
+    #main-content #gallery-container .item a {
       display: block;
       position: relative; }
+    #main-content #gallery-container .item img {
+      display: block;
+      max-width: 100%; }
 
 .gallery-filters-wrapper {
   background: #fff;
@@ -250,6 +263,10 @@ body {
   line-height: 58px;
   padding: 0 50px 0 30px;
   text-transform: uppercase; }
+
+@media only screen and (min-width: 1180px) {
+  #main-content #gallery-container {
+    padding: 0; } }
 
 /* ############ gallery.scss ############ */
 /* -------------- Gallery --------------- */
