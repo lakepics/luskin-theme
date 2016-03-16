@@ -485,8 +485,10 @@ function luskinScriptsAndStyles()
          * **************************************************/
         if (is_page_template(array('template-gallery.php',
             'template-room-gallery.php'))) {
+            // Images Loaded
+            wp_enqueue_script('imagesLoaded', get_stylesheet_directory_uri() . '/library/js/libs/imagesloaded.pkgd.min.js', array('jquery'), false, true);
             // Isotope
-            wp_enqueue_script('isotope', get_stylesheet_directory_uri() . '/library/js/libs/isotope.pkgd.min.js', array('jquery'), false, true);
+            wp_enqueue_script('isotope', get_stylesheet_directory_uri() . '/library/js/libs/isotope.pkgd.min.js', array('imagesLoaded'), false, true);
             // Fancybox
             wp_enqueue_script('fancybox', get_stylesheet_directory_uri() . '/library/plugins/fancybox/jquery.fancybox.min.js', array('isotope'), false, true);
             // Gallery Scripts

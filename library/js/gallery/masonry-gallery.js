@@ -37,12 +37,41 @@
             });
 
         // isotope
-        $('#gallery-container').isotope({
+        // $('#gallery-container').isotope({
+        //     itemSelector: '.item',
+        //     masonry: {
+        //       gutter: 20
+        //     }
+        // });
+
+        // // init Isotope
+        // var $grid = $('#gallery-container').isotope({
+        //     // options...
+        //     itemSelector: '.item',
+        //     masonry: {
+        //       gutter: 20
+        //     }
+        // });
+
+        // // layout Isotope after each image loads
+        // $grid.imagesLoaded().progress( function() {
+        //   $grid.isotope('layout');
+        // });
+
+
+
+        var $grid = $('#gallery-container').imagesLoaded( function() {
+          // init Isotope after all images have loaded
+          $grid.isotope({
+            // options...
             itemSelector: '.item',
             masonry: {
               gutter: 20
             }
-        });     
+          });
+        });
+
+        
 
         //resize gallery on window change
         $(window).resize(function () {

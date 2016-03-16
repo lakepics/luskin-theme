@@ -411,9 +411,15 @@
   .home #container #content #slideshow-container .action-buttons {
     display: none; }
   .home #container #content #slideshow-container .bx-wrapper .bx-viewport .home-slideshow .slide .slide-overlay {
-    right: 50px;
+    margin-right: -590px;
+    margin-top: -154px;
+    max-width: 850px;
+    padding-right: 30px;
+    position: absolute;
+    right: 50%;
     text-align: right;
-    top: 25%; }
+    top: 45%;
+    z-index: 100; }
     .home #container #content #slideshow-container .bx-wrapper .bx-viewport .home-slideshow .slide .slide-overlay h2 {
       font-size: 72px;
       margin: 0 0 20px;
@@ -442,3 +448,9 @@
       right: 50px; }
     .home #container #content #slideshow-container .bx-wrapper .bx-controls .bx-controls-direction {
       display: none; } }
+
+@media screen and (max-width: 1180px) {
+  .home #container #content #slideshow-container .bx-wrapper .bx-viewport .home-slideshow .slide .slide-overlay {
+    margin-right: 0;
+    padding-right: 0;
+    right: 30px; } }

@@ -37,22 +37,24 @@ if ( $slides ) {
         $portrait_image = wpGetAttachment( $slide['portrait_image']['id'] );
 
         echo '<div class="slide" style="background-image: url('. $image['src'] .');">';
-        echo '<div class="slide-overlay">';
 
-        if ( !empty( $slide['title'] ) ) {
-            echo '<h2>'. $slide['title'] .'</h2>';
-        }
+            echo '<div class="slide-overlay">';
 
-        if ( !empty( $slide['subtitle'] ) ) {
-            echo '<h3 class="tk-adobe-caslon-pro">'. $slide['subtitle'] .'</h3>';
-        }
+            if ( !empty( $slide['title'] ) ) {
+                echo '<h2>'. $slide['title'] .'</h2>';
+            }
 
-        if ( !empty( $slide['orange_title'] ) ) {
-            echo '<h4>'. $slide['orange_title'] .'</h4>';
-        }
+            if ( !empty( $slide['subtitle'] ) ) {
+                echo '<h3 class="tk-adobe-caslon-pro">'. $slide['subtitle'] .'</h3>';
+            }
 
-        echo '</div>';
-        echo '<span class="slide-description">'. $slide['description'] .'</span>';
+            if ( !empty( $slide['orange_title'] ) ) {
+                echo '<h4>'. $slide['orange_title'] .'</h4>';
+            }
+
+            echo '</div>';
+            echo '<span class="slide-description">'. $slide['description'] .'</span>';
+
         echo '</div>';
     }
     echo '</div></div>';
