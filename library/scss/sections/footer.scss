@@ -218,13 +218,20 @@
         text-align: left;
         vertical-align: top;
         width: 33.3333333333%;
+        font-family: $semibold-sans-serif;
 
         h5 {
           color: $foot-pri-text-color;
-          font-family: $semibold-sans-serif;
+          font-family: $bold-sans-serif;
           font-size: 14px;
           margin: 14px 0;
           text-transform: capitalize;
+          line-height: 1.42;
+        }
+
+        #menu-secondary-nav li a {
+            color: $foot-pri-text-color;
+            font-family: $bold-sans-serif;
         }
       }
 

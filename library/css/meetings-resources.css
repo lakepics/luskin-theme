@@ -88,11 +88,11 @@
 
 @media only screen and (min-width: 1240px) {
   .text-overlay {
-    font-size: 6em;
+    font-size: 7em;
     left: 0.15em; } }
 
 /* ############ amennities-services.scss ############ */
-.amenities h2 {
+#main-content .amenities h2 {
   color: #47718E;
   font-family: "Proxima Nova Semibold", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 25px;
@@ -101,29 +101,26 @@
   margin: 0 0 10px 0;
   text-transform: uppercase; }
 
-.amenities .amenities-description,
-.amenities .room-amenities {
+#main-content .amenities .amenities-description,
+#main-content .amenities .room-amenities {
   font-family: "Proxima Nova Regular", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 15px;
   line-height: 1.5; }
-  .amenities .amenities-description h2,
-  .amenities .room-amenities h2 {
-    margin: 0 0 28px 0; }
-  .amenities .amenities-description p,
-  .amenities .room-amenities p {
+  #main-content .amenities .amenities-description p,
+  #main-content .amenities .room-amenities p {
     margin-bottom: 30px; }
 
-.amenities .services .service-wrapper {
+#main-content .amenities .services .service-wrapper {
   float: left;
   width: 49.99%; }
-  .amenities .services .service-wrapper.rooms, .amenities .services .service-wrapper .rooms {
+  #main-content .amenities .services .service-wrapper.rooms, #main-content .amenities .services .service-wrapper .rooms {
     width: 45%;
     margin-right: 4.9%; }
-  .amenities .services .service-wrapper:last-child .service {
+  #main-content .amenities .services .service-wrapper:last-child .service {
     border-bottom: 0; }
-  .amenities .services .service-wrapper.even .service {
+  #main-content .amenities .services .service-wrapper.even .service {
     margin-left: 0; }
-  .amenities .services .service-wrapper.odd .service {
+  #main-content .amenities .services .service-wrapper.odd .service {
     margin-right: 0; }
 
 .guest-services {
@@ -158,6 +155,8 @@
     .service .service-name span {
       display: table-cell;
       vertical-align: middle; }
+  .service.business-center {
+    border-bottom: 0; }
   .service.none, .service.none-none, .service.first {
     margin: 0;
     padding: 0 0 0 20px; }
@@ -207,43 +206,53 @@
 .additional-ucla-accommodations {
   padding-bottom: 40px; }
 
+@media only screen and (max-width: 639px) {
+  #main-content .amenities .services .service-wrapper {
+    width: 100%; }
+    #main-content .amenities .services .service-wrapper .service {
+      margin: 0; }
+      #main-content .amenities .services .service-wrapper .service.business-center {
+        border-bottom: 1px solid #8DA6B8; } }
+
 @media only screen and (min-width: 931px) {
-  .amenities .amenities-description,
-  .amenities .room-amenities {
-    float: left;
-    width: 35%; }
-  .amenities .services {
-    float: right;
-    width: 60%; } }
+  #main-content .amenities {
+    padding: 10px 20px 60px; }
+    #main-content .amenities .amenities-description,
+    #main-content .amenities .room-amenities {
+      float: left;
+      width: 35%; }
+    #main-content .amenities .services {
+      float: right;
+      width: 60%; } }
 
 /* ############ meeting-resources.scss ############ */
-.event-planning-resources .section-description {
+#main-content .event-planning-resources .section-description {
   padding-bottom: 42px; }
 
-.event-planning-resources .three-columns {
+#main-content .event-planning-resources .three-columns {
   margin-bottom: 70px; }
 
-.event-planning-resources .left-column,
-.event-planning-resources .right-column,
-.event-planning-resources .middle-column {
+#main-content .event-planning-resources .left-column,
+#main-content .event-planning-resources .right-column,
+#main-content .event-planning-resources .middle-column {
   float: left; }
 
-.event-planning-resources .middle-column {
+#main-content .event-planning-resources .middle-column {
   margin: 0 3.3% 0 0;
   width: 30%; }
 
-.event-planning-resources .column .inner-wrapper {
+#main-content .event-planning-resources .column .inner-wrapper {
   padding: 0 48px; }
 
-.event-planning-resources .column ul {
+#main-content .event-planning-resources .column ul {
   margin: 0;
   padding: 0;
   list-style-type: none; }
-  .event-planning-resources .column ul li {
+  #main-content .event-planning-resources .column ul li {
     border-bottom: 1px solid #8DA6B8; }
-    .event-planning-resources .column ul li:first-child {
+    #main-content .event-planning-resources .column ul li:first-child {
       border-top: 1px solid #8DA6B8; }
-    .event-planning-resources .column ul li a {
+    #main-content .event-planning-resources .column ul li a {
       background: url("/wp-content/themes/luskin/library/images/list-download-link-arrow.png") no-repeat right center;
       color: #000;
       display: block;
@@ -252,16 +261,16 @@
       letter-spacing: 0.05em;
       line-height: 1.33;
       padding: 25px 40px 25px 5px; }
-      .event-planning-resources .column ul li a:hover, .event-planning-resources .column ul li a:focus {
+      #main-content .event-planning-resources .column ul li a:hover, #main-content .event-planning-resources .column ul li a:focus {
         color: #3284BF; }
 
-.event-planning-resources .column .button {
+#main-content .event-planning-resources .column .button {
   margin-top: 45px; }
 
-.event-planning-resources .left-column .inner-wrapper {
+#main-content .event-planning-resources .left-column .inner-wrapper {
   padding-left: 0; }
 
-.event-planning-resources .right-column .inner-wrapper {
+#main-content .event-planning-resources .right-column .inner-wrapper {
   padding-right: 0; }
 
 .event-planning-resources .column h3,
@@ -426,9 +435,9 @@ h3.event-planning-resources {
     #main-content .lax-directions .lax-dir-wrapper .textbox .directions-info-block {
       left: 20px;
       margin-top: 0;
-      padding: 15px;
+      padding: 45px 35px 45px 40px;
       position: absolute;
-      width: 230px; } }
+      width: 305px; } }
 
 @media only screen and (max-width: 700px) {
   #main-content .event-planning-resources {
@@ -500,6 +509,6 @@ h3.event-planning-resources {
     #main-content .lax-directions .lax-dir-wrapper .textbox .directions-info-block {
       left: 20px;
       margin-top: 0;
-      padding: 15px;
+      padding: 45px 35px 45px 40px;
       position: absolute;
-      width: 230px; } }
+      width: 305px; } }

@@ -942,8 +942,6 @@ button {
       width: 100%; }
       #main-content .container.two-columns .column.left-column .inner-wrapper, #main-content .container.two-columns .column.right-column .inner-wrapper, #main-content .container-1024.two-columns .column.left-column .inner-wrapper, #main-content .container-1024.two-columns .column.right-column .inner-wrapper {
         padding: 0; }
-    #main-content .container.two-columns h2, #main-content .container.two-columns .h2, #main-content .container-1024.two-columns h2, #main-content .container-1024.two-columns .h2 {
-      font-size: 1.25em; }
     #main-content .container.three-columns .column.left-column, #main-content .container.three-columns .column.middle-column, #main-content .container.three-columns .column.right-column, #main-content .container-1024.three-columns .column.left-column, #main-content .container-1024.three-columns .column.middle-column, #main-content .container-1024.three-columns .column.right-column {
       float: none;
       margin: 0 0 3em;
@@ -1128,9 +1126,9 @@ div.entry-content {
 .column h4,
 .parents-column h4 {
   margin: 0 0 10px 0;
-  font-size: 18px;
+  font-size: 22px;
   line-height: 1;
-  font-family: 'Proxima Nova Bold', Arial, Helvetica, sans-serif; }
+  font-family: 'Proxima Nova Semibold', Arial, Helvetica, sans-serif; }
 
 .column p,
 .parents-column p,
@@ -1874,7 +1872,6 @@ PAGE NAVI STYLES
           #navbar #site-navigation #main-navigation li a {
             font-family: "Proxima Nova Semibold", "Helvetica Neue", Helvetica, Arial, sans-serif;
             font-size: 19px;
-            font-weight: bold;
             color: #FFFFFF;
             display: block;
             line-height: 125px;
@@ -2266,7 +2263,7 @@ div.padiPrivacy {
     #footer .container .widget {
       margin: 0; }
   #footer a, #footer a:visited {
-    color: #CCCCCC;
+    color: #A2A2A2;
     outline: none;
     text-decoration: none;
     /* on hover */
@@ -2387,13 +2384,18 @@ div.padiPrivacy {
     margin: 0 auto;
     text-align: left;
     vertical-align: top;
-    width: 33.3333333333%; }
+    width: 33.3333333333%;
+    font-family: "Proxima Nova Semibold", "Helvetica Neue", Helvetica, Arial, sans-serif; }
     #footer .container .footer-block h5 {
       color: #CCCCCC;
-      font-family: "Proxima Nova Semibold", "Helvetica Neue", Helvetica, Arial, sans-serif;
+      font-family: "Proxima Nova Bold", "Helvetica Neue", Helvetica, Arial, sans-serif;
       font-size: 14px;
       margin: 14px 0;
-      text-transform: capitalize; }
+      text-transform: capitalize;
+      line-height: 1.42; }
+    #footer .container .footer-block #menu-secondary-nav li a {
+      color: #CCCCCC;
+      font-family: "Proxima Nova Bold", "Helvetica Neue", Helvetica, Arial, sans-serif; }
   #footer .container #footer-logo {
     display: none; }
   #footer .container #menu-footer_links {

@@ -424,7 +424,10 @@ function luskinScriptsAndStyles()
 
         // jquery swap out; remove wordpress version of jquery and replace with a CDN hosted version that's more recent
         wp_deregister_script('jquery');
-        wp_enqueue_script('jquery', '//ajax.googleapis.com/ajax/libs/jquery/1.8/jquery.min.js', array('modernizr'), false, false);
+        //wp_enqueue_script('jquery', '//ajax.googleapis.com/ajax/libs/jquery/1.8/jquery.min.js', array('modernizr'), false, false);
+        wp_enqueue_script('jquery', '//code.jquery.com/jquery-1.12.1.min.js', array('modernizr'), false, false);
+
+        
 
         /* **************************************************
          * ...on the flipbook template
@@ -482,8 +485,10 @@ function luskinScriptsAndStyles()
          * **************************************************/
         if (is_page_template(array('template-gallery.php',
             'template-room-gallery.php'))) {
+            // Images Loaded
+            wp_enqueue_script('imagesLoaded', get_stylesheet_directory_uri() . '/library/js/libs/imagesloaded.pkgd.min.js', array('jquery'), false, true);
             // Isotope
-            wp_enqueue_script('isotope', get_stylesheet_directory_uri() . '/library/js/libs/isotope.pkgd.min.js', array('jquery'), false, true);
+            wp_enqueue_script('isotope', get_stylesheet_directory_uri() . '/library/js/libs/isotope.pkgd.min.js', array('imagesLoaded'), false, true);
             // Fancybox
             wp_enqueue_script('fancybox', get_stylesheet_directory_uri() . '/library/plugins/fancybox/jquery.fancybox.min.js', array('isotope'), false, true);
             // Gallery Scripts
@@ -574,10 +579,7 @@ function luskinScriptsAndStyles()
 function luskinLoadScriptsLast()
 {
     // luskin general scripts
-    //wp_enqueue_script('luskin-general', get_stylesheet_directory_uri() . '/library/js/scripts.min.js', array(), false, true);
-
-    // Helper scripts
-    //wp_register_script( 'luskin-js', get_stylesheet_directory_uri() . '/library/js/scripts.min.js', array( 'jquery' ), '', true );
+    wp_enqueue_script('luskin-general', get_stylesheet_directory_uri() . '/library/js/scripts.min.js', array(), false, true);
 }
 
 /* *****************************************************************************

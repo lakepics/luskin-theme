@@ -273,10 +273,6 @@ button {
           }
         }
       }
-
-      h2, .h2 {
-        font-size: 1.25em;
-      }
     }
 
     &.three-columns {
@@ -522,9 +518,9 @@ div.entry-content {
 .column h4,
 .parents-column h4 {
   margin: 0 0 10px 0;
-  font-size: 18px;
+  font-size: 22px;
   line-height: 1;
-  font-family: 'Proxima Nova Bold', Arial, Helvetica, sans-serif;
+  font-family: 'Proxima Nova Semibold', Arial, Helvetica, sans-serif;
 }
 
 .column p,

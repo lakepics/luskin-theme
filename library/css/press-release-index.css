@@ -88,7 +88,7 @@
 
 @media only screen and (min-width: 1240px) {
   .text-overlay {
-    font-size: 6em;
+    font-size: 7em;
     left: 0.15em; } }
 
 table.Basic-Table {
@@ -539,10 +539,10 @@ tr.releases, tr.releases td {
   float: none;
   margin: 3em 0 0; }
   #main-content .container.two-columns .column.right-column h2, #main-content .container-1024.two-columns .column.right-column h2 {
-    margin-bottom: 23px; }
+    font-size: 1.565em; }
 
 #main-content .container.two-columns .column h1, #main-content .container-1024.two-columns .column h1 {
-  font-size: 1.75em;
+  font-size: 2.75em;
   line-height: 1em;
   margin: 0 0 20px; }
 

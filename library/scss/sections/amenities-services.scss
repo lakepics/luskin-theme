@@ -2,52 +2,50 @@
 
 /* ############ amennities-services.scss ############ */
 
-.amenities {
-  h2 {
-    color: $dark-blue;
-    font-family: $semibold-sans-serif;
-    font-size: 25px;
-    letter-spacing: 0.05em;
-    line-height: 1.15;
-    margin: 0 0 10px 0;
-    text-transform: uppercase;
-  }
-
-  .amenities-description,
-  .room-amenities {
-    font-family: $sans-serif;
-    font-size: 15px;
-    line-height: 1.5;
-
+#main-content {
+  .amenities {
     h2 {
-      margin: 0 0 28px 0;
+      color: $dark-blue;
+      font-family: $semibold-sans-serif;
+      font-size: 25px;
+      letter-spacing: 0.05em;
+      line-height: 1.15;
+      margin: 0 0 10px 0;
+      text-transform: uppercase;
     }
 
-    p {
-      margin-bottom: 30px;
+    .amenities-description,
+    .room-amenities {
+      font-family: $sans-serif;
+      font-size: 15px;
+      line-height: 1.5;
+
+      p {
+        margin-bottom: 30px;
+      }
     }
-  }
 
-  .services {
-    .service-wrapper {
-      float: left;
-      width: 49.99%;
+    .services {
+      .service-wrapper {
+        float: left;
+        width: 49.99%;
 
-      &.rooms, .rooms {
-        width: 45%;
-        margin-right: 4.9%;
-      }
+        &.rooms, .rooms {
+          width: 45%;
+          margin-right: 4.9%;
+        }
 
-      &:last-child .service {
-        border-bottom: 0;
-      }
+        &:last-child .service {
+          border-bottom: 0;
+        }
 
-      &.even .service {
-        margin-left: 0;
-      }
+        &.even .service {
+          margin-left: 0;
+        }
 
-      &.odd .service {
-        margin-right: 0;
+        &.odd .service {
+          margin-right: 0;
+        }
       }
     }
   }
@@ -91,6 +89,10 @@
       display: table-cell;
       vertical-align: middle;
     }
+  }
+
+  &.business-center {
+    border-bottom: 0;
   }
 
   &.none, &.none-none, &.first {
@@ -179,6 +181,26 @@
   padding-bottom: 40px;
 }
 
+@media only screen and (max-width: 639px) {
+  #main-content {
+    .amenities {
+      .services {
+        .service-wrapper {
+          width: 100%;
+
+          .service {
+            margin: 0;
+
+            &.business-center {
+              border-bottom: 1px solid #8DA6B8;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
 // styles for 0up
 
 // styles for 481up
@@ -192,16 +214,20 @@
 
 // styles for 931up
 @media only screen and (min-width: 931px) {
-  .amenities {
-    .amenities-description,
-    .room-amenities {
-      float: left;
-      width: 35%;
-    }
+  #main-content {
+    .amenities {
+      padding: 10px 20px 60px;
 
-    .services {
-      float: right;
-      width: 60%;
+      .amenities-description,
+      .room-amenities {
+        float: left;
+        width: 35%;
+      }
+
+      .services {
+        float: right;
+        width: 60%;
+      }
     }
   }
 }

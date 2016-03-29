@@ -1,44 +1,18 @@
 (function ($) {
 
-    // where all the actions happens
     $(document).ready(function () {
 
         // fake select dropdown on gallery
-        $('#gallery-filters').after('<span>' + $('option:selected', this).text() + '</span>');
-        $('#gallery-filters').click(function (event) {
+        $('select#gallery-filters').after('<span>' + $('option:selected', this).text() + '</span>');
+        
+        // modify fake select dropdown selection on change
+        $('select#gallery-filters').on('change', function () {
             $(this).siblings('span').remove();
             $(this).after('<span>' + $('option:selected', this).text() + '</span>');
         });
-        
-        // employ fancybox
-        $('#gallery-container .item > a')
-            .addClass( "fancybox" )
-            .attr('rel', 'gallery');
-        $('.fancybox')
-            .fancybox({
-                padding     : 0,
-                margin      : [20, 60, 20, 60] // Increase left/right margin
-            });
 
-        // resize gallery
-        resizeGallery();
-
-        // resize gallery on window change
-        $(window).resize(function () {
-            resizeGallery();
-        });
-
-        // initializing isotope
-        $('#gallery-container').isotope({
-            itemSelector: '.item',
-            masonry: {
-                // columnWidth: 380,
-                gutter: 20
-            }
-        });
-
-        // bind filter on select change
-        $('#gallery-filters').on('change', function () {
+        //bind filter on select change
+        $('select#gallery-filters').on('change', function () {
             // get filter value from option value
             var filterValue = this.value;
             // use filterFn if matches value
@@ -50,82 +24,209 @@
 
     });
 
+    $(window).load(function () {
+
+        // initializing fancybox
+        $('#gallery-container .item > a')
+            .addClass( "fancybox" )
+            .attr('rel', 'gallery');
+        $('.fancybox')
+            .fancybox({
+                padding     : 0,
+                margin      : [20, 60, 20, 60] // Increase left/right margin
+            });
+
+        // isotope
+        // $('#gallery-container').isotope({
+        //     itemSelector: '.item',
+        //     masonry: {
+        //       gutter: 20
+        //     }
+        // });
+
+        // // init Isotope
+        // var $grid = $('#gallery-container').isotope({
+        //     // options...
+        //     itemSelector: '.item',
+        //     masonry: {
+        //       gutter: 20
+        //     }
+        // });
+
+        // // layout Isotope after each image loads
+        // $grid.imagesLoaded().progress( function() {
+        //   $grid.isotope('layout');
+        // });
+
+
+
+        var $grid = $('#gallery-container').imagesLoaded( function() {
+          // init Isotope after all images have loaded
+          $grid.isotope({
+            // options...
+            itemSelector: '.item',
+            masonry: {
+              gutter: 20
+            }
+          });
+        });
+
+        
+
+        //resize gallery on window change
+        $(window).resize(function () {
+            resizeGallery();
+        });
+
+        //resize gallery initial call
+        resizeGallery();
+
+    });
+
     // set width by device function
     function widthByDevice(origWidth, multiplier, gutter) {
 
-        var w = $('#gallery-container').width();
-        var columnNum, colWidth, columnDiff, newWidth;
+        // create variables
+        var columnNum,
+            colWidth,
+            columnDiff,
+            newWidth,
+            viewport = $('#gallery-container').width();
 
-        if (w > 900) {
+        // determine column count
+        if (viewport > 900) {
+
             columnNum = 3;
-        } else if (w > 600) {
+
+        } else if (viewport > 600) {
+
             columnNum = 2;
-        } else if (w > 300) {
+
+        } else if (viewport > 300) {
+
             columnNum = 1;
+
         }
 
+        // dtermine column spacing
         if (columnNum > 1) {
-            colWidth = (w - gutter * (columnNum - 1)) / columnNum;
+
+            colWidth = (viewport - (gutter * (columnNum - 1))) / columnNum;
+
             columnDiff = 380 - colWidth;
-            newWidth = origWidth - columnDiff * multiplier;
+
+            newWidth = origWidth - (columnDiff * multiplier);
+        
         } else {
-            colWidth = w;
-            columnDiff = 380 - colWidth;
+
+            columnDiff = 380 - viewport;
+            
+            // scenario for item--width1;
             if (multiplier == 1) {
-                newWidth = origWidth - columnDiff * multiplier;
+
+                newWidth = origWidth - (columnDiff * multiplier);
+
+            // scenario for item--width2;
             } else if (multiplier == 2) {
-                newWidth = w / origWidth * origWidth;
+
+                newWidth = (viewport / origWidth) * origWidth;
+
             }
+
         }
 
+        // return width
         return Math.floor(newWidth);
     }
 
     // set resize gallery function
     function resizeGallery() {
 
+        //new classes...
+        //galleryHeight01 = h1
+        //galleryHeight02 = h2
+        //galleryWidth01 = w1
+        //galleryWidth02 = w2
+
         var gutter = 20,
-            w1 = 380,
-            w2 = 780,
-            h1 = 180,
-            h2 = 380;
+                w1 = 380,
+                w2 = 780,
+                h1 = 180,
+                h2 = 380,
+                origWidth, 
+                origHeight,
+                width;
 
-        $('#gallery-container').find('.item img').each(function () {
-            var $item = $(this),
-                sizes = $item.attr('class').split(" "); // sizes[0] => image width, sizes[1] => image height
 
-            // define image sizes for different classes by calling width by device function
-            var origWidth, width;
-            switch (sizes[0]) {
-                case "w1":
-                    origWidth = w1;
-                    width = widthByDevice(origWidth, 1, gutter);
-                    break;
-                case "w2":
-                    origWidth = w2;
-                    width = widthByDevice(origWidth, 2, gutter);
-                    break;
+        $('#gallery-container').find('.item').each(function() {
+
+            if ( $(this).attr('class') ) {
+
+                var classes = $(this).attr('class').split(" "),
+                    aspectRatio,
+                    height;
+
+
+                for ( var i = 0, l = classes.length; i<l; ++i ) {
+
+                    // look at the classes assigned to the item
+                    // should look something like 'class="item item--width1 item--height1 dining"'
+
+                    // set the width by looking at the second position
+                    // for 'item--width1' or 'item--width2'
+                    switch (classes[1]) {
+
+                        case "item--width1":
+                            origWidth = w1;
+                            width = widthByDevice(origWidth, 1, gutter);
+                            break;
+                        case "item--width2":
+                            origWidth = w2;
+                            width = widthByDevice(origWidth, 2, gutter);
+                            break;
+                        default:
+                            origWidth = w1;
+                            width = widthByDevice(origWidth, 1, gutter);
+                            break;
+
+                    }
+
+                    // set the height by looking at the third position 
+                    // for 'item--height1' or 'item--height2'
+                    switch (classes[2]) {
+
+                        case "item--height1":
+                            origHeight = h1;
+                            break;
+                        case "item--height2":
+                            origHeight = h2;
+                            break;
+                        default:
+                            origHeight = h1;
+                            break;
+
+                    }
+                    
+                    // set an aspecdt ratio
+                    aspectRatio = width / origWidth;
+
+                    // set the new height
+                    height = origHeight * aspectRatio;
+
+                    // set the new image sizes
+                    $(this).find('img').css({
+                        height:  Math.floor(height),
+                        width:  Math.floor(width)
+                    });
+
+                }
+
             }
 
-            var origHeight;
-            switch (sizes[1]) {
-                case "h1":
-                    origHeight = h1;
-                    break;
-                case "h2":
-                    origHeight = h2;
-                    break;
-            }
+            // var $item = $(this),
+            //     sizes = $item.attr('class').split(' '); // sizes[0] => image width, sizes[1] => image height
 
-            var aspectRatio = width / origWidth;
-
-            var height = origHeight * aspectRatio;
-
-            // setting the new image sizes
-            $item.css({
-                width: width,
-                height: height
-            });
+            
         });
     }
 

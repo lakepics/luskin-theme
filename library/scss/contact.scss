@@ -24,10 +24,6 @@
         &.right-column {
           float: none;
           margin: 3em 0 0;
-
-          h2 {
-            margin-bottom: 23px;
-          }
         }
       }
 
@@ -39,6 +35,11 @@
         &#plan-meeting {
           border-bottom: none;
           margin-bottom: 0;
+        }
+
+        h4 {
+          font-size: 15px;
+          font-family: 'Proxima Nova Semibold', Arial, Helvetica, sans-serif;
         }
 
         .align-left {

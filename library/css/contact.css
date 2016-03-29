@@ -88,7 +88,7 @@
 
 @media only screen and (min-width: 1240px) {
   .text-overlay {
-    font-size: 6em;
+    font-size: 7em;
     left: 0.15em; } }
 
 /* ############ contact.scss ############ */
@@ -104,8 +104,6 @@
 #main-content .container.two-columns .column.right-column, #main-content .container-1024.two-columns .column.right-column {
   float: none;
   margin: 3em 0 0; }
-  #main-content .container.two-columns .column.right-column h2, #main-content .container-1024.two-columns .column.right-column h2 {
-    margin-bottom: 23px; }
 
 #main-content .container.two-columns .contact-block, #main-content .container-1024.two-columns .contact-block {
   margin-bottom: 50px;
@@ -114,6 +112,9 @@
   #main-content .container.two-columns .contact-block#plan-meeting, #main-content .container-1024.two-columns .contact-block#plan-meeting {
     border-bottom: none;
     margin-bottom: 0; }
+  #main-content .container.two-columns .contact-block h4, #main-content .container-1024.two-columns .contact-block h4 {
+    font-size: 15px;
+    font-family: 'Proxima Nova Semibold', Arial, Helvetica, sans-serif; }
   #main-content .container.two-columns .contact-block .align-left, #main-content .container-1024.two-columns .contact-block .align-left {
     float: left;
     width: 49.99%; }

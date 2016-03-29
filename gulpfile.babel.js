@@ -20,7 +20,7 @@ var inputstream = {
 
    v_css:   ['./library/plugins/**/*.css', '!./library/plugins/**/*.min.css', '!./library/plugins/**/*.pack.css'],
 
-   js:      ['./library/js/**/*.js', '!./library/js/**/*.pack.js', '!./library/js/**/*.min.js', '!./library/js/libs/*.htc'],
+   js:      ['./library/js/**/*.js', '!./library/js/**/*.pack.js', '!./library/js/libs/*.pkgd.js', '!./library/js/**/*.min.js', '!./library/js/libs/*.htc'],
    v_js:    ['./library/plugins/**/*.js', '!./library/plugins/**/*.pack.js', '!./library/plugins/**/*.min.js', '!./library/plugins/**/*.htc'],
 
    images:  ['./library/images/**/*'],

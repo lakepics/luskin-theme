@@ -14,7 +14,7 @@
     #footer .container .widget {
       margin: 0; }
   #footer a, #footer a:visited {
-    color: #CCCCCC;
+    color: #A2A2A2;
     outline: none;
     text-decoration: none;
     /* on hover */
@@ -135,13 +135,18 @@
     margin: 0 auto;
     text-align: left;
     vertical-align: top;
-    width: 33.3333333333%; }
+    width: 33.3333333333%;
+    font-family: "Proxima Nova Semibold", "Helvetica Neue", Helvetica, Arial, sans-serif; }
     #footer .container .footer-block h5 {
       color: #CCCCCC;
-      font-family: "Proxima Nova Semibold", "Helvetica Neue", Helvetica, Arial, sans-serif;
+      font-family: "Proxima Nova Bold", "Helvetica Neue", Helvetica, Arial, sans-serif;
       font-size: 14px;
       margin: 14px 0;
-      text-transform: capitalize; }
+      text-transform: capitalize;
+      line-height: 1.42; }
+    #footer .container .footer-block #menu-secondary-nav li a {
+      color: #CCCCCC;
+      font-family: "Proxima Nova Bold", "Helvetica Neue", Helvetica, Arial, sans-serif; }
   #footer .container #footer-logo {
     display: none; }
   #footer .container #menu-footer_links {
