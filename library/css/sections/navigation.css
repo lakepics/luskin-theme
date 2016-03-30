@@ -13,6 +13,7 @@
   z-index: 20000;
   box-shadow: inset -10px 0 10px -10px #000000; }
   .mobile-navigation .nav-menu {
+    display: none;
     list-style-type: none;
     margin: 0;
     padding: 0;
@@ -67,6 +68,7 @@
               background-color: rgba(55, 55, 55, 0.75); }
   .mobile-navigation .mobile-room-reservation {
     border-bottom: 1px solid #3C3C3C;
+    display: none;
     padding: 15px 0 15px 20px;
     white-space: nowrap; }
     .mobile-navigation .mobile-room-reservation .mobile-room-label {

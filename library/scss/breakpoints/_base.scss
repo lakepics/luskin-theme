@@ -246,13 +246,13 @@ button {
  * LAYOUT & GRID STYLES
  ******************************************************************/
 
+#container {
+  position: relative;
+  font-size: 1.0em;
+}
+
 #main-content {
   min-height: 400px;
-
-  #container {
-    position: relative;
-    font-size: 1.0em;
-  }
 
   .container, .container-1024 {
     margin: 0 auto;

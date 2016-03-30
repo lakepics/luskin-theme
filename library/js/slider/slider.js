@@ -1,10 +1,12 @@
-// Slider JavaScript
-
 (function ($) {
 
-    //separator images slider
-	$( '.lemmonslider > .slider' ).lemmonSlider({
-	    'infinite' : true
-	});
+    $(window).load(function () {
+        
+        // initializing slider
+        $( '.lemmonslider > .slider' ).lemmonSlider({
+            'infinite' : true
+        });
+        
+    });  
 
 })(jQuery);

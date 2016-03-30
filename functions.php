@@ -330,8 +330,6 @@ function luskinTypekit()
 {
     // ucla url to typekit
     wp_enqueue_script( 'theme_typekit', '//use.typekit.net/sif5fib.js');
-    // screen pilot copy; remove before sending to client
-    //wp_enqueue_script('theme_typekit', '//use.typekit.net/peu6ygo.js');
 }
 add_action('wp_enqueue_scripts', 'luskinTypekit');
 

@@ -158,21 +158,25 @@ function loadGravatars() {
     // mobile nav
     $('#main-navigation').clone().insertAfter('.mobile-navigation > a.logo-ucla-mobile').removeAttr('id');
     $('#toggle-menu').bind('click touch', function () {
+        // if opened
         if ($('div.mobile-navigation').hasClass('open')) {
             $('div.mobile-navigation').animate({
                 width: "0px"
             }, 300).removeClass('open').css({
                 'display': 'hidden'
             });
+            $('.mobile-navigation > .nav-menu, .mobile-navigation > .mobile-room-reservation').hide();
             $('#container, .not-frontpage #header').animate({
                 left: "0px"
             }, 300);
+        // if closed
         } else {
             $('div.mobile-navigation').animate({
                 width: "300px"
             }, 300).addClass('open').css({
                 'display': 'block'
             });
+            $('.mobile-navigation > .nav-menu, .mobile-navigation > .mobile-room-reservation').fadeIn(1000);
             $('#container, .not-frontpage #header').animate({
                 left: "300px"
             }, 300);
