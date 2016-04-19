@@ -1768,7 +1768,7 @@ PAGE NAVI STYLES
         margin: 0;
         overflow: visible;
         position: static;
-        width: auto; }
+        width: 350px; }
         .mobile-navigation .nav-menu li .sub-menu li {
           width: 100%; }
           .mobile-navigation .nav-menu li .sub-menu li a, .mobile-navigation .nav-menu li .sub-menu li a:visited {
@@ -2391,14 +2391,14 @@ div.padiPrivacy {
     font-family: "Proxima Nova Semibold", "Helvetica Neue", Helvetica, Arial, sans-serif; }
     #footer .container .footer-block h5 {
       color: #CCCCCC;
-      font-family: "Proxima Nova Bold", "Helvetica Neue", Helvetica, Arial, sans-serif;
+      font-family: "Proxima Nova Semibold", "Helvetica Neue", Helvetica, Arial, sans-serif;
       font-size: 14px;
       margin: 14px 0;
       text-transform: capitalize;
       line-height: 1.42; }
     #footer .container .footer-block #menu-secondary-nav li a {
       color: #CCCCCC;
-      font-family: "Proxima Nova Bold", "Helvetica Neue", Helvetica, Arial, sans-serif; }
+      font-family: "Proxima Nova Semibold", "Helvetica Neue", Helvetica, Arial, sans-serif; }
   #footer .container #footer-logo {
     display: none; }
   #footer .container #menu-footer_links {

@@ -5,12 +5,16 @@
 
 // styles for 0up
 
-.page-col-twothird {
+#main-content {
+    margin-bottom: 30px;
+}
+#main-content .page-col-twothird {
     width: 80%;
 }
-.page-col-onethird {
-    width: 20%;
+#main-content .page-col-onethird {
+    width: 17%;
 }
+
 
 // styles for 481up
 @media only screen and (min-width: 481px) {}
