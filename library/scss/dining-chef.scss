@@ -5,91 +5,11 @@
 
 // styles for 0up
 
-.restaurants {
-  padding: 36px 0 72px;
-
-  h1 {
-    margin: 0 0 28px 0;
-    font-size: 25px;
-    color: #47718E;
-    text-align: center;
-    letter-spacing: 0.05em;
-    line-height: 1.15;
-    text-transform: uppercase;
-    font-family: $semibold-sans-serif;
-  }
+.page-col-twothird {
+    width: 80%;
 }
-
-.restaurant-block {
-  position: relative;
-  min-height: 475px;
-  text-align: center;
-  font-size: 18px;
-  line-height: 1.44;
-  color: #000;
-  font-family: $sans-serif;
-  zoom: 1;
-
-  &.even {
-    width: 47.3%;
-    float: left;
-    background: #f6f2e1 url('/wp-content/themes/luskin/library/images/pfeil.png') no-repeat left top;
-  }
-
-  &.odd {
-    float: right;
-    width: 47.3%;
-    background: #f6f2e1 url('/wp-content/themes/luskin/library/images/pfeil_odd.png') no-repeat left bottom;
-  }
-
-  &:before {
-    content: '';
-    display: block;
-    position: absolute;
-    top: 9px;
-    bottom: 9px;
-    left: 11px;
-    right: 11px;
-    border: 1px solid #ccc7ae;
-  }
-
-  .restaurant-block-wrapper {
-    padding: 80px 60px 20px 60px;
-  }
-
-  .restaurant-logo {
-    min-height: 150px;
-    zoom: 1;
-
-    img {
-      vertical-align: top;
-    }
-  }
-}
-
-.open-soon {
-  min-height: 145px;
-  text-align: center;
-  font-size: 18px;
-  letter-spacing: 0.05em;
-  line-height: 40px;
-  color: #FFF;
-  text-transform: uppercase;
-  font-family: $sans-serif;
-  background: #523117;
-
-  > span {
-    display: block;
-    padding-top: 30px;
-  }
-
-  strong {
-    font-size: 40px;
-    letter-spacing: 1px;
-    color: #FFF;
-    font-weight: normal;
-    font-family: $bold-sans-serif;
-  }
+.page-col-onethird {
+    width: 20%;
 }
 
 // styles for 481up
