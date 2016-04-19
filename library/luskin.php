@@ -260,6 +260,9 @@ function luskinScriptsAndStyles()
             case 'template-dining.php':
                 wp_enqueue_style('dining-stylesheet', get_stylesheet_directory_uri() . '/library/css/dining.min.css', array('luskin-stylesheet'), '', 'all');
                 break;
+            case 'template-dining-chef.php':
+                wp_enqueue_style('dining-chef-stylesheet', get_stylesheet_directory_uri() . '/library/css/dining-chef.min.css', array('luskin-stylesheet'), '', 'all');
+                break;
             case 'template-flip-book.php':
                 wp_enqueue_style('flip-book-stylesheet', get_stylesheet_directory_uri() . '/library/css/flip-book.min.css', array('luskin-stylesheet'), '', 'all');
                 break;
