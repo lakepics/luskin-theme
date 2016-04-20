@@ -58,7 +58,7 @@
         margin: 0;
         overflow: visible;
         position: static;
-        width: 350px; }
+        width: auto; }
         .mobile-navigation .nav-menu li .sub-menu li {
           width: 100%; }
           .mobile-navigation .nav-menu li .sub-menu li a, .mobile-navigation .nav-menu li .sub-menu li a:visited {
