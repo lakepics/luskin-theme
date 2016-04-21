@@ -95,8 +95,5 @@
 #main-content {
   margin-bottom: 30px; }
 
-#main-content .page-col-twothird {
-  width: 80%; }
-
-#main-content .page-col-onethird {
-  width: 17%; }
+.padding-right-20 {
+  padding-right: 20px; }

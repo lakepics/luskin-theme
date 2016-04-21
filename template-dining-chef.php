@@ -26,16 +26,15 @@ if ( $intro_copy ) { echo $intro_copy; }
 $page_content = get_field( 'two-to-one' );
 if ( $page_content ) {
 ?>
-        <div class="guest-services amenities">
-            <div class="container clearfix">
-                <div class="page-col-twothird">
+            <div class="two-columns container clearfix">
+                <div class="column left-column">
                     <?php if ($page_content[0]['left_column']) { echo $page_content[0]['left_column']; }?>
                 </div>
-                <div class="page-col-onethird">
+                <div class="column right-column">
                      <?php if ($page_content[0]['right_column']) { echo $page_content[0]['right_column']; }?>
                 </div>
             </div>
-        </div>
+
         <?php
 }
 ?>

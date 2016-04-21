@@ -1122,14 +1122,16 @@ div.entry-content {
   letter-spacing: 0.05em;
   line-height: 1;
   color: #47718E;
-  font-family: 'Proxima Nova Semibold', Arial, Helvetica, sans-serif; }
+  font-family: 'Proxima Nova Semibold', Arial, Helvetica, sans-serif;
+  font-weight: 600; }
 
 .column h4,
 .parents-column h4 {
   margin: 0 0 10px 0;
   font-size: 22px;
   line-height: 1;
-  font-family: 'Proxima Nova Semibold', Arial, Helvetica, sans-serif; }
+  font-family: 'Proxima Nova Semibold', Arial, Helvetica, sans-serif;
+  font-weight: 600; }
 
 .column p,
 .parents-column p,
