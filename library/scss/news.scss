@@ -57,14 +57,16 @@
       background-position: 105% -241px;
     }
   }
-
+    .caption {
+        color: #FFFFFF;
+    }
   .callout {
     background: #aca39a;
     border: none;
-    padding-top: 20px;
-    padding: 0;
+    padding-top: 30px;
     text-align: left;
     width: 100%;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.25);
 
     p {
       color: #FFFFFF;
@@ -73,7 +75,7 @@
       font-style: italic;
       font-weight: normal;
       line-height: 1.5em;
-      margin: 0px 50px;
+      margin: 0px 30px;
       padding-bottom: 0px;
       width: 87%;
     }
@@ -89,13 +91,11 @@
     }
 
     .attribution {
-      border-bottom: 1px solid rgba(255, 255, 255, 0.25);
       font-family: 'adobe-caslon-pro', serif;
       font-size: 17px;
       font-style: normal;
       font-variant: small-caps;
       margin-bottom: 0;
-      padding-bottom: 20px;
 
       &.last {
         border-bottom: none;
@@ -159,9 +159,11 @@ a:hover {
   width: 33.3%;
 }
 
-.news-sidebar-content {
+#main-content .news-sidebar-content {
   h3 {
+    padding-bottom: 10px;
     text-transform: uppercase;
+    text-align: left;
   }
 
   ul {

@@ -131,13 +131,16 @@
 .news a.button-abt.right-arrow {
   background-position: 105% -241px; }
 
+.news .caption {
+  color: #FFFFFF; }
+
 .news .callout {
   background: #aca39a;
   border: none;
-  padding-top: 20px;
-  padding: 0;
+  padding-top: 30px;
   text-align: left;
-  width: 100%; }
+  width: 100%;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.25); }
   .news .callout p {
     color: #FFFFFF;
     font-family: 'adobe-caslon-pro', serif;
@@ -145,7 +148,7 @@
     font-style: italic;
     font-weight: normal;
     line-height: 1.5em;
-    margin: 0px 50px;
+    margin: 0px 30px;
     padding-bottom: 0px;
     width: 87%; }
   .news .callout .room {
@@ -155,13 +158,11 @@
     .news .callout .room .first {
       padding-top: 20px; }
   .news .callout .attribution {
-    border-bottom: 1px solid rgba(255, 255, 255, 0.25);
     font-family: 'adobe-caslon-pro', serif;
     font-size: 17px;
     font-style: normal;
     font-variant: small-caps;
-    margin-bottom: 0;
-    padding-bottom: 20px; }
+    margin-bottom: 0; }
     .news .callout .attribution.last {
       border-bottom: none;
       padding-bottom: 40px; }
@@ -208,20 +209,22 @@ a:hover {
   padding: 50px;
   width: 33.3%; }
 
-.news-sidebar-content h3 {
-  text-transform: uppercase; }
+#main-content .news-sidebar-content h3 {
+  padding-bottom: 10px;
+  text-transform: uppercase;
+  text-align: left; }
 
-.news-sidebar-content ul {
+#main-content .news-sidebar-content ul {
   margin: 0 0 50px 0;
   list-style-type: none; }
-  .news-sidebar-content ul li {
+  #main-content .news-sidebar-content ul li {
     border-bottom: 1px solid #8da6b8;
     margin: 0;
     padding: 10px 0; }
-    .news-sidebar-content ul li a {
+    #main-content .news-sidebar-content ul li a {
       font-size: 16px;
       font-family: "Proxima Nova Semibold", "Helvetica Neue", Helvetica, Arial, sans-serif;
       color: #1C4D71; }
 
-.news-pagination {
+#main-content .news-pagination {
   margin: 30px auto 60px auto; }
