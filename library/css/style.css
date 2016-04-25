@@ -1060,9 +1060,8 @@ button {
 
 .caption {
   float: right;
-  margin-top: -46px;
   font-family: "Proxima Nova Regular", "Helvetica Neue", Helvetica, Arial, sans-serif;
-  font-size: 10px; }
+  font-size: 12px; }
 
 .small-caption {
   font-family: "Proxima Nova Regular", "Helvetica Neue", Helvetica, Arial, sans-serif;

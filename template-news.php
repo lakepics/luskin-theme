@@ -14,19 +14,19 @@
         <?php showHeroSlides(); ?>
 
         <?php
+$issue = get_field ( 'issue' );
+if ( $issue ) {
+    echo '<div class="news-ribbon"><div class="container"><span class="news-issue">' . $issue . '</span>';
+}
 if ( get_field( 'slides' ) ) {
     while ( has_sub_field( 'slides' ) ) {
         $caption = get_sub_field( 'caption' );
         if ( $caption ) {
-            echo '<div class="container"><span class="caption">' . $caption . '</span></div>';
-            echo '<div class="container clearfix"></div>';
+            echo '<span class="caption">' . $caption . '</span>';
         }
     }
 }
-$issue = get_field ( 'issue' );
-if ( $issue ) {
-    echo '<div class="news-ribbon"><span class="container news-issue">' . $issue . '</span></div>';
-}
+echo '</div></div>';
 $heading = get_field( 'heading' );
 $sub_head = get_field( 'sub_head' );
 echo '<div class="container news">';

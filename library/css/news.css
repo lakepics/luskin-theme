@@ -104,7 +104,7 @@
   color: #FFFFFF;
   line-height: 61px; }
   .news-ribbon span {
-    display: block;
+    display: inline-block;
     height: 60px;
     line-height: 61px; }
 
