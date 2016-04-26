@@ -120,11 +120,10 @@
           color: #1C4D71;
           display: block;
           font-family: "Proxima Nova Semibold", "Helvetica Neue", Helvetica, Arial, sans-serif;
-          font-size: 0.9em;
-          height: 75px;
+          font-size: 1em;
+          height: 30px;
           letter-spacing: 0.05em;
-          line-height: 1;
-          margin: 0 3px;
+          line-height: 31px;
           padding: 0;
           text-transform: uppercase;
           -webkit-transition: color .1s ease-out, background .3s ease-in;
@@ -149,10 +148,8 @@
               vertical-align: middle; }
         .home #container #content #slideshow-container .action-buttons .action-button-wrapper.odd, .home #container #content #slideshow-container .action-buttons .action-button-wrapper.even {
           display: block;
-          height: 75px;
-          position: absolute;
-          top: 0;
-          width: 49.998%; }
+          height: 40px;
+          width: 100%; }
         .home #container #content #slideshow-container .action-buttons .action-button-wrapper.odd {
           left: 0; }
         .home #container #content #slideshow-container .action-buttons .action-button-wrapper.even {
@@ -218,7 +215,7 @@
                 bottom: 1.8em;
                 color: #DADADA;
                 font-family: "Proxima Nova Regular", "Helvetica Neue", Helvetica, Arial, sans-serif;
-                font-size: 22px;
+                font-size: 12px;
                 line-height: 1;
                 margin: 0;
                 position: absolute;

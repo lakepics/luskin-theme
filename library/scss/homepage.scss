@@ -39,11 +39,10 @@
               color: $alt-dark-blue;
               display: block;
               font-family: $semibold-sans-serif;
-              font-size: 0.9em;
-              height: 75px;
+              font-size: 1em;
+              height: 30px;
               letter-spacing: 0.05em;
-              line-height: 1;
-              margin: 0 3px;
+              line-height: 31px;
               padding: 0;
               text-transform: uppercase;
               -webkit-transition: color .1s ease-out, background .3s ease-in;
@@ -88,10 +87,8 @@
             &.odd,
             &.even {
               display: block;
-              height: 75px;
-              position: absolute;
-              top: 0;
-              width: 49.998%;
+              height: 40px;
+              width: 100%;
             }
 
             &.odd {
@@ -184,7 +181,7 @@
                   bottom: 1.8em;
                   color: #DADADA;
                   font-family: $sans-serif;
-                  font-size: 22px;
+                  font-size: 12px;
                   line-height: 1;
                   margin: 0;
                   position: absolute;
