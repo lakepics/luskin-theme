@@ -1079,7 +1079,7 @@ button {
 h2.entry-title, .news h2 {
   font-size: 25px;
   line-height: 1.15;
-  margin: 0 0 15px;
+  margin: 0 0 30px;
   text-transform: uppercase;
   font-family: "Proxima Nova Semibold", "Helvetica Neue", Helvetica, Arial, sans-serif;
   color: #47718E; }
@@ -1875,7 +1875,7 @@ PAGE NAVI STYLES
           #navbar #site-navigation .nav-menu li a,
           #navbar #site-navigation #main-navigation li a {
             font-family: "Proxima Nova Semibold", "Helvetica Neue", Helvetica, Arial, sans-serif;
-            font-size: 19px;
+            font-size: 16px;
             color: #FFFFFF;
             display: block;
             line-height: 125px;
@@ -1906,7 +1906,7 @@ PAGE NAVI STYLES
                 color: #FFFFFF;
                 display: block;
                 font-family: "Proxima Nova Regular", "Helvetica Neue", Helvetica, Arial, sans-serif;
-                font-size: 17px;
+                font-size: 15px;
                 line-height: 20px;
                 margin: 0;
                 min-height: 0px;

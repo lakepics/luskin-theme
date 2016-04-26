@@ -164,7 +164,7 @@
           #navbar #site-navigation .nav-menu li a,
           #navbar #site-navigation #main-navigation li a {
             font-family: "Proxima Nova Semibold", "Helvetica Neue", Helvetica, Arial, sans-serif;
-            font-size: 19px;
+            font-size: 16px;
             color: #FFFFFF;
             display: block;
             line-height: 125px;
@@ -195,7 +195,7 @@
                 color: #FFFFFF;
                 display: block;
                 font-family: "Proxima Nova Regular", "Helvetica Neue", Helvetica, Arial, sans-serif;
-                font-size: 17px;
+                font-size: 15px;
                 line-height: 20px;
                 margin: 0;
                 min-height: 0px;
