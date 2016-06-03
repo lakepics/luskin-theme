@@ -142,17 +142,18 @@
 
   #logo-lockup {
     margin: 0 auto;
-    width: 258px;
+    width: 202px;
 
     #logo {
-      background: url('/wp-content/themes/luskin/library/images/300-lcc2.png') no-repeat center center !important;
+      background: url('/wp-content/themes/luskin/library/images/new-logo-mobile.png') no-repeat center center !important;
       display: inline-block;
       height: 50px;
-      margin-left: 0;
+      margin-left: auto;
+      margin-right: auto;
       margin-top: 5px;
       max-width: none;
       overflow: hidden;
-      width: 258px;
+      width: 202px;
 
       img {
         display: none;
@@ -181,6 +182,10 @@
   .mobile-navigation {
     display: none;
   }
+ .reserve-now a span {
+    background: #1c4d71;
+    padding: 10px;
+    }
 
   #navbar {
     height: 125px;
@@ -194,9 +199,9 @@
 
       #logo {
         background: none !important;
-        height: 95px;
-        margin-top: 15px;
-        width: 300px;
+        height: 66px;
+        margin-top: 24px;
+        width: 308px;
         vertical-align: text-top;
 
         img {

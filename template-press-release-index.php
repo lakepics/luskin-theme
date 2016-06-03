@@ -46,7 +46,6 @@ if ( $press_releases ) {
     echo '<tr class="releases">';
     echo '<td class="date">' . $release['date']. '</td>';
     echo '<td class="title"><a href="' . $release['link'] . '">' . $release['title'] . '</a></td>';
-    echo '<td class="download"><a href="' . $release['pdf_link'] . '" target="_blank" class="button-abt down-arrow">PDF</a></td>';
     echo '</tr>';
   }
 }

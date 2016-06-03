@@ -104,14 +104,14 @@
       position: relative;
       width: 100%; }
       .home #container #content #slideshow-container .action-buttons {
-        bottom: 6em;
         display: block;
-        height: 6em;
-        left: 0;
-        margin: 0 auto;
         position: absolute;
+        bottom: 8em;
+        left: 0;
         right: 0;
+        height: 8em;
         width: 80%;
+        margin: 0 auto;
         z-index: 100; }
         .home #container #content #slideshow-container .action-buttons .action-button-wrapper a {
           background-color: #FFFFFF;
@@ -406,8 +406,35 @@
 
 @media only screen and (min-width: 1030px) {
   .home #container #content #slideshow-container .action-buttons {
-    display: none; }
+    width: 319px;
+    margin-left: -590px;
+    margin-top: 154px;
+    top: 45%;
+    left: 50%; }
+    .home #container #content #slideshow-container .action-buttons .action-button-wrapper {
+      width: 100%; }
+      .home #container #content #slideshow-container .action-buttons .action-button-wrapper.odd, .home #container #content #slideshow-container .action-buttons .action-button-wrapper.even {
+        display: block;
+        height: 75px;
+        position: absolute;
+        top: 0;
+        width: 100%; }
+      .home #container #content #slideshow-container .action-buttons .action-button-wrapper.odd {
+        left: 0; }
+      .home #container #content #slideshow-container .action-buttons .action-button-wrapper.even {
+        right: 0; }
+      .home #container #content #slideshow-container .action-buttons .action-button-wrapper.button-num-1 {
+        top: -300px !important; }
+      .home #container #content #slideshow-container .action-buttons .action-button-wrapper.button-num-2 {
+        top: -200px !important; }
+      .home #container #content #slideshow-container .action-buttons .action-button-wrapper.button-num-3 {
+        top: -100px !important; }
+      .home #container #content #slideshow-container .action-buttons .action-button-wrapper.button-num-4 {
+        top: 0px !important; }
   .home #container #content #slideshow-container .bx-wrapper .bx-viewport .home-slideshow .slide .slide-overlay {
+    right: 50px;
+    text-align: right;
+    top: 25%;
     margin-right: -590px;
     margin-top: -154px;
     max-width: 850px;
