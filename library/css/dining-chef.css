@@ -111,3 +111,12 @@
 
 .two-columns .right-column ol li {
   margin-bottom: 10px; }
+
+.container .tk-adobe-caslon-pro {
+  font-family: 'adobe-caslon-pro', 'Times New Roman', times, serif !important;
+  font-style: italic; }
+
+.container .chef-todds-recipe {
+  font-size: 26px;
+  color: #47718E;
+  margin-bottom: 5px; }

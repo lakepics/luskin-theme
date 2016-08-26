@@ -120,9 +120,6 @@
 @media only screen and (min-width: 1030px) {
   .mobile-navigation {
     display: none; }
-  .reserve-now a span {
-    background: #1c4d71;
-    padding: 10px; }
   #navbar {
     height: 125px; }
     #navbar #toggle-menu {
@@ -172,7 +169,7 @@
             color: #FFFFFF;
             display: block;
             line-height: 125px;
-            margin: 0 15px;
+            margin: 0 13px;
             padding: 0;
             text-decoration: none; }
             #navbar #site-navigation .nav-menu li a:hover, #navbar #site-navigation .nav-menu li a:focus,

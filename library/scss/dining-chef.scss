@@ -27,6 +27,15 @@
     margin-bottom: 10px;
 }
 
+.container .tk-adobe-caslon-pro {
+    font-family: 'adobe-caslon-pro', 'Times New Roman', times, serif !important;
+    font-style: italic;
+}
+.container .chef-todds-recipe {
+    font-size: 26px;
+    color: $dark-blue;
+    margin-bottom: 5px;
+}
 // styles for 481up
 @media only screen and (min-width: 481px) {}
 

@@ -578,8 +578,8 @@
       #content {
         #slideshow-container {
           .action-buttons {
-            width: 319px;
-            margin-left: -590px;
+            width: 280px;
+            margin-left: -550px;
             margin-top: 154px;
             top: 45%;
             left: 50%;
@@ -625,9 +625,9 @@
                     right: 50px;
                     text-align: right;
                     top: 25%;
-                    margin-right: -590px;
+                    margin-right: -560px;
                     margin-top: -154px;
-                    max-width: 850px;
+                    max-width: 820px;
                     padding-right:30px;
                     position: absolute;
                     right: 50%;
@@ -636,7 +636,7 @@
                     z-index: 100;
 
                     h2 {
-                      font-size: 72px;
+                      font-size: 70px;
                       margin: 0 0 20px;
                       text-align: right;
                     }
@@ -700,8 +700,6 @@
               .home-slideshow {
                 .slide {
                   .slide-overlay {
-                    margin-right: 0;
-                    padding-right: 0;
                   }
                 }
               }

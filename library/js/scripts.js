@@ -205,26 +205,26 @@ function loadGravatars() {
 		};
 
 		//if radio is checked, but user didn't fill out group code.
-		if($('#groupRes').is(':checked')) {
+		/* if($('#groupRes').is(':checked')) {
 
 			if($('input[name=groupCode]').val() == '') {
 				$('input[name=groupCode]').addClass('highlight')
 				return false;
 		 	}
 
-			if($('input[name=groupCode]').val().toUpperCase() == 'AUA12' || $('input[name=groupCode]').val().toUpperCase() == 'AMG2A' || $('input[name=groupCode]').val().toUpperCase() == 'OIT2A' || $('input[name=groupCode]').val().toUpperCase() == 'ctp2b' || $('input[name=groupCode]').val().toUpperCase() == 'AND12' || $('input[name=groupCode]').val().toUpperCase() == 'YLU2A' || $('input[name=groupCode]').val().toUpperCase() == 'CTA2P' || $('input[name=groupCode]').val().toUpperCase() == 'LEF2A' || $('input[name=groupCode]').val().toUpperCase() == 'MIM2A' || $('input[name=groupCode]').val().toUpperCase() == 'CUC2A' || $('input[name=groupCode]').val().toUpperCase() == 'GSA3B' || $('input[name=groupCode]').val().toUpperCase() == 'ISR1A' || $('input[name=groupCode]').val().toUpperCase() == 'NIH3X' || $('input[name=groupCode]').val().toUpperCase() == 'SBA3V' || $('input[name=groupCode]').val().toUpperCase() == 'TSA4A' || $('input[name=groupCode]').val().toUpperCase() == 'EBS14'
+			if($('input[name=groupCode]').val().toUpperCase() == '021' || $('input[name=groupCode]').val().toUpperCase() == '15C' || $('input[name=groupCode]').val().toUpperCase() == '10H' || $('input[name=groupCode]').val().toUpperCase() == '02E' || $('input[name=groupCode]').val().toUpperCase() == 'AND12' || $('input[name=groupCode]').val().toUpperCase() == 'YLU2A' || $('input[name=groupCode]').val().toUpperCase() == 'CTA2P' || $('input[name=groupCode]').val().toUpperCase() == 'LEF2A' || $('input[name=groupCode]').val().toUpperCase() == 'MIM2A' || $('input[name=groupCode]').val().toUpperCase() == 'CUC2A' || $('input[name=groupCode]').val().toUpperCase() == 'GSA3B' || $('input[name=groupCode]').val().toUpperCase() == 'ISR1A' || $('input[name=groupCode]').val().toUpperCase() == 'NIH3X' || $('input[name=groupCode]').val().toUpperCase() == 'SBA3V' || $('input[name=groupCode]').val().toUpperCase() == 'TSA4A' || $('input[name=groupCode]').val().toUpperCase() == 'EBS14'
 
 			|| $('input[name=groupCode]').val().toUpperCase() == 'AIS16'
 			|| $('input[name=groupCode]').val().toUpperCase() == 'CGP16'
 			|| $('input[name=groupCode]').val().toUpperCase() == 'LEP16'
-			|| $('input[name=groupCode]').val().toUpperCase() == 'LIB6A') {
+			|| $('input[name=groupCode]').val().toUpperCase() == 'LIB6A')
 			}
 			else{
 				$('input[name=groupCode]').addClass('highlight')
 				return false;
-			}
+			} */
 		 }
-	});
+	);
 
 	//if the user clicks inside text box, I remove the highlight class
 	$('input[name=groupCode]').focus( function() {
@@ -232,7 +232,7 @@ function loadGravatars() {
 	});
 
 	// hides affiliation note on page load
-	$('#note').hide();
+	$('#note,#gr-note,#ipam-note').hide();
 
 	$('.myRadio').click(function(){
 		$('#note').hide(300);
@@ -246,6 +246,23 @@ function loadGravatars() {
 		$('input[type=submit]').hide();
 		$('input[name=GroupCode]').removeClass('highlight')
 		});
+
+    /*
+    if user selects Conference Code then display a note below the selection.
+    */
+    $('#groupRes').click(function(){
+        $('#gr-note').show(300);
+        $('#ipam-note').hide();
+        });
+
+    /*
+    if user selects IPAM Code then display a note below the selection.
+    */
+    $('#IPAM').click(function(){
+        $('#ipam-note').show(300);
+        $('#gr-note').hide();
+        });
+
 
 
 }(jQuery));

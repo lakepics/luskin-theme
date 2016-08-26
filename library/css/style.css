@@ -763,6 +763,7 @@ a.button-abt, a.button-abt:visited,
 
 .gform_button.reserve {
   margin-top: 30px;
+  margin-bottom: 50px;
   width: 350px !important;
   border: none; }
 
@@ -1835,9 +1836,6 @@ PAGE NAVI STYLES
 @media only screen and (min-width: 1030px) {
   .mobile-navigation {
     display: none; }
-  .reserve-now a span {
-    background: #1c4d71;
-    padding: 10px; }
   #navbar {
     height: 125px; }
     #navbar #toggle-menu {
@@ -1887,7 +1885,7 @@ PAGE NAVI STYLES
             color: #FFFFFF;
             display: block;
             line-height: 125px;
-            margin: 0 15px;
+            margin: 0 13px;
             padding: 0;
             text-decoration: none; }
             #navbar #site-navigation .nav-menu li a:hover, #navbar #site-navigation .nav-menu li a:focus,
