@@ -293,6 +293,9 @@ function luskinScriptsAndStyles()
             case 'template-news.php':
                 wp_enqueue_style('news-stylesheet', get_stylesheet_directory_uri() . '/library/css/news.min.css', array('luskin-stylesheet'), '', 'all');
                 break;
+            case 'template-one-col.php':
+                wp_enqueue_style('one-column-stylesheet', get_stylesheet_directory_uri() . '/library/css/one-column.min.css', array('luskin-stylesheet'), '', 'all');
+                break;
             case 'template-parents-club-thank-you.php':
                 wp_enqueue_style('parents-club-thank-you-stylesheet', get_stylesheet_directory_uri() . '/library/css/parents-club-thank-you.min.css', array('luskin-stylesheet'), '', 'all');
                 break;
