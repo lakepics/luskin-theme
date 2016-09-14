@@ -12,9 +12,9 @@
         });
 
         //bind filter on select change
-        $('select#gallery-filters').on('change', function () {
+        $('#gallery-filters li a').on('click', function () {
             // get filter value from option value
-            var filterValue = this.value;
+            var filterValue = this.className;
             // use filterFn if matches value
             // filterValue = filterFns[ filterValue ] || filterValue;
             $('#gallery-container').isotope({

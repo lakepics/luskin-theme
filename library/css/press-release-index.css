@@ -160,7 +160,7 @@ p.Table-body-copy {
   widows: 1; }
 
 p.Table-body-numbers {
-  color: #919195;
+  color: #323944;
   font-family: "Proxima Nova Regular", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 14px;
   font-style: normal;
@@ -250,13 +250,13 @@ td.CellOverride-1 {
   border-bottom-color: #000000;
   border-bottom-style: none;
   border-bottom-width: 1px;
-  border-left-color: #6d6e71;
+  border-left-color: #EAEBEC;
   border-left-style: none;
   border-left-width: 0px;
   border-right-color: #000000;
   border-right-style: none;
   border-right-width: 0px;
-  border-top-color: #6d6e71;
+  border-top-color: #EAEBEC;
   border-top-style: none;
   border-top-width: 0px;
   vertical-align: middle; }
@@ -271,7 +271,7 @@ td.CellOverride-2 {
   border-right-color: #000000;
   border-right-style: none;
   border-right-width: 0px;
-  border-top-color: #6d6e71;
+  border-top-color: #EAEBEC;
   border-top-style: none;
   border-top-width: 0px;
   vertical-align: middle; }
@@ -283,10 +283,10 @@ td.CellOverride-3 {
   border-left-color: #000000;
   border-left-style: none;
   border-left-width: 0px;
-  border-right-color: #6d6e71;
+  border-right-color: #EAEBEC;
   border-right-style: none;
   border-right-width: 0px;
-  border-top-color: #6d6e71;
+  border-top-color: #EAEBEC;
   border-top-style: none;
   border-top-width: 0px;
   padding-bottom: 0px;
@@ -299,13 +299,13 @@ td.CellOverride-4 {
   border-bottom-color: #000000;
   border-bottom-style: none;
   border-bottom-width: 1px;
-  border-left-color: #6d6e71;
+  border-left-color: #EAEBEC;
   border-left-style: none;
   border-left-width: 0px;
-  border-right-color: #6d6e71;
+  border-right-color: #EAEBEC;
   border-right-style: none;
   border-right-width: 0px;
-  border-top-color: #6d6e71;
+  border-top-color: #EAEBEC;
   border-top-style: none;
   border-top-width: 0px;
   vertical-align: middle; }
@@ -314,12 +314,12 @@ td.CellOverride-5 {
   border-bottom-color: #000000;
   border-bottom-style: none;
   border-bottom-width: 0px;
-  border-left-color: #4d4d4f;
+  border-left-color: #EAEBEC;
   border-left-style: none;
   border-left-width: 0px;
   border-right-style: solid;
   border-right-width: 0px;
-  border-top-color: #4d4d4f;
+  border-top-color: #EAEBEC;
   border-top-style: none;
   border-top-width: 0px;
   padding-bottom: 4px;
@@ -327,13 +327,13 @@ td.CellOverride-5 {
   vertical-align: middle; }
 
 td.CellOverride-6 {
-  background-color: #ebeced;
+  background-color: #EAEBEC;
   border-bottom-color: #000000;
   border-bottom-style: solid;
   border-bottom-width: 0px;
   border-left-style: solid;
   border-left-width: 0px;
-  border-right-color: #4d4d4f;
+  border-right-color: #EAEBEC;
   border-right-style: solid;
   border-right-width: 0px;
   border-top-style: solid;
@@ -341,14 +341,14 @@ td.CellOverride-6 {
   vertical-align: middle; }
 
 td.CellOverride-7 {
-  background-color: #ebeced;
+  background-color: #EAEBEC;
   border-bottom-color: #000000;
   border-bottom-style: solid;
   border-bottom-width: 0px;
-  border-left-color: #4d4d4f;
+  border-left-color: #EAEBEC;
   border-left-style: solid;
   border-left-width: 0px;
-  border-right-color: #4d4d4f;
+  border-right-color: #EAEBEC;
   border-right-style: solid;
   border-right-width: 0px;
   border-top-style: solid;
@@ -356,11 +356,11 @@ td.CellOverride-7 {
   vertical-align: middle; }
 
 td.CellOverride-8 {
-  background-color: #ebeced;
+  background-color: #EAEBEC;
   border-bottom-color: #000000;
   border-bottom-style: solid;
   border-bottom-width: 0px;
-  border-left-color: #4d4d4f;
+  border-left-color: #EAEBEC;
   border-left-style: solid;
   border-left-width: 0px;
   border-right-style: solid;
@@ -373,10 +373,10 @@ td.CellOverride-9 {
   border-bottom-color: #000000;
   border-bottom-style: none;
   border-bottom-width: 0px;
-  border-left-color: #4d4d4f;
+  border-left-color: #EAEBEC;
   border-left-style: none;
   border-left-width: 0px;
-  border-right-color: #4d4d4f;
+  border-right-color: #EAEBEC;
   border-right-style: solid;
   border-right-width: 0px;
   border-top-color: #000000;
@@ -390,10 +390,10 @@ td.CellOverride-10 {
   border-bottom-color: #000000;
   border-bottom-style: solid;
   border-bottom-width: 0px;
-  border-left-color: #4d4d4f;
+  border-left-color: #EAEBEC;
   border-left-style: solid;
   border-left-width: 0px;
-  border-right-color: #4d4d4f;
+  border-right-color: #EAEBEC;
   border-right-style: solid;
   border-right-width: 0px;
   border-top-color: #000000;
@@ -402,14 +402,14 @@ td.CellOverride-10 {
   vertical-align: middle; }
 
 td.CellOverride-11 {
-  background-color: #ebeced;
+  background-color: #EAEBEC;
   border-bottom-color: #000000;
   border-bottom-style: solid;
   border-bottom-width: 0px;
-  border-left-color: #4d4d4f;
+  border-left-color: #EAEBEC;
   border-left-style: solid;
   border-left-width: 0px;
-  border-right-color: #4d4d4f;
+  border-right-color: #EAEBEC;
   border-right-style: solid;
   border-right-width: 0px;
   border-top-color: #000000;
@@ -421,10 +421,10 @@ td.CellOverride-12 {
   border-bottom-color: #000000;
   border-bottom-style: none;
   border-bottom-width: 0px;
-  border-left-color: #4d4d4f;
+  border-left-color: #EAEBEC;
   border-left-style: none;
   border-left-width: 0px;
-  border-right-color: #4d4d4f;
+  border-right-color: #EAEBEC;
   border-right-style: none;
   border-right-width: 0px;
   border-top-color: #000000;
@@ -435,14 +435,14 @@ td.CellOverride-12 {
   vertical-align: middle; }
 
 td.CellOverride-13 {
-  background-color: #ebeced;
+  background-color: #EAEBEC;
   border-bottom-color: #000000;
   border-bottom-style: none;
   border-bottom-width: 0px;
-  border-left-color: #4d4d4f;
+  border-left-color: #EAEBEC;
   border-left-style: none;
   border-left-width: 0px;
-  border-right-color: #4d4d4f;
+  border-right-color: #EAEBEC;
   border-right-style: none;
   border-right-width: 0px;
   border-top-color: #000000;
@@ -454,10 +454,10 @@ td.CellOverride-14 {
   border-bottom-color: #000000;
   border-bottom-style: solid;
   border-bottom-width: 0px;
-  border-left-color: #4d4d4f;
+  border-left-color: #EAEBEC;
   border-left-style: none;
   border-left-width: 0px;
-  border-right-color: #4d4d4f;
+  border-right-color: #EAEBEC;
   border-right-style: none;
   border-right-width: 0px;
   border-top-color: #000000;
@@ -482,7 +482,7 @@ td.CellOverride-15 {
   vertical-align: middle; }
 
 td.CellOverride-16 {
-  background-color: #ebeced;
+  background-color: #EAEBEC;
   border-bottom-style: none;
   border-bottom-width: 0px;
   border-left-color: #3284BF;
@@ -500,13 +500,13 @@ td.CellOverride-17 {
   border-bottom-color: #000000;
   border-bottom-style: none;
   border-bottom-width: 0px;
-  border-left-color: #4d4d4f;
+  border-left-color: #EAEBEC;
   border-left-style: none;
   border-left-width: 0px;
-  border-right-color: #4d4d4f;
+  border-right-color: #EAEBEC;
   border-right-style: none;
   border-right-width: 0px;
-  border-top-color: #4d4d4f;
+  border-top-color: #EAEBEC;
   border-top-style: none;
   border-top-width: 0px;
   padding-bottom: 4px;
@@ -516,29 +516,29 @@ td.CellOverride-17 {
   vertical-align: middle; }
 
 td.CellOverride-18 {
-  background-color: #ebeced;
+  background-color: #EAEBEC;
   border-bottom-color: #000000;
   border-bottom-style: none;
   border-bottom-width: 0px;
-  border-left-color: #4d4d4f;
+  border-left-color: #EAEBEC;
   border-left-style: none;
   border-left-width: 0px;
-  border-right-color: #4d4d4f;
+  border-right-color: #EAEBEC;
   border-right-style: none;
   border-right-width: 0px;
-  border-top-color: #4d4d4f;
+  border-top-color: #EAEBEC;
   border-top-style: none;
   border-top-width: 0px;
   vertical-align: middle; }
 
 td.CellOverride-19 {
-  border-bottom-color: #4d4d4f;
+  border-bottom-color: #EAEBEC;
   border-bottom-style: none;
   border-bottom-width: 0px;
-  border-left-color: #4d4d4f;
+  border-left-color: #EAEBEC;
   border-left-style: none;
   border-left-width: 0px;
-  border-right-color: #4d4d4f;
+  border-right-color: #EAEBEC;
   border-right-style: solid;
   border-right-width: 0px;
   border-top-color: #000000;
@@ -551,13 +551,13 @@ td.CellOverride-19 {
   vertical-align: middle; }
 
 td.CellOverride-20 {
-  border-bottom-color: #4d4d4f;
+  border-bottom-color: #EAEBEC;
   border-bottom-style: none;
   border-bottom-width: 0px;
-  border-left-color: #4d4d4f;
+  border-left-color: #EAEBEC;
   border-left-style: solid;
   border-left-width: 0px;
-  border-right-color: #4d4d4f;
+  border-right-color: #EAEBEC;
   border-right-style: solid;
   border-right-width: 0px;
   border-top-color: #000000;
@@ -566,17 +566,17 @@ td.CellOverride-20 {
   vertical-align: middle; }
 
 td.CellOverride-21 {
-  background-color: #ebeced;
-  border-bottom-color: #4d4d4f;
+  background-color: #EAEBEC;
+  border-bottom-color: #EAEBEC;
   border-bottom-style: none;
   border-bottom-width: 0px;
-  border-left-color: #4d4d4f;
+  border-left-color: #EAEBEC;
   border-left-style: none;
   border-left-width: 0px;
-  border-right-color: #4d4d4f;
+  border-right-color: #EAEBEC;
   border-right-style: none;
   border-right-width: 0px;
-  border-top-color: #4d4d4f;
+  border-top-color: #EAEBEC;
   border-top-style: none;
   border-top-width: 0px;
   padding-bottom: 4px;
@@ -586,17 +586,17 @@ td.CellOverride-21 {
   vertical-align: middle; }
 
 td.CellOverride-22 {
-  background-color: #ebeced;
-  border-bottom-color: #4d4d4f;
+  background-color: #EAEBEC;
+  border-bottom-color: #EAEBEC;
   border-bottom-style: none;
   border-bottom-width: 0px;
-  border-left-color: #4d4d4f;
+  border-left-color: #EAEBEC;
   border-left-style: none;
   border-left-width: 0px;
-  border-right-color: #4d4d4f;
+  border-right-color: #EAEBEC;
   border-right-style: none;
   border-right-width: 0px;
-  border-top-color: #4d4d4f;
+  border-top-color: #EAEBEC;
   border-top-style: none;
   border-top-width: 0px;
   vertical-align: middle; }
@@ -605,13 +605,13 @@ td.CellOverride-23 {
   border-bottom-color: #000000;
   border-bottom-style: none;
   border-bottom-width: 0px;
-  border-left-color: #4d4d4f;
+  border-left-color: #EAEBEC;
   border-left-style: none;
   border-left-width: 0px;
-  border-right-color: #4d4d4f;
+  border-right-color: #EAEBEC;
   border-right-style: solid;
   border-right-width: 0px;
-  border-top-color: #4d4d4f;
+  border-top-color: #EAEBEC;
   border-top-style: none;
   border-top-width: 0px;
   padding-bottom: 4px;
@@ -624,26 +624,26 @@ td.CellOverride-24 {
   border-bottom-color: #000000;
   border-bottom-style: none;
   border-bottom-width: 0px;
-  border-left-color: #4d4d4f;
+  border-left-color: #EAEBEC;
   border-left-style: solid;
   border-left-width: 0px;
-  border-right-color: #4d4d4f;
+  border-right-color: #EAEBEC;
   border-right-style: solid;
   border-right-width: 0px;
-  border-top-color: #4d4d4f;
+  border-top-color: #EAEBEC;
   border-top-style: none;
   border-top-width: 0px;
   vertical-align: middle; }
 
 td.CellOverride-25 {
-  background-color: #ebeced;
+  background-color: #EAEBEC;
   border-bottom-color: #000000;
   border-bottom-style: none;
   border-bottom-width: 0px;
-  border-left-color: #4d4d4f;
+  border-left-color: #EAEBEC;
   border-left-style: none;
   border-left-width: 0px;
-  border-right-color: #4d4d4f;
+  border-right-color: #EAEBEC;
   border-right-style: solid;
   border-right-width: 0px;
   border-top-color: #000000;
@@ -656,14 +656,14 @@ td.CellOverride-25 {
   vertical-align: middle; }
 
 td.CellOverride-26 {
-  background-color: #ebeced;
+  background-color: #EAEBEC;
   border-bottom-color: #000000;
   border-bottom-style: none;
   border-bottom-width: 0px;
-  border-left-color: #4d4d4f;
+  border-left-color: #EAEBEC;
   border-left-style: solid;
   border-left-width: 0px;
-  border-right-color: #4d4d4f;
+  border-right-color: #EAEBEC;
   border-right-style: solid;
   border-right-width: 0px;
   border-top-color: #000000;
@@ -675,10 +675,10 @@ td.CellOverride-27 {
   border-bottom-color: #000000;
   border-bottom-style: none;
   border-bottom-width: 0px;
-  border-left-color: #4d4d4f;
+  border-left-color: #EAEBEC;
   border-left-style: none;
   border-left-width: 0px;
-  border-right-color: #4d4d4f;
+  border-right-color: #EAEBEC;
   border-right-style: solid;
   border-right-width: 0px;
   border-top-color: #000000;
@@ -694,10 +694,10 @@ td.CellOverride-28 {
   border-bottom-color: #000000;
   border-bottom-style: none;
   border-bottom-width: 0px;
-  border-left-color: #4d4d4f;
+  border-left-color: #EAEBEC;
   border-left-style: solid;
   border-left-width: 0px;
-  border-right-color: #4d4d4f;
+  border-right-color: #EAEBEC;
   border-right-style: solid;
   border-right-width: 0px;
   border-top-color: #000000;
@@ -712,7 +712,7 @@ td.CellOverride-29 {
   border-left-color: #3284BF;
   border-left-style: none;
   border-left-width: 0px;
-  border-right-color: #4d4d4f;
+  border-right-color: #EAEBEC;
   border-right-style: solid;
   border-right-width: 0px;
   border-top-color: #000000;
@@ -744,8 +744,7 @@ span.CharOverride-4 {
   color: #78818c; }
 
 span.CharOverride-5 {
-  color: #78818c;
-  font-size: 7px; }
+  color: #78818c; }
 
 td._idGenCellOverride-1 {
   border-top-color: #000000;
@@ -771,7 +770,7 @@ tr._idGenTableRowColumn-6 {
   min-height: 22px; }
 
 tr._idGenTableRowColumn-7 {
-  background-color: #e6e6e7;
+  background-color: #EAEBEC;
   height: 16px; }
 
 tr._idGenTableRowColumn-8 {

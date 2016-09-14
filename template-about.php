@@ -87,7 +87,7 @@
                         }
                             echo '<div class="feature-wrapper">';
                                 if( $feature['icon'] ){
-                                    echo '<img class="feature-icon" src="'. $feature['icon'] .'" alt="" />';
+                                    echo '<a href="' . $feature[icon_url] . '"><img class="feature-icon" src="'. $feature['icon'] .'" alt="" /></a>';
                                 }
                                 echo '<div class="description">'. $feature['content'] .'</div>';
                             echo '</div>';
@@ -103,7 +103,7 @@
                         }
                             echo '<div class="feature-wrapper">';
                                 if( $feature['icon'] ){
-                                    echo '<img class="feature-icon" src="'. $feature['icon'] .'" alt="" />';
+                                    echo '<a href="' . $feature[icon_url] . '"><img class="feature-icon" src="'. $feature['icon'] .'" alt="" /></a>';
                                 }
                                 echo '<div class="description">'. $feature['content'] .'</div>';
                             echo '</div>';

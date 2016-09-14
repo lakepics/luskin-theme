@@ -21,14 +21,14 @@
 
         <div class="container clearfix">
             <div class="gallery-filters-wrapper">
-                <select id="gallery-filters">
-                    <option selected="selected" value="*">show all</option>
-                    <option value=".accommodations">Accommodations</option>
-                    <option value=".meetings">Meetings</option>
-                    <option value=".dining">Dining</option>
-                    <option value=".conference-center">Conference Center</option>
-                    <option value=".campus">Campus</option>
-                </select>
+                <ul id="gallery-filters">
+                    <li><a class="*" href="#">show all</a></li>
+                    <li><a class=".accommodations" href="#">Accommodations</a></li>
+                    <li><a class=".meetings" href="#">Meetings</a></li>
+                    <li><a class=".dining" href="#">Dining</a></li>
+                    <li><a class=".conference-center" href="#">Conference Center</a></li>
+                    <li><a class=".campus" href="#">Campus</a></li>
+                </ul>
             </div>
         </div>
 
