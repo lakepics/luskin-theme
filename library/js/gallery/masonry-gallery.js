@@ -2,17 +2,8 @@
 
     $(document).ready(function () {
 
-        // fake select dropdown on gallery
-        $('select#gallery-filters').after('<span>' + $('option:selected', this).text() + '</span>');
-        
-        // modify fake select dropdown selection on change
-        $('select#gallery-filters').on('change', function () {
-            $(this).siblings('span').remove();
-            $(this).after('<span>' + $('option:selected', this).text() + '</span>');
-        });
-
         //bind filter on select change
-        $('#gallery-filters li a').on('click', function () {
+        $('#gallery-filters li').on('click', function () {
             // get filter value from option value
             var filterValue = this.className;
             // use filterFn if matches value
@@ -32,9 +23,10 @@
             .attr('rel', 'gallery');
         $('.fancybox')
             .fancybox({
+                type        : 'image',
                 padding     : 0,
                 margin      : [20, 60, 20, 60] // Increase left/right margin
-            });
+        });
 
         // isotope
         // $('#gallery-container').isotope({

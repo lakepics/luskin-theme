@@ -21,13 +21,14 @@
 
         <div class="container clearfix">
             <div class="gallery-filters-wrapper">
+               <h2 class="sort-photos">Sort Photos</h2>
                 <ul id="gallery-filters">
-                    <li><a class="*" href="#">show all</a></li>
-                    <li><a class=".accommodations" href="#">Accommodations</a></li>
-                    <li><a class=".meetings" href="#">Meetings</a></li>
-                    <li><a class=".dining" href="#">Dining</a></li>
-                    <li><a class=".conference-center" href="#">Conference Center</a></li>
-                    <li><a class=".campus" href="#">Campus</a></li>
+                    <li class="*">show all</li>
+                    <li class=".accommodations">Accommodations</li>
+                    <li class=".meetings">Meetings</li>
+                    <li class=".dining">Dining</li>
+                    <li class=".conference-center">Conference Center</li>
+                    <li class=".campus">Campus</li>
                 </ul>
             </div>
         </div>
