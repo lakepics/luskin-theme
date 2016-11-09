@@ -14,6 +14,26 @@ if ( have_posts() ) :
 
   showHeroSlides(); ?>
 
+        <div class="container clearfix press-release-list">
+           <h1 class="press-release">Press Clippings</h1>
+            <h2 class="view-press-release">View our Press Clippings</h2>
+            <table id="press-release-table">
+              <?php
+$press_clippings = get_field( 'press_clipping' );
+if ( $press_clippings ) {
+  foreach ( $press_clippings as $clip ) {
+    echo '<tr class="releases">';
+    echo '<td class="date">' . $clip['date']. '</td>';
+    echo '<td class="title"><a href="' . $clip['link'] . '">' . $clip['title'] . '</a></td>';
+    echo '</tr>';
+  }
+}
+?>
+            </table>
+        </div>
+
+        <div class="container clearfix"></div><br><br>
+
         <div class="container clearfix two-columns">
             <div class="column left-column">
                 <h1 class="press-release">Press Releases</h1>

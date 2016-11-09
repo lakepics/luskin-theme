@@ -435,3 +435,13 @@ ul.about-buttons {
     font-size: 4.5em; } }
 
 /* ############ about-us-dir.scss ############ */
+.directions-address {
+  font-family: "Proxima Nova Semibold", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-weight: 600;
+  line-height: 24px;
+  font-size: 18px;
+  text-transform: uppercase;
+  margin-bottom: 20px; }
+
+h2 {
+  font-size: 2em; }

@@ -49,7 +49,7 @@ if ( $slides ) {
             }
 
             if ( !empty( $slide['orange_title'] ) ) {
-                echo '<h4>'. $slide['orange_title'] .'</h4>';
+                echo '<h4 style="opacity: 1">'. $slide['orange_title'] .'</h4>';
             }
 
             echo '</div>';

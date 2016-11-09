@@ -1,0 +1,13 @@
+/* ############ two-column.scss ############ */
+.holiday-closure p {
+  margin-top: 20px;
+  font-size: 15px;
+  font-family: "Proxima Nova Regular", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-weight: 400;
+  text-transform: none;
+  letter-spacing: 0.025px;
+  color: #47718E;
+  line-height: 1.5em; }
+  .holiday-closure p a {
+    font-family: "Proxima Nova Semibold", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-weight: 600; }

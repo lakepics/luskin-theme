@@ -317,6 +317,9 @@ function luskinScriptsAndStyles()
             case 'template-stories.php':
                 wp_enqueue_style('stories-stylesheet', get_stylesheet_directory_uri() . '/library/css/stories.min.css', array('luskin-stylesheet'), '', 'all');
                 break;
+            case 'template-two-col.php':
+                wp_enqueue_style('two-column-stylesheet', get_stylesheet_directory_uri() . '/library/css/two-column.min.css', array('luskin-stylesheet'), '', 'all');
+                break;
             default : '';
         }
 

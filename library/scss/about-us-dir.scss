@@ -5,7 +5,17 @@
 /* ############ about-us-dir.scss ############ */
 
 // styles for 0up
-
+.directions-address {
+    font-family: $semibold-sans-serif;
+    font-weight: 600;
+    line-height: 24px;
+    font-size: 18px;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+}
+h2 {
+    font-size: 2em;
+}
 // styles for 481up
 @media only screen and (min-width: 481px) {}
 
