@@ -68,7 +68,7 @@
   zoom: 1;
 
   .icon {
-    background: url('/wp-content/themes/luskin/library/images/amenities2.png') no-repeat center 0;
+    background: url('/wp-content/themes/luskin/library/images/amenities3.png') no-repeat center 0;
     bottom: 0;
     display: block;
     height: 32px;
@@ -130,6 +130,10 @@
   &.complimentary-coffee-refreshments .icon {
     height: 34px;
     background-position: center -1086px;
+  }
+  &.daily-housekeeping .icon {
+    height: 34px;
+    background-position: center -1156px;
   }
 
   &.concierge .icon {

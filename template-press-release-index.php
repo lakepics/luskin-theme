@@ -14,8 +14,8 @@ if ( have_posts() ) :
 
   showHeroSlides(); ?>
 
-        <div class="container clearfix press-release-list">
-           <h1 class="press-release">Press Clippings</h1>
+        <div class="container clearfix column">
+           <h1>In The News</h1>
             <h2 class="view-press-release">View our Press Clippings</h2>
             <table id="press-release-table">
               <?php
@@ -36,8 +36,8 @@ if ( $press_clippings ) {
 
         <div class="container clearfix two-columns">
             <div class="column left-column">
-                <h1 class="press-release">Press Releases</h1>
-                <p class="bottom-30">Welcome to the Press and Media Center for The UCLA Meyer and Renee Luskin Conference Center.  Here you will find information on the Conference Center, current press releases and our fact sheet.  Should you need anything more on the Luskin Conference Center, please contact our media relations manager, Ken Ellens.</p>
+                <h1>Press Releases</h1>
+                <p class="bottom-30">Welcome to the Press Center for The UCLA Meyer and Renee Luskin Conference Center.  Here you will find information on the Conference Center, current press releases and our fact sheet.  Should you need anything more on the Luskin Conference Center, please contact our media relations manager, Ken Ellens.</p>
                 <a class="button-abt down-arrow" href="/wp-content/uploads/2015/02/Luskin_Fact-Sheet.pdf" target="_blank">FACT SHEET</a>
             </div>
             <div class="media-contact column right-column">

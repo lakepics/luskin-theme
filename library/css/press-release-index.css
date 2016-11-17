@@ -829,13 +829,9 @@ tr.releases, tr.releases td {
   #main-content .container.two-columns .column.right-column h2, #main-content .container-1024.two-columns .column.right-column h2 {
     font-size: 1.565em; }
 
-#main-content .container.two-columns .column h1, #main-content .container-1024.two-columns .column h1 {
-  font-size: 2.75em;
-  line-height: 1em;
-  margin: 0 0 20px; }
-
 #main-content .media-contact {
-  margin: 50px 0 20px 0; }
+  margin: 50px 0 20px 0;
+  padding-top: 50px; }
   #main-content .media-contact a.luskin-social {
     display: inline-block;
     margin: 0px 5px 0 0;
