@@ -117,10 +117,9 @@
                 <h2>Explore UCLA, Southern California, and Beyond!</h2>
                 <a id="plan-your-visit" class="anchor-offset-visit"></a>
                 <div class="res-columns">
-                    <p>UCLA is one of those special places where you know that you are at the center of what’s happening… a place buzzing with activities, culture, arts and ideas. And it’s all taking place against the exciting backdrop of Los Angeles.</p>
-                    <p>As a guest at the Luskin Conference Center, we encourage you to take full advantage of the opportunity to explore the many possibilities that both UCLA and Southern California have to offer!</p>
+                    <p>There’s always something special happening in Southern California, and at UCLA, you’ll feel at the center of it all. Buzzing with activity, culture, athletics, academics and research, the campus is set against the exciting backdrop of Los Angeles. Guests of the Luskin Conference Center’s hotel are encouraged to take full advantage of the opportunity to explore the many possibilities that both UCLA and Southern California have to offer!</p>
                 </div>
-                <div class="container sd-callout">Engage your mind, become inspired and experience the uniqueness of UCLA and the Los Angeles area during your stay.</div>
+                <div class="container sd-callout">Achieve engagement and inspiration in the experiences found at UCLA and beyond as you explore this wonderful city during your stay.</div>
             </div>
 
             <div class="explore-more clearfix">

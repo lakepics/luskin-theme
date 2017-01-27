@@ -975,6 +975,15 @@ tr.releases, tr.releases td {
   background-position-x: 104%;
   padding: 10px 40px 10px 10px; }
 
+.highlights {
+  margin-top: -19px; }
+
+ul {
+  list-style-type: disc;
+  margin-left: 1em; }
+  ul li {
+    line-height: 2em; }
+
 @media screen and (max-width: 878px) {
   .res-columns {
     -webkit-column-count: 1;

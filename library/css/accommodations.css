@@ -229,3 +229,8 @@
       width: 60%; } }
 
 /* ############ accommodations.scss ############ */
+ul {
+  list-style-type: disc;
+  margin-left: 1em; }
+  ul li {
+    line-height: 2em; }

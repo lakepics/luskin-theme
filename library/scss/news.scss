@@ -145,10 +145,58 @@ a:hover {
   color: $alt-dark-blue;
 }
 
-.news-inline-image {
-  float: left;
-  margin-bottom: 10px;
-  margin-right: 20px;
+.container {
+    .news-inline-image-left, .news-inline-image-right {
+        margin-bottom: 10px;
+        font-size: 10px;
+        line-height: 1.6em;
+        .news-inline-image-caption {
+            display: inline-block;
+            max-width: 320px;
+        }
+        .news-inline-image-credit {
+            display: inline-block;
+            font-style: italic;
+            max-width: 320px;
+        }
+    }
+    .news-inline-image-left {
+        margin-right: 20px;
+        float: left;
+    }
+    .news-inline-image-right {
+        margin-left: 20px;
+        float: right;
+    }
+    .recipe-ingredients {
+        background: #aca39a;
+        width: auto;
+        float: left;
+        text-align: left;
+        padding: 10px 30px;
+        margin-right: 40px;
+        h4 {
+            color: #FFFFFF;
+            margin-top: 10px;
+            margin-bottom: 10px;
+        }
+        ul {
+            list-style: square;
+            margin-top: 0;
+            margin-bottom: 10px;
+            margin-left: 15px;
+            li {
+                color: #FFFFFF;
+            }
+        }
+
+    }
+    .recipe-directions {
+        h4, p {
+            margin-bottom: 10px;
+            padding-bottom: 0;
+        }
+    }
 }
 
 .news-sidebar {

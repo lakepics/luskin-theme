@@ -21,7 +21,7 @@
 
         <div class="container clearfix">
             <div class="gallery-filters-wrapper">
-               <h2 class="sort-photos">Sort Photos</h2>
+               <h2 class="sort-photos">Sort Photos By:</h2>
                 <ul id="gallery-filters">
                     <li class="*">show all</li>
                     <li class=".accommodations">Accommodations</li>

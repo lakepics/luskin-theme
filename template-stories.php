@@ -15,7 +15,7 @@
 
         <?php $intro_text = get_field( 'intro_copy' );
 if ( $intro_text ) {
-    echo '<div class="two-columns container clearfix top-30">';
+    echo '<div class="two-columns container clearfix">';
     $page_sub_head = get_field( 'page_sub_head' );
     if ( $page_sub_head ) {
         echo '<h2>' . $page_sub_head . '</h2>';
@@ -29,9 +29,9 @@ if ( $intro_text ) {
 $stories = get_field( 'stories' );
 if ( $stories ) {
 ?>
-        <div class="explore-ucla container clearfix">
+        <div class="explore-ucla container clearfix top-30">
             <?php foreach ( $stories as $new_row ) {
-        echo '<div class="two-columns clearfix top-30">';
+        echo '<div class="two-columns clearfix">';
         echo '<div class="column left-column column-entry">';
         foreach ( $new_row['left_column'] as $entry ) {
             echo '<div class="story clearfix">';

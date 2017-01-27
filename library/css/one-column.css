@@ -8,3 +8,6 @@
 
 .catering-menu li {
   margin-bottom: 10px; }
+
+.cmp-bullet-list {
+  list-style: disc; }

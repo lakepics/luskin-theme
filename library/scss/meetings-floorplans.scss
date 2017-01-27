@@ -39,6 +39,18 @@
   }
 }
 
+.highlights {
+    margin-top: -19px;
+}
+
+ul {
+    list-style-type: disc;
+    margin-left: 1em;
+    li {
+        line-height: 2em;
+    }
+}
+
 // styles for 878down
 @media screen and (max-width: 878px) {
   .res-columns {

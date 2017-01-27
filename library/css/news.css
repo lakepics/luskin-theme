@@ -197,10 +197,48 @@ a:hover {
 #main-content .page-col-onethird h3 {
   color: #1C4D71; }
 
-.news-inline-image {
-  float: left;
+.container .news-inline-image-left, .container .news-inline-image-right {
   margin-bottom: 10px;
-  margin-right: 20px; }
+  font-size: 10px;
+  line-height: 1.6em; }
+  .container .news-inline-image-left .news-inline-image-caption, .container .news-inline-image-right .news-inline-image-caption {
+    display: inline-block;
+    max-width: 320px; }
+  .container .news-inline-image-left .news-inline-image-credit, .container .news-inline-image-right .news-inline-image-credit {
+    display: inline-block;
+    font-style: italic;
+    max-width: 320px; }
+
+.container .news-inline-image-left {
+  margin-right: 20px;
+  float: left; }
+
+.container .news-inline-image-right {
+  margin-left: 20px;
+  float: right; }
+
+.container .recipe-ingredients {
+  background: #aca39a;
+  width: auto;
+  float: left;
+  text-align: left;
+  padding: 10px 30px;
+  margin-right: 40px; }
+  .container .recipe-ingredients h4 {
+    color: #FFFFFF;
+    margin-top: 10px;
+    margin-bottom: 10px; }
+  .container .recipe-ingredients ul {
+    list-style: square;
+    margin-top: 0;
+    margin-bottom: 10px;
+    margin-left: 15px; }
+    .container .recipe-ingredients ul li {
+      color: #FFFFFF; }
+
+.container .recipe-directions h4, .container .recipe-directions p {
+  margin-bottom: 10px;
+  padding-bottom: 0; }
 
 .news-sidebar {
   background: rgba(215, 210, 203, 0.25);

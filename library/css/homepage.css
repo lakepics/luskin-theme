@@ -202,6 +202,8 @@
                   line-height: 1.0;
                   margin: 0 0 5px;
                   text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5); }
+                  .home #container #content #slideshow-container .bx-wrapper .bx-viewport .home-slideshow .slide .slide-overlay h3 a {
+                    color: #FFFFFF; }
                 .home #container #content #slideshow-container .bx-wrapper .bx-viewport .home-slideshow .slide .slide-overlay h4 {
                   float: right;
                   width: 60%;

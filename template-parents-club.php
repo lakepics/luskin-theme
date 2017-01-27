@@ -39,7 +39,7 @@ echo '</div>';
         </div>
 
         <div class="container clearfix parents top-30">
-            <div class="about-buttons"><a href="/family-club-signup/" class="button">Sign up today!</a></div>
+            <div class="about-buttons"><a href="/partner-signup/" class="button">Sign up today!</a></div>
         </div>
 
         <div class="container clearfix"><br><br>
