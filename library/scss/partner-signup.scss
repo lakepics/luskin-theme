@@ -1,0 +1,244 @@
+@import 'partials/variables';
+@import 'sections/page';
+
+/* ############ partner-signup.scss ############ */
+
+// styles for 0up
+* {
+	box-sizing:border-box;
+	-moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+}
+
+
+.prefield_normal {
+font-family: Arial, Helvetica, sans-serif;
+font-size: 13px;
+font-weight: normal;
+display: inline;
+vertical-align:middle;
+}
+.style1 {font-size: 13px}
+.style2 {
+	font-size: 13px;
+}
+td, th {
+  border-left: solid 1px black;
+}
+.border-side {
+  border-left: solid 1px black;
+}
+.border-bottom {
+  border-bottom: solid 1px black;
+}
+.marginLeft {
+	margin-left:10px !important;
+	box-sizing:border-box;
+	-moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+}
+.wFormTitle { display: none }
+form, fieldset {
+background-image: none !important;
+background-color: transparent !important;
+}
+#formContainer {
+	width:100%;
+	max-width: 650px;
+	margin:0 auto;
+}
+.wForm {
+	width:100%;
+	max-width: 600px;
+	margin:0 auto;
+    padding: 10px;
+	font-size:13px;
+	font-family:Arial, Helvetica, sans-serif;
+}
+.wForm .inputWrapper {
+	width:100%;
+	display:block;
+	padding: 0 0 15px 0;
+	margin:0;
+}
+.float {
+	display:block;
+	float:left;
+	width:50%;
+	box-sizing:border-box;
+	-moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+}
+select, input[type="text"], input[type="email"], input[type="tel"] {
+	width:100% !important;
+	max-width:650px;
+	padding:4px !important;
+	font-size:16px;
+	box-sizing:border-box;
+	-moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+}
+
+input[type="checkbox"] {
+    margin: 0;
+}
+
+label.label.preField.checkLabel {
+    display: block;
+	padding-left: 22px;
+    text-indent: -19px;
+	box-sizing:border-box;
+	-moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+}
+.float label {
+	padding: 0px 10px 0px 10px;
+}
+.wForm fieldset {
+	margin-left:14px;
+	margin-right:14px;
+}
+.wForm .postField {
+	margin:0;
+}
+.wForm .secondaryAction, .wForm .primaryAction, .wForm .wfPagePreviousButton, .wForm .wfPageNextButton {
+  background-image: none;
+  border-radius:0;
+}
+input[type="submit"] {
+	padding: 8px 8px !important;
+	color: #FFFFFF !important;
+	font-size: 18px !important;
+	width: 220px;
+	height:50px;
+	display: block;
+	cursor: pointer;
+	font-weight: normal !important;
+	text-transform: uppercase;
+	background-color: #1C4D71 !important;
+	background-image:none;
+	border: 0 !important;
+	outline:0 !important;
+    font-size: 24px;
+	text-align: center;
+	-webkit-appearance: none;
+	-webkit-border-radius: 0;
+	border-radius: 0;
+	box-sizing:border-box;
+	-moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+}
+
+ input[type="submit"]:hover {
+	cursor: pointer;
+	background-color: #184363 !important;
+}
+
+textarea:focus,
+input[type="text"]:focus,
+input[type="number"]:focus,
+input[type="email"]:focus,
+input[type="tel"]:focus,
+.uneditable-input:focus {
+  border-color: rgba(82, 168, 236, 0.8);
+  outline: 0;
+  outline: thin dotted \9;
+  /* IE6-9 */
+}
+input[type=checkbox], input[type=radio] {
+  -webkit-transform: scale(1,1) !important;
+  display:inline;
+  vertical-align:middle;
+}
+.wForm input[type="checkbox"] {
+   	width: auto !important;
+   	height: auto !important;
+	}
+
+	.wForm input[type="radio"] {
+	width: auto !important;
+	height: auto !important;
+	}
+.wForm select {
+		padding: 2px !important;
+		margin:0px !important;
+		box-sizing:border-box;
+	-moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+	}
+.wForm form .errFld .errMsg {
+	 color:#BB0D10;
+	 padding-bottom:4px;
+ }
+
+ .errMsg::before {
+	 content: "\21D1";
+	 color:#BB0D10;
+ }
+
+.container .wFormContainer {
+    border-style: none!important;
+    font-family: $sans-serif;
+}
+ .wFormContainer .errMsg {
+	padding-left: 0px !important;
+}
+.oneField.errFld input {
+	border: 1px solid #BB0D10 !important;
+}
+
+.wForm form .errFld {
+	border:none;
+}
+
+.wForm .oneField {
+	border: none;
+}
+
+.supportInfo {
+    display: none;
+ }
+
+ .wForm input, .wForm textarea, .wForm .preField, .wForm .postField {
+	 max-width:650px !important;
+ }
+
+/* Smaller Screens */
+@media only screen
+and (max-width : 400px) {
+	.float {
+	width:100%;
+}
+}
+
+
+// styles for 481up
+@media only screen and (min-width: 481px) {}
+
+// styles for 640up
+@media only screen and (min-width: 640px) {}
+
+// styles for 768up
+@media only screen and (min-width: 768px) {}
+
+// styles for 1030up
+@media only screen and (min-width: 1030px) {
+    .page-template-template-partner-form {
+        .wFormContainer {
+            width: inherit;
+        }
+        .wForm {
+            max-width: inherit;
+            .oneField {
+                width: 100%;
+                margin-bottom: 20px;
+                display: block;
+            }
+        }
+    }
+}
+// styles for 1240up
+@media only screen and (min-width: 1240px) {}
+
+// styles for 2x
+@media only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min--moz-device-pixel-ratio: 1.5), only screen and (min-device-pixel-ratio: 1.5) {}

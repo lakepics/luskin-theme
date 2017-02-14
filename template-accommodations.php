@@ -30,7 +30,7 @@ if ( $content ) {
 }
 
 $secondary_slider = get_field( 'secondary_slider' );
-if ( $secondary_slider ) {
+if ( isset($secondary_slider[0]['image']) ) {
     echo '<div class="lemmonslider clearfix top-30">';
     echo '<div id="slider1" class="slider">';
     echo '<ul>';
@@ -49,21 +49,18 @@ if ( $secondary_slider ) {
 }
 
 $reservation_policy = get_field( 'reservation_policy' );
-if ( $reservation_policy ) {
-?>
-        <div class="reservation-policy">
-            <div class="two-columns container clearfix"><h2>AFFILIATION & ELIGIBILITY POLICY</h2>
-                <?php
+if ( isset($reservation_policy) ) {
+
+    echo '<div class="reservation-policy">
+            <div class="two-columns container clearfix"><h2>AFFILIATION & ELIGIBILITY POLICY</h2>';
     if ( $reservation_policy[0]['left_column'] ) {
         echo '<div class="column left-column">'. $reservation_policy[0]['left_column'] .'</div>';
     }
     if ( $reservation_policy[0]['right_column'] ) {
         echo '<div class="column right-column">'. $reservation_policy[0]['right_column'] .'</div>';
     }
-?>
-            </div>
-        </div>
-        <?php
+    echo'</div>
+        </div>';
 }
 ?>
 

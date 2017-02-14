@@ -302,6 +302,12 @@ function luskinScriptsAndStyles()
             case 'template-parents-club.php':
                 wp_enqueue_style('parents-club-stylesheet', get_stylesheet_directory_uri() . '/library/css/parents-club.min.css', array('luskin-stylesheet'), '', 'all');
                 break;
+            case 'template-partner-program.php':
+                wp_enqueue_style('partners-stylesheet', get_stylesheet_directory_uri() . '/library/css/partners.min.css', array('luskin-stylesheet'), '', 'all');
+                break;
+            case 'template-partner-form.php':
+                wp_enqueue_style('partner-signup-stylesheet', get_stylesheet_directory_uri() . '/library/css/partner-signup.min.css', array('luskin-stylesheet'), '', 'all');
+                break;
             case 'template-press-release-index.php':
                 wp_enqueue_style('press-release-index-stylesheet', get_stylesheet_directory_uri() . '/library/css/press-release-index.min.css', array('luskin-stylesheet'), '', 'all');
                 break;
@@ -343,7 +349,7 @@ function luskinScriptsAndStyles()
         /* **************************************************
          * ...on the hma opt-in template
          * **************************************************/
-        if (is_page_template('template-hma.php')) {
+        if (is_page_template('template-hma.php' || 'template-partner-form.php')) {
 
             // layout stylesheet
             wp_enqueue_style('wforms-layout-stylesheet', '//www.tfaforms.com/form-builder/4.1.0/css/wforms-layout.css', array(), '', 'all');
@@ -548,7 +554,7 @@ function luskinScriptsAndStyles()
          * - "Join the Luskin Conference Center Family Club Today!" @ /parents-club-signup/
          * **************************************************/
         if (is_page(array('mailing-list',
-            'parents-club-signup'))) {
+            'parents-club-signup', 'partner-form'))) {
             // form processing scripts
             wp_enqueue_script('wforms', '//www.tfaforms.com/wForms/3.7/js/wforms.js', array(), false, true);
             wp_enqueue_script('wforms-localization', '//www.tfaforms.com/wForms/3.7/js/localization-en_US.js', array('wforms'), false, true);

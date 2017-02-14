@@ -13,6 +13,17 @@
 
         <?php
 
+        $page_title = get_field('page_title');
+        $intro_text = get_field('intro_text');
+
+        if ($page_title) {
+            echo '<div class="container clearfix bottom-30"><h1>' . $page_title . '</h1>';
+        }
+
+        if ($intro_text) {
+            echo '<div>' . $intro_text . '</div></div>';
+        }
+
         foreach ( get_field( 'images', 20 ) as $picture ) {
             $categories[createSlug( $picture['category'] )] =  $picture['category'];
         }
@@ -21,7 +32,7 @@
 
         <div class="container clearfix">
             <div class="gallery-filters-wrapper">
-               <h2 class="sort-photos">Sort Photos By:</h2>
+               <h2 class="sort-photos">Sort By:</h2>
                 <ul id="gallery-filters">
                     <li class="*">show all</li>
                     <li class=".accommodations">Accommodations</li>
@@ -49,7 +60,19 @@
                 echo '<a href="'. $picture['large_image']['url'] .'" title="'. $imgTitle .'">';
                 echo '<img class="" src="'. $picture_src[0] .'" alt="'. $imgTitle .'" />';
                 echo '</a>';
-            } else {
+            }
+            elseif ( $picture['video'] ) {
+                if ( $picture['large_image']['caption'] != '' ) {
+                    $imgTitle = $picture['large_image']['caption'];
+                } else {
+                    $imgTitle = '';
+                }
+                /* echo '<video width="960" height="540" controls><source src="' . $picture['video'] . '" type="video/mp4">Your browser does not support the video tag.</video>'; */
+                echo '<a href="'. $picture['video'] . '">';
+                echo '<img class="" src="'. $picture_src[0] .'" alt="'. $imgTitle .'" />';
+                echo '</a>';
+            }
+            else {
                 echo '<img class="" src="'. $picture_src[0] .'" alt="'. $imgTitle .'" />';
             }
             echo '</div>';

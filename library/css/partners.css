@@ -1,0 +1,236 @@
+/* ############ page.scss ############ */
+#page-310 {
+  margin-top: 55px; }
+
+.hero-image-container, .full-width-gallery {
+  margin-bottom: 30px; }
+
+.hero-image-container img {
+  display: block;
+  margin: 0 auto;
+  width: 100%;
+  max-width: 100%; }
+
+/* quick facts */
+.quick-facts {
+  position: relative;
+  margin-top: 25px;
+  margin-bottom: 60px;
+  border-top: 1px solid #8DA6B8;
+  padding-top: 40px; }
+
+.quick-facts-description {
+  font-family: "Proxima Nova Regular", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 15px;
+  line-height: 1.5;
+  margin-bottom: 25px;
+  width: 100%; }
+
+.quick-facts-description h3 {
+  margin: 40px 0 20px 0;
+  font-size: 25px;
+  letter-spacing: 0.05em;
+  line-height: 1;
+  color: #47718E;
+  font-family: "Proxima Nova Semibold", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  text-transform: uppercase;
+  text-align: center; }
+
+.quick-facts-button {
+  margin-top: 30px; }
+
+.generic-button {
+  float: left;
+  margin-right: 30px; }
+
+/* call out */
+.callout {
+  display: inline-block;
+  width: inherit;
+  margin: 0px;
+  padding: 20px 0px 30px 0px;
+  border-top: 1px solid #8DA6B8;
+  font-family: 'Adobe Caslon Pro', serif;
+  font-style: italic;
+  font-size: 200%;
+  line-height: 1.75em;
+  color: #8da6b8;
+  text-align: center; }
+
+.text-overlay {
+  bottom: -.5em;
+  color: rgba(255, 255, 255, 0.85);
+  font-family: "Proxima Nova Semibold", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 1.75em;
+  left: 0.7em;
+  line-height: 1.6em;
+  position: absolute;
+  text-transform: uppercase; }
+
+@media only screen and (min-width: 481px) {
+  .text-overlay {
+    font-size: 2.5em;
+    left: 0.5em; } }
+
+@media only screen and (min-width: 640px) {
+  .text-overlay {
+    font-size: 3.5em;
+    left: 0.3em; } }
+
+@media only screen and (min-width: 768px) {
+  .text-overlay {
+    font-size: 4.25em;
+    left: 0.25em; } }
+
+@media only screen and (min-width: 1030px) {
+  .text-overlay {
+    font-size: 5em; } }
+
+@media only screen and (min-width: 1240px) {
+  .text-overlay {
+    font-size: 7em;
+    left: 0.15em; } }
+
+/* ############ amennities-services.scss ############ */
+#main-content .amenities h2 {
+  color: #47718E;
+  font-family: "Proxima Nova Semibold", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 25px;
+  letter-spacing: 0.05em;
+  line-height: 1.15;
+  margin: 0 0 10px 0;
+  text-transform: uppercase; }
+
+#main-content .amenities .amenities-description,
+#main-content .amenities .room-amenities {
+  font-family: "Proxima Nova Regular", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 15px;
+  line-height: 1.5; }
+  #main-content .amenities .amenities-description p,
+  #main-content .amenities .room-amenities p {
+    margin-bottom: 30px; }
+
+#main-content .amenities .services .service-wrapper {
+  float: left;
+  width: 49.99%; }
+  #main-content .amenities .services .service-wrapper.rooms, #main-content .amenities .services .service-wrapper .rooms {
+    width: 45%;
+    margin-right: 4.9%; }
+  #main-content .amenities .services .service-wrapper:last-child .service {
+    border-bottom: 0; }
+  #main-content .amenities .services .service-wrapper.even .service {
+    margin-left: 0; }
+  #main-content .amenities .services .service-wrapper.odd .service {
+    margin-right: 0; }
+
+.guest-services {
+  padding: 0 0 20px 0; }
+
+.service {
+  border-bottom: 1px solid #8DA6B8;
+  color: #000;
+  font-family: "Proxima Nova Semibold", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 16px;
+  line-height: 1.25;
+  margin: 0 10px;
+  min-height: 75px;
+  padding: 0;
+  position: relative;
+  zoom: 1; }
+  .service .icon {
+    background: url("/wp-content/themes/luskin/library/images/amenities3.png") no-repeat center 0;
+    bottom: 0;
+    display: block;
+    height: 32px;
+    left: 20px;
+    margin: auto;
+    position: absolute;
+    right: auto;
+    top: 0;
+    width: 32px; }
+  .service .service-name {
+    display: table;
+    height: 75px;
+    padding: 0 10px 0 70px; }
+    .service .service-name span {
+      display: table-cell;
+      vertical-align: middle; }
+  .service.business-center {
+    border-bottom: 0; }
+  .service.none, .service.none-none, .service.first {
+    margin: 0;
+    padding: 0 0 0 20px; }
+  .service.first {
+    border-top: 1px solid #8DA6B8; }
+  .service.bullet-round {
+    background: url("/wp-content/themes/luskin/library/images/round-bullet.png") no-repeat center 0; }
+  .service.ada-rooms-services .icon {
+    background-position: center -632px; }
+  .service.bell-service .icon,
+  .service.porter-service .icon {
+    height: 34px;
+    background-position: center -471px; }
+  .service.business-center .icon,
+  .service.extensive-business-center .icon {
+    background-position: center -320px; }
+  .service.campus-shuttle .icon {
+    background-position: center -711px; }
+  .service.complimentary-coffee-refreshments .icon {
+    height: 34px;
+    background-position: center -1086px; }
+  .service.daily-housekeeping .icon {
+    height: 34px;
+    background-position: center -1156px; }
+  .service.concierge .icon {
+    background-position: center -395px; }
+  .service.dry-cleaning .icon {
+    height: 34px;
+    background-position: center -547px; }
+  .service.express-room-service .icon {
+    background-position: center -159px; }
+  .service.event-planning-services .icon {
+    background-position: center -1015px; }
+  .service.full-service-catering .icon {
+    background-position: center -865px; }
+  .service.integrated-audio-visual-technology-support .icon {
+    background-position: center -940px; }
+  .service.on-site-fitness-center .icon {
+    background-position: center -790px; }
+  .service.restaurant-and-lounge .icon,
+  .service.group-dining-options .icon {
+    background-position: center -82px; }
+  .service.valet-parking .icon,
+  .service.event-parking .icon {
+    background-position: center -237px; }
+  .service.wi-fi .icon {
+    background-position: center 0; }
+
+/* additional accommodations */
+.additional-ucla-accommodations {
+  padding-bottom: 40px; }
+
+@media only screen and (max-width: 639px) {
+  #main-content .amenities .services .service-wrapper {
+    width: 100%; }
+    #main-content .amenities .services .service-wrapper .service {
+      margin: 0; }
+      #main-content .amenities .services .service-wrapper .service.business-center {
+        border-bottom: 1px solid #8DA6B8; } }
+
+@media only screen and (min-width: 931px) {
+  #main-content .amenities {
+    padding: 10px 20px 60px; }
+    #main-content .amenities .amenities-description,
+    #main-content .amenities .room-amenities {
+      float: left;
+      width: 35%; }
+    #main-content .amenities .services {
+      float: right;
+      width: 60%; } }
+
+/* ############ accommodations.scss ############ */
+ul {
+  list-style-type: disc;
+  margin-left: 1em; }
+  ul li {
+    line-height: 2em; }

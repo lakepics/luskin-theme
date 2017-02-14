@@ -14,22 +14,23 @@
   height: 60px;
   min-height: 60px;
   font-family: $semibold-sans-serif;
-  font-size: 18px;
+  font-size: 10px;
   color: #FFFFFF;
-  line-height: 61px;
-
-  span {
-    display: inline-block;
-    height: 60px;
-    line-height: 61px;
-  }
+  line-height: 1.25em;
+    span, .caption {
+        margin-top: 1em;
+        display: inline-block;
+        height: 1.1em;
+        font-size: 10px;
+        line-height: 1.11em;
+    }
 }
 
 .news {
-  h1 {
-    text-align: left;
-    margin: 30px 0;
-    font-size: 2.5em;
+    h1 {
+        text-align: left;
+        margin: 30px 0;
+        font-size: 2.5em;
   }
 
   h3 {
@@ -141,8 +142,23 @@ a:hover {
   text-decoration: none;
 }
 
-#main-content .page-col-onethird h3 {
-  color: $alt-dark-blue;
+#main-content {
+    .page-col-onethird {
+        float: none;
+        width: 100%;
+        h3 {
+          color: $alt-dark-blue;
+        }
+    }
+    .page-col-twothird {
+        float: none;
+        margin-right: 10px;
+        width: 100%;
+        video {
+            max-width: 100%!important;
+            height: auto!important;
+        }
+    }
 }
 
 .container {
@@ -161,12 +177,12 @@ a:hover {
         }
     }
     .news-inline-image-left {
-        margin-right: 20px;
-        float: left;
+        margin-right: auto;
+        float: none;
     }
     .news-inline-image-right {
-        margin-left: 20px;
-        float: right;
+        margin-left: auto;
+        float: none;
     }
     .recipe-ingredients {
         background: #aca39a;
@@ -243,7 +259,48 @@ a:hover {
 @media only screen and (min-width: 640px) {}
 
 // styles for 768up
-@media only screen and (min-width: 768px) {}
+@media only screen and (min-width: 768px) {
+    #main-content {
+        .page-col-onethird {
+            float: right;
+            width: 30%;
+        }
+        .page-col-twothird {
+            float: left;
+            margin-right: 3%;
+            width: 66%;
+        }
+        .news-ribbon {
+            background: #968c83;
+            height: 60px;
+            min-height: 60px;
+            font-family: $semibold-sans-serif;
+            font-size: 18px;
+            color: #FFFFFF;
+            line-height: 61px;
+            span {
+                margin-top: 0;
+                font-size: 18px;
+                display: inline-block;
+                height: 60px;
+                line-height: 61px;
+            }
+            .caption {
+                font-size: 12px;
+            }
+        }
+    }
+    .container {
+        .news-inline-image-left {
+            margin-right: 20px;
+            float: left;
+        }
+    .news-inline-image-right {
+            margin-left: 20px;
+            float: right;
+        }
+    }
+}
 
 // styles for 1030up
 @media only screen and (min-width: 1030px) {}

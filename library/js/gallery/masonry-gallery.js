@@ -23,9 +23,10 @@
             .attr('rel', 'gallery');
         $('.fancybox')
             .fancybox({
-                type        : 'image',
+                /*type        : 'image',*/
                 padding     : 0,
-                margin      : [20, 60, 20, 60] // Increase left/right margin
+                margin      : [20, 60, 20, 60], // Increase left/right margin
+                closeBtn  : true
         });
 
         // isotope
