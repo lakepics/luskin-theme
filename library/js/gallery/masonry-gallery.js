@@ -1,3 +1,41 @@
+/* var fancyboxModule = (function($, undefined) {
+      var indexVid = function() {
+        var vidOpener = $(".vidOpener"),
+            videoTag = vidOpener.siblings(".videoTag").html(),
+            video;
+
+        if (vidOpener.length) {
+            vidOpener.fancybox({
+                content: videoTag,
+                padding:0,
+                helpers: {
+                    overlay : {
+                        locked : false,
+                        css : {
+                            'background' : 'rgba(0, 0, 0, 0.8)'
+                        }
+                    }
+                },
+                beforeShow: function() {
+                    video = $('.fancybox-inner').find("video").get(0);
+                    video.load();
+                    video.play();
+                }
+            });
+        }
+    }
+
+    return {
+        init: function() {
+            indexVid();
+        }
+    }
+})(jQuery)
+
+$(function() {
+    fancyboxModule.init();
+}); */
+
 (function ($) {
 
     $(document).ready(function () {
@@ -23,10 +61,54 @@
             .attr('rel', 'gallery');
         $('.fancybox')
             .fancybox({
-                /*type        : 'image',*/
+                /*type        : 'image',
+                openEffect  : 'none',
+                closeEffect : 'none',
+                nextEffect  : 'none',
+                prevEffect  : 'none',   */
                 padding     : 0,
                 margin      : [20, 60, 20, 60], // Increase left/right margin
                 closeBtn  : true
+        });
+        // adding the following from http://jsfiddle.net/PudLq/ to support externally linked youtube vids - LK 170217
+        $(".fancybox").click(function() {
+            $.fancybox.showLoading();
+
+            var wrap = $('<div id="dummy"></div>').appendTo('body');
+            var el   = $(this).clone().appendTo(wrap);
+
+            el.oembed(null, {
+                embedMethod : 'replace',
+                afterEmbed  : function(rez) {
+                    var what = $(rez.code);
+                    var type = 'html';
+                    var scrolling = 'no';
+
+                    if (rez.type == 'photo') {
+                        what = what.find('img:first').attr('src');
+                        type = 'image';
+                    } else if (rez.type === 'rich') {
+                        scrolling = 'auto';
+                    }
+
+                    $.fancybox.open({
+                        href      : what,
+                        type      : type,
+                        scrolling : scrolling,
+                        title     : rez.title || $(this).attr('title'),
+                        width     : 640,
+                        height    : 384,
+                        autoSize  : false
+                    });
+
+                    wrap.remove();
+                },
+                onError : function() {
+                   $.fancybox.open(this);
+                }
+            });
+
+            return false;
         });
 
         // isotope

@@ -40,6 +40,7 @@
                     <li class=".dining">Dining</li>
                     <li class=".conference-center">Conference Center</li>
                     <li class=".campus">Campus</li>
+                    <li class=".video">Video</li>
                 </ul>
             </div>
         </div>
@@ -48,6 +49,7 @@
 
         <?php
         $pictures = get_field( 'images', 20 );
+            // echo '<!-- '. var_dump($picture) . '-->';
         foreach ( $pictures as $picture ) {
             $picture_src = wp_get_attachment_image_src( $picture['image']['id'], 'full' );
             echo '<div class="item '. $picture['css_class'] . ' ' . createSlug( $picture['category'] ) .'">';
@@ -67,8 +69,7 @@
                 } else {
                     $imgTitle = '';
                 }
-                /* echo '<video width="960" height="540" controls><source src="' . $picture['video'] . '" type="video/mp4">Your browser does not support the video tag.</video>'; */
-                echo '<a href="'. $picture['video'] . '">';
+                echo '<a href="' . $picture['video'] . '">';
                 echo '<img class="" src="'. $picture_src[0] .'" alt="'. $imgTitle .'" />';
                 echo '</a>';
             }

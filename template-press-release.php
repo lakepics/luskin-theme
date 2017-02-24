@@ -14,7 +14,11 @@
     echo '<div id="press-release" class="container press-release-heading">';
 if ( get_field( 'page_heading' ) ) {
     $page_heading = get_field( 'page_heading' );
-    echo '<h2 class="bottom-30">' . $page_heading . '</h2>';
+    echo '<h1>' . $page_heading . '</h1>';
+}
+if ( get_field( 'sub_heading' ) ) {
+    $sub_heading = get_field( 'sub_heading' );
+    echo '<h2>' . $sub_heading . '</h2>';
 }
 if ( get_field( 'body' ) ) {
     $press_release_body = get_field( 'body' );

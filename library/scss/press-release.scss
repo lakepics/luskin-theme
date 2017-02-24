@@ -9,15 +9,6 @@ ul {
   list-style-type: disc;
 }
 
-h1.press-release {
-  color: #47718E;
-  font-family: $semibold-sans-serif;
-  font-size: 2.75em;
-  line-height: 1.25em;
-  margin: 40px 0 20px 0;
-  padding: 0;
-  text-transform: uppercase;
-}
 
 .media-contact {
   margin: 50px 0 20px 0;
@@ -120,21 +111,34 @@ tr.releases td {
 
 #press-release {
   margin-top: 40px;
-
-  h2 {
-    margin-bottom: 10px;
-    text-align: center;
-    text-transform: none;
-  }
-
-  h3 {
-    margin-bottom: 20px;
-    text-align: center;
-    font-size: 21px;
-  }
-
-  p {
-    margin-bottom: 10px;
+    h1 {
+        margin-top: 30px;
+        margin-bottom: 30px;
+        margin-left: auto;
+        margin-right: auto;
+        max-width: 80%;
+        padding: 0;
+        color: #47718E;
+        font-family: $semibold-sans-serif;
+        font-size: 1.75em;
+        line-height: 1.25em;
+        text-align: center;
+    }
+    h2 {
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: 30px;
+        text-align: center;
+        text-transform: none;
+        max-width: 80%;
+    }
+    h3 {
+        margin-bottom: 20px;
+        text-align: center;
+        font-size: 21px;
+      }
+    p {
+        margin-bottom: 10px;
   }
 }
 
@@ -202,7 +206,20 @@ p.sources a:visited {
 @media only screen and (min-width: 768px) {}
 
 // styles for 1030up
-@media only screen and (min-width: 1030px) {}
+@media only screen and (min-width: 1030px) {
+    #press-release {
+        h1 {
+            max-width: 75%;
+        }
+        h2 {
+            max-width: 75%;
+        }
+        .press-release-body {
+            max-width: 75%;
+            padding: 0;
+        }
+    }
+}
 
 // styles for 1240up
 @media only screen and (min-width: 1240px) {}
