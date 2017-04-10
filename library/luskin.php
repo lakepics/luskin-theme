@@ -326,6 +326,10 @@ function luskinScriptsAndStyles()
             case 'template-two-col.php':
                 wp_enqueue_style('two-column-stylesheet', get_stylesheet_directory_uri() . '/library/css/two-column.min.css', array('luskin-stylesheet'), '', 'all');
                 break;
+              case 'template-testimonials.php':
+                wp_enqueue_style('testimonials', get_stylesheet_directory_uri() . '/library/css/testimonials.min.css', array('luskin-stylesheet'), '', 'all');
+                break;
+
             default : '';
         }
 
@@ -415,6 +419,7 @@ function luskinScriptsAndStyles()
          * **************************************************/
         if (is_page_template(array('template-accommodations-amenities.php',
             'template-accommodations.php',
+            'template-testimonials.php',
             'template-dining.php',
             'template-meetings-floorplans.php',
             'template-meetings.php',
@@ -506,8 +511,10 @@ function luskinScriptsAndStyles()
             wp_enqueue_script('isotope', get_stylesheet_directory_uri() . '/library/js/libs/isotope.pkgd.min.js', array('imagesLoaded'), false, true);
             // Fancybox
             wp_enqueue_script('fancybox', get_stylesheet_directory_uri() . '/library/plugins/fancybox/jquery.fancybox.min.js', array('isotope'), false, true);
+            // MediaElement
+            wp_enqueue_script('mediaelement', get_stylesheet_directory_uri() . '/library/plugins/mediaelement/mediaelement-and-player.min.js', array('fancybox'), false, true);
             // Gallery Scripts
-            wp_enqueue_script('luskin-gallery', get_stylesheet_directory_uri() . '/library/js/gallery/masonry-gallery.min.js', array('fancybox'), false, true);
+            wp_enqueue_script('luskin-gallery', get_stylesheet_directory_uri() . '/library/js/gallery/masonry-gallery.min.js', array('mediaelement'), false, true);
         }
 
         // /* **************************************************
@@ -523,6 +530,7 @@ function luskinScriptsAndStyles()
         //  * **************************************************/
         if (is_page_template(array('template-accommodations-amenities.php',
             'template-accommodations.php',
+            'template-testimonials.php',
             'template-dining.php',
             'template-meetings-floorplans.php',
             'template-meetings.php',

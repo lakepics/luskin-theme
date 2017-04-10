@@ -89,6 +89,10 @@ them in here, they won't work.
  * MEDIA OVERRIDE STYLES
  ******************************************************************/
 
+h1, .h1 {
+    font-size: 2.5em;
+}
+
 // @media screen and (max-width: 640px) and (orientation: landscape) {
 //   .home-slideshow .slide-overlay {
 //     top: 16px;

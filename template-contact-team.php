@@ -19,7 +19,7 @@ if ( $intro_text ) {
     echo '<div class="two-columns container clearfix">';
     $page_sub_head = get_field( 'page_sub_head' );
     if ( $page_sub_head ) {
-        echo '<h2>' . $page_sub_head . '</h2>';
+        echo '<h1>' . $page_sub_head . '</h1>';
     }
     echo '<div class="res-content bottom-30">'. $intro_text .'</div>';
     echo '</div>';

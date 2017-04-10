@@ -114,7 +114,7 @@ ul.about-buttons {
   }
 
   .features-column {
-    width: 49.99%;
+    width: 100%;
     float: left;
 
     .feature {
@@ -130,6 +130,8 @@ ul.about-buttons {
       position: relative;
       text-align: center;
       zoom: 1;
+        padding-left: 10px;
+        padding-right: 10px;
 
       &:before {
         content: '';
@@ -227,11 +229,11 @@ ul.about-buttons {
   margin-top: 2em;
 
   .explore-column {
-    width: 49.99%;
-    float: left;
+    width: 100%;
+    float: none;
 
     .explore-left {
-      border-right: 2px solid #FFF;
+      border-right: none;
     }
   }
 
@@ -320,14 +322,27 @@ ul.about-buttons {
 
 // styles for 768up
 @media only screen and (min-width: 768px) {
+    .features {
+        .features-column {
+            width: 49.99%;
+        }
+    }
   .explore-more {
-    .explore-teaser {
-      .explore-title {
-        bottom: 18px;
-        font-size: 3em;
+        .explore-column {
+            width: 49.99%;
+            float: left;
+           .explore-left {
+               border-right: 2px solid #FFF;
+           }
+      }
+
+      .explore-teaser {
+          .explore-title {
+              bottom: 18px;
+              font-size: 3em;
+          }
       }
     }
-  }
 }
 
 // styles for 1030up
@@ -336,11 +351,11 @@ ul.about-buttons {
 // styles for 1240up
 @media only screen and (min-width: 1240px) {
   .explore-more {
-    .explore-teaser {
-      .explore-title {
-        bottom: -20px;
-        font-size: 4.5em;
-      }
+      .explore-teaser {
+          .explore-title {
+              bottom: -20px;
+              font-size: 4.5em;
+          }
     }
   }
 }

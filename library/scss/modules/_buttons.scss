@@ -99,7 +99,7 @@ a.button-abt, a.button-abt:visited,
   display: inline-block;
   font-family: $semibold-sans-serif;
   font-size: 14px;
-  height: 42px;
+  min-height: 42px;
   letter-spacing: 0.05em;
   line-height: 24px;
   margin: 0;

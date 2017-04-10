@@ -1,0 +1,43 @@
+0 info it worked if it ends with ok
+1 verbose cli [ '/usr/local/bin/node',
+1 verbose cli   '/usr/local/bin/npm',
+1 verbose cli   'rebuild',
+1 verbose cli   'node-sass' ]
+2 info using npm@3.10.10
+3 info using node@v6.9.4
+4 info readInstalled object
+5 verbose rebuild path, id [ '/Volumes/marketing$/! Completed Projects/Web/Luskin/theme-snapshots/20160331-luskin-theme-with-screen-review-changes/node_modules/node-sass',
+5 verbose rebuild   'node-sass@3.4.2' ]
+6 silly rebuild set [ '/Volumes/marketing$/! Completed Projects/Web/Luskin/theme-snapshots/20160331-luskin-theme-with-screen-review-changes/node_modules/node-sass' ]
+7 info build /Volumes/marketing$/! Completed Projects/Web/Luskin/theme-snapshots/20160331-luskin-theme-with-screen-review-changes/node_modules/node-sass
+8 info lifecycle node-sass@3.4.2~preinstall: node-sass@3.4.2
+9 silly lifecycle node-sass@3.4.2~preinstall: no script for preinstall, continuing
+10 info linkStuff node-sass@3.4.2
+11 silly linkStuff node-sass@3.4.2 has /Volumes/marketing$/! Completed Projects/Web/Luskin/theme-snapshots/20160331-luskin-theme-with-screen-review-changes/node_modules as its parent node_modules
+12 verbose linkBins node-sass@3.4.2
+13 verbose link bins [ { 'node-sass': 'bin/node-sass' },
+13 verbose link bins   '/Volumes/marketing$/! Completed Projects/Web/Luskin/theme-snapshots/20160331-luskin-theme-with-screen-review-changes/node_modules/.bin',
+13 verbose link bins   false ]
+14 verbose linkMans node-sass@3.4.2
+15 verbose rebuildBundles node-sass@3.4.2
+16 verbose stack Error: EACCES: permission denied, chmod '/Volumes/marketing$/! Completed Projects/Web/Luskin/theme-snapshots/20160331-luskin-theme-with-screen-review-changes/node_modules/node-sass/bin/node-sass'
+16 verbose stack     at Error (native)
+17 verbose cwd /Volumes/marketing$/! Completed Projects/Web/Luskin/theme-snapshots/20160331-luskin-theme-with-screen-review-changes
+18 error Darwin 16.4.0
+19 error argv "/usr/local/bin/node" "/usr/local/bin/npm" "rebuild" "node-sass"
+20 error node v6.9.4
+21 error npm  v3.10.10
+22 error path /Volumes/marketing$/! Completed Projects/Web/Luskin/theme-snapshots/20160331-luskin-theme-with-screen-review-changes/node_modules/node-sass/bin/node-sass
+23 error code EACCES
+24 error errno -13
+25 error syscall chmod
+26 error Error: EACCES: permission denied, chmod '/Volumes/marketing$/! Completed Projects/Web/Luskin/theme-snapshots/20160331-luskin-theme-with-screen-review-changes/node_modules/node-sass/bin/node-sass'
+26 error     at Error (native)
+26 error  { Error: EACCES: permission denied, chmod '/Volumes/marketing$/! Completed Projects/Web/Luskin/theme-snapshots/20160331-luskin-theme-with-screen-review-changes/node_modules/node-sass/bin/node-sass'
+26 error     at Error (native)
+26 error   errno: -13,
+26 error   code: 'EACCES',
+26 error   syscall: 'chmod',
+26 error   path: '/Volumes/marketing$/! Completed Projects/Web/Luskin/theme-snapshots/20160331-luskin-theme-with-screen-review-changes/node_modules/node-sass/bin/node-sass' }
+27 error Please try running this command again as root/Administrator.
+28 verbose exit [ -13, true ]

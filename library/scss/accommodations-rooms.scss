@@ -12,6 +12,30 @@
     padding: 0 10px;
   }
 }
+#main-content {
+        .amenities {
+            .services {
+                .service-wrapper {
+                    &.rooms {
+                        width: 100%;
+                        margin-right: 0px;
+                        &.odd {
+                            .service {
+                                &.first {
+                                border-top: none;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    .room-types {
+        padding: 0;
+    }
+}
+
+
 
 // styles for 481up
 @media only screen and (min-width: 481px) {}
@@ -20,7 +44,30 @@
 @media only screen and (min-width: 640px) {}
 
 // styles for 768up
-@media only screen and (min-width: 768px) {}
+@media only screen and (min-width: 768px) {
+    #main-content {
+        .amenities {
+            .services {
+                .service-wrapper {
+                    &.rooms {
+                        width: 45%;
+                        margin-right: 4.9%;
+                        &.odd {
+                            .service {
+                                &.first {
+                                    border-top: 1px solid $light-blue;
+                                }
+                            }
+                        }
+                    }
+                }
+        }
+    }
+        .room-types {
+         padding: 70px;
+        }
+    }
+}
 
 // styles for 1030up
 @media only screen and (min-width: 1030px) {}

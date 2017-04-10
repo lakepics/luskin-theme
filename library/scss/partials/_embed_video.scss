@@ -1,0 +1,34 @@
+// ############ partials/video.scss ############
+
+// ******************************************************************
+// Stylesheet: Embeded Video Stylesheet
+
+// This is the embeded video stylesheet. Call it on page styles that use youtube
+// embeds to make the videos scale to the colmn width.
+// ******************************************************************
+
+.video-container {
+	position: relative;
+    margin-bottom: 2em;
+	padding-bottom: 56.25%;
+	padding-top: 30px;
+	height: 0;
+	overflow: hidden;
+}
+
+.video-container iframe,
+.video-container object,
+.video-container embed {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+}
+
+.entry-content img,
+.entry-content iframe,
+.entry-content object,
+.entry-content embed {
+        max-width: 100%;
+}
