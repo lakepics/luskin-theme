@@ -264,13 +264,13 @@ a.button-abt, a.button-abt:visited,
 .gform_button {
   text-align: left !important;
   width: 200px !important;
-}
 
-.gform_button.reserve {
-    margin-top: 30px;
-    margin-bottom: 50px;
-    width: 350px !important;
-    border: none;
+    &.reserve {
+        margin-top: 30px;
+        margin-bottom: 50px;
+        width: 350px; /* !important; */
+        border: none;
+    }
 }
 
 .column-button-block {

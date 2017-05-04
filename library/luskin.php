@@ -303,7 +303,7 @@ function luskinScriptsAndStyles()
                 wp_enqueue_style('parents-club-stylesheet', get_stylesheet_directory_uri() . '/library/css/parents-club.min.css', array('luskin-stylesheet'), '', 'all');
                 break;
             case 'template-partner-program.php':
-                wp_enqueue_style('partners-stylesheet', get_stylesheet_directory_uri() . '/library/css/partners.min.css', array('luskin-stylesheet'), '', 'all');
+                wp_enqueue_style('partner-signup-stylesheet', get_stylesheet_directory_uri() . '/library/css/partner-signup.min.css', array('luskin-stylesheet'), '', 'all');
                 break;
             case 'template-partner-form.php':
                 wp_enqueue_style('partner-signup-stylesheet', get_stylesheet_directory_uri() . '/library/css/partner-signup.min.css', array('luskin-stylesheet'), '', 'all');

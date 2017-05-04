@@ -388,6 +388,9 @@
 .service .service-name {
   padding: 0 10px; }
 
+#main-content .amenities .room-amenities p {
+  margin-bottom: 15px; }
+
 #main-content .amenities .services .service-wrapper.rooms {
   width: 100%;
   margin-right: 0px; }

@@ -883,20 +883,19 @@ label.label.preField.checkLabel {
 }
 
 input[type="submit"] {
-    padding: 8px 8px !important;
-    color: #FFFFFF !important;
-    font-size: 18px !important;
-    width: 220px;
-    height: 50px;
-    display: block;
+    padding: 10px 20px;/* 8px 8px !important; */
+    color: #FFFFFF; /* !important; */
+    font-size: 14px; /* 18px !important; */
+    width: auto; /* 220px; */
+    min-height: 48px; /* height: 50px; */
+    display: inline-block; /* block */
     cursor: pointer;
-    font-weight: normal !important;
+    font-weight: normal; /* !important; */
     text-transform: uppercase;
     background-color: #1C4D71 !important;
     background-image: none;
     border: 0 !important;
     outline: 0 !important;
-    font-size: 24px;
     text-align: center;
     -webkit-appearance: none;
     -webkit-border-radius: 0;

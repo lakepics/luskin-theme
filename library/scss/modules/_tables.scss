@@ -1,743 +1,130 @@
-// ############ modules/forms.scss ############
+    // ############ modules/forms.scss ############
+    // ******************************************************************
+    // Stylesheet: Table Styles
+    // ******************************************************************
+    // capacity table
+    .capacities {
+        table {
+            border-collapse: collapse;
+            border-color: #000000;
+            border-style: none;
+            border-width: 0px;
+            margin-bottom: 30px;
+            margin-top: 4px;
+            width: 100%;
+            thead {
+                tr {
+                    td {
+                        color: $ucla-blue;
+                        font-family: $sans-serif;
+                        font-size: 12px;
+                        font-style: normal;
+                        font-variant: normal;
+                        line-height: 1.133;
+                        margin-bottom: 0;
+                        margin-left: 0;
+                        margin-right: 0;
+                        margin-top: 0;
+                        orphans: 1;
+                        page-break-after: auto;
+                        page-break-before: auto;
+                        text-align: center;
+                        text-decoration: none;
+                        text-indent: 0;
+                        text-transform: uppercase;
+                        vertical-align: middle;
+                        widows: 1;
+                    }
+                    td:nth-child(1) {
+                        text-align: left;
+                    }
+                }
+            }
+            tbody {
+                tr {
+                    &:nth-child(odd) {
+                        background-color: $light;
+                    }
+                    td {
+                        padding-top: 4px;
+                        padding-bottom: 4px;
+                        padding-left: 4px;
+                        padding-right: 4px;
+                        vertical-align: top;
+                        color: #000000;
+                        font-family: $sans-serif;
+                        font-size: 14px;
+                        font-style: normal;
+                        font-variant: normal;
+                        line-height: 1.2;
+                        margin-bottom: 0;
+                        margin-left: 0;
+                        margin-right: 0;
+                        margin-top: 0;
+                        orphans: 1;
+                        page-break-after: auto;
+                        page-break-before: auto;
+                        text-align: center;
+                        text-decoration: none;
+                        text-indent: 0;
+                        text-transform: none;
+                        widows: 1;
+                        &:nth-child(1) {
+                            width: 30%;
+                            text-align: left;
+                        }
+                    }
+                }
+            }
+        }
+    }
 
-// ******************************************************************
-// Stylesheet: Table Styles
-// ******************************************************************
+    // press-release-table
+    #press-release-table {
+        width: 100%;
+        padding: 0;
+    }
 
-// capacity table
+    tr.releases.first {
+        border-top: 1px solid #CCCCCC;
+    }
 
-table.Basic-Table {
-	border-collapse:collapse;
-	border-color:#000000;
-	border-style:none;
-	border-width:0px;
-	margin-bottom:4px;
-	margin-top:4px;
-}
-td.Basic-Table {
-	border-left-width:1px;
-	border-left-style:solid;
-	border-left-color:#000000;
-	border-top-width:1px;
-	border-top-style:solid;
-	border-top-color:#000000;
-	border-right-width:1px;
-	border-right-style:solid;
-	border-right-color:#000000;
-	border-bottom-width:1px;
-	border-bottom-style:solid;
-	border-bottom-color:#000000;
-	padding-top:4px;
-	padding-bottom:4px;
-	padding-left:4px;
-	padding-right:4px;
-	vertical-align:top;
-}
-p.Basic-Paragraph {
-	color:#000000;
-	font-family:"Minion Pro", serif;
-	font-size:12px;
-	font-style:normal;
-	font-variant:normal;
-	font-weight:normal;
-	line-height:1.2;
-	margin-bottom:0;
-	margin-left:0;
-	margin-right:0;
-	margin-top:0;
-	orphans:1;
-	page-break-after:auto;
-	page-break-before:auto;
-	text-align:left;
-	text-decoration:none;
-	text-indent:0;
-	text-transform:none;
-	widows:1;
-}
-p.Table-body-copy {
-	color:#000000;
-	font-family: $sans-serif;
-	font-size:14px;
-	font-style:normal;
-	font-variant:normal;
-	line-height:1.2;
-	margin-bottom:0;
-	margin-left:0;
-	margin-right:0;
-	margin-top:0;
-	orphans:1;
-	page-break-after:auto;
-	page-break-before:auto;
-	text-align:left;
-	text-decoration:none;
-	text-indent:0;
-	text-transform:none;
-	widows:1;
-}
-p.Table-body-numbers {
-	color: $dark;
-	font-family:$sans-serif;
-	font-size:14px;
-	font-style:normal;
-	font-variant:normal;
-	line-height:1.2;
-	margin-bottom:0;
-	margin-left:0;
-	margin-right:0;
-	margin-top:0;
-	orphans:1;
-	page-break-after:auto;
-	page-break-before:auto;
-	text-align:center;
-	text-decoration:none;
-	text-indent:0;
-	text-transform:none;
-	widows:1;
-}
-p.Table-headings {
-	color:#000000;
-	font-family: $sans-serif;
-	font-size:12px;
-	font-style:normal;
-	font-variant:normal;
-	line-height:1.133;
-	margin-bottom:0;
-	margin-left:0;
-	margin-right:0;
-	margin-top:0;
-	orphans:1;
-	page-break-after:auto;
-	page-break-before:auto;
-	text-align:center;
-	text-decoration:none;
-	text-indent:0;
-	text-transform:uppercase;
-	widows:1;
-}
-p.Table-parenthetical-text {
-	color:#000000;
-	font-family: $sans-serif;
-	font-size:10px;
-	font-style:italic;
-	font-variant:normal;
-	line-height:1.286;
-	margin-bottom:0;
-	margin-left:0;
-	margin-right:0;
-	margin-top:0;
-	orphans:1;
-	page-break-after:auto;
-	page-break-before:auto;
-	text-align:center;
-	text-decoration:none;
-	text-indent:0;
-	text-transform:none;
-	widows:1;
-}
-p.table-level-heading {
-	color:#000000;
-	font-family: $semibold-sans-serif;
-	font-size:16px;
-	font-style:italic;
-	font-variant:normal;
-	line-height:0.895;
-	margin-bottom:0;
-	margin-left:0;
-	margin-right:0;
-	margin-top:0;
-	orphans:1;
-	page-break-after:auto;
-	page-break-before:auto;
-	text-align:left;
-	text-decoration:none;
-	text-indent:0;
-	text-transform:none;
-	widows:1;
-}
-table.TableOverride-1 {
-	border-collapse:collapse;
-	border-style:none;
-}
-table.TableOverride-2 {
-	border-collapse:collapse;
-}
-td.CellOverride-1 {
-	border-bottom-color:#000000;
-	border-bottom-style:none;
-	border-bottom-width:1px;
-	border-left-color: $light;
-	border-left-style:none;
-	border-left-width:0px;
-	border-right-color:#000000;
-	border-right-style:none;
-	border-right-width:0px;
-	border-top-color:$light;
-	border-top-style:none;
-	border-top-width:0px;
-	vertical-align:middle;
-}
-td.CellOverride-2 {
-	border-bottom-color:#000000;
-	border-bottom-style:none;
-	border-bottom-width:1px;
-	border-left-color:#000000;
-	border-left-style:none;
-	border-left-width:0px;
-	border-right-color:#000000;
-	border-right-style:none;
-	border-right-width:0px;
-	border-top-color:$light;
-	border-top-style:none;
-	border-top-width:0px;
-	vertical-align:middle;
-}
-td.CellOverride-3 {
-	border-bottom-color:#000000;
-	border-bottom-style:none;
-	border-bottom-width:1px;
-	border-left-color:#000000;
-	border-left-style:none;
-	border-left-width:0px;
-	border-right-color:$light;
-	border-right-style:none;
-	border-right-width:0px;
-	border-top-color:$light;
-	border-top-style:none;
-	border-top-width:0px;
-	padding-bottom:0px;
-	padding-left:0px;
-	padding-right:0px;
-	padding-top:0px;
-	vertical-align:middle;
-}
-td.CellOverride-4 {
-	border-bottom-color:#000000;
-	border-bottom-style:none;
-	border-bottom-width:1px;
-	border-left-color:$light;
-	border-left-style:none;
-	border-left-width:0px;
-	border-right-color:$light;
-	border-right-style:none;
-	border-right-width:0px;
-	border-top-color:$light;
-	border-top-style:none;
-	border-top-width:0px;
-	vertical-align:middle;
-}
-td.CellOverride-5 {
-	border-bottom-color:#000000;
-	border-bottom-style:none;
-	border-bottom-width:0px;
-	border-left-color:$light;
-	border-left-style:none;
-	border-left-width:0px;
-	border-right-style:solid;
-	border-right-width:0px;
-	border-top-color:$light;
-	border-top-style:none;
-	border-top-width:0px;
-	padding-bottom:4px;
-	padding-top:4px;
-	vertical-align:middle;
-}
-td.CellOverride-6 {
-	background-color:$light;
-	border-bottom-color:#000000;
-	border-bottom-style:solid;
-	border-bottom-width:0px;
-	border-left-style:solid;
-	border-left-width:0px;
-	border-right-color:$light;
-	border-right-style:solid;
-	border-right-width:0px;
-	border-top-style:solid;
-	border-top-width:0px;
-	vertical-align:middle;
-}
-td.CellOverride-7 {
-	background-color:$light;
-	border-bottom-color:#000000;
-	border-bottom-style:solid;
-	border-bottom-width:0px;
-	border-left-color:$light;
-	border-left-style:solid;
-	border-left-width:0px;
-	border-right-color:$light;
-	border-right-style:solid;
-	border-right-width:0px;
-	border-top-style:solid;
-	border-top-width:0px;
-	vertical-align:middle;
-}
-td.CellOverride-8 {
-	background-color:$light;
-	border-bottom-color:#000000;
-	border-bottom-style:solid;
-	border-bottom-width:0px;
-	border-left-color:$light;
-	border-left-style:solid;
-	border-left-width:0px;
-	border-right-style:solid;
-	border-right-width:0px;
-	border-top-style:solid;
-	border-top-width:0px;
-	vertical-align:middle;
-}
-td.CellOverride-9 {
-	border-bottom-color:#000000;
-	border-bottom-style:none;
-	border-bottom-width:0px;
-	border-left-color:$light;
-	border-left-style:none;
-	border-left-width:0px;
-	border-right-color:$light;
-	border-right-style:solid;
-	border-right-width:0px;
-	border-top-color:#000000;
-	border-top-style:none;
-	border-top-width:0px;
-	padding-bottom:4px;
-	padding-top:4px;
-	vertical-align:middle;
-}
-td.CellOverride-10 {
-	border-bottom-color:#000000;
-	border-bottom-style:solid;
-	border-bottom-width:0px;
-	border-left-color:$light;
-	border-left-style:solid;
-	border-left-width:0px;
-	border-right-color:$light;
-	border-right-style:solid;
-	border-right-width:0px;
-	border-top-color:#000000;
-	border-top-style:solid;
-	border-top-width:0px;
-	vertical-align:middle;
-}
-td.CellOverride-11 {
-	background-color:$light;
-	border-bottom-color:#000000;
-	border-bottom-style:solid;
-	border-bottom-width:0px;
-	border-left-color:$light;
-	border-left-style:solid;
-	border-left-width:0px;
-	border-right-color:$light;
-	border-right-style:solid;
-	border-right-width:0px;
-	border-top-color:#000000;
-	border-top-style:solid;
-	border-top-width:0px;
-	vertical-align:middle;
-}
-td.CellOverride-12 {
-	border-bottom-color:#000000;
-	border-bottom-style:none;
-	border-bottom-width:0px;
-	border-left-color:$light;
-	border-left-style:none;
-	border-left-width:0px;
-	border-right-color:$light;
-	border-right-style:none;
-	border-right-width:0px;
-	border-top-color:#000000;
-	border-top-style:none;
-	border-top-width:0px;
-	padding-bottom:4px;
-	padding-top:4px;
-	vertical-align:middle;
-}
-td.CellOverride-13 {
-	background-color:$light;
-	border-bottom-color:#000000;
-	border-bottom-style:none;
-	border-bottom-width:0px;
-	border-left-color:$light;
-	border-left-style:none;
-	border-left-width:0px;
-	border-right-color:$light;
-	border-right-style:none;
-	border-right-width:0px;
-	border-top-color:#000000;
-	border-top-style:solid;
-	border-top-width:0px;
-	vertical-align:middle;
-}
-td.CellOverride-14 {
-	border-bottom-color:#000000;
-	border-bottom-style:solid;
-	border-bottom-width:0px;
-	border-left-color:$light;
-	border-left-style:none;
-	border-left-width:0px;
-	border-right-color:$light;
-	border-right-style:none;
-	border-right-width:0px;
-	border-top-color:#000000;
-	border-top-style:none;
-	border-top-width:0px;
-	vertical-align:middle;
-}
-td.CellOverride-15 {
-	border-bottom-style:none;
-	border-bottom-width:0px;
-	border-left-color: $ucla-blue;
-	border-left-style:none;
-	border-left-width:0px;
-	border-right-color: $ucla-blue;
-	border-right-style:none;
-	border-right-width:0px;
-	border-top-color:#000000;
-	border-top-style:none;
-	border-top-width:0px;
-	padding-bottom:4px;
-	padding-top:4px;
-	vertical-align:middle;
-}
-td.CellOverride-16 {
-	background-color:$light;
-	border-bottom-style:none;
-	border-bottom-width:0px;
-	border-left-color: $ucla-blue;
-	border-left-style:none;
-	border-left-width:0px;
-	border-right-color: $ucla-blue;
-	border-right-style:none;
-	border-right-width:0px;
-	border-top-color:#000000;
-	border-top-style:solid;
-	border-top-width:0px;
-	vertical-align:middle;
-}
-td.CellOverride-17 {
-	border-bottom-color:#000000;
-	border-bottom-style:none;
-	border-bottom-width:0px;
-	border-left-color:$light;
-	border-left-style:none;
-	border-left-width:0px;
-	border-right-color:$light;
-	border-right-style:none;
-	border-right-width:0px;
-	border-top-color:$light;
-	border-top-style:none;
-	border-top-width:0px;
-	padding-bottom:4px;
-	padding-left:5px;
-	padding-right:5px;
-	padding-top:4px;
-	vertical-align:middle;
-}
-td.CellOverride-18 {
-	background-color:$light;
-	border-bottom-color:#000000;
-	border-bottom-style:none;
-	border-bottom-width:0px;
-	border-left-color:$light;
-	border-left-style:none;
-	border-left-width:0px;
-	border-right-color:$light;
-	border-right-style:none;
-	border-right-width:0px;
-	border-top-color:$light;
-	border-top-style:none;
-	border-top-width:0px;
-	vertical-align:middle;
-}
-td.CellOverride-19 {
-	border-bottom-color:$light;
-	border-bottom-style:none;
-	border-bottom-width:0px;
-	border-left-color:$light;
-	border-left-style:none;
-	border-left-width:0px;
-	border-right-color:$light;
-	border-right-style:solid;
-	border-right-width:0px;
-	border-top-color:#000000;
-	border-top-style:none;
-	border-top-width:0px;
-	padding-bottom:4px;
-	padding-left:5px;
-	padding-right:5px;
-	padding-top:4px;
-	vertical-align:middle;
-}
-td.CellOverride-20 {
-	border-bottom-color:$light;
-	border-bottom-style:none;
-	border-bottom-width:0px;
-	border-left-color:$light;
-	border-left-style:solid;
-	border-left-width:0px;
-	border-right-color:$light;
-	border-right-style:solid;
-	border-right-width:0px;
-	border-top-color:#000000;
-	border-top-style:none;
-	border-top-width:0px;
-	vertical-align:middle;
-}
-td.CellOverride-21 {
-	background-color:$light;
-	border-bottom-color:$light;
-	border-bottom-style:none;
-	border-bottom-width:0px;
-	border-left-color:$light;
-	border-left-style:none;
-	border-left-width:0px;
-	border-right-color:$light;
-	border-right-style:none;
-	border-right-width:0px;
-	border-top-color:$light;
-	border-top-style:none;
-	border-top-width:0px;
-	padding-bottom:4px;
-	padding-left:5px;
-	padding-right:5px;
-	padding-top:4px;
-	vertical-align:middle;
-}
-td.CellOverride-22 {
-	background-color:$light;
-	border-bottom-color:$light;
-	border-bottom-style:none;
-	border-bottom-width:0px;
-	border-left-color:$light;
-	border-left-style:none;
-	border-left-width:0px;
-	border-right-color:$light;
-	border-right-style:none;
-	border-right-width:0px;
-	border-top-color:$light;
-	border-top-style:none;
-	border-top-width:0px;
-	vertical-align:middle;
-}
-td.CellOverride-23 {
-	border-bottom-color:#000000;
-	border-bottom-style:none;
-	border-bottom-width:0px;
-	border-left-color:$light;
-	border-left-style:none;
-	border-left-width:0px;
-	border-right-color:$light;
-	border-right-style:solid;
-	border-right-width:0px;
-	border-top-color:$light;
-	border-top-style:none;
-	border-top-width:0px;
-	padding-bottom:4px;
-	padding-left:5px;
-	padding-right:5px;
-	padding-top:4px;
-	vertical-align:middle;
-}
-td.CellOverride-24 {
-	border-bottom-color:#000000;
-	border-bottom-style:none;
-	border-bottom-width:0px;
-	border-left-color:$light;
-	border-left-style:solid;
-	border-left-width:0px;
-	border-right-color:$light;
-	border-right-style:solid;
-	border-right-width:0px;
-	border-top-color:$light;
-	border-top-style:none;
-	border-top-width:0px;
-	vertical-align:middle;
-}
-td.CellOverride-25 {
-	background-color:$light;
-	border-bottom-color:#000000;
-	border-bottom-style:none;
-	border-bottom-width:0px;
-	border-left-color:$light;
-	border-left-style:none;
-	border-left-width:0px;
-	border-right-color:$light;
-	border-right-style:solid;
-	border-right-width:0px;
-	border-top-color:#000000;
-	border-top-style:none;
-	border-top-width:0px;
-	padding-bottom:4px;
-	padding-left:5px;
-	padding-right:5px;
-	padding-top:4px;
-	vertical-align:middle;
-}
-td.CellOverride-26 {
-	background-color:$light;
-	border-bottom-color:#000000;
-	border-bottom-style:none;
-	border-bottom-width:0px;
-	border-left-color:$light;
-	border-left-style:solid;
-	border-left-width:0px;
-	border-right-color:$light;
-	border-right-style:solid;
-	border-right-width:0px;
-	border-top-color:#000000;
-	border-top-style:none;
-	border-top-width:0px;
-	vertical-align:middle;
-}
-td.CellOverride-27 {
-	border-bottom-color:#000000;
-	border-bottom-style:none;
-	border-bottom-width:0px;
-	border-left-color:$light;
-	border-left-style:none;
-	border-left-width:0px;
-	border-right-color:$light;
-	border-right-style:solid;
-	border-right-width:0px;
-	border-top-color:#000000;
-	border-top-style:none;
-	border-top-width:0px;
-	padding-bottom:4px;
-	padding-left:5px;
-	padding-right:5px;
-	padding-top:4px;
-	vertical-align:middle;
-}
-td.CellOverride-28 {
-	border-bottom-color:#000000;
-	border-bottom-style:none;
-	border-bottom-width:0px;
-	border-left-color:$light;
-	border-left-style:solid;
-	border-left-width:0px;
-	border-right-color:$light;
-	border-right-style:solid;
-	border-right-width:0px;
-	border-top-color:#000000;
-	border-top-style:none;
-	border-top-width:0px;
-	vertical-align:middle;
-}
-td.CellOverride-29 {
-	border-bottom-color:#000000;
-	border-bottom-style:none;
-	border-bottom-width:0px;
-	border-left-color: $ucla-blue;
-	border-left-style:none;
-	border-left-width:0px;
-	border-right-color:$light;
-	border-right-style:solid;
-	border-right-width:0px;
-	border-top-color:#000000;
-	border-top-style:none;
-	border-top-width:0px;
-	padding-bottom:4px;
-	padding-left:5px;
-	padding-right:5px;
-	padding-top:4px;
-	vertical-align:middle;
-}
-p.ParaOverride-1 {
-	text-align:left;
-}
-span.CharOverride-1 {
-	color: $ucla-blue;
-}
-span.CharOverride-2 {
-	color: $ucla-blue;
-	font-style:normal;
-	font-weight:normal;
-}
-span.CharOverride-3 {
-	color: $ucla-blue;
-	font-style:normal;
-	font-weight:normal;
-}
-span.CharOverride-4 {
-	color:#78818c;
-}
-span.CharOverride-5 {
-	color:#78818c;
-}
-td._idGenCellOverride-1 {
-	border-top-color:#000000;
-	border-top-style:none;
-	border-top-width:1px;
-}
-col._idGenTableRowColumn-1 {
-	width:256px;
-}
-col._idGenTableRowColumn-2 {
-	width:100px;
-}
-col._idGenTableRowColumn-3 {
-	width:98px;
-}
-col._idGenTableRowColumn-4 {
-	width:136px;
-}
-col._idGenTableRowColumn-5 {
-	width:108px;
-}
-tr._idGenTableRowColumn-6 {
-	min-height:22px;
-}
-tr._idGenTableRowColumn-7 {
-	background-color:$light;
-	height:16px;
-}
-tr._idGenTableRowColumn-8 {
-	height:16px;
-}
+    tr.releases {
+        border-bottom: 1px solid #CCCCCC;
+        height: 30px;
+        width: 100%;
+    }
 
+    tr.releases,
+    tr.releases td {
+        margin-left: 0;
+        padding: 5px 0;
+    }
 
-// press-release-table
+    .releases td {
+        vertical-align: middle;
+    }
 
-#press-release-table {
-  width: 100%;
-  padding: 0;
-}
+    .releases td.date,
+    .releases td.title {
+        font-size: 18px;
+        text-transform: uppercase;
+        font-family: $sans-serif;
+    }
 
-tr.releases.first {
-  border-top: 1px solid #CCCCCC;
-}
+    .releases td.date {
+        width: 10%;
+    }
 
-tr.releases {
-  border-bottom: 1px solid #CCCCCC;
-  height: 30px;
-  width: 100%;
-}
+    .releases td.title {
+        padding-left: 2%;
+        width: 78%;
+    }
 
-tr.releases, tr.releases td {
-  margin-left: 0;
-  padding: 5px 0;
-}
+    .releases td.download {
+        text-align: right;
+    }
 
-.releases td {
-  vertical-align: middle;
-}
-
-.releases td.date, .releases td.title {
-  font-size: 18px;
-  text-transform: uppercase;
-  font-family: $sans-serif;
-}
-
-.releases td.date {
-  width: 10%;
-}
-
-.releases td.title {
-  padding-left: 2%;
-  width: 78%;
-}
-
-.releases td.download {
-  text-align: right;
-}
-
-.releases td.title a {
-  text-decoration: none;
-}
+    .releases td.title a {
+        text-decoration: none;
+    }

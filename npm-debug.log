@@ -4,7 +4,7 @@
 1 verbose cli   'rebuild',
 1 verbose cli   'node-sass' ]
 2 info using npm@3.10.10
-3 info using node@v6.9.4
+3 info using node@v6.10.2
 4 info readInstalled object
 5 verbose rebuild path, id [ '/Volumes/marketing$/! Completed Projects/Web/Luskin/theme-snapshots/20160331-luskin-theme-with-screen-review-changes/node_modules/node-sass',
 5 verbose rebuild   'node-sass@3.4.2' ]
@@ -25,7 +25,7 @@
 17 verbose cwd /Volumes/marketing$/! Completed Projects/Web/Luskin/theme-snapshots/20160331-luskin-theme-with-screen-review-changes
 18 error Darwin 16.4.0
 19 error argv "/usr/local/bin/node" "/usr/local/bin/npm" "rebuild" "node-sass"
-20 error node v6.9.4
+20 error node v6.10.2
 21 error npm  v3.10.10
 22 error path /Volumes/marketing$/! Completed Projects/Web/Luskin/theme-snapshots/20160331-luskin-theme-with-screen-review-changes/node_modules/node-sass/bin/node-sass
 23 error code EACCES
