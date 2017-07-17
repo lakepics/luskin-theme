@@ -26,7 +26,7 @@ if ( $intro_copy ) { echo $intro_copy; }
 $page_content = get_field( 'two-to-one' );
 if ( $page_content ) {
 ?>
-        <div class="guest-services amenities">
+        <div class="guest-services amenities top-30">
             <div class="container clearfix">
                 <div class="page-col-twothird">
                     <?php echo $page_content[0]['content']; ?>
@@ -48,6 +48,32 @@ if ( $page_content ) {
         <?php
 }
 ?>
+
+        <?php
+
+
+if ( get_field('secondary_slider') ) {
+    $secondary_slider = get_field( 'secondary_slider' );
+    echo '<div class="lemmonslider clearfix">';
+    echo '<div id="slider1" class="slider">';
+    echo '<ul>';
+    foreach ( $secondary_slider as $image ) {
+        if ( $image['image'] ) {
+            echo '<li><img src="'. $image['image'] .'" alt="" /></li>';
+        }
+    }
+    echo '</ul>';
+    echo '</div>
+            <div class="controls">
+                <a href="#" class="prev-slide">Prev Slide</a>
+                <a href="#" class="next-slide">Next Slide</a>
+            </div>
+        </div>';
+}
+
+
+    ?>
+
 
         <div class="room-types">
             <div class="room-type-container clearfix">
@@ -113,6 +139,8 @@ foreach ( $rooms as $room ) {
                 </div>
             </div>
         </div>
+
+
 
         <?php endwhile; ?>
 

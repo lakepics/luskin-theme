@@ -58,7 +58,6 @@ p {
   word-break: break-word;
   word-wrap: break-word;
   -webkit-hyphens: auto;
-  -moz-hyphens: auto;
   -ms-hyphens: auto;
       hyphens: auto;
   -webkit-hyphenate-before: 2;

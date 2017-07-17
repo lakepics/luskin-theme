@@ -419,6 +419,7 @@ function luskinScriptsAndStyles()
          * **************************************************/
         if (is_page_template(array('template-accommodations-amenities.php',
             'template-accommodations.php',
+            'template-accommodations-suites.php',
             'template-testimonials.php',
             'template-dining.php',
             'template-meetings-floorplans.php',
@@ -530,6 +531,7 @@ function luskinScriptsAndStyles()
         //  * **************************************************/
         if (is_page_template(array('template-accommodations-amenities.php',
             'template-accommodations.php',
+            'template-accommodations-suites.php',
             'template-testimonials.php',
             'template-dining.php',
             'template-meetings-floorplans.php',

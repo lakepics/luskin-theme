@@ -169,7 +169,7 @@ function loadGravatars() {
             $('#container, .not-frontpage #header').animate({
                 left: "0px"
             }, 300);
-        // if closed
+            // if closed
         } else {
             $('div.mobile-navigation').animate({
                 width: "300px"
@@ -190,80 +190,84 @@ function loadGravatars() {
         $(this).next('.room-type-div-toggle').slideToggle('fast');
     });
 
-	//---------------------------------------- Reserve Scripts ----------------------------------------//
-	//if the submit button is clicked
-	$('#submit').click(function(event){
+    //________________________________________ Make Videos Play onClick __________________________________//
+    var video = document.getElementById('video');
+    video.addEventListener('click', function () {
+        video.play();
+    }, false);
 
-		/*
-		if user selects Not Listed then refreshes page, I want to make sure
-		submit button is disabled and message shows.
-		*/
-		if($('#NotListed').is(':checked')) {
-			$('#note').show(300);
-			$('input[type=submit]').hide();
-			event.preventDefault();
-		};
+    //---------------------------------------- Reserve Scripts ----------------------------------------//
+    //if the submit button is clicked
+    $('#submit').click(function (event) {
 
-		//if radio is checked, but user didn't fill out group code.
-		/* if($('#groupRes').is(':checked')) {
+        /*
+        if user selects Not Listed then refreshes page, I want to make sure
+        submit button is disabled and message shows.
+        */
+        if ($('#NotListed').is(':checked')) {
+            $('#note').show(300);
+            $('input[type=submit]').hide();
+            event.preventDefault();
+        };
 
-			if($('input[name=groupCode]').val() == '') {
-				$('input[name=groupCode]').addClass('highlight')
-				return false;
-		 	}
+        //if radio is checked, but user didn't fill out group code.
+        /* if($('#groupRes').is(':checked')) {
 
-			if($('input[name=groupCode]').val().toUpperCase() == '021' || $('input[name=groupCode]').val().toUpperCase() == '15C' || $('input[name=groupCode]').val().toUpperCase() == '10H' || $('input[name=groupCode]').val().toUpperCase() == '02E' || $('input[name=groupCode]').val().toUpperCase() == 'AND12' || $('input[name=groupCode]').val().toUpperCase() == 'YLU2A' || $('input[name=groupCode]').val().toUpperCase() == 'CTA2P' || $('input[name=groupCode]').val().toUpperCase() == 'LEF2A' || $('input[name=groupCode]').val().toUpperCase() == 'MIM2A' || $('input[name=groupCode]').val().toUpperCase() == 'CUC2A' || $('input[name=groupCode]').val().toUpperCase() == 'GSA3B' || $('input[name=groupCode]').val().toUpperCase() == 'ISR1A' || $('input[name=groupCode]').val().toUpperCase() == 'NIH3X' || $('input[name=groupCode]').val().toUpperCase() == 'SBA3V' || $('input[name=groupCode]').val().toUpperCase() == 'TSA4A' || $('input[name=groupCode]').val().toUpperCase() == 'EBS14'
+        	if($('input[name=groupCode]').val() == '') {
+        		$('input[name=groupCode]').addClass('highlight')
+        		return false;
+         	}
 
-			|| $('input[name=groupCode]').val().toUpperCase() == 'AIS16'
-			|| $('input[name=groupCode]').val().toUpperCase() == 'CGP16'
-			|| $('input[name=groupCode]').val().toUpperCase() == 'LEP16'
-			|| $('input[name=groupCode]').val().toUpperCase() == 'LIB6A')
-			}
-			else{
-				$('input[name=groupCode]').addClass('highlight')
-				return false;
-			} */
-		 }
-	);
+        	if($('input[name=groupCode]').val().toUpperCase() == '021' || $('input[name=groupCode]').val().toUpperCase() == '15C' || $('input[name=groupCode]').val().toUpperCase() == '10H' || $('input[name=groupCode]').val().toUpperCase() == '02E' || $('input[name=groupCode]').val().toUpperCase() == 'AND12' || $('input[name=groupCode]').val().toUpperCase() == 'YLU2A' || $('input[name=groupCode]').val().toUpperCase() == 'CTA2P' || $('input[name=groupCode]').val().toUpperCase() == 'LEF2A' || $('input[name=groupCode]').val().toUpperCase() == 'MIM2A' || $('input[name=groupCode]').val().toUpperCase() == 'CUC2A' || $('input[name=groupCode]').val().toUpperCase() == 'GSA3B' || $('input[name=groupCode]').val().toUpperCase() == 'ISR1A' || $('input[name=groupCode]').val().toUpperCase() == 'NIH3X' || $('input[name=groupCode]').val().toUpperCase() == 'SBA3V' || $('input[name=groupCode]').val().toUpperCase() == 'TSA4A' || $('input[name=groupCode]').val().toUpperCase() == 'EBS14'
 
-	//if the user clicks inside text box, I remove the highlight class
-	$('input[name=groupCode]').focus( function() {
-  		$(this).removeClass('highlight');
-	});
+        	|| $('input[name=groupCode]').val().toUpperCase() == 'AIS16'
+        	|| $('input[name=groupCode]').val().toUpperCase() == 'CGP16'
+        	|| $('input[name=groupCode]').val().toUpperCase() == 'LEP16'
+        	|| $('input[name=groupCode]').val().toUpperCase() == 'LIB6A')
+        	}
+        	else{
+        		$('input[name=groupCode]').addClass('highlight')
+        		return false;
+        	} */
+    });
 
-	// hides affiliation note on page load
-	$('#note,#gr-note,#ipam-note').hide();
+    //if the user clicks inside text box, I remove the highlight class
+    $('input[name=groupCode]').focus(function () {
+        $(this).removeClass('highlight');
+    });
 
-	$('.myRadio').click(function(){
-		$('#note').hide(300);
-		$('#submit').show();
-		$('input[name=groupCode]').removeClass('highlight')
-	});
+    // hides affiliation note on page load
+    $('#note,#gr-note,#ipam-note').hide();
 
-	// show affiliation note on click; hide for others
-	$('#NotListed').click(function(){
-		$('#note').show(300);
-		$('input[type=submit]').hide();
-		$('input[name=GroupCode]').removeClass('highlight')
-		});
+    $('.myRadio').click(function () {
+        $('#note').hide(300);
+        $('#submit').show();
+        $('input[name=groupCode]').removeClass('highlight')
+    });
+
+    // show affiliation note on click; hide for others
+    $('#NotListed').click(function () {
+        $('#note').show(300);
+        $('input[type=submit]').hide();
+        $('input[name=GroupCode]').removeClass('highlight')
+    });
 
     /*
     if user selects Conference Code then display a note below the selection.
     */
-    $('#groupRes').click(function(){
+    $('#groupRes').click(function () {
         $('#gr-note').show(300);
         $('#ipam-note').hide();
-        });
+    });
 
     /*
     if user selects IPAM Code then display a note below the selection.
     */
-    $('#IPAM').click(function(){
+    $('#IPAM').click(function () {
         $('#ipam-note').show(300);
         $('#gr-note').hide();
-        });
+    });
 
 
 
 }(jQuery));
-

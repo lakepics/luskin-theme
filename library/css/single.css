@@ -1,1 +1,6 @@
 /* ############ single.scss ############ */
+video {
+  width: 100%    !important;
+  height: auto   !important;
+  margin-left: auto;
+  margin-right: auto; }

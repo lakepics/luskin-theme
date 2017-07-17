@@ -1,4 +1,7 @@
 /* ############ page.scss ############ */
+.brand-light-blue {
+  color: #00A5E5; }
+
 #page-310 {
   margin-top: 55px; }
 
@@ -366,11 +369,8 @@ ul {
 @media screen and (max-width: 878px) {
   .res-columns {
     -webkit-column-count: 1;
-    -moz-column-count: 1;
     column-count: 1;
     -webkit-column-width: 100%;
-    -moz-column-width: 100%;
     column-width: 100%;
     -webkit-column-gap: 0;
-    -moz-column-gap: 0;
     column-gap: 0; } }

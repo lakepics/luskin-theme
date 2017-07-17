@@ -5,8 +5,8 @@
 /* ############ news.scss ############ */
 
 // styles for 0up
-
-#main-content, .news {
+#main-content,
+.news {
     .full-width-gallery {
         margin-bottom: 4px;
     }
@@ -18,7 +18,8 @@
         font-size: 10px;
         color: #FFFFFF;
         line-height: 1.25em;
-        span, .caption {
+        span,
+        .caption {
             margin-top: 1.2em;
             float: none;
             display: inline-block;
@@ -30,7 +31,7 @@
     h1 {
         text-align: left;
         margin: 30px 0;
- //       font-size: 2.5em;
+        //       font-size: 2.5em;
     }
     h3 {
         font-family: $semibold-sans-serif;
@@ -40,7 +41,7 @@
         list-style: disc;
         li {
             font-family: $sans-serif;
-            line-height: 1.25em;
+            line-height: 1.6em;
             margin-bottom: .75em;
         }
     }
@@ -101,14 +102,17 @@
         margin: 0 auto 3em 0;
         p {
             margin-bottom: 2em;
-            a, a:hover, a:visited {
+            a,
+            a:hover,
+            a:visited {
                 font-family: $semibold-sans-serif;
                 font-weight: normal;
-                color: $copy-link-visited;
+                color: $light-luskin-blue;
                 text-decoration: none;
             }
-            a:visited, a:active {
-                color: $alt-dark-blue;
+            a:visited,
+            a:active {
+                color: $light-luskin-blue;
                 font-weight: bold;
             }
         }
@@ -117,7 +121,7 @@
         float: none;
         width: 100%;
         h3 {
-          color: $alt-dark-blue;
+            color: $alt-dark-blue;
         }
     }
     .page-col-twothird {
@@ -129,7 +133,9 @@
             height: auto!important;
         }
     }
-    .res-content a, .res-content a:visited, .res-content a:active {
+    .res-content a,
+    .res-content a:visited,
+    .res-content a:active {
         color: $copy-link-visited;
         font-weight: bold;
     }
@@ -138,8 +144,10 @@
         text-decoration: none;
     }
 }
+
 .container {
-    .news-inline-image-left, .news-inline-image-right {
+    .news-inline-image-left,
+    .news-inline-image-right {
         margin-bottom: 10px;
         font-size: 10px;
         line-height: 1.6em;
@@ -182,10 +190,10 @@
                 color: #FFFFFF;
             }
         }
-
     }
     .recipe-directions {
-        h4, p {
+        h4,
+        p {
             margin-bottom: 10px;
             padding-bottom: 0;
         }
@@ -193,40 +201,37 @@
 }
 
 .news-sidebar {
-  background: rgba(215, 210, 203, 0.25);
-  float: right;
-  margin-left: 50px;
-  padding: 50px;
-  width: 33.3%;
+    background: rgba(215, 210, 203, 0.25);
+    float: right;
+    margin-left: 50px;
+    padding: 50px;
+    width: 33.3%;
 }
 
 #main-content .news-sidebar-content {
-  h3 {
-    padding-bottom: 10px;
-    text-transform: uppercase;
-    text-align: left;
-  }
-
-  ul {
-    margin: 0 0 50px 0;
-    list-style-type: none;
-
-    li {
-      border-bottom: 1px solid rgb(141, 166, 184);
-      margin: 0;
-      padding: 10px 0;
-
-      a {
-        font-size: 16px;
-        font-family: $semibold-sans-serif;
-        color: #1C4D71;
-      }
+    h3 {
+        padding-bottom: 10px;
+        text-transform: uppercase;
+        text-align: left;
     }
-  }
+    ul {
+        margin: 0 0 50px 0;
+        list-style-type: none;
+        li {
+            border-bottom: 1px solid rgb(141, 166, 184);
+            margin: 0;
+            padding: 10px 0;
+            a {
+                font-size: 16px;
+                font-family: $semibold-sans-serif;
+                color: #1C4D71;
+            }
+        }
+    }
 }
 
 #main-content .news-pagination {
-  margin: 30px auto 60px auto;
+    margin: 30px auto 60px auto;
 }
 
 // styles for 481up
@@ -274,7 +279,7 @@
             margin-right: 20px;
             float: left;
         }
-    .news-inline-image-right {
+        .news-inline-image-right {
             margin-left: 20px;
             float: right;
         }
@@ -282,10 +287,33 @@
 }
 
 // styles for 1030up
-@media only screen and (min-width: 1030px) {}
+@media only screen and (min-width: 1030px) {
+    #main-content {
+        .container {
+            .recipe-ingredients {
+                width: 40%;
+                p {
+                    margin-bottom: 10px;
+                    color: white;
+                }
+                ul {
+                    margin-bottom: 30px;
+                }
+            }
+            .recipe-directions {
+                width: auto;
+                p {
+                    margin-bottom: 10px;
+                }
+            }
+        }
+    }
+}
 
 // styles for 1240up
 @media only screen and (min-width: 1240px) {}
 
 // styles for 2x
-@media only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min--moz-device-pixel-ratio: 1.5), only screen and (min-device-pixel-ratio: 1.5) {}
+@media only screen and (-webkit-min-device-pixel-ratio: 1.5),
+only screen and (min--moz-device-pixel-ratio: 1.5),
+only screen and (min-device-pixel-ratio: 1.5) {}

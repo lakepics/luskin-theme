@@ -4,6 +4,13 @@
 
 // styles for 0up
 
+video {
+  width: 100%    !important;
+  height: auto   !important;
+    margin-left: auto;
+    margin-right: auto;
+}
+
 // styles for 481up
 @media only screen and (min-width: 481px) {}
 

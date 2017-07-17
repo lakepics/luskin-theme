@@ -52,6 +52,10 @@ if ( $slides ) {
                 echo '<h4 style="opacity: 1">'. $slide['orange_title'] .'</h4>';
             }
 
+            if ( !empty( $slide['button_label'] ) ) {
+                echo '<div class="top-30" style="margin-top: 30px;"><a class="button" href="' . $slide['button_url'] . '"/>' . $slide['button_label'] . '</a></div>';
+            }
+
             echo '</div>';
             echo '<span class="slide-description">'. $slide['description'] .'</span>';
 

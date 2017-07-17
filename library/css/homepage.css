@@ -1,4 +1,7 @@
 /* ############ page.scss ############ */
+.brand-light-blue {
+  color: #00A5E5; }
+
 #page-310 {
   margin-top: 55px; }
 
@@ -128,7 +131,6 @@
           line-height: 31px;
           padding: 0;
           text-transform: uppercase;
-          -webkit-transition: color .1s ease-out, background .3s ease-in;
           transition: color .1s ease-out, background .3s ease-in; }
           .home #container #content #slideshow-container .action-buttons .action-button-wrapper a.book-a-room {
             background-position: right 0; }
@@ -372,7 +374,6 @@
       margin: 0;
       padding: 0;
       text-transform: uppercase;
-      -webkit-transition: color .1s ease-out, background .3s ease-in;
       transition: color .1s ease-out, background .3s ease-in; }
       .home #container #content #slideshow-container .action-buttons .action-button-wrapper a.book-a-room {
         background-position: right 0; }

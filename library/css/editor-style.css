@@ -262,7 +262,6 @@ http://simplebits.com/notebook/2008/08/14/ampersands-2/
   body#tinymce.wp-editor p {
     -webkit-hyphens: auto;
     -epub-hyphens: auto;
-    -moz-hyphens: auto;
     -ms-hyphens: auto;
         hyphens: auto; }
   body#tinymce.wp-editor pre {
@@ -443,7 +442,6 @@ http://simplebits.com/notebook/2008/08/14/ampersands-2/
     word-break: break-word;
     word-wrap: break-word;
     -webkit-hyphens: auto;
-    -moz-hyphens: auto;
     -ms-hyphens: auto;
         hyphens: auto;
     -webkit-hyphenate-before: 2;
