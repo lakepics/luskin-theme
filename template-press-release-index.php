@@ -38,7 +38,7 @@ if ( $press_clippings ) {
             <div class="column left-column">
                 <h1>Press Releases</h1>
                 <p class="bottom-30">Welcome to the Press Center for The UCLA Meyer and Renee Luskin Conference Center.  Here you will find information on the Conference Center, current press releases and our fact sheet.  Should you need anything more on the Luskin Conference Center, please contact our Director of Sales &amp; Marketing, Cindy Gagle.</p>
-                <a class="button-abt down-arrow" href="/wp-content/uploads/2015/02/Luskin_Fact-Sheet.pdf" target="_blank">FACT SHEET</a>
+                <a class="button-abt down-arrow" href="/docs/ucla-luskin-conference-center-fact-sheet.pdf" target="_blank">FACT SHEET</a>
             </div>
             <div class="media-contact column right-column">
                 <h2>For Press Inquiries, please contact:</h2>
