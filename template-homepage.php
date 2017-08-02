@@ -57,7 +57,7 @@ if ( $slides ) {
             }
 
             echo '</div>';
-            echo '<span class="slide-description">'. $slide['description'] .'</span>';
+            echo '<h1><span class="slide-description">'. $slide['description'] .'</span></h1> ';
 
         echo '</div>';
     }
