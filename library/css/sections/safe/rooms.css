@@ -1,0 +1,153 @@
+/* ############ rooms.scss ############ */
+.room-types {
+  background: #4d4d4d;
+  margin: 20px 0 0 0;
+  padding: 70px; }
+  .room-types .room-type-container {
+    max-width: 1170px;
+    margin-right: auto;
+    margin-left: auto; }
+  .room-types .room-type-non-mobile {
+    display: none; }
+  .room-types .room-types-mobile {
+    display: block; }
+    .room-types .room-types-mobile .room-type-div {
+      border-bottom: 1px solid #616060; }
+    .room-types .room-types-mobile .room-type-div-toggle-trigger {
+      border-top: 1px solid #434343;
+      color: #fff;
+      font-family: "Proxima Nova Semibold", "Helvetica Neue", Helvetica, Arial, sans-serif;
+      font-size: 22px;
+      line-height: 1;
+      padding: 33px 60px 33px 20px;
+      position: relative; }
+      .room-types .room-types-mobile .room-type-div-toggle-trigger :before {
+        background: url("/wp-content/themes/luskin/library/images/room-type-toogle.png") no-repeat center 0;
+        content: '';
+        display: block;
+        height: 29px;
+        margin-top: -14px;
+        position: absolute;
+        right: 20px;
+        top: 50%;
+        width: 29px; }
+      .room-types .room-types-mobile .room-type-div-toggle-trigger.expanded:before {
+        background-position: center bottom; }
+      .room-types .room-types-mobile .room-type-div-toggle-trigger * {
+        display: inline; }
+    .room-types .room-types-mobile .room-type-div-toggle {
+      padding: 12px 20px 20px 20px; }
+      .room-types .room-types-mobile .room-type-div-toggle img {
+        display: block;
+        height: auto;
+        margin: 0 auto;
+        width: 100%;
+        filter: brightness(100);
+        -webkit-filter: brightness(100);
+        -moz-filter: brightness(100);
+        -o-filter: brightness(100);
+        -ms-filter: brightness(100); }
+  .room-types .section-title {
+    color: #FFF;
+    font-family: "Proxima Nova Semibold", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 25px;
+    letter-spacing: 0.05em;
+    line-height: 1.15;
+    margin: 0 0 60px 0;
+    text-align: center;
+    text-transform: uppercase; }
+
+.room-col {
+  display: inline-block;
+  align: center;
+  width: 49%; }
+  .room-col.first .content {
+    width: 100%;
+    padding: 0;
+    padding-bottom: 30px; }
+  .room-col.first:before {
+    display: none; }
+  .room-col.second .content {
+    width: 100%;
+    padding: 0;
+    padding-bottom: 30px; }
+  .room-col h3 {
+    margin: 0;
+    padding-bottom: 30px;
+    font-family: "Proxima Nova Semibold", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 20px;
+    line-height: 1;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    color: #FFF;
+    text-align: center; }
+  .room-col img {
+    display: block;
+    height: auto;
+    margin: 0 auto;
+    width: 90%;
+    filter: brightness(100);
+    -webkit-filter: brightness(100);
+    -moz-filter: brightness(100);
+    -o-filter: brightness(100);
+    -ms-filter: brightness(100); }
+  .room-col .content {
+    padding: 0 10%;
+    text-align: center;
+    color: #fff; }
+    .room-col .content ul {
+      color: #FFF;
+      content: 0;
+      font-family: "Proxima Nova Semibold", "Helvetica Neue", Helvetica, Arial, sans-serif;
+      list-style: none;
+      margin: 0 auto;
+      padding: 0;
+      text-align: left;
+      width: 70%; }
+      .room-col .content ul li {
+        margin-bottom: 15px;
+        text-indent: -1em;
+        padding-left: 1em;
+        font-size: 18px;
+        line-height: 1.5;
+        list-style: disc;
+        list-style-position: inside; }
+    .room-col .content h5 {
+      margin: -5px 0 15px 50px;
+      font-size: 20px;
+      text-align: left;
+      line-height: 1.375;
+      letter-spacing: 0.05em;
+      color: #FFF;
+      text-transform: uppercase;
+      font-family: "Proxima Nova Semibold", "Helvetica Neue", Helvetica, Arial, sans-serif; }
+
+.room-type-div-toggle h5 {
+  margin-top: 0; }
+
+.room-type-div-toggle ul {
+  color: #FFF;
+  content: 0;
+  font-family: "Proxima Nova Semibold", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  list-style: none;
+  margin: 0 auto;
+  padding: 0;
+  text-align: left;
+  width: 100%; }
+  .room-type-div-toggle ul li {
+    margin-bottom: 15px;
+    text-indent: -1em;
+    padding-left: 1em;
+    font-size: 18px;
+    line-height: 1.5;
+    list-style: disc;
+    list-style-position: inside; }
+
+@media only screen and (min-width: 768px) {
+  .room-types .room-type-non-mobile {
+    display: block; }
+    .room-types .room-type-non-mobile .room-type-div-toggle img {
+      height: auto;
+      width: 100%; }
+  .room-types .room-types-mobile {
+    display: none; } }

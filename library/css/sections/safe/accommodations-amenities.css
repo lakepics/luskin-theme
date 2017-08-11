@@ -1,7 +1,4 @@
 /* ############ page.scss ############ */
-.brand-light-blue {
-  color: #00A5E5; }
-
 #page-310 {
   margin-top: 55px; }
 
@@ -113,7 +110,7 @@
   line-height: 1.5; }
   #main-content .amenities .amenities-description p,
   #main-content .amenities .room-amenities p {
-    margin-bottom: 15px; }
+    margin-bottom: 30px; }
 
 #main-content .amenities .services .service-wrapper {
   float: left;
@@ -233,4 +230,4 @@
       float: right;
       width: 60%; } }
 
-/* ############ meetings-amenities.scss ############ */
+/* ############ accommodations-amenities.scss ############ */

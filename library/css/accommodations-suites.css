@@ -113,7 +113,7 @@
   line-height: 1.5; }
   #main-content .amenities .amenities-description p,
   #main-content .amenities .room-amenities p {
-    margin-bottom: 30px; }
+    margin-bottom: 15px; }
 
 #main-content .amenities .services .service-wrapper {
   float: left;
@@ -234,6 +234,9 @@
       width: 60%; } }
 
 /* ############ rooms.scss ############ */
+.container p {
+  margin-bottom: 15px; }
+
 .room-types {
   background: #4d4d4d;
   margin: 20px 0 0 0;

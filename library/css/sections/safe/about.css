@@ -1,7 +1,4 @@
 /* ############ page.scss ############ */
-.brand-light-blue {
-  color: #00A5E5; }
-
 #page-310 {
   margin-top: 55px; }
 
@@ -159,8 +156,7 @@ ul.about-buttons {
   margin: 0;
   padding: 0;
   padding-bottom: 20px;
-  text-align: center;
-  padding-top: 20px !important; }
+  text-align: center; }
   ul.about-buttons li {
     display: inline; }
     ul.about-buttons li .button-wrapper {

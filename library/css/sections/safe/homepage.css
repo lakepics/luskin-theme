@@ -1,7 +1,4 @@
 /* ############ page.scss ############ */
-.brand-light-blue {
-  color: #00A5E5; }
-
 #page-310 {
   margin-top: 55px; }
 
@@ -131,6 +128,7 @@
           line-height: 31px;
           padding: 0;
           text-transform: uppercase;
+          -webkit-transition: color .1s ease-out, background .3s ease-in;
           transition: color .1s ease-out, background .3s ease-in; }
           .home #container #content #slideshow-container .action-buttons .action-button-wrapper a.book-a-room {
             background-position: right 0; }
@@ -230,17 +228,15 @@
                       color: #FFE800; }
               .home #container #content #slideshow-container .bx-wrapper .bx-viewport .home-slideshow .slide .slide-description {
                 bottom: 1.8em;
-                color: white;
+                color: #DADADA;
                 font-family: "Proxima Nova Regular", "Helvetica Neue", Helvetica, Arial, sans-serif;
                 font-size: 12px;
                 line-height: 1;
                 margin: 0;
                 position: absolute;
                 text-align: center;
-                text-shadow: 1px 1px 1px black;
-                width: 100%;
-                text-transform: none !important;
-                font-weight: normal; }
+                text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
+                width: 100%; }
         .home #container #content #slideshow-container .bx-wrapper .bx-controls {
           bottom: 2.2em;
           left: 0;
@@ -287,8 +283,7 @@
 .js .home #container #content #slideshow-container .bx-wrapper .bx-viewport .home-slideshow .slide:first-child .slide-overlay h3 {
   opacity: 1; }
 
-.js .home #container #content #slideshow-container .bx-wrapper .bx-viewport .home-slideshow .slide .slide-overlay h3,
-.js .home #container #content #slideshow-container .bx-wrapper .bx-viewport .home-slideshow .slide .slide-overlay h4 {
+.js .home #container #content #slideshow-container .bx-wrapper .bx-viewport .home-slideshow .slide .slide-overlay h3, .js .home #container #content #slideshow-container .bx-wrapper .bx-viewport .home-slideshow .slide .slide-overlay h4 {
   opacity: 0; }
 
 @media screen and (max-width: 780px) and (orientation: portrait) {
@@ -315,9 +310,7 @@
     max-width: 100%;
     top: 16px;
     width: 100%; }
-    .home #container #content #slideshow-container .bx-wrapper .bx-viewport .home-slideshow .slide .slide-overlay h2,
-    .home #container #content #slideshow-container .bx-wrapper .bx-viewport .home-slideshow .slide .slide-overlay h3,
-    .home #container #content #slideshow-container .bx-wrapper .bx-viewport .home-slideshow .slide .slide-overlay h4 {
+    .home #container #content #slideshow-container .bx-wrapper .bx-viewport .home-slideshow .slide .slide-overlay h2, .home #container #content #slideshow-container .bx-wrapper .bx-viewport .home-slideshow .slide .slide-overlay h3, .home #container #content #slideshow-container .bx-wrapper .bx-viewport .home-slideshow .slide .slide-overlay h4 {
       font-size: 2em;
       margin-bottom: 6px;
       text-align: center; }
@@ -379,6 +372,7 @@
       margin: 0;
       padding: 0;
       text-transform: uppercase;
+      -webkit-transition: color .1s ease-out, background .3s ease-in;
       transition: color .1s ease-out, background .3s ease-in; }
       .home #container #content #slideshow-container .action-buttons .action-button-wrapper a.book-a-room {
         background-position: right 0; }
@@ -493,7 +487,7 @@
           color: #FFE800; }
   .home #container #content #slideshow-container .bx-wrapper .bx-viewport .home-slideshow .slide .slide-description {
     bottom: 2.3em;
-    font-size: 18px;
+    font-size: 15px;
     left: 50px;
     text-align: left; }
   .home #container #content #slideshow-container .bx-wrapper .bx-controls {
