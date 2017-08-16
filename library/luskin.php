@@ -329,6 +329,10 @@ function luskinScriptsAndStyles()
               case 'template-testimonials.php':
                 wp_enqueue_style('testimonials', get_stylesheet_directory_uri() . '/library/css/testimonials.min.css', array('luskin-stylesheet'), '', 'all');
                 break;
+            case 'template-faq.php':
+                wp_enqueue_style('faq-stylesheet', get_stylesheet_directory_uri() . '/library/css/faq.min.css', array('luskin-stylesheet'), '', 'all');
+                break;
+
 
             default : '';
         }

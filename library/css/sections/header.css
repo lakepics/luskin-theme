@@ -72,3 +72,8 @@
     position: relative; }
   .not-frontpage .no-hero {
     margin-top: 172px !important; } }
+
+@media only screen and (min-width: 979px) {
+  #menu-item-3309 > a > span {
+    border: 1px solid white;
+    padding: 10px 15px; } }

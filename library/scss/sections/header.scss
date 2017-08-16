@@ -91,6 +91,8 @@
 
 // styles for 1030up
 @media only screen and (min-width: 1030px) {
+
+
   .full-width-gallery {
     img {
       display: block;
@@ -131,3 +133,12 @@
 
 // styles for 2x
 @media only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min--moz-device-pixel-ratio: 1.5), only screen and (min-device-pixel-ratio: 1.5) {}
+
+
+// Book a Room border Graphic
+@media only screen and (min-width: 979px) {
+  #menu-item-3309 > a > span {
+  border: 1px solid white;
+    padding: 10px 15px;
+}
+}

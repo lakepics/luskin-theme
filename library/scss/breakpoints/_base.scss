@@ -1182,6 +1182,7 @@ PAGE NAVI STYLES
 /* end .commentlist .comment_content */
 
 /* comment reply link */
+/*
 .comment-reply-link {
   @extend .blue-btn;
 
@@ -1191,6 +1192,7 @@ PAGE NAVI STYLES
   &:hover,
   &:focus {}
 }
+*/
 
 /* end .commentlist .comment-reply-link */
 
@@ -1237,12 +1239,13 @@ PAGE NAVI STYLES
   font-size: 0.9em;
 }
 
-/* comment submit button */
+/* comment submit button 
 #submit {
   @extend .blue-btn;
 
   font-size: 1em;
 }
+*/
 
 /* comment form title */
 #comment-form-title {
