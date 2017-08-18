@@ -37,8 +37,8 @@ if ( $intro_text ) {
 			<section class="two-columns container clearfix faqpage" style="
     padding-bottom: 40px;
 ">
-	<div class="faqpage__block">
-		<h2 class="faqpage__block--main_heading" style="margin-top:15px;margin-bottom: 30px;">
+	<div>
+		<h2 class="faq__heading">
 			<?php the_sub_field('main-heading'); ?>
 		</h2>
 	<?php 
@@ -51,9 +51,9 @@ if ( $intro_text ) {
 		while( have_rows('faq') ): the_row();
 
 			// display each item as a list - with a class of completed ( if completed )
-			?>			<div class="faqpage__block--entry" style="margin-bottom:30px;">					
-					<h3 class="faqpage__block--entry-question" style="font-family: Proxima Nova SemiBold;margin-bottom: 5px;"><?php the_sub_field('heading'); ?></h3>
-					<p class="faqpage__block--entry-answer"><?php the_sub_field('paragraph'); ?></p>
+			?>			<div class="faq">					
+					<h3 class="faq__question"><?php the_sub_field('heading'); ?></h3>
+					<p class="faq__answer"><?php the_sub_field('paragraph'); ?></p>
 </div>
 		<?php endwhile; ?>
 

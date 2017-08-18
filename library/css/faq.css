@@ -97,29 +97,14 @@
     left: 0.15em; } }
 
 /* ############ contact-team.scss ############ */
-.faq-block .entry {
-  margin-bottom: 40px; }
-  .faq-block .entry h3 {
-    font-family: "Proxima Nova Semibold", "Helvetica Neue", Helvetica, Arial, sans-serif;
-    font-size: 20px;
-    color: #47718E;
-    text-transform: uppercase;
-    margin-bottom: 5px;
-    margin-top: 15px; }
-  .faq-block .entry h4 {
-    margin-top: 10px;
-    font-size: 18px; }
-  .faq-block .entry img {
-    float: left;
-    margin-right: 20px;
-    margin-bottom: 10px; }
-  .faq-block .entry p {
-    margin-bottom: 15px;
-    line-height: 1.5;
-    text-align: left; }
-  .faq-block .entry .team-title {
-    font-family: "Proxima Nova Regular", "Helvetica Neue", Helvetica, Arial, sans-serif;
-    font-size: 16px; }
+.faq {
+  margin-bottom: 30px; }
+  .faq__heading {
+    margin-top: 15px;
+    margin-bottom: 30px; }
+  .faq__question {
+    font-family: Proxima Nova SemiBold;
+    margin-bottom: 5px; }
 
-#main-content .faqpage__block--entry ul li {
+#main-content ul li {
   list-style-type: disc; }
