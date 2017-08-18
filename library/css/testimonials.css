@@ -120,3 +120,6 @@
   #testimonials .entry .team-title {
     font-family: "Proxima Nova Regular", "Helvetica Neue", Helvetica, Arial, sans-serif;
     font-size: 16px; }
+
+.quick-facts:last-child {
+  display: none; }

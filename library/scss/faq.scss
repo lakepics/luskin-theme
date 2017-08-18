@@ -7,8 +7,10 @@
 
 .faq {
     margin-bottom: 30px;
+    &:last-child {
+        margin-bottom: 0px;
+    }
     &__heading {
-        margin-top: 15px;
         margin-bottom: 30px;
     }
     &__question {
@@ -24,7 +26,13 @@
     ul {
         li {
             list-style-type: disc;
+            margin-bottom: 10px;
         }
+    }
+}
+.quick-facts {
+    &:last-child {
+        display: none;
     }
 }
 

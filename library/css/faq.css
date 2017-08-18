@@ -99,12 +99,17 @@
 /* ############ contact-team.scss ############ */
 .faq {
   margin-bottom: 30px; }
+  .faq:last-child {
+    margin-bottom: 0px; }
   .faq__heading {
-    margin-top: 15px;
     margin-bottom: 30px; }
   .faq__question {
     font-family: Proxima Nova SemiBold;
     margin-bottom: 5px; }
 
 #main-content ul li {
-  list-style-type: disc; }
+  list-style-type: disc;
+  margin-bottom: 10px; }
+
+.quick-facts:last-child {
+  display: none; }
