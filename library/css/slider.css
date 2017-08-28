@@ -1,0 +1,160 @@
+/* ############ page.scss ############ */
+.brand-light-blue {
+  color: #00A5E5; }
+
+#page-310 {
+  margin-top: 55px; }
+
+.hero-image-container, .full-width-gallery {
+  margin-bottom: 30px; }
+
+.hero-image-container img {
+  display: block;
+  margin: 0 auto;
+  width: 100%;
+  max-width: 100%; }
+
+/* quick facts */
+.quick-facts {
+  position: relative;
+  margin-top: 25px;
+  margin-bottom: 60px;
+  border-top: 1px solid #8DA6B8;
+  padding-top: 40px; }
+
+.quick-facts-description {
+  font-family: "Proxima Nova Regular", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 15px;
+  line-height: 1.5;
+  margin-bottom: 25px;
+  width: 100%; }
+
+.quick-facts-description h3 {
+  margin: 40px 0 20px 0;
+  font-size: 25px;
+  letter-spacing: 0.05em;
+  line-height: 1;
+  color: #47718E;
+  font-family: "Proxima Nova Semibold", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  text-transform: uppercase;
+  text-align: center; }
+
+.quick-facts-button {
+  margin-top: 30px; }
+
+.generic-button {
+  float: left;
+  margin-right: 30px; }
+
+/* call out */
+.callout {
+  display: inline-block;
+  width: inherit;
+  margin: 0px;
+  padding: 20px 0px 30px 0px;
+  border-top: 1px solid #8DA6B8;
+  font-family: 'Adobe Caslon Pro', serif;
+  font-style: italic;
+  font-size: 200%;
+  line-height: 1.75em;
+  color: #8da6b8;
+  text-align: center; }
+
+.text-overlay {
+  bottom: -.5em;
+  color: rgba(255, 255, 255, 0.85);
+  font-family: "Proxima Nova Semibold", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 2.25em;
+  left: 0.7em;
+  line-height: 1.6em;
+  position: absolute;
+  text-transform: uppercase; }
+
+@media only screen and (min-width: 481px) {
+  h1, .h1 {
+    font-size: 2.5em; }
+  .text-overlay {
+    font-size: 2.5em;
+    left: 0.5em; } }
+
+@media only screen and (min-width: 640px) {
+  .text-overlay {
+    font-size: 3.5em;
+    left: 0.3em; } }
+
+@media only screen and (min-width: 768px) {
+  .text-overlay {
+    font-size: 4.25em;
+    left: 0.25em; } }
+
+@media only screen and (min-width: 1030px) {
+  .text-overlay {
+    font-size: 5em; } }
+
+@media only screen and (min-width: 1240px) {
+  .text-overlay {
+    font-size: 7em;
+    left: 0.15em; } }
+
+/* ############ slider.scss ############ */
+.slider {
+  overflow: hidden;
+  position: relative; }
+
+.slider ul {
+  margin: 0;
+  padding: 0;
+  white-space: nowrap; }
+
+.slider li {
+  float: left;
+  margin: 0 1px 0 0;
+  list-style: none; }
+
+.slider ul {
+  width: 100%; }
+
+/* Section separating images */
+.lemmonslider {
+  position: relative;
+  max-height: 450px;
+  overflow: hidden; }
+
+/* Floorplan Slider */
+#floorplan-slider li {
+  margin-left: 200px;
+  margin-right: 100px; }
+
+.floorplan-slider {
+  position: relative;
+  max-height: 792px;
+  overflow: hidden; }
+
+.floorplan-image {
+  padding-left: 100px;
+  padding-right: 100px; }
+
+.floorplan-slider .prev-slide, .floorplan-slider .next-slide,
+.lemmonslider .prev-slide, .lemmonslider .next-slide {
+  display: block;
+  width: 48px;
+  height: 47px;
+  position: absolute;
+  top: 50%;
+  margin-top: -24px;
+  left: 0;
+  text-indent: -99999em;
+  overflow: hidden;
+  background: url("/wp-content/themes/luskin/library/images/gallery-controls.png") no-repeat center top;
+  z-index: 100; }
+
+.lemmonslider .next-slide, floorplan-slider .next-slide {
+  left: auto;
+  right: 0;
+  background-position: center bottom; }
+
+.lemmonslider, .floorplan-slider {
+  text-align: center; }
+
+.lemmonslider img, .floorplan-slider img {
+  vertical-align: top; }

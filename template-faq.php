@@ -26,11 +26,11 @@ if ( $intro_text ) {
 }
 ?>
 
-<?php 
+<?php
 	// check for rows (parent repeater)
 	if( have_rows('question') ): ?>
 
-	<?php 
+	<?php
 
 	// loop through rows (parent repeater)
 	while( have_rows('question') ): the_row(); ?>
@@ -41,17 +41,17 @@ if ( $intro_text ) {
 		<h2 class="faq__heading">
 			<?php the_sub_field('main-heading'); ?>
 		</h2>
-	<?php 
+	<?php
 
 	// check for rows (sub repeater)
 	if( have_rows('faq') ): ?>
-	<?php 
+	<?php
 
 		// loop through rows (sub repeater)
 		while( have_rows('faq') ): the_row();
 
 			// display each item as a list - with a class of completed ( if completed )
-			?>			<div class="faq">					
+			?>			<div class="faq">
 					<h3 class="faq__question"><?php the_sub_field('heading'); ?></h3>
 					<p class="faq__answer"><?php the_sub_field('paragraph'); ?></p>
 </div>
