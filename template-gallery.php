@@ -72,6 +72,7 @@
                 }
                 echo '<a class="fancybox-media" data-fancybox-type="iframe" href="' . $picture['video'] . '">';
                 echo '<img class="" src="'. $picture_src[0] .'" alt="'. $imgTitle .'" />';
+                   echo '<div class="caption-photos">' . $picture['caption_photo'] . '</div>'; 
                 echo '</a>';
             }
             else {

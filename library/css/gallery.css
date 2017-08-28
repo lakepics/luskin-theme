@@ -300,8 +300,9 @@ video {
   position: absolute;
   background: rgba(66, 66, 66, 0.44);
   font-family: "Proxima Nova Regular Italic", "Helvetica Neue", Helvetica, Arial, sans-serif;
-  padding: 5px 10px;
-  color: white; }
+  padding: 3px 10px;
+  color: #e8e8e8;
+  font-size: 0.95em; }
 
 .fancybox-type-iframe .fancybox-nav {
   width: 60px; }
