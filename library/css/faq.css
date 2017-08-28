@@ -96,30 +96,20 @@
     font-size: 7em;
     left: 0.15em; } }
 
-/* ############ testimonials.scss ############ */
-#testimonials .entry {
-  margin-bottom: 40px; }
-  #testimonials .entry h3 {
-    font-family: "Proxima Nova Semibold", "Helvetica Neue", Helvetica, Arial, sans-serif;
-    font-size: 20px;
-    color: #47718E;
-    text-transform: uppercase;
-    margin-bottom: 5px;
-    margin-top: 15px; }
-  #testimonials .entry h4 {
-    margin-top: 10px;
-    font-size: 18px; }
-  #testimonials .entry img {
-    float: left;
-    margin-right: 20px;
-    margin-bottom: 10px; }
-  #testimonials .entry p {
-    margin-bottom: 15px;
-    line-height: 1.5;
-    text-align: left; }
-  #testimonials .entry .team-title {
-    font-family: "Proxima Nova Regular", "Helvetica Neue", Helvetica, Arial, sans-serif;
-    font-size: 16px; }
+/* ############ contact-team.scss ############ */
+.faq {
+  margin-bottom: 30px; }
+  .faq:last-child {
+    margin-bottom: 0px; }
+  .faq__heading {
+    margin-bottom: 30px; }
+  .faq__question {
+    font-family: Proxima Nova SemiBold;
+    margin-bottom: 5px; }
+
+#main-content ul li {
+  list-style-type: disc;
+  margin-bottom: 10px; }
 
 .quick-facts:last-child {
   display: none; }

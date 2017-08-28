@@ -191,10 +191,10 @@ function loadGravatars() {
     });
 
     //________________________________________ Make Videos Play onClick __________________________________//
-    var video = document.getElementById('video');
+    /* var video = document.getElementById('video');
     video.addEventListener('click', function () {
         video.play();
-    }, false);
+    }, false); */
 
     //---------------------------------------- Reserve Scripts ----------------------------------------//
     //if the submit button is clicked

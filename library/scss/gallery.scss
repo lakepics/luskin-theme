@@ -30,7 +30,15 @@ video {
     height: 100%;
 } */
 
-
+.caption-photos {
+    bottom: 0px;
+    left: 0px;
+    position: absolute;
+    background: rgba(66, 66, 66, 0.44);
+    font-family: $italic-sans-serif;
+    padding: 5px 10px;
+    color: white;
+}
  .fancybox-type-iframe {
     .fancybox-nav {
         width: 60px;
