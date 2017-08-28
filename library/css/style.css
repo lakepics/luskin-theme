@@ -152,7 +152,6 @@ hr {
 p {
   -webkit-hyphens: auto;
   -epub-hyphens: auto;
-  -moz-hyphens: auto;
   -ms-hyphens: auto;
       hyphens: auto; }
 
@@ -474,7 +473,6 @@ p {
   word-break: break-word;
   word-wrap: break-word;
   -webkit-hyphens: auto;
-  -moz-hyphens: auto;
   -ms-hyphens: auto;
       hyphens: auto;
   -webkit-hyphenate-before: 2;
@@ -554,7 +552,6 @@ a.button-abt, a.button-abt:visited,
     color: #FFFFFF !important;
     background-color: #C6C8CA !important;
     background-position: right -238px;
-    -webkit-transition: color .1s ease-out, background-color .3s ease-in !important;
     transition: color .1s ease-out, background-color .3s ease-in !important; }
   a.button.download-btn, a.button:visited.download-btn,
   a.button-alt.download-btn, a.button-alt:visited.download-btn,
@@ -1050,13 +1047,10 @@ button {
 
 .res-columns {
   -webkit-column-count: 2;
-  -moz-column-count: 2;
   column-count: 2;
   -webkit-column-width: 320px;
-  -moz-column-width: 320px;
   column-width: 320px;
   -webkit-column-gap: 50px;
-  -moz-column-gap: 50px;
   column-gap: 50px; }
 
 .res-columns p {
@@ -1065,7 +1059,6 @@ button {
 
 .column-break {
   -webkit-column-break-inside: avoid;
-  page-break-inside: avoid;
   break-inside: avoid; }
 
 .caption {
@@ -1502,10 +1495,17 @@ PAGE NAVI STYLES
 
 /* end .commentlist .comment_content */
 /* comment reply link */
+/*
 .comment-reply-link {
-  font-size: 0.9em;
-  float: right; }
+  @extend .blue-btn;
 
+  font-size: 0.9em;
+  float: right;
+
+  &:hover,
+  &:focus {}
+}
+*/
 /* end .commentlist .comment-reply-link */
 /* edit comment link */
 .comment-edit-link {
@@ -1539,10 +1539,13 @@ PAGE NAVI STYLES
   background-color: white;
   font-size: 0.9em; }
 
-/* comment submit button */
+/* comment submit button 
 #submit {
-  font-size: 1em; }
+  @extend .blue-btn;
 
+  font-size: 1em;
+}
+*/
 /* comment form title */
 #comment-form-title {
   margin: 0 0 1.1em; }
@@ -1721,6 +1724,11 @@ PAGE NAVI STYLES
     position: relative; }
   .not-frontpage .no-hero {
     margin-top: 172px !important; } }
+
+@media only screen and (min-width: 979px) {
+  #menu-item-3309 > a > span {
+    border: 1px solid white;
+    padding: 10px 15px; } }
 
 /* ############ navigation.scss ############ */
 .mobile-navigation {
@@ -2132,7 +2140,6 @@ img.logo {
   border: 1px solid #CCC;
   border-radius: 4px;
   box-shadow: inset 0 0 3px rgba(0, 0, 0, 0.18);
-  -webkit-transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
   transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
   margin: 0px;
   font-family: "Proxima Nova Regular", "Helvetica Neue", Helvetica, Arial, sans-serif; }
@@ -2589,12 +2596,64 @@ be seen on the Desktop.
 LARGE VIEWING SIZE
 This is for the larger monitors and possibly full screen viewers.
 *******************************************************************/
+@media only screen and (min-width: 1240px) {
+  /******************************************************************
+Stylesheet: Super Large Monitor Stylesheet
+
+You can add some advanced styles here if you like. This kicks in
+on larger screens.
+******************************************************************/
+  /******************************************************************
+ * LAYOUT & GRID STYLES
+ ******************************************************************/
+  /******************************************************************
+ * MEDIA OVERRIDE STYLES
+ ******************************************************************/ }
+
 /******************************************************************
 RETINA (2x RESOLUTION DEVICES)
 This applies to the retina iPhone (4s) and iPad (2,3) along with
 other displays with a 2x resolution. You can also create a media
 query for retina AND a certain size if you want. Go Nuts.
 *******************************************************************/
+@media only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min--moz-device-pixel-ratio: 1.5), only screen and (min-device-pixel-ratio: 1.5) {
+  /******************************************************************
+Stylesheet: Retina Screens & Devices Stylesheet
+
+When handling retina screens you need to make adjustments, especially
+if you're not using font icons. Here you can add them in one neat
+place.
+******************************************************************/
+  /*
+
+EXAMPLE
+Let's say you have an image and you need to make sure it looks ok
+on retina screens. Let's say we have an icon which dimension are
+24px x 24px. In your regular stylesheets, it would look something
+like this:
+
+.icon {
+	width: 24px;
+	height: 24px;
+	background: url(img/test.png) no-repeat;
+}
+
+For retina screens, we have to make some adjustments, so that image
+doesn't look blurry. So, taking into account the image above and the
+dimensions, this is what we would put in our retina stylesheet:
+
+.icon {
+	background: url(img/test@2x.png) no-repeat;
+	background-size: 24px 24px;
+}
+
+So, you would create the same icon, but at double the resolution, meaning
+it would be 48px x 48px. You'd name it the same, but with a @2x at the end
+(this is pretty standard practice). Set the background image so it matches
+the original dimensions and you are good to go.
+
+*/ }
+
 /******************************************************************
 PRINT STYLESHEET
 Feel free to customize this. Remember to add things that won't make
@@ -2641,8 +2700,7 @@ be set to display none.
   #navbar,
   .driving-directions-utils,
   .footer-block.follow,
-  .no-print
-.page-navigation,
+  .no-print .page-navigation,
   .page-template-template-contact-php .lax-directions,
   .respond-form,
   .sidebar,
