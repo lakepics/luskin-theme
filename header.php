@@ -22,6 +22,7 @@ if ( !is_front_page() ) {
 ?>
 <body <?php body_class( $not_front ); ?>>
 
+<!-- must remove the google_gtm_code_snippet from Dever server, important -->
 <?php the_field( 'google_gtm_code_snippet', 'option' ); ?>
 
     <div class="mobile-navigation">
