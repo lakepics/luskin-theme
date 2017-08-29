@@ -2,10 +2,10 @@
 @import 'sections/page';
 @import 'sections/masonry-gallery';
 
+
 /* ############ gallery.scss ############ */
 
 // styles for 0up
-
 
 /*.fancyboxVid .videoTag {
     display: none;
@@ -18,8 +18,8 @@ video {
     max-height: 620px;
 } */
 
-
 // css for fancybox oembed fiddle
+
 /* #dummy {
     display: none;
 }
@@ -30,24 +30,49 @@ video {
     height: 100%;
 } */
 
+.fancybox-title.fancybox-title-float-wrap {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    z-index: 8050;
+    margin-bottom: 0px;
+    text-align: left;
+    span {
+        background: rgba(66, 66, 66, 0.44);
+        font-family: $italic-sans-serif;
+        padding: 5px 15px;
+        color: #e8e8e8;
+        font-weight: 400 !important;
+        font-size: 1.2em;
+    }
+    .child {
+        margin: 0px !important;
+        border-radius: 0px !important;
+        letter-spacing: .1px;
+        font-weight: 400 !important;
+    }
+}
+
+
 .caption-photos {
     bottom: 0px;
     left: 0px;
     position: absolute;
     background: rgba(66, 66, 66, 0.44);
-    font-family: $italic-sans-serif; 
+    font-family: $italic-sans-serif;
     padding: 3px 10px;
     color: #e8e8e8;
     font-size: 0.95em;
 }
- .fancybox-type-iframe {
+
+.fancybox-type-iframe {
     .fancybox-nav {
         width: 60px;
         span {
             visibility: visible;
             opacity: 0.5;
         }
-        :hover span {
+         :hover span {
             opacity: 1;
         }
     }
@@ -62,7 +87,7 @@ video {
 .gallery-filters-wrapper {
     h2 {
         &.sort-photos {
-        float: none;
+            float: none;
         }
     }
     #gallery-filters {
@@ -107,4 +132,6 @@ video {
 @media only screen and (min-width: 1240px) {}
 
 // styles for 2x
-@media only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min--moz-device-pixel-ratio: 1.5), only screen and (min-device-pixel-ratio: 1.5) {}
+@media only screen and (-webkit-min-device-pixel-ratio: 1.5),
+only screen and (min--moz-device-pixel-ratio: 1.5),
+only screen and (min-device-pixel-ratio: 1.5) {}
