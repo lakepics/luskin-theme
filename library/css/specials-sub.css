@@ -470,9 +470,21 @@ ul.about-buttons {
 .parking .button {
   margin: 15px 0px; }
 
-.special__subheading {
-  margin: 0 0 10px 0;
-  font-size: 22px;
-  line-height: 1;
-  font-family: 'Proxima Nova Semibold', Arial, Helvetica, sans-serif;
-  font-weight: 600; }
+.specials__heading {
+  color: #000000 !important;
+  font-family: "Proxima Nova Semibold", "Helvetica Neue", Helvetica, Arial, sans-serif !important;
+  font-size: 100% !important;
+  text-transform: uppercase !important;
+  margin: 0 0 20px 0 !important; }
+
+.specials__subheading {
+  margin: 0 0 10px 0 !important;
+  font-size: 22px !important;
+  line-height: 1 !important;
+  font-family: "Proxima Nova Semibold", "Helvetica Neue", Helvetica, Arial, sans-serif !important;
+  color: #47718E !important; }
+
+@media only screen and (min-width: 768px) {
+  .specials__indent {
+    padding-left: 25px;
+    padding-top: 15px; } }

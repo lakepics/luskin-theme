@@ -5,6 +5,10 @@
 
 
 
+
+
+
+
 /* ############ about-us-sub.scss ############ */
 
 // styles for 0up
@@ -39,15 +43,29 @@
     }
 }
 
-.special {
+.specials {
+    &__heading {
+        color: #000000 !important;
+        font-family: $semibold-sans-serif !important;
+        font-size: 100% !important;
+        text-transform: uppercase !important;
+        margin: 0 0 20px 0 !important;
+    }
     &__subheading {
-        margin: 0 0 10px 0;
-        font-size: 22px;
-        line-height: 1;
-        font-family: 'Proxima Nova Semibold', Arial, Helvetica, sans-serif;
-        font-weight: 600;
+        margin: 0 0 10px 0 !important;
+        font-size: 22px !important;
+        line-height: 1 !important;
+        font-family: $semibold-sans-serif !important;
+        color: $dark-blue !important;
+    }
+    &__indent {
+        @media only screen and (min-width: 768px) {
+            padding-left: 25px;
+            padding-top: 15px;
+        }
     }
 }
+
 
 // this is a change
 // styles for 481up

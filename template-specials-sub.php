@@ -33,7 +33,7 @@ if ( $attraction_section ) {
         <div class="two-columns explore-ucla container clearfix">
             <?php foreach ( $attraction_section as $new_row ) {
         echo '<div class="two-columns clearfix">';
-        echo '<div class="column left-column column-entry">';
+        echo '<div class="column left-column column-entry specials">';
         foreach ( $new_row['left_column'] as $entry ) {
             if ( $entry['image'] ) {
                 if ( $entry['visit_site_url'] ) {
@@ -44,9 +44,9 @@ if ( $attraction_section ) {
             }
             if ( $entry['title'] ) {
                 if ( $entry['visit_site_url'] ) {
-                    echo '<h4><a href="'. $entry['visit_site_url'] .'">'. $entry['title'] .'</a></h4>';
+                    echo '<h4 class="specials__heading"><a href="'. $entry['visit_site_url'] .'">'. $entry['title'] .'</a></h4>';
                 } else {
-                    echo '<h4>'. $entry['title'] .'</h4>';
+                    echo '<h4 class="specials__heading">'. $entry['title'] .'</h4>';
                 }
             }
             if ( $entry['content'] ) {
@@ -54,7 +54,7 @@ if ( $attraction_section ) {
             }
         }
         echo '</div>';
-        echo '<div class="column right-column column-entry">';
+        echo '<div class="column right-column column-entry specials">';
         foreach ( $new_row['right_column'] as $entry ) {
             if ( $entry['image'] ) {
                 if ( $entry['visit_site_url'] ) {
@@ -65,9 +65,9 @@ if ( $attraction_section ) {
             }
             if ( $entry['title'] ) {
                 if ( $entry['visit_site_url'] ) {
-                    echo '<h4><a href="'. $entry['visit_site_url'] .'">'. $entry['title'] .'</a></h4>';
+                    echo '<h4 class="specials__heading"><a href="'. $entry['visit_site_url'] .'">'. $entry['title'] .'</a></h4>';
                 } else {
-                    echo '<h4>'. $entry['title'] .'</h4>';
+                    echo '<h4 class="specials__heading">'. $entry['title'] .'</h4>';
                 }
             }
             if ( $entry['content'] ) {
