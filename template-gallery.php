@@ -61,7 +61,7 @@
                 }
                 echo '<a href="'. $picture['large_image']['url'] .'" title="'. $imgTitle .'">';
                 echo '<img class="" src="'. $picture_src[0] .'" alt="'. $imgTitle .'" />';
-                  echo '<div class="caption-photos">' . $picture['caption_photo'] . '</div>';
+                echo '<div class="caption-photos">' . $imgTitle . '</div>';
                 echo '</a>';
             }
             elseif ( $picture['video'] ) {
@@ -77,7 +77,7 @@
             }
             else {
                 echo '<img class="" src="'. $picture_src[0] .'" alt="'. $imgTitle .'" />';
-                echo '<div class="caption-photos">' . $picture['caption_photo'] . '</div>';
+                echo '<div class="caption-photos">' . $imgTitle . '</div>';
             }
             echo '</div>';
         }

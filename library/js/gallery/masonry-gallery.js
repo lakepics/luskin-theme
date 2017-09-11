@@ -1,5 +1,5 @@
 (function ($) {
-
+$('.fancybox').fancybox();
     $(document).ready(function () {
 
         //bind filter on select change

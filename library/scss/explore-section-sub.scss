@@ -1,0 +1,45 @@
+@import 'partials/variables';
+@import 'sections/page';
+@import 'about';
+
+/* ############ about-us-sub.scss ############ */
+
+// styles for 0up
+
+#main-content {
+  .container {
+    &.explore-ucla,
+    &.experience-la {
+      padding: 50px 20px 0;
+
+      &.two-columns {
+        .column {
+          &.left-column,
+          &.right-column {
+            margin-bottom: 25px;
+          }
+        }
+      }
+    }
+  }
+}
+
+// this is a change
+
+// styles for 481up
+@media only screen and (min-width: 481px) {}
+
+// styles for 640up
+@media only screen and (min-width: 640px) {}
+
+// styles for 768up
+@media only screen and (min-width: 768px) {}
+
+// styles for 1030up
+@media only screen and (min-width: 1030px) {}
+
+// styles for 1240up
+@media only screen and (min-width: 1240px) {}
+
+// styles for 2x
+@media only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min--moz-device-pixel-ratio: 1.5), only screen and (min-device-pixel-ratio: 1.5) {}
