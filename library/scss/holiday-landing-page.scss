@@ -1,0 +1,73 @@
+@import 'partials/variables';
+@import 'sections/page';
+@import 'sections/amenities-services';
+@import 'sections/rooms';
+
+/* ############ accommodations-suites.scss ############ */
+
+// styles for 0up
+#main-content {
+    .guest-services {
+        padding-top: 0;
+    }
+    .container {
+
+        .bottom-30 {
+        padding-bottom: 0!important;
+        }
+    }
+    .amenities {
+        .page-col-twothird {
+            width: 100%;
+            float: none;
+            margin: 0;
+            h2 {
+                margin-top: 30px;
+            }
+        }
+        .page-col-onethird {
+            width: 100%;
+            h2 {
+                margin-top: 20px;
+            }
+            .service {
+                .service-name {
+                    padding: 0 10px;
+                }
+            }
+        }
+    }
+}
+
+// styles for 481up
+@media only screen and (min-width: 481px) {}
+
+// styles for 640up
+@media only screen and (min-width: 640px) {}
+
+// styles for 768up
+@media only screen and (min-width: 768px) {
+    #main-content 
+        .amenities {
+            .page-col-twothird {
+                float: left;
+                margin-right: 3%;
+                width: 60%;
+            }
+            .page-col-onethird {
+                float: left;
+                width: 33%;
+                min-height: 0;
+            }
+        }
+    }
+}
+
+// styles for 1030up
+@media only screen and (min-width: 1030px) {}
+
+// styles for 1240up
+@media only screen and (min-width: 1240px) {}
+
+// styles for 2x
+@media only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min--moz-device-pixel-ratio: 1.5), only screen and (min-device-pixel-ratio: 1.5) {}

@@ -18,7 +18,7 @@
             if ($sub_head) {
                 echo '<div class="container clearfix">';
                 echo '<h2 class="subhead">' . $sub_head . '</h2>';
-                echo '<div class="res-columns">' . $intro_copy . '</div>';
+                echo '<div class="res-content bottom-30">' . $intro_copy . '</div>';
                 echo '</div>';
             }
             ?>

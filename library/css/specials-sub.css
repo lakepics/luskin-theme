@@ -488,3 +488,8 @@ ul.about-buttons {
   .specials__indent {
     padding-left: 25px;
     padding-top: 15px; } }
+
+p {
+  margin-bottom: 15px !important;
+  line-height: 1.5;
+  text-align: left; }

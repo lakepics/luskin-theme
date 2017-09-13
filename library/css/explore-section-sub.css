@@ -457,6 +457,11 @@ ul.about-buttons {
 
 /* ############ about-us-sub.scss ############ */
 #main-content .container.explore-ucla, #main-content .container.experience-la {
-  padding: 50px 20px 0; }
+  padding: 0px 20px 0; }
   #main-content .container.explore-ucla.two-columns .column.left-column, #main-content .container.explore-ucla.two-columns .column.right-column, #main-content .container.experience-la.two-columns .column.left-column, #main-content .container.experience-la.two-columns .column.right-column {
     margin-bottom: 25px; }
+
+p {
+  margin-bottom: 15px !important;
+  line-height: 1.5;
+  text-align: left; }

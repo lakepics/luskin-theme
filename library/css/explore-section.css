@@ -97,6 +97,14 @@
     left: 0.15em; } }
 
 /* ############ about.scss ############ */
+p {
+  margin-bottom: 15px !important;
+  line-height: 1.5;
+  text-align: left; }
+
+.description p {
+  text-align: center; }
+
 .column-entry .img-overlay {
   display: block;
   position: relative; }
@@ -351,6 +359,9 @@ ul.about-buttons {
   .explore-more .explore-teaser .explore-title {
     bottom: 18px;
     font-size: 3em; } }
+
+#main-content a.button {
+  margin-top: 15px; }
 
 @media only screen and (min-width: 1240px) {
   .explore-more .explore-teaser .explore-title {
