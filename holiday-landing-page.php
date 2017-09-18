@@ -46,7 +46,7 @@ if ( $intro_copy ) { echo $intro_copy; }
             // display each item as a list - with a class of completed ( if completed )
             ?>
             <div class="square-img">
-                <img src=" <?php the_sub_field('image'); ?>"
+                <img src=" <?php the_sub_field('image'); ?>">
             </div>
             <?php endwhile; ?>
             <?php endif; //if( get_sub_field('items') ): ?>

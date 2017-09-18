@@ -97,6 +97,10 @@
     left: 0.15em; } }
 
 /* ############ about.scss ############ */
+.bold-blue-text {
+  color: #47718E !important;
+  font-weight: bold !important; }
+
 p {
   margin-bottom: 15px !important;
   line-height: 1.5;
