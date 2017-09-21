@@ -1,0 +1,89 @@
+@import 'partials/variables';
+@import 'sections/page';
+@import 'about';
+
+
+
+
+
+
+
+
+/* ############ about-us-sub.scss ############ */
+
+// styles for 0up
+#main-content {
+    .container {
+        &.explore-ucla,
+        &.experience-la {
+            padding: 10px 20px 0;
+
+            &.two-columns {
+                .column {
+                    &.left-column,
+                    &.right-column {
+                        margin-bottom: 25px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+//parking
+.parking {
+    &__content {
+        padding-bottom: 30px !important;
+        border-top: 1px solid #8DA6B8;
+        padding-top: 30px;
+        text-align: left;
+    }
+    .button {
+        margin: 15px 0px;
+    }
+}
+
+.specials {
+    &__heading {
+        color: #000000 !important;
+        font-family: $semibold-sans-serif !important;
+        font-size: 100% !important;
+        text-transform: uppercase !important;
+        margin: 0 0 20px 0 !important;
+    }
+    &__subheading {
+        margin: 0 0 10px 0 !important;
+        font-size: 22px !important;
+        line-height: 1 !important;
+        font-family: $semibold-sans-serif !important;
+        color: $dark-blue !important;
+    }
+    &__indent {
+        @media only screen and (min-width: 768px) {
+            padding-left: 25px;
+            padding-top: 15px;
+        }
+    }
+}
+
+
+// this is a change
+// styles for 481up
+@media only screen and (min-width: 481px) {}
+
+// styles for 640up
+@media only screen and (min-width: 640px) {}
+
+// styles for 768up
+@media only screen and (min-width: 768px) {}
+
+// styles for 1030up
+@media only screen and (min-width: 1030px) {}
+
+// styles for 1240up
+@media only screen and (min-width: 1240px) {}
+
+// styles for 2x
+@media only screen and (-webkit-min-device-pixel-ratio: 1.5),
+only screen and (min--moz-device-pixel-ratio: 1.5),
+only screen and (min-device-pixel-ratio: 1.5) {}

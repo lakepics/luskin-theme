@@ -3,7 +3,10 @@
 @import 'sections/masonry-gallery';
 
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> f5f00fd3bf40adced22b2a9d81dfe36e7c8f299b
 /* ############ gallery.scss ############ */
 
 // styles for 0up
@@ -36,6 +39,7 @@ video {
     bottom: 0;
     left: 0;
     z-index: 8050;
+<<<<<<< HEAD
     span {
         background: rgba(66, 66, 66, 0.44);
         font-family: $italic-sans-serif;
@@ -43,6 +47,23 @@ video {
         padding: 3px 10px;
         color: #e8e8e8;
         font-size: 0.95em;
+=======
+    margin-bottom: 0px;
+    text-align: left;
+    span {
+        background: rgba(66, 66, 66, 0.44);
+        font-family: $italic-sans-serif;
+        padding: 5px 15px;
+        color: #e8e8e8;
+        font-weight: 400 !important;
+        font-size: 1.2em;
+    }
+    .child {
+        margin: 0px !important;
+        border-radius: 0px !important;
+        letter-spacing: .1px;
+        font-weight: 400 !important;
+>>>>>>> f5f00fd3bf40adced22b2a9d81dfe36e7c8f299b
     }
 }
 
@@ -53,7 +74,10 @@ video {
     position: absolute;
     background: rgba(66, 66, 66, 0.44);
     font-family: $italic-sans-serif;
+<<<<<<< HEAD
     serif;
+=======
+>>>>>>> f5f00fd3bf40adced22b2a9d81dfe36e7c8f299b
     padding: 3px 10px;
     color: #e8e8e8;
     font-size: 0.95em;

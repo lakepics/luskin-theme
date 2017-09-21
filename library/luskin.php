@@ -332,7 +332,15 @@ function luskinScriptsAndStyles()
             case 'template-faq.php':
                 wp_enqueue_style('faq-stylesheet', get_stylesheet_directory_uri() . '/library/css/faq.min.css', array('luskin-stylesheet'), '', 'all');
                 break;
-
+            case 'template-explore-section.php':
+                wp_enqueue_style('faq-stylesheet', get_stylesheet_directory_uri() . '/library/css/explore-section.min.css', array('luskin-stylesheet'), '', 'all');
+                break;
+            case 'template-explore-section-sub.php':
+                wp_enqueue_style('faq-stylesheet', get_stylesheet_directory_uri() . '/library/css/explore-section-sub.min.css', array('luskin-stylesheet'), '', 'all');
+                break;
+            case 'template-specials-sub.php':
+                wp_enqueue_style('faq-stylesheet', get_stylesheet_directory_uri() . '/library/css/specials-sub.min.css', array('luskin-stylesheet'), '', 'all');
+                break;
 
             default : '';
         }

@@ -61,7 +61,11 @@
                 }
                 echo '<a href="'. $picture['large_image']['url'] .'" title="'. $imgTitle .'">';
                 echo '<img class="" src="'. $picture_src[0] .'" alt="'. $imgTitle .'" />';
+<<<<<<< HEAD
                   echo '<div class="caption-photos">' . $imgTitle . '</div>';
+=======
+                echo '<div class="caption-photos">' . $imgTitle . '</div>';
+>>>>>>> f5f00fd3bf40adced22b2a9d81dfe36e7c8f299b
                 echo '</a>';
             }
             elseif ( $picture['video'] ) {
