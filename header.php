@@ -12,7 +12,8 @@
 <meta name="MobileOptimized" content="320">
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
 <title><?php wp_title( '-', true, 'right' ) ?><?php bloginfo( 'name' ); ?></title>
-<?php wp_head(); ?></head>
+<?php wp_head(); ?>
+</head>
 <?php
 if ( !is_front_page() ) {
     $not_front = "not-frontpage";
@@ -21,6 +22,10 @@ if ( !is_front_page() ) {
 }
 ?>
 <body <?php body_class( $not_front ); ?>>
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PM45X6"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
 
 <!-- must remove the google_gtm_code_snippet from Dever server, important -->
 <?php the_field( 'google_gtm_code_snippet', 'option' ); ?>
