@@ -3,6 +3,10 @@
 @import 'about';
 
 /* ############ about-us-sub.scss ############ */
+.bold-blue-text {
+    color: #47718E !important;
+    font-weight: bold !important;
+}
 
 // styles for 0up
 
@@ -10,7 +14,7 @@
   .container {
     &.explore-ucla,
     &.experience-la {
-      padding: 50px 20px 0;
+      padding: 0px 20px 0;
 
       &.two-columns {
         .column {
@@ -22,6 +26,12 @@
       }
     }
   }
+}
+
+p {
+    margin-bottom: 15px !important;
+    line-height: 1.5;
+    text-align: left;
 }
 
 // this is a change

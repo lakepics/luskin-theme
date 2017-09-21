@@ -1,0 +1,472 @@
+/* ############ page.scss ############ */
+.brand-light-blue {
+  color: #00A5E5; }
+
+#page-310 {
+  margin-top: 55px; }
+
+.hero-image-container, .full-width-gallery {
+  margin-bottom: 30px; }
+
+.hero-image-container img {
+  display: block;
+  margin: 0 auto;
+  width: 100%;
+  max-width: 100%; }
+
+/* quick facts */
+.quick-facts {
+  position: relative;
+  margin-top: 25px;
+  margin-bottom: 60px;
+  border-top: 1px solid #8DA6B8;
+  padding-top: 40px; }
+
+.quick-facts-description {
+  font-family: "Proxima Nova Regular", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 15px;
+  line-height: 1.5;
+  margin-bottom: 25px;
+  width: 100%; }
+
+.quick-facts-description h3 {
+  margin: 40px 0 20px 0;
+  font-size: 25px;
+  letter-spacing: 0.05em;
+  line-height: 1;
+  color: #47718E;
+  font-family: "Proxima Nova Semibold", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  text-transform: uppercase;
+  text-align: center; }
+
+.quick-facts-button {
+  margin-top: 30px; }
+
+.generic-button {
+  float: left;
+  margin-right: 30px; }
+
+/* call out */
+.callout {
+  display: inline-block;
+  width: inherit;
+  margin: 0px;
+  padding: 20px 0px 30px 0px;
+  border-top: 1px solid #8DA6B8;
+  font-family: 'Adobe Caslon Pro', serif;
+  font-style: italic;
+  font-size: 200%;
+  line-height: 1.75em;
+  color: #8da6b8;
+  text-align: center; }
+
+.text-overlay {
+  bottom: -.5em;
+  color: rgba(255, 255, 255, 0.85);
+  font-family: "Proxima Nova Semibold", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 2.25em;
+  left: 0.7em;
+  line-height: 1.6em;
+  position: absolute;
+  text-transform: uppercase; }
+
+@media only screen and (min-width: 481px) {
+  h1, .h1 {
+    font-size: 2.5em; }
+  .text-overlay {
+    font-size: 2.5em;
+    left: 0.5em; } }
+
+@media only screen and (min-width: 640px) {
+  .text-overlay {
+    font-size: 3.5em;
+    left: 0.3em; } }
+
+@media only screen and (min-width: 768px) {
+  .text-overlay {
+    font-size: 4.25em;
+    left: 0.25em; } }
+
+@media only screen and (min-width: 1030px) {
+  .text-overlay {
+    font-size: 5em; } }
+
+@media only screen and (min-width: 1240px) {
+  .text-overlay {
+    font-size: 7em;
+    left: 0.15em; } }
+
+/* ############ amennities-services.scss ############ */
+#main-content .amenities h2 {
+  color: #47718E;
+  font-family: "Proxima Nova Semibold", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 25px;
+  letter-spacing: 0.05em;
+  line-height: 1.15;
+  margin: 0 0 10px 0;
+  text-transform: uppercase; }
+
+#main-content .amenities .amenities-description,
+#main-content .amenities .room-amenities {
+  font-family: "Proxima Nova Regular", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 15px;
+  line-height: 1.5; }
+  #main-content .amenities .amenities-description p,
+  #main-content .amenities .room-amenities p {
+    margin-bottom: 15px; }
+
+#main-content .amenities .services .service-wrapper {
+  float: left;
+  width: 49.99%; }
+  #main-content .amenities .services .service-wrapper.rooms, #main-content .amenities .services .service-wrapper .rooms {
+    width: 45%;
+    margin-right: 4.9%; }
+  #main-content .amenities .services .service-wrapper:last-child .service {
+    border-bottom: 0; }
+  #main-content .amenities .services .service-wrapper.even .service {
+    margin-left: 0; }
+  #main-content .amenities .services .service-wrapper.odd .service {
+    margin-right: 0; }
+
+.guest-services {
+  padding: 0 0 20px 0; }
+
+.service {
+  border-bottom: 1px solid #8DA6B8;
+  color: #000;
+  font-family: "Proxima Nova Semibold", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 16px;
+  line-height: 1.25;
+  margin: 0 10px;
+  min-height: 75px;
+  padding: 0;
+  position: relative;
+  zoom: 1; }
+  .service .icon {
+    background: url("/wp-content/themes/luskin/library/images/amenities3.png") no-repeat center 0;
+    bottom: 0;
+    display: block;
+    height: 32px;
+    left: 20px;
+    margin: auto;
+    position: absolute;
+    right: auto;
+    top: 0;
+    width: 32px; }
+  .service .service-name {
+    display: table;
+    height: 75px;
+    padding: 0 10px 0 70px; }
+    .service .service-name span {
+      display: table-cell;
+      vertical-align: middle; }
+  .service.business-center {
+    border-bottom: 0; }
+  .service.none, .service.none-none, .service.first {
+    margin: 0;
+    padding: 0 0 0 20px; }
+  .service.first {
+    border-top: 1px solid #8DA6B8; }
+  .service.bullet-round {
+    background: url("/wp-content/themes/luskin/library/images/round-bullet.png") no-repeat center 0; }
+  .service.ada-rooms-services .icon {
+    background-position: center -632px; }
+  .service.bell-service .icon,
+  .service.porter-service .icon {
+    height: 34px;
+    background-position: center -471px; }
+  .service.business-center .icon,
+  .service.extensive-business-center .icon {
+    background-position: center -320px; }
+  .service.campus-shuttle .icon {
+    background-position: center -711px; }
+  .service.complimentary-coffee-refreshments .icon {
+    height: 34px;
+    background-position: center -1086px; }
+  .service.daily-housekeeping .icon {
+    height: 34px;
+    background-position: center -1156px; }
+  .service.concierge .icon {
+    background-position: center -395px; }
+  .service.dry-cleaning .icon {
+    height: 34px;
+    background-position: center -547px; }
+  .service.express-room-service .icon {
+    background-position: center -159px; }
+  .service.event-planning-services .icon {
+    background-position: center -1015px; }
+  .service.full-service-catering .icon {
+    background-position: center -865px; }
+  .service.integrated-audio-visual-technology-support .icon {
+    background-position: center -940px; }
+  .service.on-site-fitness-center .icon {
+    background-position: center -790px; }
+  .service.restaurant-and-lounge .icon,
+  .service.group-dining-options .icon {
+    background-position: center -82px; }
+  .service.valet-parking .icon,
+  .service.event-parking .icon {
+    background-position: center -237px; }
+  .service.wi-fi .icon {
+    background-position: center 0; }
+
+/* additional accommodations */
+.additional-ucla-accommodations {
+  padding-bottom: 40px; }
+
+@media only screen and (max-width: 639px) {
+  #main-content .amenities .services .service-wrapper {
+    width: 100%; }
+    #main-content .amenities .services .service-wrapper .service {
+      margin: 0; }
+      #main-content .amenities .services .service-wrapper .service.business-center {
+        border-bottom: 1px solid #8DA6B8; } }
+
+@media only screen and (min-width: 931px) {
+  #main-content .amenities {
+    padding: 10px 20px 60px; }
+    #main-content .amenities .amenities-description,
+    #main-content .amenities .room-amenities {
+      float: left;
+      width: 35%; }
+    #main-content .amenities .services {
+      float: right;
+      width: 60%; } }
+
+/* ############ rooms.scss ############ */
+.container p {
+  margin-bottom: 15px; }
+
+.room-types {
+  background: #4d4d4d;
+  margin: 20px 0 0 0;
+  padding: 70px; }
+  .room-types .room-type-container {
+    max-width: 1170px;
+    margin-right: auto;
+    margin-left: auto; }
+  .room-types .room-type-non-mobile {
+    display: none; }
+  .room-types .room-types-mobile {
+    display: block; }
+    .room-types .room-types-mobile .room-type-div {
+      border-bottom: 1px solid #616060; }
+    .room-types .room-types-mobile .room-type-div-toggle-trigger {
+      border-top: 1px solid #434343;
+      color: #fff;
+      font-family: "Proxima Nova Semibold", "Helvetica Neue", Helvetica, Arial, sans-serif;
+      font-size: 22px;
+      line-height: 1;
+      padding: 33px 60px 33px 20px;
+      position: relative; }
+      .room-types .room-types-mobile .room-type-div-toggle-trigger :before {
+        background: url("/wp-content/themes/luskin/library/images/room-type-toogle.png") no-repeat center 0;
+        content: '';
+        display: block;
+        height: 29px;
+        margin-top: -14px;
+        position: absolute;
+        right: 20px;
+        top: 50%;
+        width: 29px; }
+      .room-types .room-types-mobile .room-type-div-toggle-trigger.expanded:before {
+        background-position: center bottom; }
+      .room-types .room-types-mobile .room-type-div-toggle-trigger * {
+        display: inline; }
+    .room-types .room-types-mobile .room-type-div-toggle {
+      padding: 12px 20px 20px 20px; }
+      .room-types .room-types-mobile .room-type-div-toggle img {
+        display: block;
+        height: auto;
+        margin: 0 auto;
+        width: 100%;
+        filter: brightness(100);
+        -webkit-filter: brightness(100);
+        -moz-filter: brightness(100);
+        -o-filter: brightness(100);
+        -ms-filter: brightness(100); }
+  .room-types .section-title {
+    color: #FFF;
+    font-family: "Proxima Nova Semibold", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 25px;
+    letter-spacing: 0.05em;
+    line-height: 1.15;
+    margin: 0 0 60px 0;
+    text-align: center;
+    text-transform: uppercase; }
+
+.room-col {
+  display: inline-block;
+  align: center;
+  width: 49%; }
+  .room-col.first .content {
+    width: 100%;
+    padding: 0;
+    padding-bottom: 30px; }
+  .room-col.first:before {
+    display: none; }
+  .room-col.second .content {
+    width: 100%;
+    padding: 0;
+    padding-bottom: 30px; }
+  .room-col h3 {
+    margin: 0;
+    padding-bottom: 30px;
+    font-family: "Proxima Nova Semibold", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 20px;
+    line-height: 1;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    color: #FFF;
+    text-align: center; }
+  .room-col img {
+    display: block;
+    height: auto;
+    margin: 0 auto;
+    width: 90%;
+    filter: brightness(100);
+    -webkit-filter: brightness(100);
+    -moz-filter: brightness(100);
+    -o-filter: brightness(100);
+    -ms-filter: brightness(100); }
+  .room-col .content {
+    padding: 0 10%;
+    text-align: center;
+    color: #fff; }
+    .room-col .content ul {
+      color: #FFF;
+      content: 0;
+      font-family: "Proxima Nova Semibold", "Helvetica Neue", Helvetica, Arial, sans-serif;
+      list-style: none;
+      margin: 0 auto;
+      padding: 0;
+      text-align: left;
+      width: 70%; }
+      .room-col .content ul li {
+        margin-bottom: 15px;
+        text-indent: -1em;
+        padding-left: 1em;
+        font-size: 18px;
+        line-height: 1.5;
+        list-style: disc;
+        list-style-position: inside; }
+    .room-col .content h5 {
+      margin: -5px 0 15px 50px;
+      font-size: 20px;
+      text-align: left;
+      line-height: 1.375;
+      letter-spacing: 0.05em;
+      color: #FFF;
+      text-transform: uppercase;
+      font-family: "Proxima Nova Semibold", "Helvetica Neue", Helvetica, Arial, sans-serif; }
+
+.room-type-div-toggle h5 {
+  margin-top: 0; }
+
+.room-type-div-toggle ul {
+  color: #FFF;
+  content: 0;
+  font-family: "Proxima Nova Semibold", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  list-style: none;
+  margin: 0 auto;
+  padding: 0;
+  text-align: left;
+  width: 100%; }
+  .room-type-div-toggle ul li {
+    margin-bottom: 15px;
+    text-indent: -1em;
+    padding-left: 1em;
+    font-size: 18px;
+    line-height: 1.5;
+    list-style: disc;
+    list-style-position: inside; }
+
+@media only screen and (min-width: 768px) {
+  .room-types .room-type-non-mobile {
+    display: block; }
+    .room-types .room-type-non-mobile .room-type-div-toggle img {
+      height: auto;
+      width: 100%; }
+  .room-types .room-types-mobile {
+    display: none; } }
+
+/* ############ accommodations-suites.scss ############ */
+.bullet-p {
+  margin-bottom: 15px !important; }
+
+.text-overlay {
+  color: #1C4D71; }
+
+p {
+  margin-bottom: 15px;
+  line-height: 1.5;
+  text-align: left; }
+
+.h4-heading {
+  font-size: 1.5em !important;
+  margin-bottom: 25px !important; }
+
+.menu-bold {
+  font-size: 1.1em;
+  display: inline;
+  font-family: "Proxima Nova Bold", "Helvetica Neue", Helvetica, Arial, sans-serif !important; }
+
+.big-bold-blue-text {
+  color: #47718E !important;
+  font-size: 1.3em !important;
+  font-family: "Proxima Nova Bold", "Helvetica Neue", Helvetica, Arial, sans-serif !important; }
+
+.bold-blue-text {
+  color: #47718E !important;
+  font-family: "Proxima Nova Bold", "Helvetica Neue", Helvetica, Arial, sans-serif !important; }
+
+.1-3em {
+  font-size: 1.3em !important; }
+
+.margin-top-0px {
+  margin-top: 0px; }
+
+.no-margin {
+  margin: 0px !important; }
+
+.margin-bottom-15px {
+  margin-bottom: 15px; }
+
+.square-img {
+  padding-bottom: 25px; }
+
+#main-content .guest-services {
+  padding-top: 0; }
+
+#main-content .container .bottom-30 {
+  padding-bottom: 0 !important; }
+
+#main-content .amenities .page-col-twothird {
+  width: 100%;
+  float: none;
+  margin: 0; }
+  #main-content .amenities .page-col-twothird h2 {
+    margin-top: 30px; }
+  #main-content .amenities .page-col-twothird ul {
+    list-style-type: disc;
+    margin-bottom: 40px;
+    margin-top: 5px; }
+  #main-content .amenities .page-col-twothird p {
+    margin-bottom: 30px; }
+
+#main-content .amenities .page-col-onethird {
+  width: 100%; }
+  #main-content .amenities .page-col-onethird h2 {
+    margin-top: 20px; }
+  #main-content .amenities .page-col-onethird .service .service-name {
+    padding: 0 10px; }
+
+@media only screen and (min-width: 768px) {
+  #main-content .amenities .page-col-twothird {
+    float: left;
+    margin-right: 3%;
+    width: 60%; }
+  #main-content .amenities .page-col-onethird {
+    float: right;
+    width: 33%;
+    min-height: 0; } }

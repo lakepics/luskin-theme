@@ -341,6 +341,9 @@ function luskinScriptsAndStyles()
             case 'template-specials-sub.php':
                 wp_enqueue_style('faq-stylesheet', get_stylesheet_directory_uri() . '/library/css/specials-sub.min.css', array('luskin-stylesheet'), '', 'all');
                 break;
+            case 'holiday-landing-page.php':
+                wp_enqueue_style('faq-stylesheet', get_stylesheet_directory_uri() . '/library/css/holiday-landing-page.min.css', array('luskin-stylesheet'), '', 'all');
+                break;
 
             default : '';
         }

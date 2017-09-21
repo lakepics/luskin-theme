@@ -455,6 +455,11 @@ ul.about-buttons {
     bottom: -20px;
     font-size: 4.5em; } }
 
+.bold-blue-text {
+  color: #47718E !important;
+  font-weight: bold !important;
+  font-size: 1.1em !important; }
+
 /* ############ about-us-sub.scss ############ */
 #main-content .container.explore-ucla, #main-content .container.experience-la {
   padding: 10px 20px 0; }
@@ -488,3 +493,8 @@ ul.about-buttons {
   .specials__indent {
     padding-left: 25px;
     padding-top: 15px; } }
+
+p {
+  margin-bottom: 15px !important;
+  line-height: 1.5;
+  text-align: left; }
