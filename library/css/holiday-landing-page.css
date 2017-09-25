@@ -391,6 +391,43 @@
     display: none; } }
 
 /* ############ accommodations-suites.scss ############ */
+.news-ribbon {
+  background: #968c83;
+  height: 60px;
+  min-height: 60px;
+  font-family: "Proxima Nova Semibold", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 10px;
+  color: #FFFFFF;
+  line-height: 1.25em; }
+  .news-ribbon span,
+  .news-ribbon .caption {
+    margin-top: 1.2em;
+    float: none;
+    display: inline-block;
+    height: 1.1em;
+    font-size: 10px;
+    line-height: 1.2em; }
+
+@media only screen and (min-width: 768px) {
+  .news-ribbon {
+    background: #968c83;
+    height: 60px;
+    min-height: 60px;
+    font-family: "Proxima Nova Semibold", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 18px;
+    color: #FFFFFF;
+    line-height: 61px; }
+    .news-ribbon span {
+      margin-top: 0;
+      font-size: 18px;
+      display: inline-block;
+      height: 60px;
+      line-height: 61px; }
+    .news-ribbon .caption {
+      font-size: 12px;
+      float: right;
+      line-height: 2.95em; } }
+
 .bullet-p {
   margin-bottom: 15px !important; }
 
@@ -434,6 +471,9 @@ p {
 
 .square-img {
   padding-bottom: 25px; }
+
+.full-width-gallery {
+  margin-bottom: 0px !important; }
 
 #main-content .guest-services {
   padding-top: 0; }
