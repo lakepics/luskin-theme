@@ -29,35 +29,33 @@
                     echo '<div class="features-column">';
                     foreach ( $features[0]['left_column'] as $feature ){
                         if( $feature['background_image'] ){
+                                  echo '<a href="' . $feature[icon_url] . '">';
                             echo '<div class="feature feature-left" style="background-image: url('. $feature['background_image'] .');">';
                         } else {
                             echo '<div class="feature">';
                         }
-                            echo '<div class="feature-wrapper">';
-                                if( $feature['icon'] ){
-                                    echo '<a href="' . $feature[icon_url] . '"><img class="feature-icon" src="'. $feature['icon'] .'" alt="" /></a>';
-                                }
+                            echo '<div class="feature-wrapper"><img class="feature-icon" src="'. $feature['icon'] .'" alt="" />';
+
                                 echo '<div class="description">'. $feature['content'] .'</div>';
                             echo '</div>';
                         echo '</div>';
                     }
-                    echo '</div>';
+                    echo '</div></a>';
                     echo '<div class="features-column">';
                     foreach ( $features[0]['right_column'] as $feature ){
                         if( $feature['background_image'] ){
+                                echo '<a href="' . $feature[icon_url] . '">';
                             echo '<div class="feature feature-right" style="background-image: url('. $feature['background_image'] .');">';
                         } else {
                             echo '<div class="feature">';
                         }
-                            echo '<div class="feature-wrapper">';
-                                if( $feature['icon'] ){
-                                    echo '<a href="' . $feature[icon_url] . '"><img class="feature-icon" src="'. $feature['icon'] .'" alt="" /></a>';
-                                }
+                            echo '<div class="feature-wrapper"><img class="feature-icon" src="'. $feature['icon'] .'" alt="" />';
+ 
                                 echo '<div class="description">'. $feature['content'] .'</div>';
                             echo '</div>';
                         echo '</div>';
                     }
-                    echo '</div>';
+                    echo '</div></a>';
                 ?>
             </div>
 
