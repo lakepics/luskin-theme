@@ -391,6 +391,9 @@
     display: none; } }
 
 /* ############ accommodations-suites.scss ############ */
+.full-width-gallery {
+  margin-bottom: 4px; }
+
 .news-ribbon {
   background: #968c83;
   height: 60px;
@@ -398,7 +401,8 @@
   font-family: "Proxima Nova Semibold", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 10px;
   color: #FFFFFF;
-  line-height: 1.25em; }
+  line-height: 1.25em;
+  border-top: 4px solid white; }
   .news-ribbon span,
   .news-ribbon .caption {
     margin-top: 1.2em;
@@ -473,7 +477,7 @@ p {
   padding-bottom: 25px; }
 
 .full-width-gallery {
-  margin-bottom: 0px !important; }
+  margin-bottom: 4px !important; }
 
 #main-content .guest-services {
   padding-top: 0; }

@@ -120,6 +120,17 @@
   max-width: 100%; }
 
 /* ############ news.scss ############ */
+.ingredients-subheading {
+  font-size: 1.1em;
+  font-weight: bold;
+  font-size: 1.1em; }
+
+.no-margin-top {
+  margin-top: 0px; }
+
+.margin-bottom-0px {
+  margin-bottom: 0px; }
+
 #main-content .full-width-gallery,
 .news .full-width-gallery {
   margin-bottom: 4px; }

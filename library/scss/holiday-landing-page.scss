@@ -8,7 +8,12 @@
 
 
 
+
 /* ############ accommodations-suites.scss ############ */
+
+.full-width-gallery {
+    margin-bottom: 4px;
+}
 
 .news-ribbon {
     background: #968c83;
@@ -18,6 +23,7 @@
     font-size: 10px;
     color: #FFFFFF;
     line-height: 1.25em;
+    border-top: 4px solid white;
     span,
     .caption {
         margin-top: 1.2em;
@@ -110,8 +116,9 @@ p {
 }
 
 .full-width-gallery {
-    margin-bottom: 0px !important;
+    margin-bottom: 4px !important;
 }
+
 // styles for 0up
 #main-content {
     .guest-services {
