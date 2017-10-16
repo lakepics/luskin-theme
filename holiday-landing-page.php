@@ -94,7 +94,18 @@
             <?php endif; //if( get_sub_field('items') ): ?>
         </div>
     </div>
+        <div class="container clearfix news-pagination">
 
+        <?php
+$previous = get_field( 'previous_article' );
+$next = get_field( 'next_article' );
+if ( $previous ) {
+    echo '<span class="align-left"><a href="' . $previous[0]['article_link'] . '">&#8810; Previous Article</a></span>';
+}
+if ( $next ) {
+    echo '<span class="align-right"><a href="' . $next[0]['article_link'] . '">Next Article &#8811;</a></span>';
+}
+?>
     <?php endwhile; // while( hass_sub_field('to-do_lists') ): ?>
     <?php endif; // if( get_field('to-do_lists') ): ?>
     <?php endwhile; ?>

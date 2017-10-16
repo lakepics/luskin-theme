@@ -4,6 +4,7 @@
 <!--[if (IE 8)&!(IEMobile)]><html <?php language_attributes(); ?> class="no-js lt-ie9"><![endif]-->
 <!--[if gt IE 8]><!--> <html <?php language_attributes(); ?> class="no-js"><!--<![endif]-->
 <head>
+<?php the_field( 'google_gtm_code_snippet', 'option' ); ?>
 <meta charset="utf-8">
 <meta http-equiv="Content-Type" content="<?php bloginfo( 'html_type' ); ?>; charset=<?php bloginfo( 'charset' ); ?>" />
 <meta name="distribution" content="global" />
@@ -27,8 +28,6 @@ if ( !is_front_page() ) {
 height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <!-- End Google Tag Manager (noscript) -->
 
-<!-- must remove the google_gtm_code_snippet from Dever server, important -->
-<?php the_field( 'google_gtm_code_snippet', 'option' ); ?>
 
     <div class="mobile-navigation">
         <a href="/" class="logo-ucla-mobile"><img src="<?php bloginfo( 'stylesheet_directory' );?>/library/images/ucla-logo-mobile.png" alt="UCLA" /></a>

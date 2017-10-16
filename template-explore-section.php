@@ -30,30 +30,30 @@
                     foreach ( $features[0]['left_column'] as $feature ){
                         if( $feature['background_image'] ){
                                   echo '<a href="' . $feature[icon_url] . '">';
-                            echo '<div class="feature feature-left" style="background-image: url('. $feature['background_image'] .');">';
+                            echo '<div class="zoom-block"><div class="feature feature-left" style="background-image: url('. $feature['background_image'] .');">';
                         } else {
                             echo '<div class="feature">';
                         }
                             echo '<div class="feature-wrapper"><img class="feature-icon" src="'. $feature['icon'] .'" alt="" />';
 
-                                echo '<div class="description">'. $feature['content'] .'</div>';
+                                echo '<div class="description">'. $feature['content'] .'</div><div class="button" style="background-color: transparent;margin-top: 0px;background-color: transparent;background-image: url(/wp-content/themes/luskin/library/images/button-arrows.png);background-position: right -238px;background-repeat: no-repeat;color: #FFFFFF !important;display: inline-block;font-family: &quot;Proxima Nova Semibold&quot;, &quot;Helvetica Neue&quot;, Helvetica, Arial, sans-serif;font-size: 16px;min-height: 42px;letter-spacing: 0.05em;line-height: 24px;margin: 0;padding: 10px 50px 10px 20px;text-transform: uppercase;zoom: 1;">Read More</div>';
                             echo '</div>';
-                        echo '</div>';
+                        echo '</div></div>';
                     }
                     echo '</div></a>';
                     echo '<div class="features-column">';
                     foreach ( $features[0]['right_column'] as $feature ){
                         if( $feature['background_image'] ){
                                 echo '<a href="' . $feature[icon_url] . '">';
-                            echo '<div class="feature feature-right" style="background-image: url('. $feature['background_image'] .');">';
+                            echo '<div class="zoom-block"><div class="feature feature-right" style="background-image: url('. $feature['background_image'] .');">';
                         } else {
                             echo '<div class="feature">';
                         }
                             echo '<div class="feature-wrapper"><img class="feature-icon" src="'. $feature['icon'] .'" alt="" />';
  
-                                echo '<div class="description">'. $feature['content'] .'</div>';
+                                echo '<div class="description">'. $feature['content'] .'</div><div class="button" style="background-color: transparent;margin-top: 0px;background-color: transparent;background-image: url(/wp-content/themes/luskin/library/images/button-arrows.png);background-position: right -238px;background-repeat: no-repeat;color: #FFFFFF !important;display: inline-block;font-family: &quot;Proxima Nova Semibold&quot;, &quot;Helvetica Neue&quot;, Helvetica, Arial, sans-serif;font-size: 16px;min-height: 42px;letter-spacing: 0.05em;line-height: 24px;margin: 0;padding: 10px 50px 10px 20px;text-transform: uppercase;zoom: 1;">Read More</div>';
                             echo '</div>';
-                        echo '</div>';
+                        echo '</div></div>';
                     }
                     echo '</div></a>';
                 ?>

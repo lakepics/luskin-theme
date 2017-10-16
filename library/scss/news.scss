@@ -2,6 +2,7 @@
 @import 'sections/page';
 @import 'partials/embed_video';
 
+
 /* ############ news.scss ############ */
 
 .ingredients-subheading {
@@ -9,12 +10,15 @@
     font-weight: bold;
     font-size: 1.1em;
 }
+
 .no-margin-top {
     margin-top: 0px;
 }
+
 .margin-bottom-0px {
     margin-bottom: 0px;
 }
+
 // styles for 0up
 #main-content,
 .news {
@@ -41,8 +45,7 @@
     }
     h1 {
         text-align: left;
-        margin: 30px 0;
-        //       font-size: 2.5em;
+        margin: 30px 0; //       font-size: 2.5em;
     }
     h3 {
         font-family: $semibold-sans-serif;
@@ -118,13 +121,17 @@
             a:visited {
                 font-family: $semibold-sans-serif;
                 font-weight: normal;
-                color: $light-luskin-blue;
+                color: #47718E;
+                font-weight: bold;
                 text-decoration: none;
             }
             a:visited,
             a:active {
-                color: $light-luskin-blue;
+                color: #47718E;
                 font-weight: bold;
+                &:hover {
+                    color: #CCCCCC;
+                }
             }
         }
     }

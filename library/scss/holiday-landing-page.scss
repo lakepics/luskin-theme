@@ -119,8 +119,23 @@ p {
     margin-bottom: 4px !important;
 }
 
+
+//pagination
+
+#main-content .news-pagination {
+    margin: 30px auto 60px auto;
+}
+
+
 // styles for 0up
 #main-content {
+    a {
+        color: #47718E;
+        font-weight: bold;
+        &:hover {
+            color: #CCCCCC;
+        }
+    }
     .guest-services {
         padding-top: 0;
     }

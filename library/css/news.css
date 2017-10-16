@@ -243,14 +243,20 @@
     .news .news-content p a:visited {
       font-family: "Proxima Nova Semibold", "Helvetica Neue", Helvetica, Arial, sans-serif;
       font-weight: normal;
-      color: #00A5E5;
+      color: #47718E;
+      font-weight: bold;
       text-decoration: none; }
     #main-content .news-content p a:visited,
     #main-content .news-content p a:active,
     .news .news-content p a:visited,
     .news .news-content p a:active {
-      color: #00A5E5;
+      color: #47718E;
       font-weight: bold; }
+      #main-content .news-content p a:visited:hover,
+      #main-content .news-content p a:active:hover,
+      .news .news-content p a:visited:hover,
+      .news .news-content p a:active:hover {
+        color: #CCCCCC; }
 
 #main-content .page-col-onethird,
 .news .page-col-onethird {

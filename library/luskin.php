@@ -344,6 +344,18 @@ function luskinScriptsAndStyles()
             case 'holiday-landing-page.php':
                 wp_enqueue_style('faq-stylesheet', get_stylesheet_directory_uri() . '/library/css/holiday-landing-page.min.css', array('luskin-stylesheet'), '', 'all');
                 break;
+            case 'template-specials-landingpage.php':
+                wp_enqueue_style('faq-stylesheet', get_stylesheet_directory_uri() . '/library/css/specials_master.min.css', array('luskin-stylesheet'), '', 'all');
+                break;            
+            case 'template-specials-first-subpage.php':
+                wp_enqueue_style('faq-stylesheet', get_stylesheet_directory_uri() . '/library/css/specials_master.css', array('luskin-stylesheet'), '', 'all');
+                break;            
+            case 'template-specials-second-subpage.php':
+                wp_enqueue_style('faq-stylesheet', get_stylesheet_directory_uri() . '/library/css/specials_master.min.css', array('luskin-stylesheet'), '', 'all');
+                break;           
+            case 'template-sustainability.php':
+                wp_enqueue_style('faq-stylesheet', get_stylesheet_directory_uri() . '/library/css/sustainability.min.css', array('luskin-stylesheet'), '', 'all');
+                break;
 
             default : '';
         }
