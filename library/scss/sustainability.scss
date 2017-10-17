@@ -2,7 +2,60 @@
 @import 'sections/page';
 
 
-/* ############ sustainability.scsss ############ */
+
+
+
+
+
+
+/* ############ sustainability.scss ############ */
+
+
+.content_block {
+  &:last-child {
+    margin-bottom: 40px !important;
+  }
+}
+//image align
+.img-image-left {
+    margin-right: 20px;
+    float: left;
+}
+
+.img-image-right {
+    margin-left: 20px;
+    float: right;
+}
+
+
+
+.img-image-left,
+.img-image-right {
+    margin-bottom: 10px;
+    font-size: 10px;
+    line-height: 1.6em;
+}
+
+.img-image-left .img-image-caption,
+.container .img-image-right .img-image-caption {
+    display: inline-block;
+    max-width: 320px;
+}
+
+
+@media only screen and (min-width: 768px) {
+    .container .img-inline-image-left {
+        margin-right: 20px;
+        float: left;
+    }
+    .container .img-inline-image-right {
+        margin-left: 20px;
+        float: right;
+    }
+}
+
+
+
 
 // styles for 0up
 #main-content {
@@ -10,8 +63,28 @@
         list-style-type: disc;
     }
     .no-disc {
-      {list-style-type: none !important;}
+        list-style-type: none !important;
     }
+    p {
+        margin-bottom: 15px;
+        line-height: 1.5;
+        text-align: left;
+    }
+}
+
+.red-text {
+    color: red;
+}
+
+.content_block {
+    &__heading {
+        font-size: 1.5em;
+        color: $alt-dark-blue;
+        font-family: $semibold-sans-serif;
+        margin-bottom: 15px;
+        margin-top: 50px;
+    }
+    &__copy {}
 }
 
 .column-entry .img-overlay {

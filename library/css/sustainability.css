@@ -96,9 +96,57 @@
     font-size: 7em;
     left: 0.15em; } }
 
-/* ############ sustainability.scsss ############ */
+/* ############ sustainability.scss ############ */
+.content_block:last-child {
+  margin-bottom: 40px !important; }
+
+.img-image-left {
+  margin-right: 20px;
+  float: left; }
+
+.img-image-right {
+  margin-left: 20px;
+  float: right; }
+
+.img-image-left,
+.img-image-right {
+  margin-bottom: 10px;
+  font-size: 10px;
+  line-height: 1.6em; }
+
+.img-image-left .img-image-caption,
+.container .img-image-right .img-image-caption {
+  display: inline-block;
+  max-width: 320px; }
+
+@media only screen and (min-width: 768px) {
+  .container .img-inline-image-left {
+    margin-right: 20px;
+    float: left; }
+  .container .img-inline-image-right {
+    margin-left: 20px;
+    float: right; } }
+
 #main-content ul {
   list-style-type: disc; }
+
+#main-content .no-disc {
+  list-style-type: none !important; }
+
+#main-content p {
+  margin-bottom: 15px;
+  line-height: 1.5;
+  text-align: left; }
+
+.red-text {
+  color: red; }
+
+.content_block__heading {
+  font-size: 1.5em;
+  color: #1C4D71;
+  font-family: "Proxima Nova Semibold", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  margin-bottom: 15px;
+  margin-top: 50px; }
 
 .column-entry .img-overlay {
   display: block;

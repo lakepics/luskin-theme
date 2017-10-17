@@ -354,7 +354,7 @@ function luskinScriptsAndStyles()
                 wp_enqueue_style('faq-stylesheet', get_stylesheet_directory_uri() . '/library/css/specials_master.min.css', array('luskin-stylesheet'), '', 'all');
                 break;           
             case 'template-sustainability.php':
-                wp_enqueue_style('faq-stylesheet', get_stylesheet_directory_uri() . '/library/css/sustainability.min.css', array('luskin-stylesheet'), '', 'all');
+                wp_enqueue_style('sustainability-stylesheet', get_stylesheet_directory_uri() . '/library/css/sustainability.min.css', array('luskin-stylesheet'), '', 'all');
                 break;
 
             default : '';
