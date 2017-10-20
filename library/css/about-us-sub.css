@@ -195,6 +195,48 @@
     left: 0.15em; } }
 
 /* ############ about.scss ############ */
+.feature {
+  content: '';
+  display: block;
+  max-width: 100%;
+  min-height: 100%;
+  position: relative;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  padding-left: 0px !important;
+  padding-right: 0px !important;
+  background: #225c83;
+  background: rgba(34, 92, 131, 0.8);
+  background: rgba(35, 75, 135, 0.5);
+  z-index: 1; }
+  .feature:hover .overlay {
+    background-color: #172b4a;
+    opacity: 0.8;
+    border-radius: 0px;
+    transition-duration: 0.25s;
+    position: relative; }
+    .feature:hover .overlay p {
+      z-index: -12323; }
+  .feature:hover .feature-wrapper {
+    position: relative;
+    width: auto;
+    max-height: 550px;
+    margin: 0 auto;
+    padding: 10px 0px;
+    z-index: 10; }
+  .feature p, .feature button, .feature .feature-icon {
+    position: relative;
+    z-index: 4; }
+
+.feature-wrapper {
+  height: 550px; }
+
+.bold-blue-text {
+  color: #47718E !important;
+  font-weight: bold !important; }
+
 .column-entry .img-overlay {
   display: block;
   position: relative; }
