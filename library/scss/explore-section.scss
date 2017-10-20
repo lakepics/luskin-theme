@@ -91,7 +91,7 @@
     }
 }
 
-
+//
 .feature {
     content: '';
     display: block;
@@ -113,7 +113,7 @@
             background-color: #172b4a;
             opacity: 0.8;
             border-radius: 0px;
-            transition-duration: 0.75s;
+            transition-duration: 0.25s;
             position: relative;
             p {
                 z-index:    -12323;
@@ -122,7 +122,6 @@
         .feature-wrapper {
             position: relative;
             width: auto;
-            max-width: 450px;
             max-height: 550px;
             margin: 0 auto;
             padding: 10px 0px;

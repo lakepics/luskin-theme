@@ -2309,7 +2309,8 @@
   text-align: left; }
 
 .specials__main-heading {
-  margin-top: 0px; }
+  margin-top: 0px;
+  text-transform: uppercase; }
 
 .specials__main-copy p {
   text-transform: uppercase;
@@ -2336,7 +2337,8 @@
 .specials__main img {
   float: left;
   margin-right: 30px;
-  margin-bottom: 10px; }
+  margin-bottom: 10px;
+  max-width: 100%; }
 
 .specials__main p {
   margin-bottom: 15px;
@@ -2348,7 +2350,8 @@
 
 .specials__firstsubpage-heading {
   margin-top: 0px;
-  margin-bottom: 10px; }
+  margin-bottom: 10px;
+  text-transform: uppercase; }
 
 .specials__firstsubpage h3 {
   font-family: "Proxima Nova Semibold", "Helvetica Neue", Helvetica, Arial, sans-serif;
@@ -2367,7 +2370,8 @@
 .specials__firstsubpage img {
   float: left;
   margin-right: 30px;
-  margin-bottom: 10px; }
+  margin-bottom: 10px;
+  max-width: 100%; }
 
 .specials__firstsubpage p {
   margin-bottom: 15px;
@@ -2399,12 +2403,14 @@
   margin-top: 0px;
   font-size: 18px;
   margin-bottom: 15px;
-  font-family: "Proxima Nova Semibold", "Helvetica Neue", Helvetica, Arial, sans-serif; }
+  font-family: "Proxima Nova Semibold", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  text-transform: uppercase; }
 
 .specials__secondsubpage img {
   float: left;
   margin-right: 30px;
-  margin-bottom: 10px; }
+  margin-bottom: 10px;
+  max-width: 100%; }
 
 .specials__secondsubpage p {
   margin-bottom: 15px;

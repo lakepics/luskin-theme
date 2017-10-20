@@ -22,6 +22,7 @@
 .specials__main {
     &-heading {
         margin-top: 0px;
+         text-transform: uppercase;
     }
     &-copy {
         p {
@@ -53,6 +54,7 @@
         float: left;
         margin-right: 30px;
         margin-bottom: 10px;
+                max-width: 100%;
     }
     p {
         margin-bottom: 15px;
@@ -69,6 +71,7 @@
     &-heading {
         margin-top: 0px;
         margin-bottom: 10px;
+         text-transform: uppercase;
     }
     &-copy {}
     h3 {
@@ -90,6 +93,7 @@
         float: left;
         margin-right: 30px;
         margin-bottom: 10px;
+                max-width: 100%;
     }
     p {
         margin-bottom: 15px;
@@ -131,11 +135,13 @@
         font-size: 18px;
         margin-bottom: 15px;
         font-family: $semibold-sans-serif;
+         text-transform: uppercase;
     }
     img {
         float: left;
         margin-right: 30px;
         margin-bottom: 10px;
+        max-width: 100%;
     }
     p {
         margin-bottom: 15px;
