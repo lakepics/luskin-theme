@@ -2303,6 +2303,9 @@
   clip: auto; }
 
 /* ############ specials_master.scss ############ */
+.page-template-template-specials-landingpage-php .text-overlay {
+  font-size: 7em !important; }
+
 #main-content p {
   margin-bottom: 15px;
   line-height: 1.5;
@@ -2313,10 +2316,13 @@
   text-transform: uppercase; }
 
 .specials__main-copy p {
-  text-transform: uppercase;
   color: #47718E;
   font-family: "Proxima Nova Semibold", "Helvetica Neue", Helvetica, Arial, sans-serif;
-  font-size: 1.5em; }
+  font-size: 1.5em;
+  letter-spacing: 0.05em;
+  line-height: 1.15;
+  margin: 0 0 10px 0;
+  text-transform: uppercase; }
   .specials__main-copy p .fa {
     margin-left: 10px;
     font-size: 18px;

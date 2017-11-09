@@ -2,14 +2,46 @@
 @import 'sections/page';
 @import 'sections/amenities-services';
 
+
+
+
 /* ############ accommodations.scss ############ */
 
+.holiday-closure {
+    p {
+        margin-bottom: 15px;
+        font-size: 15px;
+        font-family: $sans-serif;
+        font-weight: 400;
+        text-transform: none;
+        letter-spacing: 0.025px;
+        color: $dark-blue;
+        line-height: 1.5em;
+        a {
+            font-family: $semibold-sans-serif;
+            font-weight: 600;
+        }
+        &:last-of-type {
+            margin-bottom: 0px;
+        }
+    }
+    .bold-text {
+        font-size: 20px;
+        font-family: $bold-sans-serif;
+    }
+    .bold {
+        font-family: $bold-sans-serif;
+    }
+}
+
 // styles for 0up
-ul {
-    list-style-type: disc;
-    margin-left: 1em;
-    li {
-        line-height: 2em;
+.two-columns {
+    ul {
+        list-style-type: disc;
+        margin-left: 1em;
+        li {
+            line-height: 2em;
+        }
     }
 }
 
@@ -29,4 +61,6 @@ ul {
 @media only screen and (min-width: 1240px) {}
 
 // styles for 2x
-@media only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min--moz-device-pixel-ratio: 1.5), only screen and (min-device-pixel-ratio: 1.5) {}
+@media only screen and (-webkit-min-device-pixel-ratio: 1.5),
+only screen and (min--moz-device-pixel-ratio: 1.5),
+only screen and (min-device-pixel-ratio: 1.5) {}

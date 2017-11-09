@@ -8,7 +8,11 @@
 
 
 /* ############ specials_master.scss ############ */
-
+.page-template-template-specials-landingpage-php {
+    .text-overlay {
+        font-size: 7em !important;
+    }
+}
 
 //landing page
 #main-content {
@@ -22,18 +26,21 @@
 .specials__main {
     &-heading {
         margin-top: 0px;
-         text-transform: uppercase;
+        text-transform: uppercase;
     }
     &-copy {
         p {
-            text-transform: uppercase;
             color: #47718E;
-            font-family: $semibold-sans-serif;
+            font-family: "Proxima Nova Semibold", "Helvetica Neue", Helvetica, Arial, sans-serif;
             font-size: 1.5em;
+            letter-spacing: 0.05em;
+            line-height: 1.15;
+            margin: 0 0 10px 0;
+            text-transform: uppercase;
             .fa {
                 margin-left: 10px;
-                    font-size: 18px;
-    margin-bottom: 5px;
+                font-size: 18px;
+                margin-bottom: 5px;
             }
         }
     }
@@ -54,7 +61,7 @@
         float: left;
         margin-right: 30px;
         margin-bottom: 10px;
-                max-width: 100%;
+        max-width: 100%;
     }
     p {
         margin-bottom: 15px;
@@ -71,7 +78,7 @@
     &-heading {
         margin-top: 0px;
         margin-bottom: 10px;
-         text-transform: uppercase;
+        text-transform: uppercase;
     }
     &-copy {}
     h3 {
@@ -93,7 +100,7 @@
         float: left;
         margin-right: 30px;
         margin-bottom: 10px;
-                max-width: 100%;
+        max-width: 100%;
     }
     p {
         margin-bottom: 15px;
@@ -106,10 +113,10 @@
 }
 
 @media only screen and (min-width: 1240px) {
-.text-overlay {
-    font-size: 5em;
-    left: 0.15em;
-}
+    .text-overlay {
+        font-size: 5em;
+        left: 0.15em;
+    }
 }
 
 //Subpage 2
@@ -135,7 +142,7 @@
         font-size: 18px;
         margin-bottom: 15px;
         font-family: $semibold-sans-serif;
-         text-transform: uppercase;
+        text-transform: uppercase;
     }
     img {
         float: left;
@@ -164,13 +171,13 @@
 
 // styles for 768up
 @media only screen and (min-width: 768px) {
-	.specials__secondsubpage {
+    .specials__secondsubpage {
         .entry {
-        	&:first-of-type {
-            margin-top: 50px;
+            &:first-of-type {
+                margin-top: 50px;
+            }
         }
     }
-	}
 }
 
 // styles for 1030up
