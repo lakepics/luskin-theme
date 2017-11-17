@@ -28,7 +28,7 @@
             startSlide: 0,
             autoDelay: 50,
             preloadImages: 'all',
-            pause: 4000,
+            pause: 8000,
             controls: true,
             pager: true,
             onSlideAfter: function onSlideAfter($slideElement, oldIndex, newIndex) {
