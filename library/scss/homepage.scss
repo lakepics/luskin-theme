@@ -2,6 +2,8 @@
 @import 'sections/page';
 
 
+
+
 /* ############ homepage.scss ############ */
 
 // styles for 0up
@@ -184,7 +186,7 @@
                                             font-weight: 400;
                                             line-height: 1.4em;
                                             text-transform: none;
-                                            margin-bottom: 0; 
+                                            margin-bottom: 0;
                                             color: #FFFFFF;
                                             a {
                                                 color: #FFE800;
@@ -744,6 +746,17 @@
                 }
             }
         }
+    }
+}
+
+//homepage slider closure
+@media only screen and (max-width: 768px) {
+    .js .home #container #content #slideshow-container .bx-wrapper .bx-viewport .home-slideshow .slide .slide-overlay h3,
+    .js .home #container #content #slideshow-container .bx-wrapper .bx-viewport .home-slideshow .slide .slide-overlay h4 {
+        opacity: 1;
+    }
+    .home #container #content #slideshow-container .bx-wrapper .bx-viewport .home-slideshow .slide .slide-overlay h4 {
+        width: 100%;
     }
 }
 

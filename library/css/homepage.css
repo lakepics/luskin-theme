@@ -507,3 +507,10 @@
       right: 50px; }
     .home #container #content #slideshow-container .bx-wrapper .bx-controls .bx-controls-direction {
       display: none; } }
+
+@media only screen and (max-width: 768px) {
+  .js .home #container #content #slideshow-container .bx-wrapper .bx-viewport .home-slideshow .slide .slide-overlay h3,
+  .js .home #container #content #slideshow-container .bx-wrapper .bx-viewport .home-slideshow .slide .slide-overlay h4 {
+    opacity: 1; }
+  .home #container #content #slideshow-container .bx-wrapper .bx-viewport .home-slideshow .slide .slide-overlay h4 {
+    width: 100%; } }

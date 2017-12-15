@@ -48,14 +48,14 @@ if ( $slides ) {
                 echo '<h3 class="tk-adobe-caslon-pro">'. $slide['subtitle'] .'</h3>';
             }
 
-            if ( !empty( $slide['orange_title'] ) ) {
-                echo '<h4 style="opacity: 1">'. $slide['orange_title'] .'</h4>';
-            }
-
+         
             if ( !empty( $slide['button_label'] ) ) {
                 echo '<div class="top-30" style="margin-top: 30px;"><a class="button" href="' . $slide['button_url'] . '"/>' . $slide['button_label'] . '</a></div>';
             }
-
+                if ( !empty( $slide['orange_title'] ) ) {
+                echo '<h4 style="opacity: 1">'. $slide['orange_title'] .'</h4>';
+            }
+           
             echo '</div>';
             echo '<h1><span class="slide-description">'. $slide['description'] .'</span></h1> ';
 
