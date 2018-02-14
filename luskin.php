@@ -251,6 +251,9 @@ function luskinScriptsAndStyles()
             case 'template-accommodations.php':
                 wp_enqueue_style('accommodations-stylesheet', get_stylesheet_directory_uri() . '/library/css/accommodations.min.css', array('luskin-stylesheet'), '', 'all');
                 break;
+            case 'template-accommodations-rsvp.php':
+                wp_enqueue_style('accommodations-stylesheet', get_stylesheet_directory_uri() . '/library/css/accommodations.min.css', array('luskin-stylesheet'), '', 'all');
+                break;
             case 'template-contact-team.php':
                 wp_enqueue_style('contact-team-stylesheet', get_stylesheet_directory_uri() . '/library/css/contact-team.min.css', array('luskin-stylesheet'), '', 'all');
                 break;
@@ -355,9 +358,6 @@ function luskinScriptsAndStyles()
                 break;           
             case 'template-sustainability.php':
                 wp_enqueue_style('sustainability-stylesheet', get_stylesheet_directory_uri() . '/library/css/sustainability.min.css', array('luskin-stylesheet'), '', 'all');
-                break;
-            case 'template-accommodations-rsvp.php':
-                wp_enqueue_style('sustainability-stylesheet', get_stylesheet_directory_uri() . '/library/css/accommodations.min.css', array('luskin-stylesheet'), '', 'all');
                 break;
 
             default : '';
