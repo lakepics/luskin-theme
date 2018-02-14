@@ -98,7 +98,8 @@
 
 /* ############ contact-team.scss ############ */
 #meet-the-team .team {
-  margin-bottom: 40px; }
+  margin-bottom: 40px;
+  min-height: 380px; }
 
 #meet-the-team h3 {
   font-family: "Proxima Nova Semibold", "Helvetica Neue", Helvetica, Arial, sans-serif;
@@ -120,3 +121,11 @@
 #meet-the-team .team-title {
   font-family: "Proxima Nova Regular", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 16px; }
+
+@media only screen and (max-width: 481px) {
+  #meet-the-team .team {
+    min-height: 0px; } }
+
+@media only screen and (min-width: 481px) and (max-width: 1155px) {
+  #meet-the-team .team {
+    min-height: 525px; } }

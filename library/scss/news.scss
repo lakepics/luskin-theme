@@ -3,6 +3,10 @@
 @import 'partials/embed_video';
 
 
+
+
+
+
 /* ############ news.scss ############ */
 
 .ingredients-subheading {
@@ -17,6 +21,45 @@
 
 .margin-bottom-0px {
     margin-bottom: 0px;
+}
+
+//double columsn
+.double-layout {
+    padding-bottom: 30px;
+    &__container {
+                    h2 {
+                margin-bottom:  20px !important;
+            }
+        display: inline-block;
+        width: 100%;
+        &-list-block {
+            margin: 0;
+            padding: 10px 0;
+        }
+        &-list {
+            width: 40%;
+            float: left;
+                   margin-top: 0px;
+            display: inline-block;
+            li {}
+        }
+    }
+}
+
+//double column responsive
+@media only screen and (max-width: 481px) {
+    .double-layout {
+        &__container {
+            &-list {
+                width: 100%;
+                display: inline-block;
+                float: none;
+                margin-top: 0px;
+                margin-bottom: 0px;
+                li {}
+            }
+        }
+    }
 }
 
 // styles for 0up

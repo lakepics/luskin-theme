@@ -131,6 +131,30 @@
 .margin-bottom-0px {
   margin-bottom: 0px; }
 
+.double-layout {
+  padding-bottom: 30px; }
+  .double-layout__container {
+    display: inline-block;
+    width: 100%; }
+    .double-layout__container h2 {
+      margin-bottom: 20px !important; }
+    .double-layout__container-list-block {
+      margin: 0;
+      padding: 10px 0; }
+    .double-layout__container-list {
+      width: 40%;
+      float: left;
+      margin-top: 0px;
+      display: inline-block; }
+
+@media only screen and (max-width: 481px) {
+  .double-layout__container-list {
+    width: 100%;
+    display: inline-block;
+    float: none;
+    margin-top: 0px;
+    margin-bottom: 0px; } }
+
 #main-content .full-width-gallery,
 .news .full-width-gallery {
   margin-bottom: 4px; }
