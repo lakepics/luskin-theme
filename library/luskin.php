@@ -254,6 +254,9 @@ function luskinScriptsAndStyles()
             case 'template-contact-team.php':
                 wp_enqueue_style('contact-team-stylesheet', get_stylesheet_directory_uri() . '/library/css/contact-team.min.css', array('luskin-stylesheet'), '', 'all');
                 break;
+            case 'template-contact-team-sales.php':
+                wp_enqueue_style('contact-team-sales-stylesheet', get_stylesheet_directory_uri() . '/library/css/contact-team-sales.min.css', array('luskin-stylesheet'), '', 'all');
+                break;
             case 'template-contact.php':
                 wp_enqueue_style('contact-stylesheet', get_stylesheet_directory_uri() . '/library/css/contact.min.css', array('luskin-stylesheet'), '', 'all');
                 break;

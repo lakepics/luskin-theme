@@ -1,6 +1,6 @@
 <?php
 /*
- * Template Name: Contact - Team
+ * Template Name: Contact - Team Sales
  */
 ?>
 <?php get_header(); ?>
