@@ -774,6 +774,16 @@ function luskinRegisterSidebars()
         'after_title' => '</h5>',
     ));
 
+        register_sidebar(array(
+        'id' => 'blog-sidebar',
+        'name' => __('Blog Sidebar', 'luskintheme'),
+        'description' => __('Sidebar used in Blog posts', 'luskintheme'),
+        'before_widget' => '<div id="%1$s" class="widget %2$s">',
+        'after_widget' => '</div>',
+        'before_title' => '<h2 class="blog-widget-title">',
+        'after_title' => '</h2>',
+    ));
+
     /*
     to add more sidebars or widgetized areas, just copy and edit the above
     sidebar code. In order to call your new sidebar just use the following code:
