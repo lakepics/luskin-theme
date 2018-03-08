@@ -1,41 +1,44 @@
 <?php
 /*
- * Template Name: Featured Article
- * Template Post Type: post, page, product
+ * Template Name: Blog Index
  */
-  
-
-
- get_header();  ?>
-
+?>
+<?php get_header(); ?>
 
 <div id="main-content" role="main">
 
     <?php if ( have_posts() ) : ?>
 
         <?php while ( have_posts() ) : the_post(); ?>
+            <?php showHeroSlides(); ?>
+        <div class="container clearfix">
 
+        </div>
             <div <?php post_class( 'post-listing' ) ?> id="post-<?php the_ID(); ?>">
                 <div class="container  clearfix">
-                	<div class="blog-content page-col-twothird">
-                        <div class="post-date">
-                            <div class="month"><?php the_time( M ) ?></div>
-                            <div class="day"><?php the_time( j ) ?></div>
-                        </div>
-                        <h2 class="entry-title">
-                            <a href="<?php the_permalink() ?>" rel="bookmark" title="Permanent Link to <?php the_title_attribute(); ?>"><?php the_title(); ?></a>
-                        </h2>
-                            <div class="xcertp-line clearfix">
-                                <div class="entry-content xcerpt">
-                                    <?php if ( $post->post_excerpt ) { the_excerpt();
-                                    } else {
-                                        the_excerpt();
-                                    } ?>
-                                </div>
-                            </div>
-                        <div class="tags"><?php the_tags( 'Tags: ', ', ', '<br />' ); ?></div>
-                    </div>
-
+            <div class="blog-content page-col-twothird"><h1>Blog</h1>
+                    <?php 
+                    // the query
+                    $wpb_all_query = new WP_Query(array('post_type'=>'post', 'post_status'=>'publish', 'posts_per_page'=>-1)); ?>
+                     
+                    <?php if ( $wpb_all_query->have_posts() ) : ?>
+                     
+                    <ul>
+                     
+                        <!-- the losop -->
+                        <?php while ( $wpb_all_query->have_posts() ) : $wpb_all_query->the_post(); ?>
+                            <li><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></li>
+                        <?php endwhile; ?>
+                        <!-- end of the loop -->
+                     
+                    </ul>
+                     
+                        <?php wp_reset_postdata(); ?>
+                     
+                    <?php else : ?>
+                        <p><?php _e( 'Sorry, no posts matched your criteria.' ); ?></p>
+                    <?php endif; ?>
+</div>
                     <!-- Sidebar right -->
                     <div class="page-col-onethird news-sidebar-content">
                         <?php if ( is_active_sidebar( 'blog-sidebar' ) ) : ?>
@@ -43,9 +46,6 @@
                             <?php dynamic_sidebar( 'blog-sidebar' ); ?>
                         </div>
                     <?php endif; ?>
-                    
-
-
                     </div>
                     <!-- sidebar end -->
                 </div>

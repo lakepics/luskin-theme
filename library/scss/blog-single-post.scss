@@ -7,60 +7,80 @@
 
 
 
-/* ############ news.scss ############ */
 
-.ingredients-subheading {
-    font-size: 1.1em;
-    font-weight: bold;
-    font-size: 1.1em;
+
+
+
+
+
+/* ############ blog-single-post.scss ############ */
+
+
+/* #### Article  #### */
+
+.blog-content {
+    .post-date {
+        .month {}
+        .day {}
+    }
 }
 
-.no-margin-top {
-    margin-top: 0px;
-}
 
-.margin-bottom-0px {
-    margin-bottom: 0px;
-}
 
-//double columsn
-.double-layout {
-    padding-bottom: 30px;
-    &__container {
-                    h2 {
-                margin-bottom:  20px !important;
-            }
-        display: inline-block;
-        width: 100%;
-        &-list-block {
+
+
+
+/* #### END Article  #### */
+
+
+/* #### Side Bar  #### */
+
+.news-sidebar-content {
+    ul {
+        li {
+            border-bottom: 1px solid #8da6b8;
             margin: 0;
             padding: 10px 0;
+        &:last-of-type {
+            border-bottom: none !important;
         }
-        &-list {
-            width: 40%;
-            float: left;
-                   margin-top: 0px;
-            display: inline-block;
-            li {}
         }
     }
-}
-
-//double column responsive
-@media only screen and (max-width: 481px) {
-    .double-layout {
-        &__container {
-            &-list {
-                width: 100%;
-                display: inline-block;
-                float: none;
-                margin-top: 0px;
-                margin-bottom: 0px;
-                li {}
+    .tagcloud {
+        a {
+            font-size: 10px;
+            padding: 3px 8px;
+            border: 1px solid #d9d9d9;
+            margin: 0 8px 8px 0;
+            display: inline-block;
+            text-transform: uppercase;
+            color: #232323;
+            line-height: 18px;
+            &:hover {
+                background: #0073A7;
+                color: #fff !important;
+                border: 1px solid #232323;
+            }
+            &:active {
+                outline: none;
             }
         }
     }
 }
+
+
+
+
+
+
+
+
+
+
+/* #### END Side Bar  #### */
+
+
+/* ############ END blog-single-post.scss ############ */
 
 // styles for 0up
 #main-content,
@@ -68,6 +88,7 @@
     .full-width-gallery {
         margin-bottom: 4px;
     }
+
     .news-ribbon {
         background: #968c83;
         height: 60px;
@@ -86,13 +107,16 @@
             line-height: 1.2em;
         }
     }
+
     h1 {
         text-align: left;
         margin: 30px 0; //       font-size: 2.5em;
     }
+
     h3 {
         font-family: $semibold-sans-serif;
     }
+
     ul {
         padding-left: 0;
         list-style: disc;
@@ -102,6 +126,7 @@
             margin-bottom: .75em;
         }
     }
+
     a.button-abt {
         &.left-arrow {
             padding: 10px 10px 10px 45px;
@@ -111,9 +136,11 @@
             background-position: 105% -241px;
         }
     }
+
     .caption {
         color: #FFFFFF;
     }
+
     .callout {
         background: #aca39a;
         border: none;
@@ -155,6 +182,7 @@
             margin-bottom: 30px;
         }
     }
+
     .news-content {
         margin: 0 auto 3em 0;
         p {
@@ -178,6 +206,7 @@
             }
         }
     }
+
     .page-col-onethird {
         float: none;
         width: 100%;
@@ -185,6 +214,7 @@
             color: $alt-dark-blue;
         }
     }
+
     .page-col-twothird {
         float: none;
         margin-right: 10px;
@@ -194,12 +224,14 @@
             height: auto!important;
         }
     }
+
     .res-content a,
     .res-content a:visited,
     .res-content a:active {
         color: $copy-link-visited;
         font-weight: bold;
     }
+
     a:hover {
         color: $copy-link-visited;
         text-decoration: none;
@@ -222,14 +254,17 @@
             max-width: 320px;
         }
     }
+
     .news-inline-image-left {
         margin-right: auto;
         float: none;
     }
+
     .news-inline-image-right {
         margin-left: auto;
         float: none;
     }
+
     .recipe-ingredients {
         background: #aca39a;
         width: auto;
@@ -252,6 +287,7 @@
             }
         }
     }
+
     .recipe-directions {
         h4,
         p {
@@ -275,6 +311,7 @@
         text-transform: uppercase;
         text-align: left;
     }
+
     ul {
         margin: 0 0 50px 0;
         list-style-type: none;
@@ -335,6 +372,7 @@
             }
         }
     }
+
     .container {
         .news-inline-image-left {
             margin-right: 20px;

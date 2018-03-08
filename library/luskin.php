@@ -362,7 +362,15 @@ function luskinScriptsAndStyles()
             case 'template-accommodations-rsvp.php':
                 wp_enqueue_style('sustainability-stylesheet', get_stylesheet_directory_uri() . '/library/css/accommodations.min.css', array('luskin-stylesheet'), '', 'all');
                 break;
-
+            case 'template-accommodations-rsvp.php':
+                wp_enqueue_style('sustainability-stylesheet', get_stylesheet_directory_uri() . '/library/css/accommodations.min.css', array('luskin-stylesheet'), '', 'all');
+                break;
+            case 'wpb-single-post.php':
+                wp_enqueue_style('blog-single-stylesheet', get_stylesheet_directory_uri() . '/library/css/blog-single-post.min.css', array('luskin-stylesheet'), '', 'all');
+                break;
+            case 'blog-index.php':
+                wp_enqueue_style('blog-index-stylesheet', get_stylesheet_directory_uri() . '/library/css/blog-single-post.min.css', array('luskin-stylesheet'), '', 'all');
+                break;
             default : '';
         }
 

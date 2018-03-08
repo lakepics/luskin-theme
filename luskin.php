@@ -296,9 +296,6 @@ function luskinScriptsAndStyles()
             case 'template-news.php':
                 wp_enqueue_style('news-stylesheet', get_stylesheet_directory_uri() . '/library/css/news.min.css', array('luskin-stylesheet'), '', 'all');
                 break;
-            case 'wpb-single-post.php':
-                wp_enqueue_style('blog-single-stylesheet', get_stylesheet_directory_uri() . '/library/css/blog-single-post.min.css', array('luskin-stylesheet'), '', 'all');
-                break;
             case 'template-one-col.php':
                 wp_enqueue_style('one-column-stylesheet', get_stylesheet_directory_uri() . '/library/css/one-column.min.css', array('luskin-stylesheet'), '', 'all');
                 break;
@@ -403,10 +400,7 @@ function blog_post()
          array('jquery')
     );
 
-    wp_enqueue_style(
-        'opby',
-        get_stylesheet_uri()
-    );
+    wp_enqueue_style('sustainability-stylesheet', get_stylesheet_directory_uri() . '/library/css/sustainability.min.css', array('luskin-stylesheet'), '', 'all');
 
     wp_enqueue_style(
         'googleFonts',
