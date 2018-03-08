@@ -702,7 +702,7 @@ function luskinThemeSupport()
         'comment-form',
     ));
 
-} /* end Theme support */
+} /* End Theme support */
 
 /* *****************************************************************************
  * ACTIVE SIDEBARS
