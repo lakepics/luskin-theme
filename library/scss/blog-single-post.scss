@@ -13,6 +13,11 @@
 
 
 
+
+
+
+
+
 /* ############ blog-single-post.scss ############ */
 
 
@@ -30,20 +35,51 @@
 
 
 
+
+
+
+
+
 /* #### END Article  #### */
 
 
 /* #### Side Bar  #### */
 
 .news-sidebar-content {
+    .lcc-search {
+        padding-bottom: 2.2em;
+    .search {
+        float: left;
+        width: 80%;
+        border: 2px solid #3185C0;
+        padding: 5px;
+        height: 20px;
+        border-radius: 5px 0px 0px 5px;
+        outline: none;
+        color: #9DBFAF;
+    }
+    .search-submit {
+        color: #3185C0;
+        position: absolute;
+        width: 40px;
+        height: 34px;
+        border: 1px solid #3185C0;
+        background: #3185C0;
+        text-align: center;
+        color: #fff;
+        border-radius: 0px 5px 5px 0px;
+        cursor: pointer;
+        font-size: 20px;
+    }
+}
     ul {
         li {
             border-bottom: 1px solid #8da6b8;
             margin: 0;
             padding: 10px 0;
-        &:last-of-type {
-            border-bottom: none !important;
-        }
+            &:last-of-type {
+                border-bottom: none !important;
+            }
         }
     }
     .tagcloud {
@@ -67,6 +103,11 @@
         }
     }
 }
+
+
+
+
+
 
 
 

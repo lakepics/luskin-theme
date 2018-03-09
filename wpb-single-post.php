@@ -43,14 +43,11 @@
                             <?php dynamic_sidebar( 'blog-sidebar' ); ?>
                         </div>
                     <?php endif; ?>
-                    
-
-
                     </div>
                     <!-- sidebar end -->
                 </div>
             </div>
-
+<div class="container clearfix news-pagination"> <span class="align-left"><a href="https://luskin-dev.hhs.ucla.edu/hedy-jj-sales-team-1115/">≪ Previous Article</a></span><span class="align-right"><a href="https://luskin-dev.hhs.ucla.edu/planner-buzz-082115/">Next Article ≫</a></span> </div>
         <div class="navigation">
             <?php if ( function_exists( 'wp_pagenavi' ) ) { ?>
                 <?php wp_pagenavi(); ?>
