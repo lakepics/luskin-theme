@@ -729,4 +729,17 @@ function gkp_html_minyfy_finish( $html )  {
 
 }
 
+
+/**
+ * Filter the except length to 20 words.
+ *
+ * @param int $length Excerpt length.
+ * @return int (Maybe) modified excerpt length.
+ */
+function wpdocs_custom_excerpt_length( $length ) {
+    return 100;
+}
+add_filter( 'excerpt_length', 'wpdocs_custom_excerpt_length', 999 );
+
+
 /* DON'T DELETE THIS CLOSING TAG */?>

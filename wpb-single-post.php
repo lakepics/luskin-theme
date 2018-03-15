@@ -18,6 +18,9 @@
             <div <?php post_class( 'post-listing' ) ?> id="post-<?php the_ID(); ?>">
                 <div class="container  clearfix">
                 	<div class="blog-content page-col-twothird">
+                        <div id="featured">
+
+</div>
                         <div class="post-date">
                             <div class="month"><?php the_time( M ) ?></div>
                             <div class="day"><?php the_time( j ) ?></div>
@@ -33,7 +36,6 @@
                                     } ?>
                                 </div>
                             </div>
-                        <div class="tags"><?php the_tags( 'Tags: ', ', ', '<br />' ); ?></div>
                     </div>
 
                     <!-- Sidebar right -->
@@ -47,6 +49,10 @@
                     <!-- sidebar end -->
                 </div>
             </div>
+            <nav class="navigation post-navigation" role="navigation">
+        <h2 class="screen-reader-text">Continue Reading</h2>
+        <div class="nav-links"><div class="nav-previous"><a href="http://themes.89elements.com/definity/opfl/2017/07/02/blog-post-example-2/" rel="prev"><span class="linea-arrows-slim-left"></span> previous post</a></div><div class="nav-next"><a href="http://themes.89elements.com/definity/opfl/2017/07/02/blog-post-example-3/" rel="next">next post <span class="linea-arrows-slim-right"></span></a></div></div>
+    </nav>
 <?php
 $pagelist = get_pages('sort_column=menu_order&sort_order=asc');
 $pages = array();
@@ -55,8 +61,8 @@ foreach ($pagelist as $page) {
 }
 
 $current = array_search(get_the_ID(), $pages);
-$prevID = $pages[$current-1];
-$nextID = $pages[$current+1];
+$prevID = $posts[$current-1];
+$nextID = $posts[$current+1];
 ?>
 
 
@@ -78,6 +84,8 @@ if (!empty($nextID)) { ?>
 
 
 <div class="container clearfix news-pagination"> <span class="align-left"><a href="<?php next_post_link( '&laquo; Older Entries' ) ?>">Previous Article</a></span><span class="align-right"><a href="<?php previous_post_link( 'Newer Entries &raquo;' ) ?>">Next Article ≫</a></span> </div>
+
+
         <div class="navigation">
             <?php if ( function_exists( 'wp_pagenavi' ) ) { ?>
                 <?php wp_pagenavi(); ?>

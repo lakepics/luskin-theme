@@ -7,16 +7,37 @@
 
 <div id="main-content" role="main">
 
-    <?php if ( have_posts() ) : ?>
+<?php if ( have_posts() ) : ?>
+    <?php while ( have_posts() ) : the_post(); ?>
+    <?php showHeroSlides(); ?>
+<div class="two-columns container clearfix"><h1>Blog</h1></div>
+    <div <?php post_class( 'post-listing' ) ?> id="post-<?php the_ID(); ?>">
+        <div class="container  clearfix">
+            <div class="blog-content page-col-twothird">
+            <?php query_posts('posts_per_page=12'); /*1, 2*/
+                if ( have_posts() ) while ( have_posts() ) : the_post(); ?>
+                <?php if ( has_post_thumbnail() ) : ?>
+                <article class="blog-post">
+                    <div class="blog-post-single">
+                        <a class="post-img" href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>">
+                            <?php the_post_thumbnail('full'); ?>
+                        </a>
+                        <div class="bp-content">
+                            <h2><a href="<?php the_permalink(); ?>"><?php the_title();?></a></h2>
+                            <p><?php the_excerpt(); ?></p>
+                            <p><a class="button" href="<?php the_permalink(); ?>">Read More</a></p>
+                        </div>
+                    </div>
+                </article><!-- blog-post -->
+            <?php endif; ?>
+            <?php endwhile; ?> <?php wp_reset_query(); ?>
 
-        <?php while ( have_posts() ) : the_post(); ?>
-            <?php showHeroSlides(); ?>
-        <div class="container clearfix">
 
-        </div>
-            <div <?php post_class( 'post-listing' ) ?> id="post-<?php the_ID(); ?>">
-                <div class="container  clearfix">
-            <div class="blog-content page-col-twothird"><h1>Blog</h1>
+    <h2>line break</h2>
+
+
+
+
                     <?php 
                     // the query
                     $wpb_all_query = new WP_Query(array('post_type'=>'post', 'post_status'=>'publish', 'posts_per_page'=>-1)); ?>
