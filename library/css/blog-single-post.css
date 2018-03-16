@@ -442,7 +442,26 @@
   .bp-content {
     padding: 20px 25px 25px 25px !important; } }
 
-/* ############ END blog-single-post.scss ############ */
+#breadcrumbs {
+  list-style: none;
+  overflow: hidden;
+  margin: 0px; }
+
+#breadcrumbs li {
+  display: inline-block;
+  vertical-align: middle;
+  margin-right: 0px; }
+  #breadcrumbs li:before {
+    padding: 0 5px;
+    color: #ccc; }
+
+#breadcrumbs .separator {
+  content: "/\00a0";
+  color: #ccc;
+  margin: 0px 10px; }
+
+/* ############ END  blog-single-post.scss ############ */
+/* ############ OLD CODE Start ############ */
 #main-content .full-width-gallery,
 .news .full-width-gallery {
   margin-bottom: 4px; }
@@ -645,21 +664,3 @@
     width: auto; }
     #main-content .container .recipe-directions p {
       margin-bottom: 10px; } }
-
-#breadcrumbs {
-  list-style: none;
-  overflow: hidden;
-  margin: 0px; }
-
-#breadcrumbs li {
-  display: inline-block;
-  vertical-align: middle;
-  margin-right: 0px; }
-  #breadcrumbs li:before {
-    padding: 0 5px;
-    color: #ccc; }
-
-#breadcrumbs .separator {
-  content: "/\00a0";
-  color: #ccc;
-  margin: 0px 10px; }
