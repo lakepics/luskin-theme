@@ -12,40 +12,35 @@
     <div id="main-content" role="main">
         <?php if ( have_posts() ) : ?>
         <div class="blog-ribbon">
-            <div class="container"><span class="blog-issue"><?php the_title(); ?></span><span class="caption"><?php the_time('F j, Y') ?></span></div>
-        </div>s
+            <div class="container clearfix"><span class="blog-issue"><?php custom_breadcrumbs(); ?></span><span class="caption"><?php the_time('F j, Y') ?></span></div>
+        </div>
         <?php while ( have_posts() ) : the_post(); ?>
 
         <div <?php post_class( 'post-listing' ) ?> id="post-
             <?php the_ID(); ?>">
             <div class="container  clearfix">
                 <div class="blog-content page-col-twothird">
-                    <div id="featured">
-
-                    </div>
-                    <div class="post-date">
-                        <div class="month">
-                            <?php the_time( M ) ?>
-                        </div>
-                        <div class="day">
-                            <?php the_time( j ) ?>
-                        </div>
-                    </div>
-                    <h2 class="entry-title">
-                        <a href="<?php the_permalink() ?>" rel="bookmark" title="Permanent Link to <?php the_title_attribute(); ?>">
-                            <?php the_title(); ?>
-                        </a>
-                    </h2>
-                    <div class="xcertp-line clearfix">
-                        <div class="entry-content xcerpt">
-                            <?php if ( $post->post_excerpt ) { the_excerpt();
+                    <div class="blog-post">
+                        <div class="blog-post-single">
+                            <a class="post-img" href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>">
+                                <?php the_post_thumbnail('full'); ?>
+                            </a>
+                            <h2 class="entry-title">
+                                <a href="<?php the_permalink() ?>" rel="bookmark" title="Permanent Link to <?php the_title_attribute(); ?>">
+                                    <?php the_title(); ?>
+                                </a>
+                            </h2>
+                            <div class="xcertp-line clearfix">
+                                <div class="entry-content xcerpt">
+                                    <?php if ( $post->post_excerpt ) { the_excerpt();
                                     } else {
                                         the_excerpt();
                                     } ?>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
-
                 <!-- Sidebar right -->
                 <div class="page-col-onethird news-sidebar-content">
                     <?php if ( is_active_sidebar( 'blog-sidebar' ) ) : ?>

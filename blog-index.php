@@ -10,7 +10,10 @@
         <?php if ( have_posts() ) : ?>
         <?php while ( have_posts() ) : the_post(); ?>
         <?php showHeroSlides(); ?>
-        <div class="two-columns container clearfix">
+        <div class="blog-ribbon">
+            <div class="container clearfix"><span class="blog-issue"><?php custom_breadcrumbs(); ?></span></div>
+        </div>
+        <div class="container clearfix">
             <h1>Blog</h1>
         </div>
         <div <?php post_class( 'post-listing' ) ?> id="post-

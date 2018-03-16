@@ -94,7 +94,7 @@
             padding: 10px 0;
             a {
                 font-size: 16px;
-                font-family: $semibold-sans-serif;
+                font-family: $sans-serif;
                 color: #1C4D71;
             }
         }
@@ -111,6 +111,7 @@
             letter-spacing: 2px;
             text-transform: uppercase;
             color: #777;
+            font-family: $sans-serif;
         }
     }
     .lcc-search {
@@ -141,6 +142,7 @@
         }
     }
     .tagcloud {
+      padding-top: 10px;
         a {
             font-size: 10px;
             padding: 3px 8px;
@@ -212,10 +214,11 @@
     background: #f4f4f4;
     height: 60px;
     min-height: 60px;
-    font-family: $semibold-sans-serif;
+    font-family: $sans-serif;
     font-size: 10px;
     color: #FFFFFF;
     line-height: 1.25em;
+    margin-bottom: 60px;
     .blog-issue {
         margin-top: 0;
         font-size: 18px;
@@ -240,7 +243,7 @@
         background: #f4f4f4;
         height: 60px;
         min-height: 60px;
-        font-family: $semibold-sans-serif;
+        font-family: $sans-serif;
         font-size: 18px;
         color: #FFFFFF;
         line-height: 61px;
@@ -277,6 +280,9 @@
 @media only screen and (max-width: 768px) {
     #search-2 {
         margin-top: 30px !important;
+    }
+    .bp-content {
+      padding: 20px 25px 25px 25px !important;
     }
 }
 
@@ -352,7 +358,7 @@
             a,
             a:hover,
             a:visited {
-                font-family: $semibold-sans-serif;
+                font-family: $sans-serif;
                 font-weight: normal;
                 color: #47718E;
                 font-weight: bold;
@@ -517,3 +523,26 @@
 @media only screen and (-webkit-min-device-pixel-ratio: 1.5),
 only screen and (min--moz-device-pixel-ratio: 1.5),
 only screen and (min-device-pixel-ratio: 1.5) {}
+
+//Breadcrumbs
+#breadcrumbs {
+    list-style: none;
+    overflow: hidden;
+    margin: 0px;
+}
+
+#breadcrumbs li {
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: 0px;
+    &:before {
+        padding: 0 5px;
+        color: #ccc;
+    }
+}
+
+#breadcrumbs .separator {
+    content: "/\00a0";
+    color: #ccc;
+    margin: 0px 10px;
+}

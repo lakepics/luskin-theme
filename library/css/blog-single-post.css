@@ -294,7 +294,7 @@
     padding: 10px 0; }
     .news-sidebar-content ul li a {
       font-size: 16px;
-      font-family: "Proxima Nova Semibold", "Helvetica Neue", Helvetica, Arial, sans-serif;
+      font-family: "Proxima Nova Regular", "Helvetica Neue", Helvetica, Arial, sans-serif;
       color: #1C4D71; }
 
 .news-sidebar-content .widget_recent_entries a,
@@ -307,7 +307,8 @@
   font-weight: 300;
   letter-spacing: 2px;
   text-transform: uppercase;
-  color: #777; }
+  color: #777;
+  font-family: "Proxima Nova Regular", "Helvetica Neue", Helvetica, Arial, sans-serif; }
 
 .news-sidebar-content .lcc-search {
   padding-bottom: 2.2em; }
@@ -333,21 +334,23 @@
     cursor: pointer;
     font-size: 20px; }
 
-.news-sidebar-content .tagcloud a {
-  font-size: 10px;
-  padding: 3px 8px;
-  border: 1px solid #d9d9d9;
-  margin: 0 8px 8px 0;
-  display: inline-block;
-  text-transform: uppercase;
-  color: #232323;
-  line-height: 18px; }
-  .news-sidebar-content .tagcloud a:hover {
-    background: #0073A7;
-    color: #fff !important;
-    border: 1px solid #232323; }
-  .news-sidebar-content .tagcloud a:active {
-    outline: none; }
+.news-sidebar-content .tagcloud {
+  padding-top: 10px; }
+  .news-sidebar-content .tagcloud a {
+    font-size: 10px;
+    padding: 3px 8px;
+    border: 1px solid #d9d9d9;
+    margin: 0 8px 8px 0;
+    display: inline-block;
+    text-transform: uppercase;
+    color: #232323;
+    line-height: 18px; }
+    .news-sidebar-content .tagcloud a:hover {
+      background: #0073A7;
+      color: #fff !important;
+      border: 1px solid #232323; }
+    .news-sidebar-content .tagcloud a:active {
+      outline: none; }
 
 .news-sidebar-content #search-2 {
   margin-top: 0px !important; }
@@ -382,10 +385,11 @@
   background: #f4f4f4;
   height: 60px;
   min-height: 60px;
-  font-family: "Proxima Nova Semibold", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: "Proxima Nova Regular", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 10px;
   color: #FFFFFF;
-  line-height: 1.25em; }
+  line-height: 1.25em;
+  margin-bottom: 60px; }
   .blog-ribbon .blog-issue {
     margin-top: 0;
     font-size: 18px;
@@ -406,7 +410,7 @@
     background: #f4f4f4;
     height: 60px;
     min-height: 60px;
-    font-family: "Proxima Nova Semibold", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-family: "Proxima Nova Regular", "Helvetica Neue", Helvetica, Arial, sans-serif;
     font-size: 18px;
     color: #FFFFFF;
     line-height: 61px; }
@@ -434,7 +438,9 @@
 
 @media only screen and (max-width: 768px) {
   #search-2 {
-    margin-top: 30px !important; } }
+    margin-top: 30px !important; }
+  .bp-content {
+    padding: 20px 25px 25px 25px !important; } }
 
 /* ############ END blog-single-post.scss ############ */
 #main-content .full-width-gallery,
@@ -513,7 +519,7 @@
     .news .news-content p a,
     .news .news-content p a:hover,
     .news .news-content p a:visited {
-      font-family: "Proxima Nova Semibold", "Helvetica Neue", Helvetica, Arial, sans-serif;
+      font-family: "Proxima Nova Regular", "Helvetica Neue", Helvetica, Arial, sans-serif;
       font-weight: normal;
       color: #47718E;
       font-weight: bold;
@@ -639,3 +645,21 @@
     width: auto; }
     #main-content .container .recipe-directions p {
       margin-bottom: 10px; } }
+
+#breadcrumbs {
+  list-style: none;
+  overflow: hidden;
+  margin: 0px; }
+
+#breadcrumbs li {
+  display: inline-block;
+  vertical-align: middle;
+  margin-right: 0px; }
+  #breadcrumbs li:before {
+    padding: 0 5px;
+    color: #ccc; }
+
+#breadcrumbs .separator {
+  content: "/\00a0";
+  color: #ccc;
+  margin: 0px 10px; }
