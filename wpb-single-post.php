@@ -8,11 +8,12 @@
 
  get_header();  ?>
 
+
     <div id="main-content" role="main">
         <?php if ( have_posts() ) : ?>
-        <div class="news-ribbon">
-            <div class="container"><span class="news-issue"><?php the_title(); ?</span><span class="caption"><?php the_time('F Y') ?></span></div>
-        </div>
+        <div class="blog-ribbon">
+            <div class="container"><span class="blog-issue"><?php the_title(); ?></span><span class="caption"><?php the_time('F j, Y') ?></span></div>
+        </div>s
         <?php while ( have_posts() ) : the_post(); ?>
 
         <div <?php post_class( 'post-listing' ) ?> id="post-
