@@ -278,6 +278,9 @@
 
 /* #### END Article  #### */
 /* #### Side Bar  #### */
+#recent-posts-2 {
+  margin-top: 0px !important; }
+
 .news-sidebar-content h3 {
   padding-bottom: 10px;
   text-transform: uppercase;
@@ -294,7 +297,9 @@
       font-family: "Proxima Nova Semibold", "Helvetica Neue", Helvetica, Arial, sans-serif;
       color: #1C4D71; }
 
-.news-sidebar-content .widget_recent_entries a, .news-sidebar-content .widget_categories a, .news-sidebar-content .widget_archive a {
+.news-sidebar-content .widget_recent_entries a,
+.news-sidebar-content .widget_categories a,
+.news-sidebar-content .widget_archive a {
   display: block;
   margin-top: 0;
   margin-bottom: 0;
@@ -372,6 +377,11 @@
       color: #777 !important; }
 
 /* #### END Side Bar  #### */
+.news-ribbon .caption {
+  font-size: 12px;
+  float: right;
+  line-height: 2.95em; }
+
 @media only screen and (min-width: 1030px) {
   .not-frontpage .no-hero {
     margin-top: 133px !important; } }

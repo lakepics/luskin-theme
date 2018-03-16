@@ -943,6 +943,16 @@ button {
 /******************************************************************/
 /* search page */
 /* search result page */
+.search-results .entry-content {
+  display: block;
+  margin-top: 0;
+  margin-bottom: 0;
+  font-size: 0.85em;
+  font-weight: 300;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: #777; }
+
 /* no results search page */
 /* individual paged search (i.e. body.search-paged-3) */
 /******************************************************************/

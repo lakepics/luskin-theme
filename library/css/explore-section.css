@@ -233,7 +233,9 @@
     margin: 0 auto;
     padding: 10px 0px;
     z-index: 10; }
-  .feature p, .feature button, .feature .feature-icon {
+  .feature p,
+  .feature button,
+  .feature .feature-icon {
     position: relative;
     z-index: 4; }
 
