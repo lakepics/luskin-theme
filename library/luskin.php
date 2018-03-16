@@ -349,13 +349,13 @@ function luskinScriptsAndStyles()
                 break;
             case 'template-specials-landingpage.php':
                 wp_enqueue_style('faq-stylesheet', get_stylesheet_directory_uri() . '/library/css/specials_master.min.css', array('luskin-stylesheet'), '', 'all');
-                break;            
+                break;
             case 'template-specials-first-subpage.php':
                 wp_enqueue_style('faq-stylesheet', get_stylesheet_directory_uri() . '/library/css/specials_master.css', array('luskin-stylesheet'), '', 'all');
-                break;            
+                break;
             case 'template-specials-second-subpage.php':
                 wp_enqueue_style('faq-stylesheet', get_stylesheet_directory_uri() . '/library/css/specials_master.min.css', array('luskin-stylesheet'), '', 'all');
-                break;           
+                break;
             case 'template-sustainability.php':
                 wp_enqueue_style('sustainability-stylesheet', get_stylesheet_directory_uri() . '/library/css/sustainability.min.css', array('luskin-stylesheet'), '', 'all');
                 break;
@@ -489,7 +489,7 @@ function luskinScriptsAndStyles()
         //wp_enqueue_script('jquery', '//ajax.googleapis.com/ajax/libs/jquery/1.8/jquery.min.js', array('modernizr'), false, false);
         wp_enqueue_script('jquery', '//code.jquery.com/jquery-1.12.1.min.js', array('modernizr'), false, false);
 
-        
+
 
         /* **************************************************
          * ...on the flipbook template
@@ -841,5 +841,7 @@ function luskinExcerptMore($more)
 {
     global $post;
     // edit here if you like
-    return '...  <a class="excerpt-read-more" href="' . get_permalink($post->ID) . '" title="' . __('Read ', 'luskintheme') . esc_attr(get_the_title($post->ID)) . '">' . __('Read more &raquo;', 'luskintheme') . '</a>';
+    return '...';
 }
+//original code for the abot return '...' snippet,
+//    return '...  <a class="excerpt-read-more" href="' . get_permalink($post->ID) . '" title="' . __('Read ', 'luskintheme') . esc_attr(get_the_title($post->ID)) . '">' . __('Read more &raquo;', 'luskintheme') . '</a>';

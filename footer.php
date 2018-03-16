@@ -46,7 +46,7 @@
                 <div id="sidebar-sub-footer" class="container clearfix hospitality-group widget-area" role="complementary">
                     <?php dynamic_sidebar( 'sidebar-sub-footer' ); ?>
                 </div>
-                
+
             <?php endif; ?>
 
         </div>

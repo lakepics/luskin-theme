@@ -59,7 +59,7 @@ function luskinAhoy()
     add_filter('the_content', 'luskinFilterPtagsOnImages');
 
     // remove the annoying […] to a read more link
-    //add_filter('excerpt_more', 'luskinExcerptMore');
+    add_filter('excerpt_more', 'luskinExcerptMore');
 
     // enable scripts in text widgets
     add_filter('widget_text', 'php_text', 99);
@@ -737,7 +737,7 @@ function gkp_html_minyfy_finish( $html )  {
  * @return int (Maybe) modified excerpt length.
  */
 function wpdocs_custom_excerpt_length( $length ) {
-    return 100;
+    return 45;
 }
 add_filter( 'excerpt_length', 'wpdocs_custom_excerpt_length', 999 );
 

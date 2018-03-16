@@ -241,20 +241,69 @@
     .blog-content .blog-post .blog-post-single .bp-content .post-meta {
       position: relative;
       display: block;
-      margin-bottom: 23px;
+      margin-bottom: 10px;
       height: 30px; }
+      .blog-content .blog-post .blog-post-single .bp-content .post-meta .post-date span {
+        display: inline-block;
+        border-height: 18px;
+        font-size: .85em;
+        letter-spacing: 2px;
+        text-transform: uppercase;
+        vertical-align: middle;
+        color: #777;
+        transition: all .3s; }
     .blog-content .blog-post .blog-post-single .bp-content .post-title {
       display: block;
       margin: 0;
       padding-bottom: 20px;
-      font-size: 1.3em;
-      letter-spacing: 3.5px;
-      word-wrap: break-word; }
+      font-size: 1.5em;
+      word-wrap: break-word;
+      color: #1C4D71; }
     .blog-content .blog-post .blog-post-single .bp-content p {
       margin: 0 0 10px; }
+    .blog-content .blog-post .blog-post-single .bp-content .read-more-btn {
+      margin-top: 20px; }
+  .blog-content .blog-post:hover {
+    -webkit-transform: translateY(-10px);
+            transform: translateY(-10px);
+    box-shadow: 0 22px 43px rgba(0, 0, 0, 0.15); }
+
+.blog-content ul {
+  padding-left: 0;
+  list-style: disc; }
+  .blog-content ul li {
+    font-family: "Proxima Nova Regular", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    line-height: 1.6em;
+    margin-bottom: .75em; }
 
 /* #### END Article  #### */
 /* #### Side Bar  #### */
+.news-sidebar-content h3 {
+  padding-bottom: 10px;
+  text-transform: uppercase;
+  text-align: left; }
+
+.news-sidebar-content ul {
+  margin: 0 0 50px 0;
+  list-style-type: none; }
+  .news-sidebar-content ul li {
+    margin: 0;
+    padding: 10px 0; }
+    .news-sidebar-content ul li a {
+      font-size: 16px;
+      font-family: "Proxima Nova Semibold", "Helvetica Neue", Helvetica, Arial, sans-serif;
+      color: #1C4D71; }
+
+.news-sidebar-content .widget_recent_entries a, .news-sidebar-content .widget_categories a, .news-sidebar-content .widget_archive a {
+  display: block;
+  margin-top: 0;
+  margin-bottom: 0;
+  font-size: 0.85em;
+  font-weight: 300;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: #777; }
+
 .news-sidebar-content .lcc-search {
   padding-bottom: 2.2em; }
   .news-sidebar-content .lcc-search .search {
@@ -279,13 +328,6 @@
     cursor: pointer;
     font-size: 20px; }
 
-.news-sidebar-content ul li {
-  border-bottom: 1px solid #d9d9d9;
-  margin: 0;
-  padding: 10px 0; }
-  .news-sidebar-content ul li:last-of-type {
-    border-bottom: none !important; }
-
 .news-sidebar-content .tagcloud a {
   font-size: 10px;
   padding: 3px 8px;
@@ -305,7 +347,42 @@
 .news-sidebar-content #search-2 {
   margin-top: 0px !important; }
 
+.news-sidebar-content .blog-widget-title {
+  margin-top: 0;
+  margin-bottom: 570 25px;
+  padding-bottom: 20px;
+  font-size: 1.25em;
+  letter-spacing: 2px;
+  border-bottom: 1px solid #ccc; }
+
+.news-sidebar-content ul {
+  list-style: none;
+  margin: 0;
+  padding: 0; }
+  .news-sidebar-content ul li {
+    padding-bottom: 15px; }
+    .news-sidebar-content ul li a {
+      display: block;
+      margin-top: 0;
+      margin-bottom: 0;
+      font-size: 0.85em;
+      font-weight: 300;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: #777 !important; }
+
 /* #### END Side Bar  #### */
+@media only screen and (min-width: 1030px) {
+  .not-frontpage .no-hero {
+    margin-top: 133px !important; } }
+
+.no-hero {
+  margin-top: 63px !important; }
+
+@media only screen and (max-width: 768px) {
+  #search-2 {
+    margin-top: 30px !important; } }
+
 /* ############ END blog-single-post.scss ############ */
 #main-content .full-width-gallery,
 .news .full-width-gallery {
@@ -339,16 +416,6 @@
 #main-content h3,
 .news h3 {
   font-family: "Proxima Nova Semibold", "Helvetica Neue", Helvetica, Arial, sans-serif; }
-
-#main-content ul,
-.news ul {
-  padding-left: 0;
-  list-style: disc; }
-  #main-content ul li,
-  .news ul li {
-    font-family: "Proxima Nova Regular", "Helvetica Neue", Helvetica, Arial, sans-serif;
-    line-height: 1.6em;
-    margin-bottom: .75em; }
 
 #main-content a.button-abt.left-arrow,
 .news a.button-abt.left-arrow {
@@ -512,30 +579,6 @@
 .container .recipe-directions p {
   margin-bottom: 10px;
   padding-bottom: 0; }
-
-.news-sidebar {
-  background: rgba(215, 210, 203, 0.25);
-  float: right;
-  margin-left: 50px;
-  padding: 50px;
-  width: 33.3%; }
-
-#main-content .news-sidebar-content h3 {
-  padding-bottom: 10px;
-  text-transform: uppercase;
-  text-align: left; }
-
-#main-content .news-sidebar-content ul {
-  margin: 0 0 50px 0;
-  list-style-type: none; }
-  #main-content .news-sidebar-content ul li {
-    border-bottom: 1px solid #8da6b8;
-    margin: 0;
-    padding: 10px 0; }
-    #main-content .news-sidebar-content ul li a {
-      font-size: 16px;
-      font-family: "Proxima Nova Semibold", "Helvetica Neue", Helvetica, Arial, sans-serif;
-      color: #1C4D71; }
 
 #main-content .news-pagination {
   margin: 30px auto 60px auto; }
