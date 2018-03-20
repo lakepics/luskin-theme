@@ -9,8 +9,6 @@
         <div class="blog-content page-col-twothird test">
 
             <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
-            <?php showHeroSlides(); ?>
-
             <?php query_posts('posts_per_page=6'); /*1, 2*/
             if ( have_posts() ) while ( have_posts() ) : the_post(); ?>
             <?php if ( has_post_thumbnail() ) : ?>
@@ -38,10 +36,12 @@
                             <p><a class="button read-more-btn" href="<?php the_permalink(); ?>">Read More</a></p>
                         </div>
                     </div>
+
                 </div>
+    <?php endif; ?>
             </article>
             <!-- blog-post -->
-            <?php endif; ?>
+
 
             <?php endwhile; ?>
 
