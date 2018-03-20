@@ -69,10 +69,9 @@
 
     </div>
 
-
+    <div class="container  clearfix">
     <div class="container clearfix news-pagination"> <span class="align-left"><a href="<?php next_post_link( '&laquo; Older Entries' ) ?>">Previous Article</a></span><span class="align-right"><a href="<?php previous_post_link( 'Newer Entries &raquo;' ) ?>">Next Article ≫</a></span> </div>
-
-
+</div>
     <?php else : ?>
     <div class="hentry post">
         <h2 class="entry-title">Not Found</h2>
