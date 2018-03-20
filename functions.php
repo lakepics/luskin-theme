@@ -749,10 +749,10 @@ function custom_breadcrumbs() {
     $separator          = '&#47;';
     $breadcrums_id      = 'breadcrumbs';
     $breadcrums_class   = 'breadcrumbs';
-    $home_title         = 'Homepage';
+    $home_title         = 'Blog';
     $blog               = 'Blog';
 
-    // If you have any custom post types with custom taxonomies, put the taxonomy name below (e.g. product_cat)
+    // If you have any custom post types with custom taxonomiess, put the taxonomy name below (e.g. product_cat)
     $custom_taxonomy    = 'product_cat';
 
     // Get the query & post information
@@ -765,7 +765,7 @@ function custom_breadcrumbs() {
         echo '<ul id="' . $breadcrums_id . '" class="' . $breadcrums_class . '">';
 
         // Home page
-        echo '<li class="item-home"><a class="bread-link bread-home" href="' . get_home_url() . '" title="' . $home_title . '">' . $home_title . '</a></li>';
+        echo '<li class="item-home"><a class="bread-link bread-home" href="' . get_home_url(null, '/blog') . '" title="' . $home_title . '">' . $home_title . '</a></li>';
         echo '<li class="separator separator-home"> ' . $separator . ' </li>';
 
         if ( is_archive() && !is_tax() && !is_category() && !is_tag() ) {

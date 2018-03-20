@@ -7,8 +7,7 @@
 
     <div id="main-content" role="main">
 
-        <?php if ( have_posts() ) : ?>
-        <?php while ( have_posts() ) : the_post(); ?>
+        <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
         <?php showHeroSlides(); ?>
         <div class="blog-ribbon">
             <div class="container clearfix"><span class="blog-issue"><?php custom_breadcrumbs(); ?></span></div>
@@ -19,7 +18,7 @@
         <div <?php post_class( 'post-listing' ) ?> id="post-
             <?php the_ID(); ?>">
             <div class="container  clearfix">
-                <div class="blog-content page-col-twothird">
+                <div class="blog-content page-col-twothird test">
                     <?php query_posts('posts_per_page=12'); /*1, 2*/
                 if ( have_posts() ) while ( have_posts() ) : the_post(); ?>
                     <?php if ( has_post_thumbnail() ) : ?>
@@ -47,38 +46,21 @@
                         </div>
                     </article>
                     <!-- blog-post -->
+                    <?php 					// Previous/next page navigation.
+                    					the_posts_pagination(
+                    						array(
+                    							'prev_text'          => esc_html__( 'Newer posts', 'capri' ),
+                    							'next_text'          => esc_html__( 'Older posts', 'capri' ),
+                    							'before_page_number' => '<span class="meta-nav screen-reader-text">' . esc_html__( 'Page', 'capri' ) . ' </span>',
+                    						)
+                    					);
+                     ?>
+
                     <?php endif; ?>
                     <?php endwhile; ?>
+
                     <?php wp_reset_query(); ?>
-                    <h2>line break</h2>
-
-                    <?php
-                    // the query
-                    $wpb_all_query = new WP_Query(array('post_type'=>'post', 'post_status'=>'publish', 'posts_per_page'=>-1)); ?>
-
-                        <?php if ( $wpb_all_query->have_posts() ) : ?>
-
-                        <ul>
-
-                            <!-- the loop -->
-                            <?php while ( $wpb_all_query->have_posts() ) : $wpb_all_query->the_post(); ?>
-                            <li>
-                                <a href="<?php the_permalink(); ?>">
-                                    <?php the_title(); ?>
-                                </a>
-                            </li>
-                            <?php endwhile; ?>
-                            <!-- end of the loop -->
-
-                        </ul>
-
-                        <?php wp_reset_postdata(); ?>
-
-                        <?php else : ?>
-                        <p>
-                            <?php _e( 'Sorry, no posts matched your criteria.' ); ?>
-                        </p>
-                        <?php endif; ?>
+                    <!-- Add the pagination functions here. -->
                 </div>
                 <!-- Sidebar right -->
                 <div class="page-col-onethird news-sidebar-content">
@@ -91,9 +73,7 @@
                 <!-- sidebar end -->
             </div>
         </div>
-
-
-
+        <div class="container clearfix news-pagination"> <span class="align-left"><a>Previous Article</a></span><span class="align-right"><a href="Newer Entries »">Next Article ≫</a></span> </div>
         <?php endwhile; ?>
 
         <?php else : ?>
