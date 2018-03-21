@@ -23,7 +23,7 @@
     <div id="main-content" role="main">
         <?php if ( have_posts() ) : ?>
         <div class="blog-ribbon">
-            <div class="container clearfix"><span class="blog-issue"><?php custom_breadcrumbs(); ?></span><span class="caption"><?php the_time('F j, Y') ?></span></div>
+            <div class="container clearfix"><span class="blog-issue"><?php custom_breadcrumbs(); ?></span></div>
         </div>
         <div class="container  clearfix">
             <div class="blog-content page-col-twothird">
@@ -64,13 +64,16 @@
             <?php endif; ?>
         </div>
         <!-- sidebar end -->
+
+
     </div>
     </div>
 
     </div>
 
     <div class="container  clearfix">
-    <div class="container clearfix news-pagination"> <span class="align-left"><a href="<?php next_post_link( '&laquo; Older Entries' ) ?>">Previous Article</a></span><span class="align-right"><a href="<?php previous_post_link( 'Newer Entries &raquo;' ) ?>">Next Article ≫</a></span> </div>
+
+    <span class="align-left"><a href="<?php next_post_link( '&laquo; Older Entries' ) ?>">Previous Article</a></span><span class="align-right"><a href="<?php previous_post_link( 'Newer Entries &raquo;' ) ?>">Next Article ≫</a></span> </div>
 </div>
     <?php else : ?>
     <div class="hentry post">

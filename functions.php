@@ -750,7 +750,6 @@ function custom_breadcrumbs() {
     $breadcrums_id      = 'breadcrumbs';
     $breadcrums_class   = 'breadcrumbs';
     $home_title         = 'Blog';
-    $blog               = 'Blog';
 
     // If you have any custom post types with custom taxonomiess, put the taxonomy name below (e.g. product_cat)
     $custom_taxonomy    = 'product_cat';
@@ -771,6 +770,11 @@ function custom_breadcrumbs() {
         if ( is_archive() && !is_tax() && !is_category() && !is_tag() ) {
 
             echo '<li class="item-current item-archive"><strong class="bread-current bread-archive">' . post_type_archive_title($prefix, false) . '</strong></li>';
+
+        }
+        if ( is_post_type_archive( $post_type ) && !is_tax() && !is_category() && !is_tag() ) {
+
+            echo '<li class="item-current item-archive"><strong class="bread-current bread-archive">' . post_type_archive_title($prefix, false) . 'testn</strong></li>';
 
         } else if ( is_archive() && is_tax() && !is_category() && !is_tag() ) {
 
