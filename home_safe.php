@@ -46,7 +46,7 @@
             <?php endwhile; ?>
 
             <?php wp_reset_query(); ?>
-            <?php endwhile; ?>
+    <?php endwhile; ?>
 
         </div>
         <!-- Sidebar right -->
