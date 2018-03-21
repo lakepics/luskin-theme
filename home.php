@@ -6,12 +6,12 @@
         <div class="container clearfix"><span class="blog-issue"><?php custom_breadcrumbs(); ?></span></div>
     </div>
     <div class="container  clearfix">
-        <div class="blog-content page-col-twothird test">
+        <div class="blog-content page-col-twothird">
 
             <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
+
             <?php query_posts('posts_per_page=6'); /*1, 2*/
-            if ( have_posts() ) while ( have_posts() ) : the_post(); ?>
-            <?php if ( has_post_thumbnail() ) : ?>
+            if ( has_post_thumbnail() ) : ?>
             <article class="blog-post">
                 <div <?php post_class( 'post-listing' ) ?> id="post-
                     <?php the_ID(); ?>">
@@ -36,14 +36,13 @@
                             <p><a class="button read-more-btn" href="<?php the_permalink(); ?>">Read More</a></p>
                         </div>
                     </div>
-
                 </div>
-
             </article>
+
             <!-- blog-post -->
             <?php endif; ?>
 
-            <?php endwhile; ?>
+
 
             <?php wp_reset_query(); ?>
             <?php endwhile; ?>

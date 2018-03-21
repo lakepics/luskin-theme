@@ -10,8 +10,7 @@
 
             <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
             <?php query_posts('posts_per_page=6'); /*1, 2*/
-            if ( have_posts() ) while ( have_posts() ) : the_post(); ?>
-            <?php if ( has_post_thumbnail() ) : ?>
+            if ( has_post_thumbnail() ) : ?>
             <article class="blog-post">
                 <div <?php post_class( 'post-listing' ) ?> id="post-
                     <?php the_ID(); ?>">
@@ -40,13 +39,14 @@
                 </div>
 
             </article>
+            test;
             <!-- blog-post -->
             <?php endif; ?>
 
-            <?php endwhile; ?>
+
 
             <?php wp_reset_query(); ?>
-    <?php endwhile; ?>
+            <?php endwhile; ?>
 
         </div>
         <!-- Sidebar right -->
