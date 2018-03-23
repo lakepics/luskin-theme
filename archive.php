@@ -36,19 +36,22 @@
                             <a class="post-img" href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>">
                                 <?php the_post_thumbnail('full'); ?>
                             </a>
-                            <h2 class="entry-title">
-                                <a href="<?php the_permalink() ?>" rel="bookmark" title="Permanent Link to <?php the_title_attribute(); ?>">
-                                    <?php the_title(); ?>
-                                </a>
-                            </h2>
-                            <div class="xcertp-line clearfix">
-                                <div class="entry-content xcerpt">
-
-
-                                    <?php the_content(); ?>
+                            <div class="bp-content">
+                                <div class="post-meta">
+                                    <div class="post-date">
+                                        <span><?php the_time('F j, Y') ?></span>
+                                    </div>
                                 </div>
+                                <h2 class="post-title">
+                                    <a href="<?php the_permalink(); ?>">
+                                        <?php the_title();?>
+                                    </a>
+                                </h2>
+                                <p>
+                                    <?php the_excerpt(); ?>
+                                </p>
+                                <p><a class="button read-more-btn" href="<?php the_permalink(); ?>">Read More</a></p>
                             </div>
-
                         </div>
                     </div>
                 </div>

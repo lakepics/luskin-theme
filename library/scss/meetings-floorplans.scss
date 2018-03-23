@@ -2,41 +2,39 @@
 @import 'sections/page';
 @import 'sections/amenities-services';
 @import 'modules/tables';
-
 /* ############ meetings-floorplan.scss ############ */
 
 // styles for 0up
-
 .floorplan-heading {
-  position: relative;
-  padding: 28px 50px 28px 0;
-  font-size: 25px;
-  line-height: 1.2;
-  letter-spacing: 0.05em;
-  text-transform: uppercase;
-  color: #fff;
-  font-family: $semibold-sans-serif;
-  margin: 0 0 40px 0;
-  text-align: center;
+    position: relative;
+    padding: 28px 50px 28px 0;
+    font-size: 25px;
+    line-height: 1.2;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    color: #fff;
+    font-family: $semibold-sans-serif;
+    margin: 0 0 40px 0;
+    text-align: center;
 }
 
 .bx-controls-direction {
-  margin-top: -23px;
-  right: 0;
-  z-index: 101;
+    margin-top: -23px;
+    right: 0;
+    z-index: 101;
 }
 
 .service {
-  .service-name {
-    padding: 0 10px;
-  }
+    .service-name {
+        padding: 0 10px;
+    }
 }
 
 .res-columns {
-  a.button-alt {
-    background-position-x: 104%;
-    padding: 10px 40px 10px 10px;
-  }
+    a.button-alt {
+        background-position-x: 104%;
+        padding: 10px 40px 10px 10px;
+    }
 }
 
 .highlights {
@@ -53,17 +51,17 @@ ul {
 
 // styles for 878down
 @media screen and (max-width: 878px) {
-  .res-columns {
-    -webkit-column-count: 1;
-    -moz-column-count: 1;
-    column-count: 1;
-    -webkit-column-width: 100%;
-    -moz-column-width: 100%;
-    column-width: 100%;
-    -webkit-column-gap: 0;
-    -moz-column-gap: 0;
-    column-gap: 0;
-  }
+    .res-columns {
+        -webkit-column-count: 1;
+        -moz-column-count: 1;
+        column-count: 1;
+        -webkit-column-width: 100%;
+        -moz-column-width: 100%;
+        column-width: 100%;
+        -webkit-column-gap: 0;
+        -moz-column-gap: 0;
+        column-gap: 0;
+    }
 }
 
 // styles for 481up
@@ -82,4 +80,6 @@ ul {
 @media only screen and (min-width: 1240px) {}
 
 // styles for 2x
-@media only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min--moz-device-pixel-ratio: 1.5), only screen and (min-device-pixel-ratio: 1.5) {}
+@media only screen and (-webkit-min-device-pixel-ratio: 1.5),
+only screen and (min--moz-device-pixel-ratio: 1.5),
+only screen and (min-device-pixel-ratio: 1.5) {}

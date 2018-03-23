@@ -268,6 +268,40 @@
             transform: translateY(-10px);
     box-shadow: 0 22px 43px rgba(0, 0, 0, 0.15); }
 
+.blog-content .blog-post-individual {
+  margin-bottom: 40px;
+  border-top: 1px solid #f8f8f8; }
+  .blog-content .blog-post-individual .blog-post-single .post-img img {
+    max-width: 100%;
+    height: auto;
+    transition: opacity .5s;
+    margin-bottom: 20px; }
+  .blog-content .blog-post-individual .blog-post-single .bp-content {
+    padding: 40px 50px 50px 50px; }
+    .blog-content .blog-post-individual .blog-post-single .bp-content .post-meta {
+      position: relative;
+      display: block;
+      margin-bottom: 10px;
+      height: 30px; }
+      .blog-content .blog-post-individual .blog-post-single .bp-content .post-meta .post-date span {
+        display: inline-block;
+        border-height: 18px;
+        font-size: .85em;
+        letter-spacing: 2px;
+        text-transform: uppercase;
+        vertical-align: middle;
+        color: #777;
+        transition: all .3s; }
+    .blog-content .blog-post-individual .blog-post-single .bp-content .post-title {
+      display: block;
+      margin: 0;
+      padding-bottom: 20px;
+      font-size: 1.5em;
+      word-wrap: break-word;
+      color: #1C4D71; }
+    .blog-content .blog-post-individual .blog-post-single .bp-content p {
+      margin: 0 0 10px; }
+
 .blog-content ul {
   padding-left: 0;
   list-style: disc; }
@@ -380,6 +414,78 @@
       color: #777 !important; }
 
 /* #### END Side Bar  #### */
+/* #### Meta Footer   #### */
+.post-meta-footer {
+  margin-top: 50px;
+  padding: 40px;
+  background: #f4f4f4; }
+  .post-meta-footer .blog-post-categories span {
+    margin-top: 0;
+    margin-bottom: 0;
+    font-weight: 300;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: #000000; }
+  .post-meta-footer .blog-post-categories .span-title {
+    padding-right: 20px; }
+  .post-meta-footer .blog-post-categories a {
+    text-transform: uppercase;
+    color: #999 !important; }
+    .post-meta-footer .blog-post-categories a:hover {
+      color: #111 !important; }
+  .post-meta-footer .blog-post-categories .blog-space {
+    margin: 0px 10px;
+    padding: 0px !important; }
+  .post-meta-footer .blog-post-tags {
+    display: inline-block;
+    margin-top: 30px;
+    margin-bottom: 0 !important;
+    letter-spacing: 2px;
+    text-transform: uppercase; }
+    .post-meta-footer .blog-post-tags span {
+      margin-top: 0;
+      margin-bottom: 0;
+      font-size: 0.85em;
+      font-weight: 300;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: #000000;
+      padding-right: 20px; }
+    .post-meta-footer .blog-post-tags a {
+      display: inline-block;
+      padding: 5px 10px !important;
+      margin-bottom: 5px;
+      border: 1px solid #9e9e9e;
+      font-size: 0.85em;
+      letter-spacing: 2px;
+      font-weight: 400;
+      color: #999 !important;
+      text-transform: uppercase;
+      transition: all .5s;
+      margin-right: 10px; }
+      .post-meta-footer .blog-post-tags a:hover {
+        border-color: #777;
+        color: #111 !important; }
+
+/* #### pagination  #### */
+.blog-index .pagination {
+  border-radius: 0;
+  padding: 0;
+  margin: 0; }
+  .blog-index .pagination ul {
+    display: inline-block;
+    margin-left: 0;
+    margin-bottom: 0;
+    padding: 0; }
+    .blog-index .pagination ul li {
+      display: inline; }
+  .blog-index .pagination .active a {
+    color: #999999;
+    cursor: default; }
+  .blog-index .pagination span {
+    display: inline !important; }
+
+/* #### END: pagination  #### */
 /* #### Ribbon  #### */
 .blog-ribbon {
   background: #f4f4f4;
@@ -664,3 +770,18 @@
     width: auto; }
     #main-content .container .recipe-directions p {
       margin-bottom: 10px; } }
+
+@media only screen and (max-width: 768px) {
+  .blog-ribbon {
+    background: #f4f4f4;
+    height: 60px;
+    min-height: 60px;
+    font-family: "Proxima Nova Regular", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 10px;
+    color: #FFFFFF;
+    line-height: 1.25em;
+    margin-bottom: 0px; }
+  .breadcrumbs {
+    font-size: .85em; }
+    .breadcrumbs .separator {
+      margin: 0px 5px; } }

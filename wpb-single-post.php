@@ -11,16 +11,17 @@
 
     <div id="main-content" role="main">
         <?php if ( have_posts() ) : ?>
+        <?php while ( have_posts() ) : the_post(); ?>
         <div class="blog-ribbon">
             <div class="container clearfix"><span class="blog-issue"><?php custom_breadcrumbs(); ?></span><span class="caption"><?php the_time('F j, Y') ?></span></div>
         </div>
-        <?php while ( have_posts() ) : the_post(); ?>
+
 
         <div <?php post_class( 'post-listing' ) ?> id="post-
             <?php the_ID(); ?>">
             <div class="container  clearfix">
                 <div class="blog-content page-col-twothird">
-                    <div class="blog-post">
+                    <div class="blog-post-individual">
                         <div class="blog-post-single">
                             <a class="post-img" href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>">
                                 <?php the_post_thumbnail('full'); ?>
@@ -32,13 +33,18 @@
                             </h2>
                             <div class="xcertp-line clearfix">
                                 <div class="entry-content xcerpt">
-                                    <?php if ( $post->post_excerpt ) { the_excerpt();
-                                    } else {
-                                        the_excerpt();
+                                    <?php if ( $post->post_excerpt ) { the_content();
+                                  } else {
+
+                                        the_content();
                                     } ?>
                                 </div>
                             </div>
                         </div>
+                    </div>
+                    <div class="post-meta-footer">
+                            <div class="blog-post-categories"><span class="span-title">Categories: </span><?php the_category('<span class="blog-space">&#47;</span>'); ?></div>
+                        <div class="blog-post-tags"><span>Tags:</span><?php the_tags( '', '' ); ?></div>
                     </div>
                 </div>
                 <!-- Sidebar right -->
@@ -51,48 +57,12 @@
                 </div>
                 <!-- sidebar end -->
             </div>
+
         </div>
-        <?php
-$pagelist = get_pages('sort_column=menu_order&sort_order=asc');
-$pages = array();
-foreach ($pagelist as $page) {
-   $pages[] += $page->ID;
-}
-
-$current = array_search(get_the_ID(), $pages);
-$prevID = $posts[$current-1];
-$nextID = $posts[$current+1];
-?>
-
-
-            <div class="container clearfix news-pagination">
-                <?php if (!empty($prevID)) { ?>
-                <div class="align-left">
-                    <a href="<?php echo get_permalink($prevID); ?>" title="<?php echo get_the_title($prevID); ?>">
-                        << Previous</a>
-                </div>
-                <?php }
-if (!empty($nextID)) { ?>
-                <div class="align-right">
-                    <a href="<?php echo get_permalink($nextID); ?>" title="<?php echo get_the_title($nextID); ?>">Next >></a>
-                </div>
-                <?php } ?>
-            </div>
-            <!-- .navigation -->>
 
 
 
-            <div class="container clearfix news-pagination"> <span class="align-left"><a href="<?php next_post_link( '&laquo; Older Entries' ) ?>">Previous Article</a></span><span class="align-right"><a href="<?php previous_post_link( 'Newer Entries &raquo;' ) ?>">Next Article ≫</a></span> </div>
 
-
-            <div class="navigation">
-                <?php if ( function_exists( 'wp_pagenavi' ) ) { ?>
-                <?php wp_pagenavi(); ?>
-                <?php } else { ?>
-                <div class="nav-previous"><a href="<?php next_posts_link( '&laquo; Older Entries' ) ?>">Back</a></div>
-                <div class="nav-next"><a href="<?php previous_posts_link( 'Newer Entries &raquo;' ) ?>">Next</a></div>
-                <?php } ?>
-            </div>
 
 
             <?php endwhile; ?>

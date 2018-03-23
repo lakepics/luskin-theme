@@ -730,16 +730,6 @@ function gkp_html_minyfy_finish( $html )  {
 }
 
 
-/**
- * Filter the except length to 20 words.
- *
- * @param int $length Excerpt length.
- * @return int (Maybe) modified excerpt length.
- */
-function wpdocs_custom_excerpt_length( $length ) {
-    return 45;
-}
-add_filter( 'excerpt_length', 'wpdocs_custom_excerpt_length', 999 );
 
 // Breadcrumbs
 //https://www.thewebtaylor.com/articles/wordpress-creating-breadcrumbs-without-a-plugin
@@ -774,7 +764,7 @@ function custom_breadcrumbs() {
         }
         if ( is_post_type_archive( $post_type ) && !is_tax() && !is_category() && !is_tag() ) {
 
-            echo '<li class="item-current item-archive"><strong class="bread-current bread-archive">' . post_type_archive_title($prefix, false) . 'testn</strong></li>';
+            echo '<li class="item-current item-archive"><strong class="bread-current bread-archive">' . post_type_archive_title($prefix, false) . '</strong></li>';
 
         } else if ( is_archive() && is_tax() && !is_category() && !is_tag() ) {
 
@@ -977,4 +967,15 @@ function custom_breadcrumbs() {
     }
 
 }
+
+/* Tagcloud, change the font size */
+function custom_tag_cloud_widget($args) {
+$args['largest'] = 13; //largest tag
+$args['smallest'] = 13; //smallest tag
+$args['unit'] = 'px'; //tag font unit
+return $args;
+}
+add_filter( 'widget_tag_cloud_args', 'custom_tag_cloud_widget' );
+
+
 /* DON'T DELETE THIS CLOSING TAG */?>

@@ -1,6 +1,6 @@
 <?php get_header(); ?>
 
-<div id="main-content" role="main">
+<div id="main-content" class="blog-index" role="main">
 
     <div class="blog-ribbon">
         <div class="container clearfix"><span class="blog-issue"><?php custom_breadcrumbs(); ?></span></div>
@@ -60,18 +60,26 @@
     </div>
 
 
-    <div class="navigation">
-        <?php if ( function_exists( 'wp_pagenavi' ) ) { ?>
-        <?php wp_pagenavi(); ?>
-        <?php } else { ?>
-        <div class="nav-previous">
-            <?php next_posts_link( '&laquo; Older Entries' ) ?>
-        </div>
-        <div class="nav-next">
-            <?php previous_posts_link( 'Newer Entries &raquo;' ) ?>
-        </div>
-        <?php } ?>
+    <?php
+// Previous/next page navigation.
+the_posts_pagination( array(
+    'prev_text'          => __( 'Previous page', 'luskintheme' ),
+    'next_text'          => __( 'Next page', 'luskintheme' ),
+    'before_page_number' => '<span class="meta-nav screen-reader-text">' . __( 'Page', 'luskintheme' ) . ' </span>',
+) );
+?>
+
+    <!-- Paginiation for posts-->
+    <?php if ( get_next_posts_link() ) : ?>
+    <div class="container clearfix news-pagination">
+        <span class="align-left"><a href="<?php next_posts_link( 'Older posts' ); ?>">Previous Article</a></span>
+        <span class="align-right"><a href="<?php previous_posts_link( 'Newer posts' ); ?>">Next Article ≫</a></span>
     </div>
+  <?php endif; ?>
+
+</div>
+
+
     <?php else : ?>
     <div class="hentry post">
         <h2 class="entry-title">Not Found</h2>
