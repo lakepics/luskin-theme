@@ -13,7 +13,7 @@
         <?php if ( have_posts() ) : ?>
         <?php while ( have_posts() ) : the_post(); ?>
         <div class="blog-ribbon">
-            <div class="container clearfix"><span class="blog-issue"><?php custom_breadcrumbs(); ?></span><span class="caption"><?php the_time('F j, Y') ?></span></div>
+            <div class="container clearfix"><span class="blog-issue"><?php custom_breadcrumbs(); ?></span></div>
         </div>
 
 
@@ -22,29 +22,40 @@
             <div class="container  clearfix">
                 <div class="blog-content page-col-twothird">
                     <div class="blog-post-individual">
-                        <div class="blog-post-single">
-                            <a class="post-img" href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>">
-                                <?php the_post_thumbnail('full'); ?>
-                            </a>
-                            <h2 class="entry-title">
-                                <a href="<?php the_permalink() ?>" rel="bookmark" title="Permanent Link to <?php the_title_attribute(); ?>">
-                                    <?php the_title(); ?>
+                        <div class="bp-content">
+                            <div class="blog-post-single">
+                                <a class="post-img" href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>">
+                                    <?php the_post_thumbnail('full'); ?>
                                 </a>
-                            </h2>
-                            <div class="xcertp-line clearfix">
-                                <div class="entry-content xcerpt">
-                                    <?php if ( $post->post_excerpt ) { the_content();
+                                <div class="post-meta">
+                                    <div class="post-date">
+                                        <span><?php the_time('F j, Y') ?></span>
+                                    </div>
+                                    <h2 class="post-title">
+                                        <a href="<?php the_permalink() ?>" rel="bookmark" title="Permanent Link to <?php the_title_attribute(); ?>">
+                                            <?php the_title(); ?>
+                                        </a>
+                                    </h2>
+
+                                </div>
+                                <div class="xcertp-line clearfix">
+                                    <div class="entry-content xcerpt">
+                                        <?php if ( $post->post_excerpt ) { the_content();
                                   } else {
 
                                         the_content();
                                     } ?>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
                     <div class="post-meta-footer">
-                            <div class="blog-post-categories"><span class="span-title">Categories: </span><?php the_category('<span class="blog-space">&#47;</span>'); ?></div>
-                        <div class="blog-post-tags"><span>Tags:</span><?php the_tags( '', '' ); ?></div>
+                        <div class="blog-post-categories"><span class="span-title">Categories: </span>
+                            <?php the_category('<span class="blog-space">&#47;</span>'); ?></div>
+                        <div class="blog-post-tags"><span>Tags:</span>
+                            <?php the_tags( '', '' ); ?>
+                        </div>
                     </div>
                 </div>
                 <!-- Sidebar right -->
@@ -65,17 +76,17 @@
 
 
 
-            <?php endwhile; ?>
+        <?php endwhile; ?>
 
-            <?php else : ?>
-            <div class="hentry post">
-                <h2 class="entry-title">Not Found</h2>
-                <div class="entry-content">
-                    <p>Sorry, but you are looking for something that isn't here.</p>
-                </div>
-                <?php get_search_form(); ?>
+        <?php else : ?>
+        <div class="hentry post">
+            <h2 class="entry-title">Not Found</h2>
+            <div class="entry-content">
+                <p>Sorry, but you are looking for something that isn't here.</p>
             </div>
-            <?php endif; ?>
+            <?php get_search_form(); ?>
+        </div>
+        <?php endif; ?>
 
     </div>
     <!-- /main content -->

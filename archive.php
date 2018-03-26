@@ -58,26 +58,19 @@
                 <?php endwhile; ?>
             </div>
 
-        <!-- Sidebar right -->
-        <div class="page-col-onethird news-sidebar-content">
-            <?php if ( is_active_sidebar( 'blog-sidebar' ) ) : ?>
-            <div id="blog-sidebar" class="" role="complementary">
-                <?php dynamic_sidebar( 'blog-sidebar' ); ?>
+            <!-- Sidebar right -->
+            <div class="page-col-onethird news-sidebar-content">
+                <?php if ( is_active_sidebar( 'blog-sidebar' ) ) : ?>
+                <div id="blog-sidebar" class="" role="complementary">
+                    <?php dynamic_sidebar( 'blog-sidebar' ); ?>
+                </div>
+                <?php endif; ?>
             </div>
-            <?php endif; ?>
+            <!-- sidebar end -->
+
         </div>
-        <!-- sidebar end -->
-
-
-    </div>
     </div>
 
-    </div>
-
-    <div class="container  clearfix">
-
-    <span class="align-left"><a href="<?php next_post_link( '&laquo; Older Entries' ) ?>">Previous Article</a></span><span class="align-right"><a href="<?php previous_post_link( 'Newer Entries &raquo;' ) ?>">Next Article ≫</a></span> </div>
-</div>
     <?php else : ?>
     <div class="hentry post">
         <h2 class="entry-title">Not Found</h2>

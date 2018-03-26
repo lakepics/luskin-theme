@@ -1,11 +1,9 @@
 @import 'partials/variables';
 @import 'sections/page';
 @import 'sections/masonry-gallery';
-
 /* ############ room-gallery.scss ############ */
 
 // styles for 0up
-
 // styles for 481up
 @media only screen and (min-width: 481px) {}
 
@@ -22,4 +20,6 @@
 @media only screen and (min-width: 1240px) {}
 
 // styles for 2x
-@media only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min--moz-device-pixel-ratio: 1.5), only screen and (min-device-pixel-ratio: 1.5) {}
+@media only screen and (-webkit-min-device-pixel-ratio: 1.5),
+only screen and (min--moz-device-pixel-ratio: 1.5),
+only screen and (min-device-pixel-ratio: 1.5) {}
