@@ -63,14 +63,19 @@
     <?php
 // Previous/next page navigation.
 the_posts_pagination( array(
-   'screen_reader_text' => ' ',
-    'prev_text'          => __( '&larr;', 'luskintheme' ),
-    'next_text'          => __( '&rarr;', 'luskintheme' ),
+    'prev_text'          => __( 'Previous page', 'luskintheme' ),
+    'next_text'          => __( 'Next page', 'luskintheme' ),
+    'before_page_number' => '<span class="meta-nav screen-reader-text">' . __( 'Page', 'luskintheme' ) . ' </span>',
 ) );
 ?>
 
     <!-- Paginiation for posts-->
-
+    <?php if ( get_next_posts_link() ) : ?>
+    <div class="container clearfix news-pagination">
+        <span class="align-left"><a href="<?php next_posts_link( 'Older posts' ); ?>">Previous Article</a></span>
+        <span class="align-right"><a href="<?php previous_posts_link( 'Newer posts' ); ?>">Next Article ≫</a></span>
+    </div>
+  <?php endif; ?>
 
 </div>
 

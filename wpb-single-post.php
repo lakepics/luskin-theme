@@ -22,7 +22,7 @@
             <div class="container  clearfix">
                 <div class="blog-content page-col-twothird">
                     <div class="blog-post-individual">
-                        <div class="bp-content">
+                        <div class="bp-content-individual">
                             <div class="blog-post-single">
                                 <a class="post-img" href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>">
                                     <?php the_post_thumbnail('full'); ?>
@@ -31,11 +31,11 @@
                                     <div class="post-date">
                                         <span><?php the_time('F j, Y') ?></span>
                                     </div>
-                                    <h2 class="post-title">
+                                    <h1 class="post-title">
                                         <a href="<?php the_permalink() ?>" rel="bookmark" title="Permanent Link to <?php the_title_attribute(); ?>">
                                             <?php the_title(); ?>
                                         </a>
-                                    </h2>
+                                    </h1>
 
                                 </div>
                                 <div class="xcertp-line clearfix">
@@ -46,16 +46,19 @@
                                         the_content();
                                     } ?>
                                     </div>
+                                    <div class="return">
+                                      <a href="/blog">Return to Blog</a>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
                     <div class="post-meta-footer">
-                        <div class="blog-post-categories"><span class="span-title">Categories: </span>
-                            <?php the_category('<span class="blog-space">&#47;</span>'); ?></div>
-                        <div class="blog-post-tags"><span>Tags:</span>
-                            <?php the_tags( '', '' ); ?>
-                        </div>
+<div class="blog-post-categories"><span class="span-title">Categories: </span>
+    <?php the_category('<span class="blog-space">&#47;</span>'); ?></div>
+<div class="blog-post-tags"><span>Tags:</span>
+    <?php the_tags( '', '' ); ?>
+</div>
                     </div>
                 </div>
                 <!-- Sidebar right -->
